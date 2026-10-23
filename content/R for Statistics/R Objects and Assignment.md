@@ -4,7 +4,6 @@ tags:
   - r-statistics
 aliases:
   - "assignment"
-  - "<-"
   - "objects"
 status: seedling
 ---

@@ -8,7 +8,6 @@ aliases:
   - "console"
   - "Ctrl Enter"
   - "comment"
-  - "#"
 status: seedling
 ---
 

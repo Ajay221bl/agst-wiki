@@ -7,7 +7,6 @@ aliases:
   - "chi-square test"
   - "chi square"
   - "chi-squared"
-  - "χ²"
   - "chisq.test"
 status: seedling
 ---

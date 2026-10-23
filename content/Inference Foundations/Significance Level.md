@@ -4,7 +4,6 @@ tags:
   - inference
 aliases:
   - "alpha"
-  - "α"
   - "significance threshold"
   - "rejection region"
 status: seedling
