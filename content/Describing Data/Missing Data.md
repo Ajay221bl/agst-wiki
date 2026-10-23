@@ -10,25 +10,16 @@ aliases:
 status: seedling
 ---
 
-Missing data are blank or unusable values (NA in R); you must decide, document and report how they were handled, because dropping them changes your sample.
+Missing data are blank or unusable values, shown as `NA` in R. You need to decide how to handle them, and say what you did, because dropping them changes your sample.
 
-1. **Sometimes a cell has no value.** A survey respondent skips a question, a plant dies, a sensor fails ([[Data Table Rows and Columns]]).
-2. **R must be told it's missing.** It marks missing values `NA` ("not available"), but only recognizes the codes you tell it (blank, ".", "PNTA" for "prefer not to answer"). *Why:* otherwise "PNTA" is read as text and the whole column stops being numeric.
-3. **Arithmetic with an unknown gives an unknown.** Many functions return `NA` unless told to skip missing values (`na.rm = TRUE`). *Why R does this:* it refuses to silently pretend the value doesn't exist.
-4. **Dropping rows with NAs shrinks $n$**, which changes the [[Degrees of Freedom]]. Check the df in the output against the number of complete rows.
-5. **Ask why the data are missing.** If the people who skipped a question differ from those who answered (the most distressed skip the distress question), the complete rows are a biased sample ([[Sampling Bias]]).
+Sometimes a cell has no value: someone skips a survey question, a plant dies, or a sensor fails ([[Data Table Rows and Columns]]). R marks missing values as `NA` ("not available"), but it only recognises the codes you tell it about, such as a blank, "." or "PNTA" for "prefer not to answer". If you don't, R reads "PNTA" as text and the whole column stops being numeric. Any sum involving an unknown value is unknown, so many R functions return `NA` unless you tell them to skip missing values with `na.rm = TRUE`. R does this on purpose, rather than quietly pretending the value doesn't exist.
 
-The bigger question is **whether the missingness is random**. If the people who skip a question differ systematically from those who answer (orientation, marital status), the remaining data are biased: **non-response bias** ([[Sampling Bias]]).
+Dropping rows with missing values makes your sample smaller, which changes the [[Degrees of Freedom|degrees of freedom]] in a test. Check that number in the output against the number of complete rows.
 
-For example:
+The bigger question is why the data are missing. If the people who skip a question differ from those who answer it, for example if the most distressed people skip the question about distress, then the complete rows are a biased sample. This is called non-response bias ([[Sampling Bias]]).
 
-COVID survey: 1,000 rows. After `na.omit()`, 939 complete rows remain, so a [[One-Sample t-Test|one-sample t-test]] has df = 938, not 999. If you expected 999, the df tells you rows were dropped ([[Why use degrees of freedom as a sanity check]]).
+For example, a COVID survey has 1,000 rows. After `na.omit()`, 939 complete rows remain, so a [[One-Sample t-Test|one-sample t-test]] has 938 degrees of freedom, not 999. If you expected 999, the output tells you that rows were dropped ([[Why use degrees of freedom as a sanity check]]).
 
-Common mistakes:
-
-- **"`na.omit()` drops only the NAs in the column I care about."** It drops any row with an NA in **any** column. Select columns first, or use `complete.cases()` on the ones you need.
-- **"Missing values don't matter if there are few."** Even a few can bias results if they are not random.
-
-See also: [[na.omit() and complete.cases()]].
+`na.omit()` doesn't just drop the missing values in the column you care about: it drops any row with a missing value in **any** column. Select your columns first, or use `complete.cases()` on just the ones you need ([[na.omit() and complete.cases()]]). And a few missing values can still bias results if they aren't missing at random.
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.3 non-response).

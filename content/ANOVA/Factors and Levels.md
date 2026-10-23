@@ -10,33 +10,27 @@ aliases:
 status: seedling
 ---
 
-A factor is a categorical grouping variable (the treatment or IV), and its levels are the groups it creates; "one-way" ANOVA means one factor with any number of levels.
+A factor is a categorical grouping variable, such as the treatment or the independent variable (IV). Its levels are the groups it creates. "One-way" ANOVA means one factor, with any number of levels.
 
-1. **In a comparison of groups, the IV is categorical** ([[Independent and Dependent Variables]], [[Types of Data]]).
-2. **ANOVA calls that IV a factor, and its categories levels.** "Time of day" is one factor. Morning, midday and evening are its three levels.
-3. **Count factors and levels to name the design:**
+When a study compares groups, the independent variable is categorical ([[Independent and Dependent Variables]], [[Types of Data]]). ANOVA calls that variable a **factor**, and its categories **levels**. For example, "time of day" is one factor, and morning, midday and evening are its three levels. Counting factors and levels names the design:
 
 | Factor | Levels | Design |
 |---|---|---|
 | Time of day | morning, midday, evening | 1 factor, 3 levels |
-| Region | NE, [[Standard Error\|SE]], South, Midwest, West | 1 factor, 5 levels |
+| Region | Northeast, Southeast, South, Midwest, West | 1 factor, 5 levels |
 | Soy consumption | 4 groups of 20 | 1 factor, 4 levels |
 | Undergraduate major | business, English, math, psychology | 1 factor, 4 levels |
 | Halloween costume | Hulk, Ninja Turtle, Spider-Man, Superman | 1 factor, 4 levels |
 | Blood lead level | low, medium, high | 1 factor, 3 levels |
-| Child under 12 at home | no, yes | 1 factor, 2 levels → two-sample t-test |
+| Child under 12 at home | no, yes | 1 factor, 2 levels, so a two-sample t-test |
 
-4. **The count decides the test.** *Why:* 2 levels is the two-sample t-test; 3 or more needs ANOVA ([[Why ANOVA instead of many t-tests]]). In R the factor must be stored as a factor, or `aov()` treats it as a number ([[factor()]]).
+The number of levels decides the test. With 2 levels it is a two-sample t-test; with 3 or more you need ANOVA ([[Why ANOVA instead of many t-tests]]). In R, the variable must be stored as a factor, or `aov()` treats it as a number ([[factor()]]).
 
-"I have 5 groups." Yes, but they are the *levels* of **one** variable. Two factors (say sex × time of day, with an [[Two-Way ANOVA and Interaction|interaction]]) make a **two-way ANOVA**, which is a later topic.
+Five groups are the five *levels* of **one** variable, not five factors. Two factors, such as sex and time of day, with a possible [[Two-Way ANOVA and Interaction|interaction]] between them, make a **two-way ANOVA**.
 
-For example:
+For example, four fertilizers coded A, B, C and D are one factor with four levels, so the ANOVA [[Ratios and Fractions|numerator]] degrees of freedom are k − 1 = 3. If they are coded 1, 2, 3, 4 and read as numbers, R gives 1 degree of freedom, which is a sign it treated fertilizer as a single number ([[Why use degrees of freedom as a sanity check]]).
 
-Four fertilizers coded A, B, C, D: one factor, four levels, so the ANOVA [[Ratios and Fractions|numerator]] df = k − 1 = 3. If coded 1, 2, 3, 4 and read as numbers, R gives df = 1, a sign it treated fertilizer as a single number ([[Why use degrees of freedom as a sanity check]]).
-
-Common mistakes:
-
-- **"More groups means more factors."** More groups means more levels of the same factor.
+More groups don't mean more factors; they mean more levels of the same factor.
 
 See also: [[One-Way ANOVA]], [[Wide vs Long Format]].
 

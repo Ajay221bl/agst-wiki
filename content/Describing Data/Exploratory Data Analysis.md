@@ -10,27 +10,19 @@ aliases:
 status: seedling
 ---
 
-Exploratory data analysis (EDA) is looking at the data before testing anything: checking how R read it, summarizing it overall and by group, and plotting it, to find errors, shape and patterns.
+Exploratory data analysis (EDA) means looking at your data before testing anything. You check how R read the file, summarize the data overall and by group, and plot them, to find mistakes, see the shape of the data and spot patterns.
 
-1. **A data file can be wrong in ways no test will notice**: a typo, a column read as text, missing values coded as 999 ([[read.csv() and file.choose()]], [[Missing Data]]).
-2. **So first check what you have.** How many rows, which columns, what type each is ([[str()]], [[summary()]]). *Why first:* every later step trusts these.
-3. **Then describe it**: centre and spread, overall and by group ([[Mean]], [[Standard Deviation]], [[describe() and describeBy()]]).
-4. **Then look at it.** Histograms and box plots for one variable, side-by-side plots for groups, scatter plots for two quantitative variables ([[Histogram]], [[Box Plot and Five-Number Summary]], [[Plots for Two Variables]]). *Why pictures:* they show shape, [[Outliers|outliers]] and gaps that summary numbers hide ([[Why visualize data before testing]]).
-5. **Use what you see to plan the test.** [[Shape of a Distribution|Skew]], outliers, unequal spreads and odd values decide which test and which assumption checks come next ([[Test Assumptions]], [[Test Choice Guide]]).
-6. **EDA is description, not proof.** Patterns found by looking still need a test, ideally planned before the look ([[Why choose alpha and tails before seeing the data]]).
+A data file can be wrong in ways no test will notice: a typo, a column read as text, or missing values coded as 999 ([[read.csv() and file.choose()]], [[Missing Data]]). So first check what you have: how many rows, which columns, and what type each column is ([[str()]], [[summary()]]). Every later step relies on this. Next, describe the data: centre and spread, overall and for each group ([[Mean]], [[Standard Deviation]], [[describe() and describeBy()]]). Then plot them: histograms and box plots for one variable, side-by-side plots for groups, and scatter plots for two quantitative variables ([[Histogram]], [[Box Plot and Five-Number Summary]], [[Plots for Two Variables]]). Pictures show shape, [[Outliers|outliers]] and gaps that summary numbers hide ([[Why visualize data before testing]]).
+
+What you see decides what comes next. [[Shape of a Distribution|Skew]], outliers, unequal spreads and odd values tell you which test to use and which assumptions to check ([[Test Assumptions]], [[Test Choice Guide]], [[Types of Data]]).
 
 ![[Plots for two variables.png|700]]
 Each pair of variable types has its own exploratory plot; choosing it is the first EDA decision.
 
-A test answers one narrow question and assumes the data are what you think they are. EDA checks that assumption and shows what the data actually look like.
+A test answers one narrow question and assumes the data are what you think they are. EDA checks that, and shows you what the data actually look like.
 
-For example:
+For example, in the book's FAMuSS data (checked in R), `str()` shows 595 rows, with `ndrm.ch` stored as numbers and `genotype` stored as text (chr). The genotype column must be turned into a factor before running `aov()` ([[factor()]]). Within each genotype, values run from 0 to at least 150, and each group's mean sits above its [[Median|median]]. So the groups overlap a lot and are right-skewed, which warns that the ANOVA result (p = 0.040) may be fragile ([[One-Way ANOVA]]).
 
-Book FAMuSS data (checked in R): `str()` shows 595 rows, `ndrm.ch` as numbers and `genotype` as text (chr), which must become a factor before `aov()` ([[factor()]]). By genotype, every group runs from 0 to at least 150 and its mean sits above its [[Median|median]], so the groups overlap heavily and are right-skewed: a warning that the ANOVA result (p = 0.040) may be fragile ([[One-Way ANOVA]]).
+EDA isn't optional just because the test is simple: even the simplest test trusts the data file. And a pattern you spot while exploring is a lead, not a finding. EDA describes; it doesn't prove. Testing a pattern on the same data you found it in raises the chance of [[Type I and Type II Errors|false positives]], so tests are best planned before you look ([[Family-Wise Type I Error]], [[Why choose alpha and tails before seeing the data]]).
 
-Common mistakes:
-
-- **"EDA is optional when the test is simple."** The simplest test still trusts the data file.
-- **"A pattern seen in EDA is a finding."** It is a lead; testing it on the same data after looking inflates [[Type I and Type II Errors|false positives]] ([[Family-Wise Type I Error]]).
-
-See also: [[Descriptive vs Inferential Statistics]], [[Types of Data]].
+See also: [[Descriptive vs Inferential Statistics]].

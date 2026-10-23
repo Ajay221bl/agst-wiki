@@ -8,13 +8,13 @@ aliases:
 status: seedling
 ---
 
-Random assignment uses chance to decide which [[Treatment and Control Groups|treatment group]] each experimental unit goes to, so that nuisance variables are balanced across groups and the treatment is the only systematic difference.
+Random assignment uses chance to decide which [[Treatment and Control Groups|treatment group]] each unit goes into. This balances other variables across the groups, so the treatment is the only systematic difference between them.
 
-1. **Confounding happens when a nuisance variable lines up with the treatment** ([[Nuisance Variables and Confounding]]).
-2. **People choosing groups create that line-up.** I have 40 chickens and two diets. If I pick which chickens get diet A, I might (without meaning to) pick the bigger, livelier ones.
-3. **So let chance choose.** If a random number generator picks, big and small, old and young, end up mixed into both groups. *Why chance works:* it can't prefer any kind of chicken, so it can't line up with anything.
-4. **Any nuisance variable, measured or not, is spread out evenly on average.** *Consequence:* the only systematic difference left between groups is the treatment, so a difference in outcome can be credited to it. That's what lets an [[Experiment]] support [[Association vs Causation|causation]] ([[Internal Validity]]).
-5. **It is not the same as random sampling.** Random assignment protects the comparison; random sampling protects generalizing to a [[Population and Sample|population]] ([[Why random assignment and random sampling protect different things]]).
+Confounding happens when another variable lines up with the treatment ([[Nuisance Variables and Confounding]]). People choosing the groups can create that line-up. With 40 chickens and two diets, if you pick which chickens get diet A, you might, without meaning to, pick the bigger and livelier ones. So let chance choose. If a random number generator decides, big and small, old and young chickens end up mixed into both groups. Chance can't prefer any kind of chicken, so it can't line up with anything.
+
+As a result, every other variable, measured or not, is spread evenly across the groups on average. The only systematic difference left is the treatment, so a difference in outcome can be credited to it. That is what lets an [[Experiment|experiment]] support a claim of [[Association vs Causation|causation]], and it is called [[Internal Validity|internal validity]]. Without random assignment, confounding can't be ruled out, and the study becomes a [[Quasi-Experiment|quasi-experiment]].
+
+Random assignment is not the same as random sampling. Assignment protects the comparison between groups; sampling protects your ability to generalize to a [[Population and Sample|population]] ([[Why random assignment and random sampling protect different things]]).
 
 ```mermaid
 flowchart LR
@@ -24,24 +24,17 @@ flowchart LR
   P -.-> X["External validity:<br>can I generalize to the population?"]
   T -.-> Y["Internal validity:<br>did the treatment cause the difference?"]
 ```
-The two random steps happen at different places and buy different things. Sampling protects generalization; assignment protects causation.
+The two random steps happen at different places and do different jobs. Sampling protects generalization; assignment protects causation.
 
-It protects **internal validity**: the right to say the [[Independent and Dependent Variables|IV]] *caused* the change in the DV ([[Internal Validity]]). Without it, confounding can't be ruled out, causation can't be inferred, and the study becomes a [[Quasi-Experiment]].
-
-For example:
-
-Assigning plots of land or chickens to diets at random, "so that the older chickens aren't all in one group".
+For example, plots of land or chickens are assigned to diets at random, so that the older chickens don't all end up in one group.
 
 | | Random assignment | Random sampling |
 |---|---|---|
 | What is random | which group each unit joins | which units enter the study |
 | Protects | internal validity (causation) | [[External Validity\|external validity]] (generalization) |
 
-Common mistakes:
+Random assignment does nothing to make a sample representative; that needs [[Random Sampling|random sampling]]. And alternating (first unit to A, second to B, and so on) isn't random. It is systematic and can line up with hidden patterns.
 
-- **"Random assignment makes my sample representative."** It does nothing for representativeness; that needs [[Random Sampling]].
-- **"Alternating assignment (1st A, 2nd B, ...) is random."** It is systematic and can line up with hidden patterns.
-
-See also: [[Classical vs Relative Frequency Probability]], [[Randomized Controlled Trial]].
+See also: [[Randomized Controlled Trial]], [[Classical vs Relative Frequency Probability]], [[Independent and Dependent Variables]].
 
 Further reading: [[References|Kirk 2013, Ch. 1]], [[References|Vu and Harrington 2020, Ch. 1]] (pp. 25–27).

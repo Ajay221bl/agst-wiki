@@ -8,27 +8,19 @@ aliases:
 status: seedling
 ---
 
-The absolute value of a number, written $|x|$, is its distance from 0, so it is never negative: $|-3| = |3| = 3$.
+The absolute value of a number is its distance from 0. It is written $|x|$ and is never negative: $|-3| = |3| = 3$.
 
-1. **A number line has a direction.** Numbers to the right of 0 are positive, to the left negative. The sign tells you *which side*; the size tells you *how far*.
-2. **Sometimes only "how far" matters.** If I'm 3 km from home, it doesn't matter whether I'm east or west for asking "am I far away?". *Why this matters for statistics:* a lot of questions are "how far from what we expected?", where both directions count as surprising.
-3. **So we need a way to drop the sign.** The absolute value does exactly that: $|x| = x$ if $x \ge 0$, and $|x| = -x$ if $x < 0$.
-4. **There are two ways to drop a sign**, and statistics uses both:
-   - take the absolute value, $|x|$, which keeps the original units;
-   - square it, $x^2$, which also drops the sign but changes the units and stretches big values more ([[Squares and Square Roots]]). *Why squares win for spread:* squares have neat algebra (they add up cleanly), which is why variance uses them ([[Variance]]).
+A number has two parts: a sign, which says which side of 0 it is on, and a size, which says how far away it is. Sometimes only the size matters. If you are 3 km from home, you are equally far whether you went east or west. The absolute value keeps the size and drops the sign: $|x| = x$ when $x \ge 0$, and $|x| = -x$ when $x < 0$.
+
+Squaring is the other way to drop a sign ([[Squares and Square Roots]]). Squaring changes the units and makes big values even bigger, but it has tidy algebra, which is why the [[Variance]] uses squares rather than absolute values.
 
 ![[Absolute value - distance from zero.png|700]]
 −3 and 3 sit on opposite sides of 0 but at the same distance, so both have absolute value 3.
 
-Without it, "far below" and "far above" would cancel out. Two-sided tests ask whether a [[Parameter vs Statistic|statistic]] is far from 0 *in either direction*, so their p-values use $|t|$ ([[One-Tailed vs Two-Tailed Tests]]). [[Effect Size|Effect sizes]] like Cohen's d are often reported as absolute values because their sign only reflects the order of subtraction ([[Cohen's d]]).
+Statistics often asks "how far is this from what we expected?", and a big gap counts whether it is above or below. A two-sided test therefore looks at $|t|$, the size of the test statistic, whatever its sign ([[One-Tailed vs Two-Tailed Tests]]). [[Effect Size|Effect sizes]] such as [[Cohen's d]] are often reported as absolute values too, because their sign only shows which group was subtracted from which.
 
-For example:
+For example, a test on mercury in fish gave $t = -11.96$. For a two-sided p-value, what matters is $|t| = 11.96$: how far out it sits, on either side ([[One-Sample t-Test]]).
 
-Croaker test: $t = -11.96$. For a two-sided p-value, what matters is $|t| = 11.96$: how far out it sits, on either side ([[One-Sample t-Test]]).
+Absolute value doesn't "flip" a number. A positive number stays exactly as it is. And $|a - b|$ is not the same as $a - b$: the first gives only the size of the gap, while the second also tells you which number is bigger.
 
-Common mistakes:
-
-- **"Absolute value makes a number positive by flipping it."** It gives the distance from 0; for a positive number nothing changes.
-- **"|a − b| and a − b say the same thing."** The first is the size of the gap; the second also says which one is bigger.
-
-See also: [[Greek Letters and Symbols]], [[Variable and Observation]], [[Deviations from the Mean]], [[Homogeneity of Variance]].
+See also: [[Greek Letters and Symbols]], [[Variable and Observation]], [[Deviations from the Mean]], [[Homogeneity of Variance]], [[Parameter vs Statistic]].

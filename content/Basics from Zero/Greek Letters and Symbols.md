@@ -9,13 +9,11 @@ aliases:
 status: seedling
 ---
 
-Greek letters usually stand for unknown population values (parameters) and Roman letters for values calculated from a sample (statistics).
+Greek letters usually stand for values of the whole population, which we don't know. Ordinary (Roman) letters stand for values worked out from a sample.
 
-1. **Statistics talks about two worlds at once:** the whole population we care about and the sample we actually measured ([[Population and Sample]]).
-2. **The same quantity exists in both worlds.** There's a population mean (unknown) and a sample mean (computed). We need different symbols so we never confuse them.
-3. **The convention: Greek for the population, Roman for the sample.** $\mu$ (mu) is the population mean, $\bar{x}$ (x-bar) the sample mean; $\sigma$ ([[Standard Deviation|sigma]]) is the population SD, $s$ the sample SD ([[Parameter vs Statistic]]). *Why it matters:* a sentence like "$H_0: \mu = 98.6$" is about the population, never about the sample you already have.
-4. **A "hat" means "an [[Point Estimate|estimate]] of".** $\hat{p}$ (p-hat) is the sample's estimate of the population [[Proportions and Percentages|proportion]] $p$.
-5. **The full list used in these notes:**
+Statistics always talks about two groups at once: the population we care about and the sample we actually measured ([[Population and Sample]]). The same quantity exists in both. There is a population mean, which is unknown, and a sample mean, which we calculate. Different symbols keep them apart: $\mu$ (mu) is the population mean and $\bar{x}$ (x-bar) is the sample mean; $\sigma$ (sigma) is the population [[Standard Deviation|standard deviation]] (SD) and $s$ is the sample SD ([[Parameter vs Statistic]]). A "hat" means "an [[Point Estimate|estimate]] of": $\hat{p}$ (p-hat) is the sample's estimate of the population [[Proportions and Percentages|proportion]] $p$.
+
+The symbols used in these notes:
 
 | Symbol | Say | Means |
 |---|---|---|
@@ -35,16 +33,11 @@ Greek letters usually stand for unknown population values (parameters) and Roman
 | $\cup$, $\cap$ | union, intersection | "or", "and" ([[Addition Rule]], [[Multiplication Rule]]) |
 | $P(A \mid B)$ | P of A given B | [[Conditional Probability]] |
 
-Symbols make it obvious whether a sentence is about the data I have or the population I want to learn about. "$H_0: \bar{x} = 2$" is nonsense once you know $\bar{x}$ is something I can just calculate ([[Null and Alternative Hypotheses]]).
+The symbols make it clear whether a sentence is about the data you have or the population you want to learn about. A hypothesis such as "$H_0: \mu = 98.6$" is always about the population. Writing "$H_0: \bar{x} = 2$" makes no sense, because $\bar{x}$ is something you can simply calculate ([[Null and Alternative Hypotheses]]).
 
-For example:
+For example, "In my sample of 24 lizards, $\bar{x} = 8.96$ cm; I want an interval for $\mu$." The first number is known. The second is what we are trying to learn.
 
-"In my sample of 24 lizards, $\bar{x} = 8.96$ cm; I want an interval for $\mu$." The first number is known; the second is the target.
-
-Common mistakes:
-
-- **"$\sigma$ and $s$ are interchangeable."** $\sigma$ is the population value (almost never known); $s$ is computed from data. Using $s$ is exactly why we need the [[t-Distribution]].
-- **"$N$ always means population size."** Fields differ; some papers write $N$ for [[Sample Size|sample size]]. In ANOVA, $N$ is often the total sample size across groups ([[ANOVA Table]]).
+$\sigma$ and $s$ are not interchangeable. $\sigma$ is the population value and is almost never known, while $s$ comes from the data. Having to use $s$ is exactly why we need the [[t-Distribution]]. Also, not everyone uses $N$ the same way: some papers write $N$ for the [[Sample Size|sample size]], and in ANOVA $N$ is often the total number of observations across all groups ([[ANOVA Table]]).
 
 See also: [[Variable and Observation]].
 

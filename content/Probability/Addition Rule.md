@@ -8,25 +8,19 @@ aliases:
 status: seedling
 ---
 
-The chance that $A$ or $B$ happens is the chance of $A$ plus the chance of $B$, minus the chance of both (so the overlap is not counted twice).
+The chance that $A$ or $B$ happens is the chance of $A$, plus the chance of $B$, minus the chance of both. Subtracting "both" stops the overlap being counted twice.
 
-1. **Question: what's the chance of A or B?** In statistics "or" means **A or B or both**. People forget the "both".
-2. **First try: add the two probabilities.** Count the students who take biology, then those who take chemistry, and add.
-3. **That double-counts the overlap.** Anyone taking **both** is on both lists ([[Sample Space and Events]]).
-4. **Fix it by subtracting the overlap once:**
+In probability, "A or B" means A, or B, or both. Suppose you want the chance that a student takes biology or chemistry. If you simply add the biology students and the chemistry students, anyone taking both subjects gets counted twice ([[Sample Space and Events]]). So you subtract the overlap once:
 $$P(A \text{ or } B) = P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
-   *Why once:* the overlap was counted twice and should be counted once.
-5. **If the events are disjoint, the overlap is 0** and the rule shrinks to $P(A) + P(B)$ ([[Disjoint Events]]).
-6. **The overlap $P(A \cap B)$ itself comes from the multiplication rule** ([[Multiplication Rule]]) or straight from a table ([[Contingency Table]]).
+
+If the two events can't happen together, the overlap is 0 and the rule shrinks to $P(A) + P(B)$ ([[Disjoint Events]]). The overlap itself, $P(A \cap B)$, comes from the [[Multiplication Rule]] or can be read straight from a [[Contingency Table]].
 
 ![[Venn diagrams - addition, disjoint, conditional.png|700]]
 Left: adding A and B counts the overlap twice, so the addition rule subtracts it once. Middle: disjoint events have no overlap at all. Right: conditioning on B throws away everything outside B, so P(A | B) is the dark overlap as a share of B.
 
-"Or" questions come up constantly (positive test or drug user; male or smoker), and simply adding probabilities overshoots whenever events overlap. If $A$ and $B$ are [[Disjoint Events|disjoint]], $P(A \cap B) = 0$ and it simplifies to $P(A) + P(B)$.
+"Or" questions come up all the time (a positive test or a drug user; male or a smoker), and just adding the probabilities gives too big an answer whenever the events overlap.
 
-For example:
-
-A drug test table (n = 1,000):
+For example, here are 1,000 people grouped by drug use and test result:
 
 | | Positive | Negative | Total |
 |---|---|---|---|
@@ -36,11 +30,8 @@ A drug test table (n = 1,000):
 
 $P(\text{positive or user}) = \frac{134}{1000} + \frac{50}{1000} - \frac{44}{1000} = \frac{140}{1000} = 0.14$
 
-Check by reading the table directly, counting each cell once: $(44 + 90 + 6)/1000 = 0.14$.
+You can check this by adding the cells that are positive or a user, each counted once: $(44 + 90 + 6)/1000 = 0.14$.
 
-Common mistakes:
-
-- **"Or means one or the other but not both."** In probability it includes both.
-- **"Always just add."** Only for disjoint events.
+Remember that "or" includes "both", and that plain adding only works when the events can't happen together.
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (pp. 94–96).

@@ -12,13 +12,13 @@ aliases:
 status: seedling
 ---
 
-Post hoc tests compare every pair of group means after a significant ANOVA, with p-values adjusted so the overall Type I error rate stays controlled.
+Post hoc tests compare every pair of group means after a significant ANOVA. Their p-values are adjusted so that the overall chance of a Type I error stays controlled.
 
-1. **A significant ANOVA says "at least one mean differs" but not which** ([[One-Way ANOVA]]).
-2. **Post hocs (pairwise comparisons, "mean separation") find out.** Each one is like a two-sided two-sample test, $H_0: \mu_i = \mu_j$, run for all $k(k-1)/2$ pairs ([[Two-Sample Independent t-Test]]).
-3. **Their p-values are adjusted.** *Why:* many comparisons at α each would inflate the family-wise error ([[Family-Wise Type I Error]], [[Bonferroni Correction]], [[Tukey HSD]]).
-4. **When? Only after a significant omnibus ANOVA.** The ANOVA is the **gatekeeper**: [[Why we never accept the null hypothesis|fail to reject]] and the gate shuts, even if software prints Tukey results by default ([[Why post hoc tests only after a significant ANOVA]]). *Why:* the overall test protects the whole family; skipping it reopens the multiple-testing problem.
-5. **Summarize the results with letters** when there are many groups ([[Compact Letter Display]]).
+A significant ANOVA says that at least one mean differs, but not which ([[One-Way ANOVA]]). Post hoc tests, also called pairwise comparisons or mean separation, find out. Each one is like a two-sided two-sample test of $H_0: \mu_i = \mu_j$, run for all $k(k-1)/2$ pairs ([[Two-Sample Independent t-Test]]).
+
+Their p-values are adjusted, because many comparisons, each at α, would inflate the chance of a false positive across the family ([[Family-Wise Type I Error]], [[Bonferroni Correction]], [[Tukey HSD]]).
+
+Run them only after a significant overall ANOVA. The ANOVA acts as a gatekeeper: if you [[Why we never accept the null hypothesis|fail to reject]], the gate stays shut, even if the software prints Tukey results by default ([[Why post hoc tests only after a significant ANOVA]]). The overall test protects the whole family, and skipping it reopens the multiple-testing problem. When there are many groups, summarize the results with letters ([[Compact Letter Display]]).
 
 ```mermaid
 flowchart TD
@@ -33,23 +33,19 @@ The ANOVA is a gate. Pairwise tests only run once the gate opens, which is what 
 ![[Tukey intervals.png|700]]
 Each row is one pair of groups with its adjusted 95% interval. Intervals that cross the dashed 0 line are not significant; red ones miss 0, so that pair differs.
 
-Adjustment is still needed *after* a significant ANOVA; you can't switch to plain t-tests just because you cleared the omnibus hurdle.
+Adjustment is still needed *after* a significant ANOVA. Clearing the overall test doesn't mean you can switch to plain t-tests.
 
-Common methods ("no wrong way"; your advisor or field may have a default):
-- [[Tukey HSD]]: a common default.
-- [[Bonferroni Correction]]: simplest, most [[Conservative Tests|conservative]].
-- Fisher's LSD, Holm, Scheffé, Dunnett (each vs a control).
-- Results summarized as SAS-style letters ([[Compact Letter Display]]).
+There are several common methods, and your field or advisor may have a default:
+- [[Tukey HSD|Tukey's honestly significant difference (HSD)]]: a common default.
+- [[Bonferroni Correction|The Bonferroni correction]]: the simplest, and the most [[Conservative Tests|conservative]].
+- Fisher's least significant difference, Holm, Scheffé, and Dunnett (each group against a control).
+- Results summarized as letters, in the style of the SAS software ([[Compact Letter Display]]).
 
-For example:
+For example, in data on frustration by undergraduate major (Tukey's test), English − business, math − business and psychology − business are all positive, with confidence intervals that are entirely positive, so business students have the lowest frustration. Psychology − English is positive, so psychology students are more frustrated than English students. English against math and math against psychology are not significant.
 
-**Frustration by major** (Tukey): English − business, math − business and psychology − business all positive with all-positive CIs → business has the lowest frustration. Psychology − English positive → psychology more frustrated than English. English vs math and math vs psychology not significant.
+In the Halloween costume data, only Superman differs: it is higher than Hulk, Ninja Turtle and Spider-Man.
 
-**Costumes:** only Superman differs (higher than Hulk, Ninja Turtle, Spider-Man).
-
-Common mistakes:
-
-- **"Read the post hocs whatever the ANOVA says."** Only after a significant ANOVA.
+Don't read the post hoc tests whatever the ANOVA says; read them only after a significant ANOVA.
 
 See also: [[TukeyHSD()]].
 

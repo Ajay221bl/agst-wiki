@@ -13,16 +13,18 @@ aliases:
 status: seedling
 ---
 
-A variable is either categorical (labels: nominal, ordinal or binary) or quantitative (numbers you can do arithmetic with: discrete or continuous), and that type decides which summaries and tests make sense.
+Every variable is either categorical (labels) or quantitative (numbers you can do arithmetic with), and its type decides which summaries, plots and tests make sense.
 
-1. **Every variable records something about each observation** ([[Variable and Observation]]). Before summarizing it, ask one question: **does arithmetic make sense on these values?**
-2. **If not, the values are labels: categorical (qualitative).** You can count them, but not average them. *Why it matters:* the mean of "region" codes 1, 2, 3 is a meaningless number.
-   - **Nominal:** no order (region, eye colour, favourite exercise, subject ID).
-   - **Ordinal:** a natural order (fitness rating poor → excellent, [[Likert Scale|Likert]] agree scales). Order exists, but the steps between levels aren't guaranteed equal.
-   - **Binary:** exactly two levels (yes/no, laid off, alive/dead).
-3. **If arithmetic makes sense, the values are quantitative (numerical).**
-   - **Discrete:** only whole units ("number of ..."). The half-unit check: can 2.5 of them exist? If not, discrete.
-   - **Continuous:** an infinite scale; fractions make sense.
+Every variable records something about each observation ([[Variable and Observation]]). Before summarizing it, ask one question: does arithmetic make sense on these values?
+
+If not, the values are labels, and the variable is **categorical** (also called qualitative). You can count labels, but not average them: the mean of region codes 1, 2 and 3 is a meaningless number. Categorical variables come in three kinds:
+- **Nominal:** no order, such as region, eye colour, favourite exercise or ID number.
+- **Ordinal:** a natural order, such as a fitness rating from poor to excellent, or a [[Likert Scale|Likert]] agreement scale. The order is real, but the steps between levels aren't guaranteed to be equal.
+- **Binary:** exactly two levels, such as yes/no or alive/dead.
+
+If arithmetic makes sense, the variable is **quantitative** (also called numerical):
+- **Discrete:** only whole units, as in "number of ...". A quick check: can 2.5 of them exist? If not, it is discrete.
+- **Continuous:** any value on a scale, so fractions make sense.
 
 ```
 Data
@@ -35,8 +37,6 @@ Data
     └── Continuous: an infinite scale
 ```
 
-4. **The type decides everything downstream:** which centre (mode, [[Median|median]] or mean: [[Why the median beats the mean for skewed data]]), which plot ([[Plots for Categorical Data]], [[Histogram]]) and which test ([[Test Choice Guide]]). *Why:* each method uses only the operations the data type allows.
-
 ```mermaid
 flowchart TD
   V["Variable"] --> C["Categorical<br>labels"]
@@ -47,17 +47,11 @@ flowchart TD
   Q --> D["Discrete<br>counts: number of bikes"]
   Q --> Ct["Continuous<br>measurements: weight in kg"]
 ```
-The first split (labels vs numbers) decides which summaries and plots make sense; the second split refines it.
+The first split, labels or numbers, decides which summaries and plots make sense; the second split refines it.
 
-Choosing the right analysis starts here; the test-choice flow chart begins with the data type ([[Test Choice Guide]]).
-- Only the **mode** is a meaningful center for unordered categories ([[Mode]]).
-- Categorical unordered variables have **no shape**; the bars can be rearranged ([[Shape of a Distribution]]).
-- Discrete counts often violate normality, which most classical tests assume ([[Normality Checks]]).
-- In t-tests and ANOVA the [[Independent and Dependent Variables|explanatory variable]] is categorical (a factor) and the response is quantitative ([[Factors and Levels]]).
+The type decides almost everything that follows, because each method only uses operations the data allow. It decides which centre to use (the [[Mode|mode]], the [[Median|median]] or the [[Mean|mean]]: [[Why the median beats the mean for skewed data]]), which plot ([[Plots for Categorical Data]], [[Histogram]]) and which test ([[Test Choice Guide]]). Unordered categories have no shape, because their bars can be put in any order ([[Shape of a Distribution]]). Counts often aren't normal, which most classical tests assume ([[Normality Checks]]). In t-tests and ANOVA, the [[Independent and Dependent Variables|explanatory variable]] is categorical (a factor) and the response is quantitative ([[Factors and Levels]]).
 
-For example:
-
-A survey:
+For example, the variables in a survey:
 
 | Variable | Type | Why |
 |---|---|---|
@@ -68,11 +62,8 @@ A survey:
 | Favourite exercise | categorical nominal | no order |
 | Number of bikes owned | quantitative discrete | "number of" |
 
-Common mistakes:
+Being a number doesn't make a variable quantitative: ID numbers and treatment codes are labels. And discrete doesn't mean categorical: discrete data are quantitative counts.
 
-- **"If it's a number, it's quantitative."** ID numbers and treatment codes are labels.
-- **"Discrete means categorical."** Discrete is a kind of *quantitative* data (counts).
-
-See also: [[Mean]], [[Random Variable]].
+See also: [[Random Variable]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.2, p. 15).

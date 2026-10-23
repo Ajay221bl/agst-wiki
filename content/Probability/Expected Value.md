@@ -10,25 +10,17 @@ aliases:
 status: seedling
 ---
 
-The expected value $E(X)$ of a random variable is its long-run average: each possible value weighted by its probability, $E(X) = \sum x_i P(X = x_i)$.
+The expected value $E(X)$ of a random variable is its long-run average: each possible value multiplied by its probability, then added up. In symbols, $E(X) = \sum x_i P(X = x_i)$.
 
-1. **A random variable turns outcomes into numbers** (heads in two flips: 0, 1 or 2; [[Random Variable]]).
-2. **Its distribution gives each value a probability**, adding to 1 ([[Probability Distribution]]).
-3. **If we repeated the experiment forever, what would the average be?** Each value turns up a share of the time equal to its probability ([[Law of Large Numbers]]). *Why weight by probability:* a value that happens half the time should count half.
-4. **So multiply each value by its probability and add:** $E(X) = \sum x_i P(X = x_i)$ ([[Summation Notation]]). It is the mean of the population, written $\mu$ ([[Mean]], [[Parameter vs Statistic]]).
-5. **It is the balance point of the distribution**, just as the mean is the balance point of data.
-6. **[[Descriptive vs Inferential Statistics|Inference]] uses it constantly.** "Unbiased" means $E(\text{statistic}) = \text{parameter}$, e.g. $E(\bar{x}) = \mu$ ([[Unbiased Estimator]]). The "expected" value under $H_0$ is what the test statistic compares against ([[Test Statistic]]).
+A [[Random Variable|random variable]] turns chance outcomes into numbers, such as the number of heads in two coin flips (0, 1 or 2). Its [[Probability Distribution|distribution]] gives each value a probability. If you repeated the experiment forever, each value would come up a share of the time equal to its probability ([[Law of Large Numbers]]). So to find the long-run average, weight each value by its probability: a value that happens half the time should count half ([[Summation Notation]]).
+
+The expected value is the mean of the whole population, written $\mu$ ([[Mean]], [[Parameter vs Statistic]]). It is the balance point of the distribution, just as the mean is the balance point of a set of data.
 
 ![[Random variable - heads in two flips.png|700]]
-The bars at 0, 1 and 2 heads with heights 0.25, 0.5, 0.25 balance at 1.
+The bars at 0, 1 and 2 heads, with heights 0.25, 0.5 and 0.25, balance at 1.
 
-It gives a single number for "what to expect" from something random, and it is the yardstick for asking whether a statistic is biased.
+Inference uses expected values all the time ([[Descriptive vs Inferential Statistics]]). A statistic is called unbiased when its expected value equals the thing it estimates, for example $E(\bar{x}) = \mu$ ([[Unbiased Estimator]]). And a [[Test Statistic|test statistic]] compares what you saw with what you would expect if the null hypothesis were true.
 
-For example:
+For example, for heads in two fair flips, $E(X) = 0(0.25) + 1(0.5) + 2(0.25) = 1$ head.
 
-Heads in two fair flips: $E(X) = 0(0.25) + 1(0.5) + 2(0.25) = 1$ head ([[Random Variable]]).
-
-Common mistakes:
-
-- **"The expected value is the most likely value."** Not necessarily; for one die it is 3.5, which never happens.
-- **"Expected means guaranteed."** It is a long-run average; any one result can be far from it.
+The expected value isn't necessarily the most likely value. For one die it is 3.5, which never comes up. And "expected" doesn't mean guaranteed: it is a long-run average, and any single result can be far from it.

@@ -11,28 +11,22 @@ aliases:
 status: seedling
 ---
 
-Sampling bias is a systematic tilt in who ends up in the sample or what they report, so the sample misrepresents the population no matter how large it is.
+Sampling bias is a systematic tilt in who ends up in a sample, or in what they report. A biased sample misrepresents the population however large it is.
 
-1. **A sample can miss the population in two ways:** by chance ([[Random Error and Precision|random error]]) or by a consistent tilt (bias).
-2. **Random error averages out with more data; bias does not.** *Why:* the law of large numbers pulls the sample towards whatever the sampling method actually reaches. If my survey reaches mostly people with strong opinions, adding more of them just makes my wrong answer more precise ([[Law of Large Numbers]]).
-3. **So bias must be prevented by the design,** not fixed by [[Sample Size|sample size]] ([[Sampling Methods]]).
-4. **Common sources:**
-   - **Poorly worded questions.** A **double-barreled** question asks two things at once ("Do you like animals or do you go to the movies? Yes/No").
-   - **Self-deception.** If a survey doesn't feel anonymous, answers drift toward what sounds good (everyone "believes in universalism" but is fine with the Porsche in the driveway).
-   - **Non-response.** People who skip a question ("PNTA", prefer not to answer) may differ systematically ([[Missing Data]]).
-   - **Voluntary response.** Only people with strong feelings respond.
-   - **Convenience sampling.** The sample is whoever was easy to reach.
+A sample can miss the truth about a population in two ways: by chance, which is [[Random Error and Precision|random error]], or by a consistent tilt, which is bias. Random error averages out as you collect more data; bias doesn't. More data pull the sample towards whatever the sampling method actually reaches ([[Law of Large Numbers]]). If a survey mostly reaches people with strong opinions, adding more of them just makes the wrong answer more precise. So bias has to be prevented by the design, not fixed by the [[Sample Size|sample size]] ([[Sampling Methods]]).
 
-Biased samples damage **external validity**, and no statistical technique can fully fix a bad sample ([[External Validity]]). "Garbage in, garbage out."
+Common sources:
+- **Poorly worded questions,** such as a question that asks two things at once ("Do you like animals or do you go to the movies? Yes/No").
+- **Answers that sound good.** If a survey doesn't feel anonymous, people drift towards the answers they think they should give.
+- **Non-response.** People who skip a question may differ systematically from those who answer ([[Missing Data]]).
+- **Voluntary response.** Only people with strong feelings respond.
+- **Convenience sampling.** The sample is whoever was easy to reach.
 
-For example:
+Biased samples damage [[External Validity|external validity]], and no statistical technique can fully fix a bad sample. If the data going in are poor, so are the conclusions coming out.
 
-From the book: a **non-response rate** above about 15–30% can make a sample unrepresentative. **Anecdotal evidence** (a few memorable cases) is not a substitute for a well-collected sample ([[References|Vu and Harrington 2020, Ch. 1]], pp. 19–21).
+For example, the book notes that a non-response rate above about 15 to 30% can make a sample unrepresentative, and that anecdotes (a few memorable cases) are no substitute for a well-collected sample ([[References|Vu and Harrington 2020, Ch. 1]], pp. 19–21).
 
-Common mistakes:
-
-- **"A bigger sample fixes bias."** Bigger biased samples are still biased.
-- **"Bias means the researcher is dishonest."** It is about the process, usually unintended.
+A bigger sample doesn't fix bias: a bigger biased sample is still biased. And bias isn't about the researcher being dishonest. It is about the process, and it is usually unintended.
 
 See also: [[Population and Sample]], [[Construct Validity]].
 

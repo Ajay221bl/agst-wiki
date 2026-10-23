@@ -14,9 +14,9 @@ aliases:
 status: seedling
 ---
 
-Base R's quick exploratory plots: `hist()` for one [[Types of Data|quantitative]] variable, `boxplot(y ~ group)` for comparing groups, plus `plot()`, `barplot()`, `mosaicplot()` and `qqnorm()`.
+These are base R's quick plots for exploring data: `hist()` for one [[Types of Data|quantitative]] variable, `boxplot(y ~ group)` for comparing groups, plus `plot()`, `barplot()`, `mosaicplot()` and `qqnorm()`.
 
-1. **Plot before testing** ([[Why visualize data before testing]]). Base R has a function for each plot in Describing Data ([[Histogram]], [[Box Plot and Five-Number Summary]]):
+Plot before testing ([[Why visualize data before testing]]). Base R has a function for each of the common plots ([[Histogram]], [[Box Plot and Five-Number Summary]]):
 
 ```r
 hist(d$ACE_total, main = "ACE total", xlab = "ACE score", col = "lavender")
@@ -31,22 +31,19 @@ qqnorm(x); qqline(x)                                          # Q-Q plot
 colors()                                                      # built-in colour names
 ```
 
-2. **Why the mean and [[Median|median]] lines:** the gap between them shows skew at a glance ([[Shape of a Distribution]]).
-3. **Why `boxplot(score ~ major)`:** side-by-side boxes show what ANOVA will test ([[Plots for Two Variables]]).
-4. **Why `beside = TRUE`:** side-by-side bars share a baseline, stacked ones don't ([[Plots for Categorical Data]]).
-5. **Why `qqline`:** the reference line makes departures from normality visible ([[Q-Q Plot]]).
+Some of these choices have reasons:
+- The mean and [[Median|median]] lines show skew at a glance, from the gap between them ([[Shape of a Distribution]]).
+- `boxplot(score ~ major)` shows side-by-side boxes, which is what ANOVA will test ([[Plots for Two Variables]]).
+- `beside = TRUE` puts bars side by side, so they share a baseline; stacked bars don't ([[Plots for Categorical Data]]).
+- `qqline` adds a reference line, which makes departures from normality visible ([[Q-Q Plot]]).
 
 ![[Box plot anatomy - canopy trees.png|700]]
 The canopy-tree numbers: the box is the [[Range and IQR|middle half]] (Q1 to Q3), the line inside is the median, whiskers stop at the last values inside the fences, and anything beyond a fence (here 25.2 m) is drawn as a separate point.
 
-Fast looks at shape, [[Outliers|outliers]] and group differences before any test ([[Why visualize data before testing]]).
+These give fast looks at shape, [[Outliers|outliers]] and group differences before any test.
 
-For example:
+For example, if the mean line sits far to the right of the median line on a histogram, the data are skewed to the right.
 
-Mean line far right of the median line on a histogram → right skew.
-
-Common mistakes:
-
-- **"Bar graph and histogram are the same function."** Factor → `plot()`/`barplot()`; number → `hist()`.
+A bar graph and a histogram aren't the same function. A factor goes to `plot()` or `barplot()`; a number goes to `hist()`.
 
 See also: [[ggpubr Plots]], [[Normality Checks]].

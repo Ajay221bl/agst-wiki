@@ -7,23 +7,16 @@ aliases:
 status: seedling
 ---
 
-Construct validity asks whether your measurements actually capture the idea (the construct) you care about.
+Construct validity asks whether your measurements actually capture the idea you care about. That idea is called the construct.
 
-1. **A study measures variables** ([[Variable and Observation]]). Some, like body weight, can be put on a scale.
-2. **Others are ideas, not things.** "Psychological distress" cannot be put on a scale like body weight.
-3. **So we measure it indirectly.** A survey (such as the COVID distress score) tries to measure it through answers to questions.
-4. **Construct validity asks whether the measure tracks the idea.** If the questions really track distress, the measure has good construct validity. If they track something else (mood that morning, reading level), it doesn't. *Why it matters:* a perfect analysis of the wrong quantity answers the wrong question. Poor question wording is one cause ([[Sampling Bias]]).
+A study measures variables ([[Variable and Observation]]). Some, like body weight, can be put on a scale. Others are ideas rather than things: "psychological distress" can't be weighed. So it is measured indirectly, for example by a survey score built from answers to questions. Construct validity asks whether that score really tracks the idea. If the questions track distress, the measure has good construct validity. If they track something else, such as mood that morning or reading level, it doesn't.
 
-A perfectly analyzed study of the wrong quantity answers the wrong question. Construct validity matters most for **surveys and psychometric instruments**, common in agricultural education and social science. Better measures help.
+This matters because a perfect analysis of the wrong quantity answers the wrong question. It matters most for surveys and questionnaires, which are common in education and social science. Poorly worded questions are one common cause of trouble ([[Sampling Bias]]), and better measures help.
 
-For example:
+For example, a question that asks two things at once, such as "Do you like animals or go to the movies?", can't measure either attitude, so anything built on it is muddled.
 
-A double-barreled question ("Do you like animals or go to the movies?") cannot measure either attitude, so any construct built on it is muddled ([[Sampling Bias]]).
+Reliable doesn't mean valid. A bathroom scale that always reads 2 kg heavy is reliable, because it is consistent, but it isn't valid.
 
-Common mistakes:
-
-- **"Reliable means valid."** A bathroom scale that always reads 2 kg heavy is reliable (consistent) but not valid.
-
-See also: [[Statistical Conclusion Validity]], [[Internal Validity]].
+See also: [[Statistical Conclusion Validity]], [[Internal Validity]], [[Validity]].
 
 Further reading: [[References|Kirk 2013, Ch. 1]].

@@ -10,22 +10,22 @@ aliases:
 status: seedling
 ---
 
-`wilcox.test()` runs the rank-based versions of the one-sample, paired and two-sample t-tests, and `kruskal.test()` the rank-based version of one-way ANOVA.
+`wilcox.test()` runs the rank-based versions of the one-sample, paired and two-sample t-tests. `kruskal.test()` runs the rank-based version of one-way ANOVA.
 
-1. **Rank tests replace values by their ranks**, so [[Outliers|outliers]] and [[Shape of a Distribution|skew]] can't dominate ([[Ranks]], [[Nonparametric Alternatives]]).
-2. **Each parametric test has a rank partner**, and R mirrors the arguments of the parametric function ([[t.test()]], [[aov()]]):
-   - `wilcox.test(x, mu = m0)`: signed-rank, one sample.
-   - `wilcox.test(x, y, paired = TRUE)`: signed-rank, paired.
-   - `wilcox.test(y ~ group, data = d)`: rank-sum (Mann–Whitney), two groups.
-   - `kruskal.test(y ~ group, data = d)`: Kruskal–Wallis, 3+ groups.
-3. **Read the [[Parameter vs Statistic|statistic]] and the p-value** (V, W or chi-squared). *Why chi-squared for Kruskal–Wallis:* its statistic is compared with a chi-square curve on k − 1 df ([[Chi-Square Test]]).
-4. **Ties give a warning**: "cannot compute exact p-value with ties". R switches to an approximation; it is not an error.
-5. **Run them beside the t-test or ANOVA**, not instead of looking. Agreement means the conclusion doesn't hinge on normality ([[Why rank tests trade power for robustness, and why run both]]).
+Rank tests replace values by their ranks, so [[Outliers|outliers]] and [[Shape of a Distribution|skew]] can't dominate ([[Ranks]], [[Nonparametric Alternatives]]). Each standard test has a rank partner, and R mirrors the arguments of the standard function ([[t.test()]], [[aov()]]):
+- `wilcox.test(x, mu = m0)`: signed-rank test, one sample.
+- `wilcox.test(x, y, paired = TRUE)`: signed-rank test, paired.
+- `wilcox.test(y ~ group, data = d)`: rank-sum (Mann–Whitney) test, two groups.
+- `kruskal.test(y ~ group, data = d)`: Kruskal–Wallis test, 3 or more groups.
+
+Read the [[Parameter vs Statistic|statistic]] (V, W or chi-squared) and the p-value. Kruskal–Wallis reports a chi-squared value because its statistic is compared with a chi-square curve on k − 1 degrees of freedom ([[Chi-Square Test]]). Tied values give the warning "cannot compute exact p-value with ties". R then switches to an approximation; it isn't an error.
+
+Run them alongside the t-test or ANOVA, not instead of looking at the data. If they agree, the conclusion doesn't depend on normality ([[Why rank tests trade power for robustness, and why run both]]).
 
 ![[Worked example - rank-based test.png|700]]
 The outlying stem-cell sheep is far out as a value but only one step up as a rank.
 
-It gives a rank-based check in one line per design, with the same formula style as the tests it checks.
+They give a rank-based check in one line for each design, in the same formula style as the tests they check.
 
 For example:
 
@@ -36,9 +36,6 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)          # chi-squared = 5.75, d
 ```
 Checked in R on the book data ([[Nonparametric Alternatives]]).
 
-Common mistakes:
-
-- **"wilcox.test is one test."** It is two: signed-rank (one sample or paired) and rank-sum (two groups), chosen by the arguments.
-- **"A tie warning means the result is invalid."** It means the p-value is approximate.
+wilcox.test is really two tests: the signed-rank test (one sample or paired) and the rank-sum test (two groups), chosen by the arguments. And a tie warning doesn't mean the result is invalid, only that the p-value is approximate.
 
 See also: [[Functions and Arguments]], [[Test Choice Guide]].

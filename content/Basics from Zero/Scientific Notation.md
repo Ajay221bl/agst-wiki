@@ -9,26 +9,21 @@ aliases:
 status: seedling
 ---
 
-R writes very small or very large numbers as "number e [[Statistical Power|power]]", so `2.2e-16` means $2.2 \times 10^{-16}$ = 0.00000000000000022.
+R writes very small or very large numbers in a short form: `2.2e-16` means $2.2 \times 10^{-16}$, which is 0.00000000000000022.
 
-1. **Powers of ten count zeros.** $10^3 = 1000$ (three zeros); $10^{-3} = 0.001$ (the 1 sits three places after the point).
-2. **Any number can be written as (a number between 1 and 10) × (a power of ten).** 15,000 = $1.5 \times 10^4$; 0.0034 = $3.4 \times 10^{-3}$. *Why bother:* very small and very large numbers become short and easy to compare by their power.
-3. **R writes "× 10 to the power" as `e`.** So:
-   - `1.5e+04` = 15,000
-   - `3.4e-3` = 0.0034
-   - `2.2e-16` = 0.00000000000000022
-4. **Read the power first.** A more negative power means a smaller number: `1e-10` is far smaller than `1e-3`. *Why this matters:* p-values are often tiny, and `p-value < 2.2e-16` just means "smaller than the smallest number R bothers to print", reported as p < 0.001 ([[P-Value]]).
+Powers of ten count places. $10^3 = 1000$ has three zeros, and $10^{-3} = 0.001$ has the 1 three places after the point. Any number can be written as a number between 1 and 10 times a power of ten: 15,000 is $1.5 \times 10^4$ and 0.0034 is $3.4 \times 10^{-3}$. This keeps very small and very large numbers short and easy to compare.
 
-Printing sixteen zeros wastes space, and computers cannot store infinitely small numbers precisely. R prints `p-value < 2.2e-16` when the true p-value is smaller than the smallest gap it can reliably represent.
+R writes "times 10 to the power" as the letter `e`:
+- `1.5e+04` = 15,000
+- `3.4e-3` = 0.0034
+- `2.2e-16` = 0.00000000000000022
 
-For example:
+Read the power first. The more negative the power, the smaller the number, so `1e-10` is far smaller than `1e-3`.
 
-R output: `t = -5.4548, df = 129, p-value = 2.411e-07`.
-Read the p-value as 0.0000002411. It is tiny, not 2.4.
+This matters because p-values are often tiny. When R prints `p-value < 2.2e-16`, it means the p-value is smaller than the smallest number R can reliably show. Report it as p < 0.001 ([[P-Value]]).
 
-Common mistakes:
+For example, R prints `t = -5.4548, df = 129, p-value = 2.411e-07`. Read the p-value as 0.0000002411. It is tiny, not 2.4.
 
-- **"e means Euler's number here."** In R output, `e-16` is shorthand for $\times 10^{-16}$.
-- **"A p-value of 2.2e-16 is exactly that number."** It means "smaller than this"; the true value could be even smaller.
+The `e` here has nothing to do with Euler's number; it is just shorthand for $\times 10^{-16}$ and the like. And `p-value < 2.2e-16` does not mean the p-value is exactly 2.2e-16. It means it is smaller than that.
 
 See also: [[Proportions and Percentages]], [[Squares and Square Roots]], [[t.test()]], [[shapiro.test()]].

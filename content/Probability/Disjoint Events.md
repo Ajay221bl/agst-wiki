@@ -8,27 +8,17 @@ aliases:
 status: seedling
 ---
 
-Two events are disjoint (mutually exclusive) when they cannot happen at the same time, so $P(A \text{ and } B) = 0$.
+Two events are disjoint, or mutually exclusive, when they can't happen at the same time. Then $P(A \text{ and } B) = 0$.
 
-1. **Events are groups of outcomes** ([[Sample Space and Events]]).
-2. **Two groups may share outcomes or not.** Roll one die: "get a 2" and "get a 5" share no outcome, so they can't both happen on the same roll.
-3. **No shared outcomes = disjoint (mutually exclusive).** Drawn as a [[Venn Diagram|Venn diagram]], their circles do not touch, and $P(A \text{ and } B) = 0$.
-4. **A and its complement are always disjoint** ([[Complementary Events]]).
-5. **For disjoint events, "or" is just addition:** $P(A \text{ or } B) = P(A) + P(B)$. *Why:* there's no overlap to double-count ([[Addition Rule]]).
-6. **Disjoint is not the same as independent.** Disjoint events are actually strongly dependent: if one happens, the other certainly didn't ([[Independent Events]]).
+An event is a group of outcomes ([[Sample Space and Events]]). Two events either share some outcomes or they don't. On one roll of a die, "get a 2" and "get a 5" share no outcome, so they can't both happen. In a [[Venn Diagram|Venn diagram]], their circles don't touch. An event and its complement are always disjoint ([[Complementary Events]]).
+
+For disjoint events, "or" is plain addition: $P(A \text{ or } B) = P(A) + P(B)$. Normally the [[Addition Rule]] subtracts the overlap, $P(A \text{ and } B)$, which would otherwise be counted twice. With no overlap, there is nothing to subtract.
 
 ![[Venn diagrams - addition, disjoint, conditional.png|700]]
 Left: adding A and B counts the overlap twice, so the addition rule subtracts it once. Middle: disjoint events have no overlap at all. Right: conditioning on B throws away everything outside B, so P(A | B) is the dark overlap as a share of B.
 
-Disjointness simplifies the [[Addition Rule]]. Normally $P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B)$, subtracting the overlap that was counted twice. If there is no overlap, the subtraction disappears: $P(A \text{ or } B) = P(A) + P(B)$.
+For example, on one die, $P(2 \text{ or } 5) = 1/6 + 1/6 = 2/6$.
 
-For example:
-
-One die: $P(2 \text{ or } 5) = 1/6 + 1/6 = 2/6$. No overlap, so nothing to subtract.
-
-Common mistakes:
-
-- **"Disjoint means independent."** The opposite, nearly: two disjoint events with non-zero probabilities are **never** independent. If one happens, the other's probability drops to 0, so knowing one changes the other. See [[Independent Events]].
-- **"Disjoint events have probabilities that add to 1."** Only if together they cover the whole sample space (complements). A 2 and a 5 are disjoint but add to 1/3.
+Disjoint is not the same as independent. It is nearly the opposite: two disjoint events that each have some chance of happening are never independent. If one happens, the other's chance drops to 0, so knowing one tells you about the other ([[Independent Events]]). Also, disjoint events only add to 1 if together they cover every outcome. A 2 and a 5 are disjoint, but together they make only 1/3.
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (pp. 93–96).

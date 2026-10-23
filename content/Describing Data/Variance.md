@@ -9,34 +9,25 @@ aliases:
 status: seedling
 ---
 
-The variance is the average squared distance of the data from their mean (dividing by $n - 1$ for a sample).
+The variance is the average squared distance of the data from their mean. For a sample, you divide by $n - 1$ rather than $n$.
 
-1. **Spread means how far values sit from the centre.** For each value, that's its deviation from the mean, $x_i - \bar{x}$ ([[Deviations from the Mean]]).
-2. **Averaging the deviations fails:** they **always sum to zero**, because the mean is the balancing point.
-3. **So square them first.** Squaring removes the signs, and it weights big distances more ([[Squares and Square Roots]]). *Why squares rather than [[Absolute Value|absolute values]]:* variances of independent quantities add, which makes standard errors possible ([[Standard Error]]).
-4. **Add the squares: the [[Sums of Squares and Mean Squares|sum of squares]]**, $\sum (x_i - \bar{x})^2$ ([[Summation Notation]]).
-5. **Divide by $n - 1$ to get an average squared distance:**
+Spread means how far values sit from the centre. For each value, that is its deviation from the mean, $x_i - \bar{x}$ ([[Deviations from the Mean]]). You can't just average the deviations, because they always add up to zero: the mean is the balance point. So square them first. Squaring removes the signs and gives big distances more weight ([[Squares and Square Roots]]). Squares are used rather than [[Absolute Value|absolute values]] because the variances of independent quantities add up, which is what makes standard errors possible ([[Standard Error]]).
+
+Adding the squared deviations gives the [[Sums of Squares and Mean Squares|sum of squares]], $\sum (x_i - \bar{x})^2$ ([[Summation Notation]]). Dividing by $n - 1$ gives an average squared distance:
 $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1}$$
-   *Why $n - 1$ and not $n$:* the deviations are measured from $\bar{x}$, which was fitted to these same data, so they come out a little too small; dividing by $n - 1$ corrects that on average ([[Why we divide by n minus 1]], [[Degrees of Freedom]]).
-6. **The result is in squared units** ("worms²"). Its square root brings the units back: the standard deviation ([[Standard Deviation]]).
+Why $n - 1$ and not $n$? The deviations are measured from $\bar{x}$, which was worked out from these same data, so they come out a little too small. Dividing by $n - 1$ corrects for that on average, which makes $s^2$ an unbiased estimate of the population variance $\sigma^2$ ([[Why we divide by n minus 1]], [[Degrees of Freedom]], [[Unbiased Estimator]]).
+
+The variance is in squared units, such as "worms²". Its square root brings the units back: that is the [[Standard Deviation|standard deviation]].
 
 ![[Deviations from the mean.png|700]]
-Each line is one value's distance from the mean. Square them, add them (32), divide by n − 1 (7) and you have the variance; the square root gives the SD back in the original units.
+Each line is one value's distance from the mean. Square them, add them (32), divide by n − 1 (7) and you have the variance; the square root gives the standard deviation back in the original units.
 
-Variance is the mathematical workhorse of spread. Variances of independent quantities add, which is how standard errors for differences are built ([[Standard Error]]), and ANOVA literally analyzes it: it splits the total variance into between-group and within-group parts ([[Between- and Within-Group Variability]]).
+The variance does the heavy lifting behind measures of spread. Because variances of independent quantities add, it is how standard errors for differences are built. And ANOVA literally analyses it, splitting the total variance into a between-group part and a within-group part ([[Between- and Within-Group Variability]]).
 
-Dividing by $n - 1$ instead of $n$ makes $s^2$ an **unbiased** estimator of $\sigma^2$ ([[Why we divide by n minus 1]]).
+For example, take the data 1, 2, 3, 6, 3, with mean 3. The deviations are −2, −1, 0, 3 and 0 (sum 0). Squared, they are 4, 1, 0, 9 and 0 (sum 14). So $s^2 = 14/4 = 3.5$.
 
-For example:
+The variance and the standard deviation aren't two different measures of two different things: the standard deviation is just the square root of the variance. And dividing by $n$ is the formula for a whole population; for a sample, divide by $n - 1$.
 
-Data 1, 2, 3, 6, 3 (mean 3). Deviations: −2, −1, 0, 3, 0 (sum 0). Squared: 4, 1, 0, 9, 0 (sum 14).
-$s^2 = 14/4 = 3.5$.
-
-Common mistakes:
-
-- **"Variance and SD are different measures of different things."** The SD is just the square root of the variance.
-- **"Divide by n."** That is the population formula; for a sample, $n - 1$.
-
-See also: [[Mean]], [[Pooled Variance]], [[Unbiased Estimator]].
+See also: [[Mean]], [[Pooled Variance]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).

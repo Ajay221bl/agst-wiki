@@ -11,12 +11,12 @@ aliases:
 status: seedling
 ---
 
-`emmeans()` estimates each group's mean from the model with a [[Confidence Interval|CI]], and `multcomp::cld()` assigns SAS-style letters so groups sharing a letter are not significantly different.
+`emmeans()` estimates each group's mean from the model, with a [[Confidence Interval|confidence interval]] (CI). `multcomp::cld()` then assigns letters, so that groups sharing a letter are not significantly different.
 
-1. **Many pairwise results are easier to read as letters** ([[Compact Letter Display]]).
-2. **Step 1: get each group's estimated mean and CI from the fitted model** with `emmeans()` ([[aov()]]).
-3. **Step 2: compare them with a Tukey adjustment and turn the results into letters** with `cld()`. *Why Tukey:* it controls the family-wise error for all pairs ([[Tukey HSD]]).
-4. **Step 3: plot means, CIs and letters together** ([[ggpubr Plots]]). *Why:* a reader sees size, [[Random Error and Precision|precision]] and significance in one picture.
+Many pairwise results are easier to read as letters ([[Compact Letter Display]]). There are three steps:
+1. Get each group's estimated mean and CI from the fitted model with `emmeans()` ([[aov()]]).
+2. Compare them with a Tukey adjustment and turn the results into letters with `cld()`. Tukey's adjustment controls the chance of any false positive across all the pairs ([[Tukey HSD]]).
+3. Plot the means, CIs and letters together ([[ggpubr Plots]]), so a reader sees size, [[Random Error and Precision|precision]] and significance in one picture.
 
 ```r
 library(emmeans); library(multcomp)
@@ -32,14 +32,10 @@ ggplot(letters_df, aes(x = major, y = emmean, label = .group)) +
 ![[Compact letter display.png|700]]
 The letters summarize the same Tukey results: groups that share a letter are not significantly different.
 
-Letters on a plot are the compact way to report [[Post Hoc Tests|mean separation]] ([[Compact Letter Display]]).
+Letters on a plot are a compact way to report which means differ ([[Post Hoc Tests|mean separation]]).
 
-For example:
+For example, in the Halloween costume data, Superman's point gets a letter of its own, while Hulk, Ninja Turtle and Spider-Man share one.
 
-Costumes: Superman's point gets a letter of its own; Hulk, Ninja Turtle and Spider-Man share one.
-
-Common mistakes:
-
-- **"Shared letter means equal means."** It means not significantly different.
+A shared letter doesn't mean equal means. It means not significantly different.
 
 See also: [[Writing a Conclusion]].

@@ -10,22 +10,18 @@ aliases:
 status: seedling
 ---
 
-The more times you repeat a chance process (or the bigger your sample), the closer the observed [[Proportions and Percentages|proportion]] or average gets to the true probability or mean.
+The more times you repeat a chance process, or the bigger your sample, the closer the observed [[Proportions and Percentages|proportion]] or average gets to the true probability or mean.
 
-1. **A relative frequency is an [[Point Estimate|estimate]] of a probability** ([[Classical vs Relative Frequency Probability]]). How good an estimate?
-2. **With few tries, it can be far off.** Flip a fair coin 10 times and you might get 7 heads (70%).
-3. **With many tries, it gets close.** Flip it 10,000 times and you will get very close to 50%. *Why:* nothing "corrects" the coin; the early streaks just get swamped by the many later flips, so they matter less and less to the overall share.
-4. **The same holds for averages.** As the [[Sample Size|sample size]] grows, the sample mean $\bar{x}$ settles toward the population mean $\mu$, and $s$ settles toward $\sigma$ ([[Mean]], [[Parameter vs Statistic]]).
-5. **This is why bigger samples are trusted more.** It's the first step towards the idea that the [[Variability|variability]] of $\bar{x}$ shrinks as $n$ grows, which the standard error makes precise ([[Standard Error]], [[Sampling Distribution]]).
+A relative frequency is an [[Point Estimate|estimate]] of a probability ([[Classical vs Relative Frequency Probability]]). With few tries it can be far off: flip a fair coin 10 times and you might get 7 heads, which is 70%. With many tries it gets close: flip it 10,000 times and you will be very near 50%. Nothing "corrects" the coin. The early streaks simply get swamped by all the later flips, so they matter less and less to the overall share.
+
+The same holds for averages. As the [[Sample Size|sample size]] grows, the sample mean $\bar{x}$ settles towards the population mean $\mu$, and the sample standard deviation $s$ settles towards $\sigma$ ([[Mean]], [[Parameter vs Statistic]]). This is why bigger samples are trusted more. The [[Standard Error|standard error]] makes the idea precise by measuring how much $\bar{x}$ varies for a given sample size ([[Sampling Distribution]], [[Variability]]).
 
 ![[Law of large numbers.png|700]]
 Early on the proportion of heads swings wildly; after thousands of flips it hugs 0.5. Short runs can mislead, long runs settle.
 
-It is the justification for learning about populations from samples at all. If bigger samples did not get closer to the truth, collecting more data would be pointless. It also sets up the [[Central Limit Theorem]], which goes further and describes the *shape and spread* of sample means, not just where they settle.
+This law is the reason we can learn about populations from samples at all. If bigger samples didn't get closer to the truth, collecting more data would be pointless. The [[Central Limit Theorem]] goes further and describes the shape and spread of sample means, not just where they settle.
 
-For example:
-
-Proportion of heads after:
+For example, the proportion of heads after:
 
 | Flips | Heads | Proportion |
 |---|---|---|
@@ -33,12 +29,9 @@ Proportion of heads after:
 | 50 | 28 | 0.56 |
 | 5,000 | 2,513 | 0.503 |
 
-(Made-up but typical numbers.) The proportion wanders early, then settles near 0.5.
+These are made-up but typical numbers. The proportion wanders early, then settles near 0.5.
 
-Common mistakes:
-
-- **"After five tails, heads is due."** That is the gambler's fallacy. Each flip is still 50/50 ([[Independent Events]]); the law works by dilution, not correction.
-- **"A huge sample guarantees the right answer."** Only for an unbiased, representative sample.
+After five tails, heads is not "due". That belief is the gambler's fallacy: each flip is still 50/50 ([[Independent Events]]). The law works by dilution, not correction. And a huge sample only gets close to the truth if it is unbiased and representative.
 
 See also: [[Why a bigger sample gives a narrower confidence interval]].
 

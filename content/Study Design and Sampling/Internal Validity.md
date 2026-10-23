@@ -13,24 +13,21 @@ aliases:
 status: seedling
 ---
 
-Internal validity is how confidently you can say that the independent variable, and not something else, caused the change in the dependent variable.
+Internal validity is how confidently you can say that the treatment, and not something else, caused the change in the outcome.
 
-1. **The claim is "the IV caused the change in the DV"** ([[Independent and Dependent Variables]]).
-2. **Internal validity is how far that claim can be trusted.**
-3. **Any "third variable" that could explain the result instead of the treatment is a threat to internal validity** ([[Nuisance Variables and Confounding]]).
-4. **The defense is random assignment of individual units to treatment groups.** *Why:* it balances third variables between groups ([[Random Assignment]]). Some threats need more than that:
+A study's claim is usually "the independent variable caused the change in the dependent variable" ([[Independent and Dependent Variables]]). Internal validity is how far that claim can be trusted. Anything else that could explain the result, a "third variable", is a threat to it ([[Nuisance Variables and Confounding]]). The main defence is randomly assigning individual units to the treatment groups, which balances third variables between the groups ([[Random Assignment]]). Some threats need more than that:
 
 | Threat | What happens | Example |
 |---|---|---|
-| **Confounding** | a nuisance variable tied to both treatment and response | older chickens all on one diet |
+| **Confounding** | another variable is tied to both the treatment and the outcome | older chickens all on one diet |
 | **Maturation** | subjects change naturally over time | children's reading at age 6 and again at 9 |
 | **Testing effects** | repeated testing improves scores by itself | taking the same exam three times |
-| **Attrition** | units drop out or die | loss to follow-up in long RCTs |
-| **Diffusion of treatment** | treatment leaks between groups | participants share information |
-| **Compensatory rivalry** | the control group works harder to prove itself | "I'll show you I'm good even on placebo" |
-| **Resentful demoralization** | the control group gives up | "Fine, whatever" |
+| **Attrition** | units drop out or die | people lost to follow-up in long trials |
+| **Diffusion of treatment** | the treatment leaks between groups | participants share information |
+| **Compensatory rivalry** | the control group works harder to prove itself | trying to show they can do well without the treatment |
+| **Resentful demoralization** | the control group gives up | losing interest after missing out on the treatment |
 
-5. **Subject behaviour and placebo effects threaten it too** ([[Blinding and Placebo]]).
+People's behaviour and placebo effects threaten it too ([[Blinding and Placebo]]).
 
 ```mermaid
 flowchart LR
@@ -40,19 +37,14 @@ flowchart LR
   P -.-> X["External validity:<br>can I generalize to the population?"]
   T -.-> Y["Internal validity:<br>did the treatment cause the difference?"]
 ```
-The two random steps happen at different places and buy different things. Sampling protects generalization; assignment protects causation.
+The two random steps happen at different places and do different jobs. Sampling protects generalization; assignment protects [[Association vs Causation|causation]].
 
-A study can be perfectly analyzed and still answer the wrong question if a third variable produced the effect. Internal validity is what makes a causal claim believable.
+A study can be perfectly analysed and still mislead if a third variable produced the effect. Internal validity is what makes a causal claim believable.
 
-For example:
+For example, pens of animals placed side by side might share air, noise or disease, so the treatment could spread between them. A reviewer could raise this, and the "limitations" section of a paper is often about issues like it.
 
-Pens of animals placed side by side might share air, [[Signal and Noise|noise]] or disease: a diffusion-of-treatment problem that a reviewer could raise. Limitations sections are often internal-validity issues like this.
+Internal validity isn't about generalizing to other settings; that is [[External Validity|external validity]]. And a big [[Population and Sample|sample]] doesn't protect it: size doesn't fix confounding, but randomization does.
 
-Common mistakes:
-
-- **"Internal validity is about generalizing."** That is [[External Validity]].
-- **"A big [[Population and Sample|sample]] protects internal validity."** Size doesn't fix confounding; randomization does.
-
-See also: [[Association vs Causation|causal]], [[Why random assignment and random sampling protect different things]], [[Why RCTs trade external validity for internal validity]].
+See also: [[Why random assignment and random sampling protect different things]], [[Why RCTs trade external validity for internal validity]], [[Validity]].
 
 Further reading: [[References|Kirk 2013, Ch. 1]].

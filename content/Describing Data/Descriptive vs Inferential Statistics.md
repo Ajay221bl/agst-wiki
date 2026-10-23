@@ -11,32 +11,22 @@ aliases:
 status: seedling
 ---
 
-Descriptive statistics summarize the sample you have; inferential statistics use that sample to say something about the larger population.
+Descriptive statistics summarize the sample you have. Inferential statistics use that sample to say something about the larger population it came from.
 
-1. **I measure 30 tomato plants.** I have data about these 30 plants, and a question about all plants of this variety ([[Population and Sample]]).
-2. **Describing the 30 needs no guessing.** "Their average height is 41 cm and the [[Standard Deviation|SD]] is 6 cm" is **descriptive**: true of these 30 plants, full stop.
-3. **Saying something about all plants needs a leap.** "The average height of all plants of this variety is probably between 39 and 43 cm" is **inferential**: it reaches beyond my 30 plants. *Why it comes with uncertainty:* a different 30 plants would have given a slightly different average ([[Sampling Distribution]]).
-4. **The leap is only justified by how the sample was chosen and by probability theory.** That's why inference needs random sampling and [[Test Assumptions|assumptions]], and description doesn't ([[Random Sampling]], [[Why probability comes before statistics]]).
+Say you measure 30 tomato plants. You have data about these 30 plants and a question about all plants of this variety ([[Population and Sample]]). Describing the 30 needs no guessing: "their average height is 41 cm and the [[Standard Deviation|standard deviation]] is 6 cm" is simply true of these plants. That is descriptive. Saying "the average height of all plants of this variety is probably between 39 and 43 cm" reaches beyond your 30 plants. That is inferential, and it comes with uncertainty, because a different 30 plants would have given a slightly different average ([[Sampling Distribution]]). The leap is only justified by how the sample was chosen and by probability theory, so inference needs random sampling and [[Test Assumptions|assumptions]], and description doesn't ([[Random Sampling]], [[Why probability comes before statistics]]).
 
 | Descriptive | Inferential |
 |---|---|
-| mean, [[Median\|median]], SD, [[Range and IQR\|IQR]], plots, tables | confidence intervals, p-values, hypothesis tests, Bayesian analysis |
+| mean, [[Median\|median]], standard deviation, [[Range and IQR\|interquartile range]], plots, tables | confidence intervals, p-values, hypothesis tests, Bayesian analysis |
 | about **this** sample | about the **population** |
 | no sampling assumptions | needs random sampling and theory |
 
-5. **Always describe first.** Inference uses the descriptive numbers as its raw material, and a plot shows problems a test won't ([[Why visualize data before testing]]).
+Always describe first. Inference uses the descriptive numbers as its raw material, and a plot shows problems that a test won't ([[Why visualize data before testing]]). Mixing the two up leads to errors such as testing a hypothesis about something you already measured, or reporting a p-value when you measured the whole population.
 
-Mixing them up causes errors like testing a hypothesis about something I already measured, or reporting a p-value when I measured the whole population.
+For example, a rare berry grows in only one corner of Arkansas, and you measure every plant. That is a **census**. There is no sampling [[Variability|variability]] left to account for, so description is enough.
 
-For example:
+Descriptive statistics aren't just a warm-up: they are how you check assumptions and spot problems before any test. And a [[Confidence Interval|confidence interval]] doesn't describe the sample. It is inferential, because it estimates a population value ([[Parameter vs Statistic]]).
 
-A rare berry grows only in one corner of Arkansas, and I measure every plant. That is a **census**: there is no sampling [[Variability|variability]] left to account for, so description is enough.
-
-Common mistakes:
-
-- **"Descriptive statistics are just a warm-up."** They are how you check assumptions and spot problems before any test ([[Why visualize data before testing]]).
-- **"A confidence interval describes the sample."** It is inferential: it estimates a population parameter.
-
-See also: [[Parameter vs Statistic]], [[Mean]], [[Confidence Interval]], [[Hypothesis Testing]].
+See also: [[Mean]], [[Hypothesis Testing]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]].

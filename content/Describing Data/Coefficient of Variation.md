@@ -8,17 +8,13 @@ aliases:
 status: seedling
 ---
 
-The coefficient of [[Variability|variation]] (CV) is the SD divided by the mean, a unitless measure of spread that lets you compare variability across very different scales.
+The coefficient of variation (CV) is the standard deviation divided by the mean. It measures spread without units, so you can compare how variable things are even when they are measured on very different scales.
 
-1. **An SD has the units of the data**, and its size depends on the scale of what's measured ([[Standard Deviation]]).
-2. **So raw SDs can't be compared across very different things.** An SD of 5 pounds is huge for bearded dragons and trivial for humans.
-3. **Express the SD relative to the mean:**
+A [[Standard Deviation|standard deviation]] (SD) has the same units as the data, and its size depends on the scale of what you measured. An SD of 5 pounds is huge for bearded dragons and tiny for humans, so raw SDs can't be compared across very different things. The CV expresses the SD relative to the mean:
 $$CV = \frac{s}{\bar{x}} \quad (\text{often} \times 100\%)$$
-   *Why divide by the mean:* it asks "how big is the spread compared with a typical value?"
-4. **The units cancel, so the CV has none** ([[Proportions and Percentages]]), and spreads of different variables, or of the same variable on very different scales, become comparable.
-5. **Only meaningful when zero means "none"** (a ratio scale with positive values). *Why:* if the mean can be near 0 or negative, the ratio blows up or flips sign.
+It asks "how big is the spread compared with a typical value?". The units cancel, so the CV has none ([[Ratios and Fractions]], [[Proportions and Percentages]]).
 
-Raw SDs cannot be compared when the means or units differ. The CV asks "how big is the spread *relative to the typical size*?"
+The CV only makes sense for positive measurements where zero means "none", such as weight or length. If the mean can be near 0 or negative, the ratio blows up or flips sign.
 
 For example:
 
@@ -27,11 +23,8 @@ For example:
 | Humans | 170 | 30 | 0.18 (18%) |
 | Bearded dragons | 1.0 | 0.25 | 0.25 (25%) |
 
-(Illustrative numbers.) The dragons' SD is tiny in pounds, but relative to their size they are *more* variable.
+These numbers are for illustration. The dragons' SD is tiny in pounds, but compared with their size they are *more* variable.
 
-Common mistakes:
+A smaller SD only means less variability when the things being compared are on the same scale; the CV adjusts for scale. And the CV doesn't work for every variable: a mean near zero makes it explode.
 
-- **"A smaller SD always means less variability."** Only on the same scale; the CV adjusts for scale.
-- **"CV works for any variable."** It only makes sense for positive, ratio-scale measurements; a mean near zero makes it explode.
-
-See also: [[Mean]], [[Ratios and Fractions|ratio]], [[Z-Score]].
+See also: [[Mean]], [[Z-Score]], [[Variability]].

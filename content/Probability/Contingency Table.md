@@ -12,24 +12,18 @@ status: seedling
 
 A contingency table counts how many observations fall into each combination of two categorical variables, with row and column totals around the edge.
 
-1. **Two categorical variables measured on the same people**, for example "uses drugs: yes/no" and "test result: positive/negative" ([[Types of Data]]).
-2. **Every person lands in exactly one combination**, so cross the categories into a grid of cells and count.
-3. **Add the rows, the columns and the grand total around the edge.** That's a contingency table. *Why the margins:* each probability question picks a different total as its whole.
-4. **Read probabilities by choosing the whole:**
-   - a cell ÷ the grand total = "and" ([[Multiplication Rule]]);
-   - a row or column total ÷ the grand total = one variable alone;
-   - a cell ÷ its row (or column) total = "given" ([[Conditional Probability]]).
-   *Why this beats formulas:* the counts make every overlap visible, so nothing gets double-counted ([[Addition Rule]]).
-5. Think of it as a [[Venn Diagram|Venn diagram]] that has already been drawn for you.
+Suppose you record two yes-or-no facts about the same people, such as "uses drugs" and "tested positive" ([[Types of Data]]). Every person lands in exactly one combination, so you can lay the combinations out as a grid of cells and count. Then add up each row, each column and the grand total. Those totals around the edge matter, because each probability question uses a different total as its whole. A contingency table is like a [[Venn Diagram|Venn diagram]] that has already been drawn and counted for you.
 
-It turns probability rules into reading exercises. Every basic probability rule can be applied by pointing at cells:
+Every basic probability rule becomes a matter of picking cells:
 
-| Want | Numerator | Denominator |
+| Want | Top of the fraction | Bottom of the fraction |
 |---|---|---|
 | $P(A)$ (marginal) | row or column total for $A$ | grand total |
 | $P(A \cap B)$ (joint) | the cell where both occur | grand total |
 | $P(A \cup B)$ | every cell in $A$ or $B$, each counted once | grand total |
 | $P(A \mid B)$ (conditional) | the cell where both occur | **total for $B$ only** |
+
+Because the counts show every overlap, nothing gets counted twice ([[Addition Rule]], [[Multiplication Rule]], [[Conditional Probability]]).
 
 For example:
 
@@ -44,10 +38,7 @@ For example:
 - $P(\text{positive} \mid \text{user}) = 44/50 = 0.88$
 - $P(\text{user} \mid \text{positive}) = 44/134 \approx 0.33$
 
-Common mistakes:
-
-- **"Conditional probabilities use the grand total."** They use only the total of the row or column you condition on.
-- **"The table holds probabilities."** It holds counts; probabilities come from dividing.
+A conditional probability uses only the total of the row or column you condition on, not the grand total. And the table holds counts; you get probabilities by dividing.
 
 See also: [[Proportions and Percentages]], [[Sensitivity and Specificity]], [[Bayes' Theorem]], [[Ratios and Fractions]].
 

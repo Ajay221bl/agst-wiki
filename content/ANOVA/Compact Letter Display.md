@@ -10,10 +10,9 @@ aliases:
 status: seedling
 ---
 
-A compact letter display labels each group with letters so that groups sharing a letter are not significantly different and groups with no letter in common are.
+A compact letter display labels each group with letters. Groups that share a letter are not significantly different, and groups with no letter in common are.
 
-1. **Post hocs give one result per pair** ([[Post Hoc Tests]]). With many groups, a table of every pairwise p-value is hard to read: $k(k-1)/2$ rows.
-2. **Letters compress it.** Give groups that are not significantly different a shared letter ([[Tukey HSD]]):
+Post hoc tests give one result for each pair of groups ([[Post Hoc Tests]]). With many groups, a table of every pairwise p-value is hard to read, because it has $k(k-1)/2$ rows. Letters compress it: groups that are not significantly different get a shared letter ([[Tukey HSD]]).
 
 | Group | Mean | Letters |
 |---|---|---|
@@ -21,7 +20,7 @@ A compact letter display labels each group with letters so that groups sharing a
 | B | 14.0 | ab |
 | C | 15.9 | b |
 
-3. **Read it by asking "do they share a letter?"** A and C differ (no shared letter). B shares "a" with A and "b" with C, so it differs from neither. *Why that isn't a contradiction:* "not significantly different" is not "equal", so A ≈ B and B ≈ C don't force A ≈ C ([[Why we never accept the null hypothesis]]).
+Read it by asking "do they share a letter?" A and C differ, because they share no letter. B shares "a" with A and "b" with C, so it differs from neither. That isn't a contradiction: "not significantly different" doesn't mean "equal", so A ≈ B and B ≈ C don't force A ≈ C ([[Why we never accept the null hypothesis]]).
 
 ![[Compact letter display.png|700]]
 The letters summarize the same Tukey results: groups that share a letter are not significantly different.
@@ -29,14 +28,10 @@ The letters summarize the same Tukey results: groups that share a letter are not
 ![[Tukey intervals.png|700]]
 Each row is one pair of groups with its adjusted 95% interval. Intervals that cross the dashed 0 line are not significant; red ones miss 0, so that pair differs.
 
-It is the standard way agricultural and SAS-trained fields report mean separation on tables and [[Plots for Categorical Data|bar charts]].
+Letters are the standard way agricultural fields, and fields that learned statistics in SAS, report which means differ, in tables and on [[Plots for Categorical Data|bar charts]].
 
-For example:
+For example, in the Halloween costume data, **Superman gets its own letter and the other three costumes share one**, which matches the Tukey result that only Superman differs.
 
-Costume data: **Superman gets its own letter; the other three costumes share one**, matching the Tukey result that only Superman differs.
-
-Common mistakes:
-
-- **"Different letters mean very different means."** They mean significantly different, which depends on n and [[Variability|variability]] too.
+Different letters don't mean very different means. They mean significantly different, which depends on n and [[Variability|variability]] too.
 
 See also: [[emmeans() and cld()]].

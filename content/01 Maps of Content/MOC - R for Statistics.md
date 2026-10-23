@@ -7,46 +7,46 @@ status: growing
 ---
 
 > [!tip] New to this?
-> Read the first group in order. After that, each note is one function, so jump to whichever one the script in front of me uses.
+> Read the first group in order. After that, each note covers one function, so jump to whichever one your script uses.
 
-The R workflow, from opening RStudio to post hoc letters.
+How to work in R, from opening RStudio to the letters that show which groups differ.
 
 ## 1. Getting started
 - [[RStudio and Scripts]]: always work in a saved script
-- [[R Objects and Assignment]]: `<-`
-- [[Functions and Arguments]]: what goes in the parentheses
-- [[R Packages]]: install once, load every session
-- [[c() and Vectors]]: R's basic list
-- [[Data Frames]]: R's spreadsheet
+- [[R Objects and Assignment]]: storing a value under a name with `<-`
+- [[Functions and Arguments]]: what goes inside the parentheses
+- [[R Packages]]: install once, then load in every session
+- [[c() and Vectors]]: R's basic list of values
+- [[Data Frames]]: R's version of a spreadsheet
 
 ## 2. Reading and checking data
-- [[read.csv() and file.choose()]]: getting the file in
+- [[read.csv() and file.choose()]]: getting the file into R
 - [[str()]]: how R stored each column
-- [[factor()]]: making groups categorical
-- [[summary()]]: the quick overview
-- [[na.omit() and complete.cases()]]: dropping missing rows on purpose
-- [[Wide vs Long Format]] and [[stack()]]: reshaping for ANOVA
+- [[factor()]]: telling R that a column holds groups
+- [[summary()]]: a quick overview of every column
+- [[na.omit() and complete.cases()]]: dropping rows with missing values, on purpose
+- [[Wide vs Long Format]] and [[stack()]]: reshaping the data for an ANOVA
 
 ## 3. Describing and plotting
-- [[mean() and sd()]]: and `na.rm = TRUE`
-- [[describe() and describeBy()]]: everything at once, overall or by group
-- [[aggregate() and by()]]: one statistic per group
-- [[report()]]: Table 1 and text summaries
-- [[hist() and boxplot()]]: base R's quick looks
-- [[ggpubr Plots]]: publication-ready plots
+- [[mean() and sd()]]: the mean and the standard deviation, and why `na.rm = TRUE` matters when values are missing
+- [[describe() and describeBy()]]: many summaries at once, for all the data or for each group
+- [[aggregate() and by()]]: one statistic for each group
+- [[report()]]: a summary table (the "Table 1" of a paper) and written summaries
+- [[hist() and boxplot()]]: quick plots in base R
+- [[ggpubr Plots]]: plots ready for a report or a paper
 
 ## 4. Testing
-- [[shapiro.test()]]: normality
-- [[leveneTest()]]: equal variances
-- [[t.test()]]: one-sample, paired, two-sample
-- [[cohensD()]]: effect size for t-tests
+- [[shapiro.test()]]: checks whether the data look normal
+- [[leveneTest()]]: checks whether the groups have equal variances
+- [[t.test()]]: one-sample, paired and two-sample t-tests
+- [[cohensD()]]: the effect size for t-tests
 - [[power.t.test()]]: sample size and power
-- [[pnorm(), qnorm(), pt() and qt()]]: areas and cut-offs without tables
-- [[wilcox.test() and kruskal.test()]]: the rank-based checks
+- [[pnorm(), qnorm(), pt() and qt()]]: areas and cut-offs without printed tables
+- [[wilcox.test() and kruskal.test()]]: the tests based on ranks, used as a check
 - [[aov()]]: one-way ANOVA
-- [[TukeyHSD()]]: all pairs, adjusted
-- [[pairwise.t.test()]]: Bonferroni matrix
-- [[emmeans() and cld()]]: letters
+- [[TukeyHSD()]]: compares every pair of groups, adjusted for the number of tests
+- [[pairwise.t.test()]]: a table of t-tests for every pair, with the Bonferroni adjustment
+- [[emmeans() and cld()]]: letters that show which groups differ
 
 ## See it as a flowchart
 
@@ -61,9 +61,9 @@ flowchart TD
   G -->|yes| H["TukeyHSD() or pairwise.t.test()<br>emmeans() + cld() for letters"]
   G -->|no| I["Report: no factor effect"]
 ```
-*What to look at:* the order of a typical ANOVA script, from reading the file to letters.
+The order of a typical ANOVA script, from reading in the file to the letters.
 
-## Related molecular notes
+## Why notes on this topic
 - [[Why visualize data before testing]]
 - [[Why check assumptions before trusting a test]]
 - [[Why use degrees of freedom as a sanity check]]
@@ -71,5 +71,5 @@ flowchart TD
 - [[Why you must say how missing values were handled]]
 - [[Why we hope for a large p-value on assumption checks]]
 
-## Related MOCs
+## Other maps
 [[MOC - Describing Data]] · [[MOC - t-Tests]] · [[MOC - ANOVA]] · [[index|Home]]

@@ -10,28 +10,23 @@ aliases:
 status: seedling
 ---
 
-An effect size measures how big an effect is (its magnitude or strength), independent of [[Sample Size|sample size]], so it complements the p-value.
+An effect size measures how big an effect is, whatever the [[Sample Size|sample size]]. It complements the p-value.
 
-1. **The p-value answers "is it likely real?", and depends heavily on $n$** ([[P-Value]]). *Why:* the [[Test Statistic|test statistic]] grows with $\sqrt{n}$ ([[Signal and Noise]]).
-2. **We also need "how big is it?",** a number that doesn't grow just because we collected more data. That is the **effect size**, which is closer to practical importance ([[Statistical vs Practical Significance]]).
-3. **Report both.** "They're complementary, not meant to hate on each other." ([[Why report an effect size with the p-value]])
-4. **Common effect sizes**, each scaled to be comparable across studies:
-   - **Cohen's d** for t-tests: the difference in [[Standard Deviation|SD]] units ([[Cohen's d]]).
-   - **η² (eta squared)** for ANOVA: the share of total [[Variance|variance]] explained by the factor, $SS_{between}/SS_{total}$ ([[ANOVA Table]], [[Sums of Squares and Mean Squares]]).
-   - **[[Correlation|Pearson's r]]**, the correlation coefficient.
-   - **[[Odds and Odds Ratio|Odds ratios]]** for [[Types of Data|categorical]] outcomes.
+The p-value answers "is the effect likely real?", and it depends heavily on $n$ ([[P-Value]]), because the [[Test Statistic|test statistic]] grows with $\sqrt{n}$ ([[Signal and Noise]]). We also need to know how big the effect is, using a number that doesn't grow just because we collected more data. That number is the **effect size**, and it is closer to practical importance ([[Statistical vs Practical Significance]]). The two answer different questions, so report both ([[Why report an effect size with the p-value]]).
+
+Common effect sizes, each scaled so it can be compared across studies:
+- **Cohen's d** for t-tests: the difference in [[Standard Deviation|standard deviation]] units ([[Cohen's d]]).
+- **η² (eta squared)** for ANOVA: the share of the total [[Variance|variance]] explained by the factor, $SS_{between}/SS_{total}$ ([[ANOVA Table]], [[Sums of Squares and Mean Squares]]).
+- **[[Correlation|Pearson's r]]**, the correlation coefficient.
+- **[[Odds and Odds Ratio|Odds ratios]]** for [[Types of Data|categorical]] outcomes.
 
 ![[Cohens d overlap.png|700]]
 D measures how far apart two group means are in SD units. Even a large effect (d = 0.8) leaves the two groups overlapping heavily.
 
-A large $n$ makes trivial effects significant; a small $n$ can miss big ones ([[Statistical Power]]). The effect size reads the same either way ([[Why report an effect size with the p-value]]).
+A large $n$ makes trivial effects significant, and a small $n$ can miss big ones ([[Statistical Power]]). The effect size reads the same either way.
 
-For example:
+For example, in a COVID survey, a one-sample test found a difference of only 0.14 from the reference value, which is very small even if it had been significant. A paired test in the same survey gave p ≈ 0.011, but d was negligible.
 
-COVID one-sample: a difference of 0.14 from the reference value, "crazy small" even if it had been significant. COVID paired: p ≈ 0.011 but d negligible.
-
-Common mistakes:
-
-- **"A small p-value means a large effect."** No; check the effect size.
+A small p-value doesn't mean a large effect; check the effect size.
 
 Further reading: [[References|Wasserstein and Lazar 2016]], [[References|Vu and Harrington 2020, Ch. 5]] (§5.4).

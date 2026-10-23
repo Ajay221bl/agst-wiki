@@ -10,16 +10,17 @@ aliases:
 status: seedling
 ---
 
-Power is the probability that a test detects an effect that really exists: $1 - \beta$.
+Power is the probability that a test detects an effect that really exists. It equals $1 - \beta$, where β is the chance of missing the effect.
 
-1. **If a new feed truly raises weight gain, will my study notice?** Power is that chance: P(reject $H_0$ | $H_0$ false) = 1 − β ([[Type I and Type II Errors]]). Low power means a real effect may come out "not significant".
-2. **The test notices when the [[Test Statistic|test statistic]] is large,** that is, when signal is big compared with noise ([[Signal and Noise]]). So power rises with anything that grows the signal, shrinks the noise or lowers the bar.
-3. **Ways to increase power**, each through one of those routes:
-   1. **Increase α** (0.05 → 0.10): lowers the bar. Raises power, but most researchers don't want the higher Type I risk.
-   2. **Increase $n$:** shrinks the noise, because the SE is $s/\sqrt{n}$ ([[Standard Error]]). The simplest fix, not always practical (cost, rare animals).
-   3. **Increase the effect size:** grows the signal ([[Effect Size]]). For a preliminary study, design **vastly different** treatment levels instead of six subtle ones; refine later with more funding.
-   4. (Book) **Reduce [[Variability|variability]]:** shrinks the noise. Better measurement, [[Nuisance Variables and Confounding|blocking]], paired designs ([[Why use a paired test for paired data]]).
-4. **Plan power before the study.** *Why:* after a non-significant result it's too late to tell a real null from a missed effect.
+Suppose a new feed truly raises weight gain. Will your study notice? Power is that chance: the probability of rejecting $H_0$ when $H_0$ is false, which is 1 − β ([[Type I and Type II Errors]]). With low power, a real effect may come out "not significant".
+
+A test notices an effect when the [[Test Statistic|test statistic]] is large, that is, when the signal is big compared with the noise ([[Signal and Noise]]). So power rises with anything that makes the signal bigger, makes the noise smaller, or lowers the bar. There are four ways to increase it:
+1. **Raise α**, for example from 0.05 to 0.10. This lowers the bar and raises power, but most researchers don't want the higher risk of a Type I error.
+2. **Increase $n$.** This shrinks the noise, because the standard error is $s/\sqrt{n}$ ([[Standard Error]]). It is the simplest fix, but not always practical because of cost or rare animals.
+3. **Increase the effect size.** This makes the signal bigger ([[Effect Size]]). For a first study, design treatment levels that are very different from each other instead of six subtle ones, and refine them later with more funding.
+4. **Reduce [[Variability|variability]]** (from the book). This shrinks the noise, through better measurement, [[Nuisance Variables and Confounding|blocking]] or paired designs ([[Why use a paired test for paired data]]).
+
+Plan power before the study. After a non-significant result it is too late to tell a true null from a missed effect.
 
 ![[Type I and II errors and power.png|700]]
 Blue is the world where H₀ is true, orange the world with a real effect. Red (α) is a false alarm, gray (β) a missed effect, green is power. Moving the dashed [[Critical Value|cut-off]] right shrinks red but grows gray.
@@ -27,19 +28,15 @@ Blue is the world where H₀ is true, orange the world with a real effect. Red (
 ![[Power vs sample size.png|700]]
 For a medium effect at α = 0.05, power climbs with n and reaches the usual 80% target at about 64 per group.
 
-Planning power **before** collecting data avoids wasting money and animals on an underpowered study, and avoids an overpowered one that flags trivial differences ([[References|Vu and Harrington 2020, Ch. 5]], pp. 259–260).
+Planning power before collecting data avoids wasting money and animals on a study too small to find anything. It also avoids a study so large that it flags trivial differences ([[References|Vu and Harrington 2020, Ch. 5]], pp. 259–260).
 
-For example:
+For example, in a blood-pressure trial in the book, with a [[Standard Deviation|standard deviation]] of 12 mmHg, 100 people per group and a true difference of 3 mmHg, power is about 0.42. About 251 per group gives 80% power, and 500 per group gives about 97.7%, more than needed.
 
-Book blood-pressure trial: [[Standard Deviation|SD]] 12 mmHg, 100 per group, true difference 3 mmHg → power ≈ **0.42**. About **251 per group** gives 80% power; 500 per group gives about 97.7%, more than needed.
-
-[[Sample Size|Sample size]] per group (two-sample, equal $n$):
+The [[Sample Size|sample size]] per group for a two-sample test with equal group sizes is about
 $$n \approx \frac{(z_{1-\alpha/2} + z_{1-\beta})^2(\sigma_1^2 + \sigma_2^2)}{\Delta^2}$$
-For 80% power at α = 0.05: $(1.96 + 0.84)^2 = 7.84$. Targets are usually **80% or 90%**.
+For 80% power at α = 0.05, $(1.96 + 0.84)^2 = 7.84$. Targets are usually 80% or 90%.
 
-Common mistakes:
-
-- **"A non-significant result means no effect."** It may mean low power.
+A non-significant result doesn't mean there is no effect. It may mean the study had low power.
 
 See also: [[Ratios and Fractions|ratio]], [[Statistical vs Practical Significance]], [[power.t.test()]], [[Statistical Conclusion Validity]].
 

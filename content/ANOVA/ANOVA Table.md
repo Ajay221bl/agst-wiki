@@ -11,10 +11,9 @@ aliases:
 status: seedling
 ---
 
-The [[One-Way ANOVA|ANOVA]] table lists, for the factor and for the [[Residuals|residuals]], the degrees of freedom, sums of squares, mean squares, the F ratio and the p-value, and the numbers fit together like "a fun little sudoku".
+The [[One-Way ANOVA|ANOVA]] table lists, for the factor and for the [[Residuals|residuals]], the degrees of freedom (df), sums of squares, mean squares, the F ratio and the p-value. The numbers fit together like a puzzle, so each one can be checked against the others.
 
-1. **ANOVA splits the total [[Variability|variation]] into a between-groups part and a within-groups part** ([[Sums of Squares and Mean Squares]]).
-2. **The table lays out that split, one row per source, building left to right:** SS (how much variation), df (how many independent pieces), MS = SS/df (a variance), then F and p.
+ANOVA splits the total [[Variability|variation]] into a between-groups part and a within-groups part ([[Sums of Squares and Mean Squares]]). The table lays out that split with one row per source, building from left to right: the sum of squares (SS, how much variation), the df (how many independent pieces), the mean square MS = SS/df (a variance), and then F and p.
 
 | Source | df | SS | MS = SS/df | F | p |
 |---|---|---|---|---|---|
@@ -22,9 +21,9 @@ The [[One-Way ANOVA|ANOVA]] table lists, for the factor and for the [[Residuals|
 | **Within** (error, residuals) | $N - k$ | $SSE = \sum\sum(x_{ij} - \bar{x}_i)^2$ | $MSE$ | | |
 | **Total** (often not printed) | $N - 1$ | $SST = SSG + SSE$ | | | |
 
-3. **$\bar{x}$ is the [[Grand Mean|grand mean]]; $\bar{x}_i$ the mean of group $i$.** Deviations are squared for the same reason as in the variance ([[Variance]]).
-4. **Why divide SS by df:** a sum of squares grows with the number of terms, so it has to be averaged before two of them can be compared ([[Degrees of Freedom]]).
-5. **The columns check each other:** df and SS each add up to the total, and $N - 1$ should match the number of rows R used ([[Why use degrees of freedom as a sanity check]]). $SSG/SST$ is η², the effect size ([[Effect Size]]).
+Here $\bar{x}$ is the [[Grand Mean|grand mean]] and $\bar{x}_i$ is the mean of group $i$. Deviations are squared for the same reason as in the variance ([[Variance]]). Each sum of squares is divided by its df because a sum of squares grows with the number of terms, so it has to be averaged before two of them can be compared ([[Degrees of Freedom]]).
+
+The columns check each other. The df and the sums of squares each add up to the total, and $N - 1$ should match the number of rows R used ([[Why use degrees of freedom as a sanity check]]). $SSG/SST$ is η², the effect size ([[Effect Size]]).
 
 ```mermaid
 flowchart TD
@@ -33,21 +32,17 @@ flowchart TD
 ```
 The two rows of the ANOVA table split the total df (and the total sum of squares) between them, so 3 + 76 = 79. If R prints anything else, check the data.
 
-It organizes the whole calculation, and it is the place to run **sanity checks**. Software computes it for you.
+The table organizes the whole calculation, and it is the place to run quick checks. Software works it out for you.
 
-For example:
-
-Book FAMuSS output from R ([[References|Vu and Harrington 2020, Ch. 5]], p. 269):
+For example, here is the book's FAMuSS output from R ([[References|Vu and Harrington 2020, Ch. 5]], p. 269):
 ```
                     Df Sum Sq Mean Sq F value Pr(>F)
 famuss$actn3.r577x   2   7043    3522   3.231 0.0402
 Residuals          592 645293    1090
 ```
-Check: 7043/2 ≈ 3522; 645293/592 ≈ 1090; 3522/1090 ≈ 3.23. df 2 → 3 genotypes; 2 + 592 + 1 = 595 participants.
+Check: 7043/2 ≈ 3522; 645293/592 ≈ 1090; 3522/1090 ≈ 3.23. A df of 2 means 3 genotypes, and 2 + 592 + 1 = 595 participants.
 
-Common mistakes:
-
-- **"Residuals means mistakes."** It means within-group variability left over after group means are accounted for.
+"Residuals" doesn't mean mistakes. It means the within-group variability left over after the group means are accounted for.
 
 See also: [[Between- and Within-Group Variability]], [[F-Distribution]], [[aov()]], [[Tails of a Distribution]].
 

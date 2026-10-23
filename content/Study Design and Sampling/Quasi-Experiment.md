@@ -8,16 +8,15 @@ aliases:
 status: seedling
 ---
 
-A quasi-experiment compares groups like an experiment, but the researcher cannot manipulate the [[Independent and Dependent Variables|IV]] or cannot randomly assign units, usually for practical or ethical reasons.
+A quasi-experiment compares groups like an experiment does, but the researcher can't set the [[Independent and Dependent Variables|independent variable]] (IV) or can't randomly assign units to groups, usually for practical or ethical reasons.
 
-1. **A true experiment needs manipulation and random assignment** ([[Experiment]]).
-2. **Some IVs simply cannot be assigned:**
-   - The **age of cattle**, or the number of calves already born ("Cattle, hurry up, I need you to have 5").
-   - **Birth order** and achievement (first-born vs later-born).
-   - Student performance at **two different schools**.
-   - **Lead in drinking water:** you cannot ethically assign people to live in a high-lead town.
-3. **You can still compare groups,** but units arrived in their groups by some process you didn't control. *Consequence:* that process may also affect the outcome, so confounding can't be ruled out and [[Association vs Causation|causal]] claims are weaker ([[Nuisance Variables and Confounding]], [[Random Assignment]]).
-4. **Quasi-experiments are sometimes called non-randomized controlled trials.**
+A true experiment needs both manipulation and random assignment ([[Experiment]]). Some variables simply can't be assigned:
+- the age of cattle, or how many calves a cow has already had;
+- birth order (first-born or later-born) and achievement;
+- student performance at two different schools;
+- lead in drinking water, since you can't ethically make people live in a high-lead town.
+
+You can still compare the groups, but units ended up in their groups through some process you didn't control. That process may also affect the outcome, so confounding can't be ruled out and [[Association vs Causation|causal]] claims are weaker ([[Nuisance Variables and Confounding]], [[Random Assignment]]). Quasi-experiments are sometimes called non-randomized controlled trials.
 
 ```mermaid
 flowchart TD
@@ -27,18 +26,13 @@ flowchart TD
   B -->|yes| E["Experiment<br>causal conclusions possible"]
   E --> R["Randomized controlled trial<br>plus control group and blinding"]
 ```
-Two yes/no questions separate the three kinds of study, and only the bottom path supports a causal claim.
+Two yes-or-no questions separate the three kinds of study, and only the bottom path supports a causal claim.
 
-Many important questions cannot be studied experimentally. Quasi-experiments let us study them anyway, at the cost of weaker causal claims: without random assignment, a nuisance variable tied to group membership may explain the difference ([[Nuisance Variables and Confounding]]).
+Many important questions can't be studied with true experiments. Quasi-experiments let us study them anyway, at the cost of weaker causal claims.
 
-For example:
+For example, in a study of blood lead level (low, medium or high) and IQ analysed with ANOVA, the lead groups weren't assigned. Even a significant result only shows an association, which could be due to something like household income.
 
-Blood lead level (low, medium, high) and IQ, an ANOVA example: the lead groups were not assigned, so even a significant result shows an association that could be confounded with, say, household income.
-
-Common mistakes:
-
-- **"Quasi-experiments are bad science."** They are often the only ethical option. State the limitation.
-- **"A quasi-experiment is the same as an observational study."** Close cousins; in a quasi-experiment there is usually a planned comparison of defined groups, often with some researcher control.
+Quasi-experiments aren't bad science; they are often the only ethical option, as long as you state the limitation. They are close cousins of observational studies, but usually involve a planned comparison of defined groups, often with some researcher control.
 
 See also: [[Observational Study Designs]], [[Internal Validity]].
 

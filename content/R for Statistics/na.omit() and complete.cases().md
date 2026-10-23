@@ -10,10 +10,9 @@ aliases:
 status: seedling
 ---
 
-`na.omit(d)` drops every row that has a missing value in any column; `d[complete.cases(d), ]` does the same, and is easy to aim at only the columns you need.
+`na.omit(d)` drops every row that has a missing value (NA) in any column. `d[complete.cases(d), ]` does the same, and is easy to aim at only the columns you need.
 
-1. **Missing values stop many functions and change $n$** ([[Missing Data]]).
-2. **Decide which rows to keep, then drop the rest explicitly:**
+Missing values stop many functions and change $n$ ([[Missing Data]]). Decide which rows to keep, then drop the rest on purpose:
 
 ```r
 d <- na.omit(d)                                     # any NA anywhere → row dropped
@@ -22,18 +21,12 @@ COVIDtime <- COVIDtime[complete.cases(COVIDtime), ] # 1000 → 979 rows
 Amelia::missmap(d); dev.off()                       # picture of where NAs are
 ```
 
-3. **Why keep only the needed columns first:** `na.omit()` drops a row if *any* column is missing, so an unrelated empty column could throw away good data ([[Data Frames]]).
-4. **Why drop explicitly:** then you know your $n$, and the df in the test output should match it ([[Why use degrees of freedom as a sanity check]]).
-5. **Look at where the NAs are first.** *Why:* if missingness follows a pattern, the complete rows may be biased ([[Sampling Bias]]).
+Keep only the needed columns first. `na.omit()` drops a row if *any* column is missing, so an unrelated empty column could throw away good data ([[Data Frames]]). Dropping on purpose means you know your $n$, and the degrees of freedom in the test output should match it ([[Why use degrees of freedom as a sanity check]]). Look at where the missing values are first: if they follow a pattern, the complete rows may be biased ([[Sampling Bias]]).
 
-Tests need complete observations, but dropping rows changes $n$, the df and possibly who is in the sample. So select the needed columns first, then drop, then **record the count** ([[Missing Data]]).
+Tests need complete observations, but dropping rows changes $n$, the degrees of freedom, and possibly who is in the sample. So select the needed columns, then drop, then **record the count**.
 
-For example:
+For example, in a COVID survey, `na.omit` on the full data left 939 rows for a one-sample test (938 degrees of freedom). The paired analysis, which kept only the March and April columns, kept 979. Different choices give a different $n$.
 
-COVID one-sample: `na.omit` on the full data left 939 rows (df 938); the paired analysis, after keeping only March and April, kept 979. Different choices, different $n$.
-
-Common mistakes:
-
-- **"na.omit only removes NAs in the variable I'm analyzing."** It looks at every column.
+na.omit doesn't only remove missing values in the variable you are analysing; it looks at every column.
 
 See also: [[Degrees of Freedom]], [[t.test()]].

@@ -10,27 +10,21 @@ aliases:
 status: seedling
 ---
 
-Variability is the fact that measurements differ from one unit to the next; statistics exists because of it, and range, IQR, variance and SD are ways to measure it.
+Variability is the fact that measurements differ from one unit to the next. Statistics exists because of it, and the range, interquartile range, variance and standard deviation are ways to measure it.
 
-1. **Measure the same thing on different units and you get different numbers.** Plants of one variety grow to different heights. That is variability (also called variation, spread or dispersion).
-2. **It has sources**: real differences between units, [[Random Error and Precision|measurement error]], and anything not controlled ([[Nuisance Variables and Confounding]]).
-3. **A centre alone hides it.** Two groups can share a mean and have very different spreads ([[Why report both center and spread]]).
-4. **So we measure it.** Range and IQR use positions ([[Range and IQR]]); variance and SD use deviations from the mean ([[Variance]], [[Standard Deviation]]). *Why several:* the SD uses every value but is pulled by [[Outliers|outliers]]; the IQR resists them ([[Robustness]]).
-5. **Variability is also the noise in every test.** An effect is only "big" compared with how much things vary anyway ([[Signal and Noise]]). ANOVA splits it into between-group and within-group parts ([[Between- and Within-Group Variability]]).
-6. **Statistics themselves vary from sample to sample.** That second kind of variability is the sampling distribution, measured by the standard error ([[Sampling Distribution]], [[Standard Error]]).
+Measure the same thing on different plants of one variety and you get different heights. That is variability, also called variation, spread or dispersion. It comes from real differences between units, from [[Random Error and Precision|measurement error]], and from anything that wasn't controlled ([[Nuisance Variables and Confounding]]). A centre on its own hides it: two groups can share a mean and have very different spreads ([[Why report both center and spread]]).
+
+So we measure it. The range and the interquartile range use positions in the sorted data ([[Range and IQR]]). The [[Variance|variance]] and the [[Standard Deviation|standard deviation]] use [[Deviations from the Mean|deviations from the mean]]. Several measures exist because they behave differently: the standard deviation uses every value but is pulled by [[Outliers|outliers]], while the interquartile range resists them ([[Robustness]]).
+
+Variability is also the "noise" in every test. An effect only counts as big compared with how much things vary anyway ([[Signal and Noise]]). ANOVA splits variability into a between-group part and a within-group part ([[Between- and Within-Group Variability]]). And statistics themselves vary from sample to sample. That second kind of variability is described by the [[Sampling Distribution|sampling distribution]] and measured by the [[Standard Error|standard error]].
 
 ![[Same mean different spread.png|700]]
 Identical centres, very different spreads. The centre alone would call them the same.
 
 If every measurement were identical, one observation would answer every question. Variability is why we need samples, intervals and tests at all.
 
-For example:
+For example, in the FAMuSS data the three genotype means differ by about 9 [[Proportions and Percentages|percentage]] points, but values within each genotype run from 0 to over 100. That large variability within groups is why the ANOVA p-value is only 0.040 ([[One-Way ANOVA]]).
 
-FAMuSS: the three genotype means differ by about 9 [[Proportions and Percentages|percentage]] points, but values within each genotype run from 0 to over 100. That large within-group variability is why the ANOVA p is only 0.040 ([[One-Way ANOVA]]).
+Variability isn't just error: much of it is real differences between units. And the standard deviation and the standard error measure different things. The standard deviation describes how the data vary; the standard error describes how a [[Parameter vs Statistic|statistic]] varies between samples.
 
-Common mistakes:
-
-- **"Variability is error."** Much of it is real differences between units.
-- **"SD and SE both measure the data's variability."** The SD does; the SE measures the variability of a [[Parameter vs Statistic|statistic]] ([[Standard Error]]).
-
-See also: [[Variable and Observation]], [[Mean]], [[Deviations from the Mean]].
+See also: [[Variable and Observation]], [[Mean]].

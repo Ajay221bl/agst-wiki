@@ -8,13 +8,17 @@ aliases:
 status: seedling
 ---
 
-Degrees of freedom (df) count how many values are free to vary once the quantities you estimated are fixed; in practice they track the [[Sample Size|sample size]] minus the number of estimated parameters.
+Degrees of freedom (df) count how many values are free to vary once the quantities you estimated are fixed. In practice, they are the [[Sample Size|sample size]] minus the number of quantities estimated from the data.
 
-1. **Three numbers must average 10.** Pick the first two freely (say 8 and 15); the third is forced (7). Once the mean is fixed, only $n - 1 = 2$ values are free.
-2. **The same thing happens to deviations.** Deviations from $\bar{x}$ must sum to zero, so once $n - 1$ are known the last one is forced ([[Deviations from the Mean]]). *Consequence:* the [[Sums of Squares and Mean Squares|sum of squares]] only holds $n - 1$ independent pieces of information, which is why the sample variance divides by $n - 1$ ([[Variance]], [[Why we divide by n minus 1]]).
-3. **The general rule: each [[Parameter vs Statistic|parameter]] estimated from the data costs one df.** The textbook definition, "the number of sample values that can vary after certain restrictions have been imposed", is vague. In practice, df is tied to the **sample size and the number of parameters estimated**.
-4. **df sets how much to trust the spread [[Point Estimate|estimate]],** and so the shape of the t and F distributions: fewer df, heavier [[Tails of a Distribution|tails]], larger critical values ([[t-Distribution]], [[F-Distribution]], [[Critical Value]]).
-5. **Apply the rule to each test:**
+Suppose three numbers must average 10. You can pick the first two freely, say 8 and 15, but then the third is forced to be 7. Once the mean is fixed, only $n - 1 = 2$ values are free.
+
+The same thing happens to deviations. Deviations from $\bar{x}$ must add up to zero, so once $n - 1$ of them are known, the last one is forced ([[Deviations from the Mean]]). So the [[Sums of Squares and Mean Squares|sum of squares]] holds only $n - 1$ independent pieces of information, which is why the sample variance divides by $n - 1$ ([[Variance]], [[Why we divide by n minus 1]]).
+
+The general rule is that each [[Parameter vs Statistic|parameter]] estimated from the data costs one degree of freedom. The textbook definition, "the number of sample values that can vary after certain restrictions have been imposed", is vague. In practice, df depends on the **sample size and the number of parameters estimated**.
+
+Degrees of freedom say how much to trust the [[Point Estimate|estimate]] of spread, and so they set the shape of the t and F distributions. Fewer df means heavier [[Tails of a Distribution|tails]] and larger critical values ([[t-Distribution]], [[F-Distribution]], [[Critical Value]]).
+
+Applying the rule to each test:
 
 | Setting | df | Why |
 |---|---|---|
@@ -26,24 +30,18 @@ Degrees of freedom (df) count how many values are free to vary once the quantiti
 | One-way ANOVA within (denominator) | $N - k$ | $N$ values, minus $k$ group means |
 | ANOVA total | $N - 1$ | $N$ values, minus the grand mean |
 
-6. **Use it as a check.** The df in R's output tells you how many observations R actually used ([[Why use degrees of freedom as a sanity check]]).
+The df in R's output is also the best quick check in any output. It tells you how many observations R actually used ([[Why use degrees of freedom as a sanity check]]).
 
 ![[t-distribution vs normal.png|700]]
 With few degrees of freedom the t curve is lower in the middle and fatter in the tails, so cut-offs sit further out. By df = 30 it is almost the normal curve.
 
-df sets the shape of the t and F distributions ([[t-Distribution]], [[F-Distribution]]). And it is the best **sanity check** in any output ([[Why use degrees of freedom as a sanity check]]).
-
 For example:
+- A COVID survey had 1,000 rows, but `na.omit` left 939, so **df = 938** ([[Missing Data]]).
+- A salmonella sample with $n = 9$ has df = 8, as expected.
+- ANOVA df of 2 and 12 means $k = 3$ groups and $N = 15$ observations. A soy study with $N = 80$ and $k = 4$ gives 3 and 76 ([[ANOVA Table]]).
+- A [[Ratios and Fractions|numerator]] df of 1 with 4 treatments means R read the treatment codes as numbers ([[Factors and Levels]]).
 
-- COVID: 1,000 rows, but `na.omit` left 939 → **df = 938** ([[Missing Data]]).
-- Salmonella: $n = 9$ → df = 8 ✓.
-- ANOVA df of 2 and 12 → $k = 3$ groups, $N = 15$ observations. Soy: $N = 80$, $k = 4$ → 3 and 76 ([[ANOVA Table]]).
-- [[Ratios and Fractions|Numerator]] df of 1 with 4 treatments → R read the treatment codes as numbers ([[Factors and Levels]]).
-
-Common mistakes:
-
-- **"df is just n."** It is n minus the number of estimated quantities.
-- **"A decimal df is an error."** Welch's df is often fractional; that's normal.
+Degrees of freedom aren't just n: they are n minus the number of estimated quantities. And a decimal df isn't an error. Welch's df is often fractional, which is normal.
 
 See also: [[Grand Mean]].
 

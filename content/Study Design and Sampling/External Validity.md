@@ -8,12 +8,11 @@ aliases:
 status: seedling
 ---
 
-External validity is how far a study's findings can be generalized beyond the units actually studied, and it depends on random sampling from the population of interest.
+External validity is how far a study's findings can be applied beyond the units actually studied. It depends mainly on randomly sampling from the population you care about.
 
-1. **A result is about the units studied.** I study 40 broilers from one farm under ideal lab [[Test Assumptions|conditions]].
-2. **The question is how far it reaches.** Can I say anything about all broilers on commercial farms? Only as far as my 40 represent them ([[Population and Sample]]). External validity is that reach.
-3. **Random sampling from the target population is its main protection.** *Why:* a random sample resembles the population, so results transfer ([[Random Sampling]]).
-4. **Artificial conditions also limit it.** Results under ideal lab conditions may not hold on a working farm. *Why RCTs often have less of it:* their tight control makes conditions unlike real life ([[Why RCTs trade external validity for internal validity]]).
+A result is first of all about the units you studied. Say you study 40 broiler chickens from one farm under ideal lab [[Test Assumptions|conditions]]. Can you say anything about all broilers on commercial farms? Only as far as your 40 represent them ([[Population and Sample]]). External validity is that reach.
+
+The main protection is random sampling from the target population, because a random sample tends to resemble the population, so results carry over ([[Random Sampling]]). Artificial conditions also limit it: results under ideal lab conditions may not hold on a working farm. That is why tightly controlled randomized trials often score high on [[Internal Validity|internal validity]] but lower on external validity ([[Why RCTs trade external validity for internal validity]]).
 
 ```mermaid
 flowchart LR
@@ -23,19 +22,12 @@ flowchart LR
   P -.-> X["External validity:<br>can I generalize to the population?"]
   T -.-> Y["Internal validity:<br>did the treatment cause the difference?"]
 ```
-The two random steps happen at different places and buy different things. Sampling protects generalization; assignment protects [[Association vs Causation|causation]].
+The two random steps happen at different places and do different jobs. Sampling protects generalization; assignment protects [[Association vs Causation|causation]].
 
-A result that holds only for the exact units studied is of limited use. External validity needs **random sampling** from the larger population ([[Random Sampling]]). Tightly controlled RCTs score high on [[Internal Validity|internal validity]] and often **lower on external validity** ([[Why RCTs trade external validity for internal validity]]).
+For example, a random sample of Prosecco brands tells you about Prosecco, not about all wine or about Merlot. A random sample of adults in Arkansas tells you about Arkansas adults.
 
-For example:
+High internal validity doesn't imply high external validity; the two often trade off. And [[Random Assignment|random assignment]] doesn't help you generalize. It improves internal validity, while generalizing needs random sampling.
 
-A worked answer: a random sample of Prosecco brands generalizes to Prosecco, not to all wine or to Merlot. A random sample of adults in Arkansas generalizes to Arkansas adults.
-
-Common mistakes:
-
-- **"High internal validity implies high external validity."** They often trade off.
-- **"[[Random Assignment|Random assignment]] improves generalizability."** It improves internal validity; generalizing needs random sampling.
-
-See also: [[Why random assignment and random sampling protect different things]].
+See also: [[Why random assignment and random sampling protect different things]], [[Validity]].
 
 Further reading: [[References|Kirk 2013, Ch. 1]].

@@ -15,36 +15,34 @@ aliases:
 status: seedling
 ---
 
-The shape of a distribution is how the values pile up: how many peaks (modality), whether it is symmetric or has a long [[Tails of a Distribution|tail]] on one side (skew), and how peaked or flat it is (kurtosis).
+The shape of a distribution is how its values pile up: how many peaks it has, whether it is symmetric or has a long [[Tails of a Distribution|tail]] on one side (skew), and how peaked or flat it is.
 
-1. **Draw a histogram and describe the silhouette** ([[Histogram]]). Three questions cover it.
-2. **How many peaks? (modality)** Unimodal (one peak), [[Mode|bimodal]] (two), multimodal ("given up hope"), uniform (flat, no peak). *Why it matters:* two peaks often mean two groups mixed together.
-3. **Symmetric or skewed?** Symmetric folds over onto itself. **Right (positive) skew** = a long tail to the right (income, time outdoors); **left (negative) skew** = a long tail to the left. *Why it matters:* the tail pulls the mean towards it, away from the median, so the choice of centre depends on skew ([[Mean]], [[Median]]).
-4. **How peaked? (kurtosis)** Sharply peaked (leptokurtic) or flat (platykurtic). `psych::describe()` prints skew and kurtosis; you need to know they exist, not compute them.
-5. **Normal is one specific shape:** unimodal, symmetric, bell-shaped. Not every symmetric unimodal shape is normal ([[Normal Distribution]]). *Why the shape matters for tests:* many tests assume normality somewhere, checked with a Q-Q plot ([[Q-Q Plot]], [[Normality Checks]]).
+Draw a [[Histogram|histogram]] and describe its outline with three questions.
+
+**How many peaks?** One peak is unimodal, two is [[Mode|bimodal]], several is multimodal, and none (flat) is uniform. Two peaks often mean two different groups have been mixed together.
+
+**Symmetric or skewed?** A symmetric shape folds onto itself. **Right skew** (positive skew) means a long tail to the right, as with income or time spent outdoors. **Left skew** (negative skew) means a long tail to the left. The tail pulls the mean towards it and away from the median, so the skew decides which centre to report ([[Mean]], [[Median]]).
+
+**How peaked?** A distribution can be sharply peaked or flat; the technical word is kurtosis. R's `psych::describe()` prints skew and kurtosis, and it is enough to know what they mean.
+
+The [[Normal Distribution|normal distribution]] is one particular shape: one peak, symmetric and bell-shaped. Not every symmetric shape with one peak is normal. Many tests assume normality somewhere, which is checked with a [[Q-Q Plot|Q-Q plot]] ([[Normality Checks]]).
 
 ![[Distribution shapes.png|700]]
 Watch where the red mean line sits relative to the dashed median: they agree for symmetric data and the mean chases the long tail when the data are skewed.
 
-Shape decides which summaries to trust and which tests are safe.
-- Skew pulls the mean toward the tail, so the median becomes the better center ([[Why the median beats the mean for skewed data]]).
-- Most tests assume roughly normal data or sample means ([[Normality Checks]]).
+Shape decides which summaries to trust and which tests are safe. Skew pulls the mean towards the tail, so the median becomes the better centre ([[Why the median beats the mean for skewed data]]).
 
-For example:
+For example, comparing the mean with the median gives a quick check of skew:
 
-Quick skew check with mean vs median:
 | Mean vs median | Shape |
 |---|---|
 | mean > median | right skew |
 | mean < median | left skew |
 | mean ≈ median | symmetric (normal, uniform, even symmetric bimodal) |
 
-Time outdoors: mean 3.72 h, median 1.07 h → right-skewed.
+For time spent outdoors, the mean is 3.72 hours and the median is 1.07 hours, so the data are right-skewed.
 
-Common mistakes:
-
-- **"Right skew means most values are on the right."** The *tail* is on the right; most values pile up on the left.
-- **"Symmetric means normal."** A uniform distribution is symmetric but flat.
+Right skew doesn't mean most values are on the right: the tail is on the right, and most values pile up on the left. And symmetric doesn't mean normal: a uniform distribution is symmetric but flat.
 
 See also: [[Outliers]].
 

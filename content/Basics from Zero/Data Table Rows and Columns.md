@@ -9,26 +9,22 @@ aliases:
 status: seedling
 ---
 
-In a data table, each row is one observation and each column is one variable, which is the layout R expects.
+In a data table, each row is one observation and each column is one variable. This is the layout R expects.
 
-1. **I have several observations, each with values for several variables** ([[Variable and Observation]]). I need one layout that holds them all.
-2. **Give each observation its own row** (one chicken, one plot, one survey respondent). *Why rows for observations:* adding a new chicken then means adding a row, and nothing else has to change.
-3. **Give each variable its own column** (diet, weight, region). *Why:* every value in a column is the same kind of thing, so a column can be summarized (averaged, counted) as a unit.
-4. **Put one value in each cell.** *Why:* a cell holding "2.1 kg, healthy" can't be computed with.
-5. **This is the "tidy" layout, and software assumes it.** R calls such a table a [[Data Frames|data frame]], and most R functions, such as `aov()` and `t.test()` with a formula, expect it. When data arrive another way (one column per group), they have to be reshaped first ([[Wide vs Long Format]]).
+Say you weigh several chickens and note each one's diet. Give each chicken its own row, so adding a chicken just means adding a row. Give each measured thing (diet, weight) its own column, so every value in a column is the same kind of thing and the column can be averaged or counted. Put a single value in each cell: a cell that says "2.1 kg, healthy" can't be used in a calculation. A table built this way is called "tidy" ([[Variable and Observation]]).
 
-If the layout is inconsistent, software cannot tell which numbers belong to the same unit or which column holds the groups. The classic case: recording one column per [[Treatment and Control Groups|treatment group]] ("wide" format) is natural on paper, but `aov()` needs one column of responses and one column of group labels ("long" format). See [[Wide vs Long Format]].
+R stores such a table as a [[Data Frames|data frame]], and most R functions, such as `aov()` and `t.test()` with a formula, assume this layout. If the layout is messy, the software can't tell which numbers belong to the same chicken or which column holds the groups.
 
-For example:
+The usual problem is data written with one column per [[Treatment and Control Groups|treatment group]]. That is called wide format. It is natural on paper, but `aov()` needs long format: one column of measurements and one column saying which group each belongs to ([[Wide vs Long Format]]). The group column holds the [[Factors and Levels|levels of a factor]].
 
-Wide (how I might jot it down):
+For example, here are four chicken weights in wide format, the way you might jot them down:
 
 | corn | soy |
 |---|---|
 | 2.1 | 2.9 |
 | 2.4 | 2.6 |
 
-Long (what R's modeling functions want):
+And the same numbers in long format, the way R's modeling functions want them:
 
 | weight | diet |
 |---|---|
@@ -37,13 +33,8 @@ Long (what R's modeling functions want):
 | 2.9 | soy |
 | 2.6 | soy |
 
-Same numbers, different shape. In the long version every row is a chicken and every column is a variable.
+In the long version every row is a chicken and every column is a variable.
 
-Common mistakes:
-
-- **"Wide data are wrong."** They are fine for paired data and for reading. They only need reshaping for functions that want a group column.
-- **"A row is a variable."** In a tidy table it is always an observation.
-
-See also: [[Factors and Levels]].
+Wide data aren't wrong. They are fine for reading and for paired data, and only need reshaping for functions that want a group column. In a tidy table a row is always an observation, never a variable.
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (data matrices, §1.2).

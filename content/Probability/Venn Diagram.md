@@ -9,27 +9,17 @@ aliases:
 status: seedling
 ---
 
-A Venn diagram draws the sample space as a box and each event as a circle, so "or", "and", "not" and overlaps can be seen as areas.
+A Venn diagram draws all possible outcomes as a box and each event as a circle, so that "or", "and", "not" and overlaps can be seen as areas.
 
-1. **Draw every possible outcome as the inside of a box**: the sample space, total probability 1 ([[Sample Space and Events]]).
-2. **Draw an event as a circle**; its area stands for its probability.
-3. **"A or B" is everything inside either circle; "A and B" is the overlap.** *Why the picture helps:* adding the two circles counts the overlap twice, which is exactly why the addition rule subtracts it once ([[Addition Rule]]).
-4. **Outside the circle is "not A"**, the complement, $1 - P(A)$ ([[Complementary Events]]).
-5. **Circles that don't touch are disjoint**: no shared outcomes, $P(A \text{ and } B) = 0$ ([[Disjoint Events]]).
-6. **Conditioning shrinks the box to one circle.** $P(A \mid B)$ is the share of circle B that is also in A ([[Conditional Probability]]).
+The box is the sample space, with a total probability of 1 ([[Sample Space and Events]]). Each event is a circle, and its area stands for its probability. "A or B" is everything inside either circle, and "A and B" is the part where they overlap. The picture shows why adding two circles counts the overlap twice, which is why the [[Addition Rule|addition rule]] subtracts it once. Everything outside a circle is "not A", the complement, with probability $1 - P(A)$ ([[Complementary Events]]). Circles that don't touch are [[Disjoint Events|disjoint]]: they share no outcomes, so $P(A \text{ and } B) = 0$. Conditioning on B means looking only inside circle B: $P(A \mid B)$ is the share of circle B that is also in A ([[Conditional Probability]]).
 
 ![[Venn diagrams - addition, disjoint, conditional.png|700]]
 The overlap is counted once in "or", is empty for disjoint events, and becomes the [[Ratios and Fractions|numerator]] when you condition on B.
 
-It turns probability rules into pictures of areas, so you can check a formula by asking "which area is this?".
+Turning probability rules into pictures of areas lets you check a formula by asking "which area is this?".
 
-For example:
+For example, with $P(A) = 0.5$, $P(B) = 0.35$ and $P(A \text{ and } B) = 0.175$, the "or" area is $0.5 + 0.35 - 0.175 = 0.675$.
 
-$P(A) = 0.5$, $P(B) = 0.35$, $P(A \text{ and } B) = 0.175$: the "or" area is $0.5 + 0.35 - 0.175 = 0.675$ ([[Independent Events]]).
-
-Common mistakes:
-
-- **"Overlapping circles means independent."** Overlap only means the events can happen together; independence is a statement about probabilities ([[Independent Events]]).
-- **"Separate circles means independent."** Separate circles are disjoint, which makes the events strongly dependent.
+Overlapping circles don't mean the events are independent; overlap only means they can happen together. Independence is a statement about probabilities ([[Independent Events]]). And separate circles mean disjoint, which actually makes the events strongly dependent.
 
 See also: [[Proportions and Percentages]], [[Contingency Table]].

@@ -8,9 +8,9 @@ aliases:
 status: seedling
 ---
 
-A classic question: "All of these increase CI width *except*..." Why do confidence level, [[Variability|variability]] and [[Sample Size|sample size]] push the width the way they do?
+Why do the confidence level, the [[Variability|variability]] and the [[Sample Size|sample size]] change the width of a confidence interval the way they do?
 
-A CI's half-width is a critical value times the standard error, $s/\sqrt{n}$. More data shrinks the SE ([[Population and Sample|sample]] means vary less), so the interval narrows. Higher confidence needs a bigger critical value, and more variable data a bigger $s$, so both widen it.
+Half the width of a confidence interval (CI) is a critical value times the standard error (SE), $s/\sqrt{n}$. More data shrink the standard error, because means of bigger [[Population and Sample|samples]] vary less, so the interval narrows. Higher confidence needs a bigger critical value, and more variable data give a bigger $s$, so both widen it.
 
 ![[CI width vs sample size.png|700]]
 Same data spread, same confidence level; only n changes. Each fourfold increase in n halves the width.
@@ -19,11 +19,11 @@ Same data spread, same confidence level; only n changes. Each fourfold increase 
 The SE drops fast at first and then slowly: going from 4 to 16 observations halves it, and halving it again needs 64.
 
 1. Width = 2 × critical value × $s/\sqrt{n}$ ([[Confidence Interval]]).
-2. **Confidence ↑** → critical value ↑ (1.645 → 1.96 → 2.58) → wider. A wider net is needed to be more certain; a 100% CI would be "0 to 200 just in case".
-3. **Variability ↑** → $s$ ↑ → wider.
-4. **Sample size ↑** → $\sqrt{n}$ ↑ → SE ↓ → narrower. Means of big samples vary less ([[Law of Large Numbers]]).
+2. **Higher confidence** needs a bigger critical value (1.645, then 1.96, then 2.58), so the interval is wider. A wider net is needed to be more certain. A 100% interval would have to be something like "0 to 200", which says nothing.
+3. **More variability** means a bigger $s$, so the interval is wider.
+4. **A bigger sample** means a bigger $\sqrt{n}$ and a smaller standard error, so the interval is narrower. Means of big samples vary less ([[Law of Large Numbers]]).
 5. Because of the square root, halving the width needs four times the data ([[Squares and Square Roots]]).
 
-Without this, people might think more confidence is free, or that a narrow interval from a biased sample is trustworthy.
+Without this, people might think more confidence is free, or that a narrow interval from a biased sample can be trusted.
 
 See also: [[Point Estimate|estimate]], [[Standard Error]], [[Critical Value]], [[Why the sampling distribution makes inference possible]], [[Statistical Power]].

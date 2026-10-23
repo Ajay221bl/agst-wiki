@@ -7,36 +7,27 @@ aliases:
 status: seedling
 ---
 
-For large enough samples, sample means are approximately normally distributed, centered at the population mean, with spread $\sigma/\sqrt{n}$, whatever the shape of the population.
+The central limit theorem (CLT) says that for large enough samples, sample means are approximately normally distributed. They are centred at the population mean, with spread $\sigma/\sqrt{n}$, whatever the shape of the population.
 
-1. **We need the sampling distribution of $\bar{x}$,** but we only have one sample ([[Sampling Distribution]]).
-2. **The CLT says we can know it anyway.** For a random sample with a reasonably large $n$, the distribution of $\bar{x}$ has three properties:
-   1. **Shape:** approximately **normal**, *whatever the shape of the population*. *Why:* a mean adds up many independent pieces, and sums of many small independent pieces tend towards a bell ([[Normal Distribution]]).
-   2. **Center:** $\mu_{\bar{x}} = \mu$. *Why:* $\bar{x}$ is unbiased ([[Unbiased Estimator]]).
-   3. **Spread:** $\sigma_{\bar{x}} = \sigma/\sqrt{n}$, the **standard error of the mean** ([[Standard Error]]).
-3. **"Reasonably large" depends on the population.** Close to normal already: small $n$ is fine. Strongly skewed: you need more (the usual rule of thumb is about 30).
-4. **Because $\sqrt{n}$ is in the [[Ratios and Fractions|denominator]], the distribution collapses toward $\mu$ as $n$ grows:** the law of large numbers again ([[Law of Large Numbers]]).
-5. **This is what makes tests and intervals possible.** Knowing the shape, centre and spread means we can say how rare an observed $\bar{x}$ would be if $\mu$ had some value ([[Why the sampling distribution makes inference possible]]). It is also why t-tests are robust to non-normal data with large samples ([[Robustness]]).
+To test or estimate anything, we need the sampling distribution of $\bar{x}$: how sample means would vary from sample to sample. But we only have one sample ([[Sampling Distribution]]). The central limit theorem says we can know that distribution anyway. For a random sample with a reasonably large $n$, the distribution of $\bar{x}$ has three properties:
+1. **Shape:** approximately [[Normal Distribution|normal]], whatever the shape of the population. A mean adds up many independent pieces, and sums of many small independent pieces tend towards a bell shape.
+2. **Centre:** $\mu_{\bar{x}} = \mu$, because $\bar{x}$ is unbiased ([[Unbiased Estimator]]).
+3. **Spread:** $\sigma_{\bar{x}} = \sigma/\sqrt{n}$, called the **standard error of the mean** ([[Standard Error]]).
+
+How large is "reasonably large"? It depends on the population. If the population is already close to normal, a small $n$ is fine. If it is strongly skewed, you need more; the usual rule of thumb is about 30. Because $\sqrt{n}$ is in the [[Ratios and Fractions|denominator]], the distribution of sample means squeezes in towards $\mu$ as $n$ grows, which is the [[Law of Large Numbers|law of large numbers]] again.
 
 ![[Central limit theorem.png|700]]
 The population (left) is strongly skewed, yet the means of samples pile up into a bell around μ = 10 and get narrower as n grows. By n = 30 the red normal curve fits almost perfectly.
 
-Most data are not normal, yet t-tests and CIs work. The CLT is why: they rely on the *means* being normal, and means become normal fast. It is the justification for running a t-test when Shapiro–Wilk rejects normality but $n$ is large ([[Normality Checks]]).
+This is what makes tests and confidence intervals possible. Knowing the shape, centre and spread means we can say how rare an observed $\bar{x}$ would be if $\mu$ had some value ([[Why the sampling distribution makes inference possible]]). Most data are not normal, yet t-tests and confidence intervals work, because they rely on the *means* being normal, and means become normal quickly. It is also why t-tests hold up with non-normal data when samples are large ([[Robustness]]), and why you can still run a t-test when a Shapiro–Wilk test rejects normality but $n$ is large ([[Normality Checks]]).
 
-**When can you use it?**
-- The population is normal (any $n$), **or**
-- $n$ is large: traditionally **> 30** (some texts say 35). The book: at least 30 independent observations and data not strongly skewed; with extreme [[Outliers|outliers]] or strong [[Shape of a Distribution|skew]], more is needed ([[References|Vu and Harrington 2020, Ch. 4]], p. 202).
+You can use it when:
+- the population is normal (any $n$), **or**
+- $n$ is large: traditionally more than 30 (some texts say 35). The book asks for at least 30 independent observations and data that are not strongly skewed. With extreme [[Outliers|outliers]] or strong [[Shape of a Distribution|skew]], you need more ([[References|Vu and Harrington 2020, Ch. 4]], p. 202).
 
-For example:
+For example, a classic demonstration took populations that were normal, flat (uniform), skewed, or with two uneven peaks. All of them gave approximately normal sampling distributions of $\bar{x}$ by $n = 30$. And with $\sigma = 20$, the standard error is 10 for $n = 4$, 5 for $n = 16$, and 2 for $n = 100$.
 
-A classic demonstration: populations that were normal, uniform, skewed or asymmetric-bimodal all produced approximately normal sampling distributions of $\bar{x}$ by $n = 30$.
-
-SE for $\sigma = 20$: $n = 4$ → 10; $n = 16$ → 5; $n = 100$ → 2.
-
-Common mistakes:
-
-- **"The CLT makes my data normal."** It makes the distribution of *sample means* normal; your data keep their shape.
-- **"n > 30 always suffices."** Strong skew or outliers need more.
+The central limit theorem doesn't make your data normal. It makes the distribution of *sample means* normal; the data keep their shape. And more than 30 isn't always enough: strong skew or outliers need more.
 
 See also: [[Confidence Interval]], [[One-Sample t-Test]].
 

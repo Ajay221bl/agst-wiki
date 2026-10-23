@@ -8,27 +8,18 @@ aliases:
 status: seedling
 ---
 
-The mode is the most common value or category; a dataset can have one mode, two (bimodal) or several.
+The mode is the most common value or category. A data set can have one mode, two (bimodal) or several.
 
-1. **Some data are labels with no order** ([[Types of Data]]). Ask 20 classmates their favourite colour.
-2. **The [[Mean|mean]] fails:** you can't average "green" and "orange".
-3. **The [[Median|median]] fails:** "the middle colour" depends on how you happen to order them.
-4. **Counting still works.** Which colour was named most often? That is the **mode**. *Why it's the only option here:* counting is the one operation nominal data allow.
-5. **Quantitative data have modes too**, read as the peak(s) of a histogram, which is how "unimodal" and "bimodal" are defined ([[Shape of a Distribution]]).
+Some data are labels with no order ([[Types of Data]]). Ask 20 people their favourite colour. You can't take a [[Mean|mean]], because you can't average "green" and "orange". You can't take a [[Median|median]] either, because "the middle colour" depends on how you happen to order them. But you can still count: the colour named most often is the **mode**. Counting is the only operation unordered labels allow, so for them the mode is the only measure of centre that points to an actual category.
 
-For **categorical unordered data**, the mode is the only measure of center that maps back to an actual category. Mean and median need numbers or an order.
+Quantitative data have modes too. They are the peaks of a histogram, which is where the words "unimodal" (one peak) and "bimodal" (two peaks) come from ([[Shape of a Distribution]]).
 
-For example:
+For example, colours are coded 1 = red, 2 = green, 3 = orange and 4 = blue, and the answers are 2, 2, 3, 3, 1, 4, 3, 2.
+- The mean is 20/8 = 2.5, "between green and orange", which means nothing.
+- Recode the colours alphabetically and the mean changes, and still means nothing.
+- The modes are green (2) and orange (3), with three answers each, so the data are **bimodal**. That is informative, and it doesn't change when you recode.
 
-Colours coded 1 = red, 2 = green, 3 = orange, 4 = blue. Responses: 2, 2, 3, 3, 1, 4, 3, 2.
-- Mean = 20/8 = 2.5: "between green and orange"? Meaningless.
-- Recode alphabetically and the mean changes. Still meaningless.
-- Modes: green (2) and orange (3), three each → **bimodal**. Informative, and unchanged by recoding.
-
-Common mistakes:
-
-- **"The mode is useless for numbers."** It is rarely the best center for continuous data, but bimodality in a histogram is important information.
-- **"There is always exactly one mode."** There can be [[Ranks|ties]], or none worth mentioning.
+The mode is rarely the best centre for continuous data, but spotting two peaks in a histogram is important information. And there isn't always exactly one mode: there can be [[Ranks|ties]], or no clear peak at all.
 
 See also: [[Plots for Categorical Data]].
 

@@ -16,13 +16,20 @@ aliases:
 status: seedling
 ---
 
-The independent variable (IV) is the one you think drives the outcome, often the one you manipulate; the dependent variable (DV) is the outcome you measure.
+The independent variable (IV) is the one you think drives the outcome, and often the one you control. The dependent variable (DV) is the outcome you measure.
 
-1. **A study asks whether one variable affects another** ([[Variable and Observation]]).
-2. **The driver is the independent variable (IV).** In a fertilizer trial, I choose the fertilizer. Other names: explanatory variable, predictor, or, in ANOVA, the **factor** ([[Factors and Levels]]).
-3. **The thing measured is the dependent variable (DV)**, because it *depends* on the IV. Here, yield. Also called the response or outcome.
-4. **Either can be any type** ([[Types of Data]]). The IV can be qualitative or quantitative, manipulated or intrinsic: sex is qualitative and intrinsic; a dose of 2, 4 or 8 mg is quantitative and manipulated. The DV can also be qualitative or quantitative.
-5. **The pair of types picks the analysis.** Categorical IV with a quantitative DV leads to t-tests and ANOVA ([[Test Choice Guide]]). *Why manipulation matters:* only an IV the researcher sets (and assigns at random) supports a [[Association vs Causation|causal]] claim ([[Experiment]]).
+A study asks whether one variable affects another ([[Variable and Observation]]). In a fertilizer trial, you choose the fertilizer: that is the independent variable. It is also called the explanatory variable or predictor, and in ANOVA the **factor** ([[Factors and Levels]]). The crop yield is the dependent variable, because it depends on the fertilizer. It is also called the response or outcome.
+
+Either one can be any type of data ([[Types of Data]]). The independent variable can be categorical or quantitative, and set by the researcher or simply part of the subject. Sex is categorical and part of the subject; a dose of 2, 4 or 8 mg is quantitative and set by the researcher. Only an independent variable that the researcher sets, and assigns at random, supports a [[Association vs Causation|causal]] claim ([[Experiment]]).
+
+The types of the two variables pick the analysis:
+
+| Independent variable | Dependent variable | Analysis |
+|---|---|---|
+| categorical, 2 levels | quantitative | two-sample t-test |
+| categorical, 3+ levels | quantitative | one-way ANOVA |
+| quantitative | quantitative | [[Correlation\|correlation]], [[Regression\|regression]] |
+| categorical | categorical | [[Chi-Square Test\|chi-square]] |
 
 ```mermaid
 flowchart TD
@@ -37,28 +44,12 @@ flowchart TD
   H -->|no| J["Stop"]
   C & E & F & G -.->|"assumptions badly violated"| K["Nonparametric alternative"]
 ```
-Two questions pick the test: what type the IV is, and (for two groups) whether the data are paired.
+Two questions pick the test: what type the independent variable is, and, for two groups, whether the data are paired. The [[Test Choice Guide]] covers this in more detail.
 
-**The IV and DV types decide the classical analysis.** For example:
+For example, in a COVID survey, "child under 12 at home" (no or yes) is an independent variable with 2 levels, and the March distress score is the dependent variable, so the analysis is a two-sample t-test. Undergraduate major (4 levels) and a frustration score call for a one-way ANOVA.
 
-| IV | DV | Analysis |
-|---|---|---|
-| categorical, 2 levels | quantitative | two-sample t-test |
-| categorical, 3+ levels | quantitative | one-way ANOVA |
-| quantitative | quantitative | correlation, regression |
-| categorical | categorical | chi-square |
+"Independent" here has nothing to do with statistical independence; it just means "explanatory". And the independent variable doesn't have to be set by the researcher. In observational studies it isn't, and then causal claims are weaker ([[Quasi-Experiment]]).
 
-See [[Test Choice Guide]]. The online flow charts are "helpful for a starter path".
-
-For example:
-
-COVID data: "child under 12 at home" (no/yes) is the IV with 2 levels; March distress score is the DV → two-sample t-test. Undergraduate major (4 levels) and frustration score → one-way ANOVA.
-
-Common mistakes:
-
-- **"Independent variable means it is statistically independent."** Different meaning entirely: here it just means "explanatory".
-- **"The IV must be manipulated."** Not in observational studies; then causal claims get weaker ([[Quasi-Experiment]]).
-
-See also: [[Nuisance Variables and Confounding]], [[Correlation]], [[Chi-Square Test]], [[Regression]].
+See also: [[Nuisance Variables and Confounding]].
 
 Further reading: [[References|Kirk 2013, Ch. 1]].

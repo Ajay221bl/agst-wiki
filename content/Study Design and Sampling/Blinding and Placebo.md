@@ -11,29 +11,20 @@ aliases:
 status: seedling
 ---
 
-A placebo is a fake treatment that separates the real effect from the effect of believing you are treated; blinding keeps subjects (single-blind) or subjects and researchers (double-blind) from knowing who got what.
+A placebo is a fake treatment. It separates the real effect of a treatment from the effect of believing you are being treated. Blinding keeps people from knowing who got what: single-blind hides it from the subjects, and double-blind hides it from the subjects and the researchers.
 
-1. **In an experiment, the only difference between groups should be the treatment** ([[Experiment]]).
-2. **But knowing you were treated is itself a difference.** Give someone a sugar pill and suddenly "my mood, energy and sleep improved". Belief alone produces real changes: the **placebo effect**.
-3. **So give the [[Treatment and Control Groups|control group]] a placebo.** It experiences that belief too, so any *extra* improvement in the treatment group is the treatment's.
-4. **Knowledge also leaks through behaviour and measurement.** A researcher who knows who got the drug may rate them more kindly. **Blinding** stops that:
-   - **Single-blind:** subjects don't know their group.
-   - **Double-blind:** neither subjects nor researchers know.
-5. **Both protect the [[Association vs Causation|causal]] conclusion** by removing explanations other than the treatment ([[Internal Validity]]).
+In an experiment, the only difference between groups should be the treatment ([[Experiment]]). But knowing you were treated is itself a difference. Give someone a sugar pill and they may report better mood, energy and sleep. Belief alone can produce real changes; this is the **placebo effect**. So the [[Treatment and Control Groups|control group]] gets a placebo. They experience the same belief, so any extra improvement in the treatment group is due to the treatment.
 
-People (and sometimes animals) behave differently when they know they are studied. Kirk's (2013) types of subject:
-- **Cooperative subject:** works out what you want and tries to please you. Sounds good; isn't.
-- **"Screw you" subject** (Kirk's term): works out what you want and does the opposite.
-- **Evaluation-apprehension subject:** mainly wants to look intelligent and responsible.
-- **Faithful subject:** follows the protocol. The one we want.
+Knowledge can also leak through how people behave and how things are measured. A researcher who knows who got the drug may rate those people more kindly. Blinding stops this:
+- **Single-blind:** the subjects don't know which group they are in.
+- **Double-blind:** neither the subjects nor the researchers know.
 
-For example:
+Both protect the [[Association vs Causation|causal]] conclusion by removing explanations other than the treatment ([[Internal Validity]]).
 
-Knee surgery vs physical therapy: everyone knows which group they are in, so blinding is impossible, and expectations may colour self-reported pain ([[Randomized Controlled Trial]]).
+People, and sometimes animals, behave differently when they know they are being studied. Kirk (2013) describes several types of subject. Some work out what the researcher wants and try to please; others work out what the researcher wants and do the opposite; some mainly want to look intelligent and responsible. The subject you want simply follows the instructions.
 
-Common mistakes:
+For example, in a trial of knee surgery against physical therapy, everyone knows which group they are in, so blinding is impossible, and expectations may colour how much pain people report ([[Randomized Controlled Trial]]).
 
-- **"Placebo effects are fake."** The improvements are real; their cause is expectation, not the drug.
-- **"Blinding only matters for people."** Researchers' expectations can bias how they score animals or plants.
+Placebo effects aren't fake: the improvements are real, but their cause is expectation, not the drug. And blinding doesn't only matter for people. Researchers' expectations can bias how they score animals or plants too.
 
 Further reading: [[References|Kirk 2013, Ch. 1]], [[References|Vu and Harrington 2020, Ch. 1]] (§1.3).

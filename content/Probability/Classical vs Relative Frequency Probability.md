@@ -9,19 +9,17 @@ aliases:
 status: seedling
 ---
 
-Classical probability counts equally likely outcomes on paper; relative frequency probability counts how often something actually happened in many tries.
+Classical probability counts equally likely outcomes on paper. Relative frequency probability counts how often something actually happened over many tries.
 
-1. **Question: how likely is a spade?** There are two honest ways to answer.
-2. **Classical: count on paper.** List the sample space ([[Sample Space and Events]]). If every simple event is equally likely,
+Take the question "how likely is drawing a spade?". The classical way lists every possible outcome ([[Sample Space and Events]]) and, if each is equally likely, divides:
 $$P(A) = \frac{\text{number of ways } A \text{ can occur}}{\text{number of simple events in } S}$$
-   A deck has 52 cards, 13 of them spades: 13/52. *Why "equally likely" matters:* counting only gives the right share if each outcome carries the same weight; a loaded die breaks it.
-3. **Relative frequency (empirical, experimental): count what happened.** Repeat or observe the procedure many times:
-$$P(A) \approx \frac{\text{number of times } A \text{ occurred}}{\text{number of times the procedure was repeated}}$$
-   No sample space is needed. *Why this matters:* most real questions (will this seed germinate? does this patient respond?) have no equally likely outcomes to count, so data are the only route.
-4. **The two meet in the long run.** With more and more repetitions, the relative frequency settles towards the true probability ([[Law of Large Numbers]]). *Why it's written "≈":* any finite run is only an estimate.
-5. **Statistics lives on the relative-frequency side**: a sample proportion is a relative frequency used to estimate an unknown probability ([[Parameter vs Statistic]]).
+A deck has 52 cards and 13 are spades, so the answer is 13/52. This only works if every outcome is equally likely; a loaded die breaks it.
 
-Most real questions have no neat sample space. Nobody can list "all the ways a person might be a smoker". So we estimate the probability from data, which is the bridge to everything else in statistics: estimating unknown population values from observed samples ([[Population and Sample]]).
+The relative frequency way (also called empirical or experimental) repeats or watches the process many times:
+$$P(A) \approx \frac{\text{number of times } A \text{ occurred}}{\text{number of times the procedure was repeated}}$$
+No list of outcomes is needed. That matters because most real questions, like "will this seed germinate?" or "will this patient respond?", have no equally likely outcomes to count. Data are the only way in. The "≈" is there because any finite number of tries only gives an estimate. With more and more tries, the relative frequency settles towards the true probability ([[Law of Large Numbers]]).
+
+Statistics works on the relative frequency side. A sample proportion is a relative frequency used to estimate an unknown probability ([[Parameter vs Statistic]], [[Point Estimate]]). Nobody can list "all the ways a person might be a smoker", so we estimate the chance from data. That is the link to the rest of statistics: estimating unknown population values from samples ([[Population and Sample]]).
 
 For example:
 
@@ -32,11 +30,8 @@ For example:
 | Die roll less than 5 | classical | 4/6 |
 | Smoker, from a survey of 1,010 adults with 202 smokers | relative frequency | ≈ 0.20 |
 
-Common mistakes:
+Two outcomes don't mean 50/50: winning or losing the lottery is two outcomes, nowhere near equally likely. And a relative frequency is only an estimate of the true probability, a rough one when the number of tries is small.
 
-- **"Two outcomes means 50/50."** Win or lose the lottery is two outcomes, nowhere near equally likely.
-- **"A relative frequency is the true probability."** It is an estimate, and a noisy one when the number of trials is small.
-
-See also: [[Proportions and Percentages]], [[Point Estimate]].
+See also: [[Proportions and Percentages]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (§2.1, pp. 90–93).

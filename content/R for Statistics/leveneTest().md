@@ -10,10 +10,9 @@ aliases:
 status: seedling
 ---
 
-`car::leveneTest(y ~ group, data = d)` tests whether the groups have equal variances; a large p-value means homogeneity of variance looks fine.
+`car::leveneTest(y ~ group, data = d)` tests whether the groups have equal variances. A large p-value means equal variances look fine.
 
-1. **ANOVA assumes the groups share one [[Variance|variance]]** ([[Homogeneity of Variance]]).
-2. **Levene's test checks it.** It runs an ANOVA on each value's distance from its group [[Median|median]] ([[Absolute Value]]); it lives in the `car` package ([[R Packages]]):
+ANOVA assumes the groups share one [[Variance|variance]] ([[Homogeneity of Variance]]). Levene's test checks this. It runs an ANOVA on each value's distance from its group [[Median|median]] ([[Absolute Value]]), and it lives in the `car` package ([[R Packages]]):
 
 ```r
 library(car)
@@ -23,20 +22,15 @@ leveneTest(score ~ major, data = frust)
 # group   3   ...    ...
 ```
 
-3. **Why the median as the centre:** distances from the median are less affected by [[Shape of a Distribution|skew]] and [[Outliers|outliers]].
-4. **Read it like Shapiro–Wilk: a large p means no evidence of unequal variances,** which is what you want. A small p means the pooled MSE is suspect ([[ANOVA Assumptions]]).
+It uses the median as the centre because distances from the median are less affected by [[Shape of a Distribution|skew]] and [[Outliers|outliers]]. Read it like a Shapiro–Wilk test: a large p means no evidence of unequal variances, which is what you want. A small p means the pooled within-group variance, the mean square error, can't be trusted ([[ANOVA Assumptions]]).
 
 ![[Homogeneity of variance.png|700]]
 Compare the heights of the boxes and [[Box Plot and Five-Number Summary|whiskers]], not where they sit. On the right, group C is far more spread out than group A.
 
-It checks the third ANOVA [[Test Assumptions|assumption]] formally ([[ANOVA Assumptions]]). Compare group SDs first with `aggregate()` ([[aggregate() and by()]]).
+It is the formal check of ANOVA's third [[Test Assumptions|assumption]]. Compare the group standard deviations first with `aggregate()` ([[aggregate() and by()]]).
 
-For example:
+For example, Pr(>F) = 0.08 means you [[Why we never accept the null hypothesis|fail to reject]] at 0.05, so equal variances are believable, though the result is close.
 
-Pr(>F) = 0.08 → [[Why we never accept the null hypothesis|fail to reject]] at 0.05 → equal variances are plausible, "close but OK".
-
-Common mistakes:
-
-- **"The F here is the ANOVA F."** It is Levene's own [[Parameter vs Statistic|statistic]], about spreads, not means.
+The F here isn't the ANOVA F. It is Levene's own [[Parameter vs Statistic|statistic]], about spreads, not means.
 
 See also: [[aov()]].

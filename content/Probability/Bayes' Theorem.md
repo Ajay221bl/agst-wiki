@@ -9,16 +9,17 @@ aliases:
 status: seedling
 ---
 
-Bayes' theorem flips a conditional probability around: from "how likely is a positive test if you have the disease" to "how likely is the disease if you test positive".
+Bayes' theorem turns a conditional probability around. It goes from "how likely is a positive test if you have the disease?" to "how likely is the disease if you test positive?".
 
-1. **A test company tells you $P(+ \mid \text{disease})$. A patient wants $P(\text{disease} \mid +)$.** Those are different numbers: different wholes ([[Conditional Probability]]).
-2. **Write what you want with the definition:** $P(A \mid B) = P(A \cap B)/P(B)$.
-3. **Rebuild the top with the multiplication rule:** $P(A \cap B) = P(B \mid A)P(A)$, the "true route" to $B$ ([[Multiplication Rule]]).
-4. **Rebuild the bottom by adding every route to $B$:** through $A$ and through not-$A$, $P(B) = P(B \mid A)P(A) + P(B \mid A^c)P(A^c)$. *Why every route:* a positive test can come from a sick person or from a healthy one.
-5. **Put them together:**
+A test maker reports $P(+ \mid \text{disease})$, but a patient wants $P(\text{disease} \mid +)$. These are different numbers because they are shares of different groups ([[Conditional Probability]]). To get from one to the other:
+
+1. Start from the definition: $P(A \mid B) = P(A \cap B)/P(B)$.
+2. Rewrite the top with the [[Multiplication Rule]]: $P(A \cap B) = P(B \mid A)P(A)$. This is the "true" route to a positive test.
+3. Rewrite the bottom by adding every way $B$ can happen. A positive test can come from a sick person or a healthy one: $P(B) = P(B \mid A)P(A) + P(B \mid A^c)P(A^c)$.
+4. Put them together:
 $$P(A \mid B) = \frac{P(B \mid A)\,P(A)}{P(B \mid A)\,P(A) + P(B \mid A^c)\,P(A^c)}$$
-6. **The extra ingredient is $P(A)$, how common $A$ is to begin with (the prevalence).** *Why it matters so much:* when $A$ is rare, the "false route" through the many people without $A$ can outnumber the true route ([[Predictive Values and Prevalence]]).
-7. **The table route gives the same answer with less algebra:** fill in counts for an imaginary 1,000 people and read across ([[Contingency Table]]).
+
+The new ingredient is $P(A)$, how common the condition is to begin with, called the prevalence. When the condition is rare, there are so many healthy people that their false positives can outnumber the true positives ([[Predictive Values and Prevalence]]). You can get the same answer with less algebra by filling in counts for an imaginary group of people and reading across a table ([[Contingency Table]]).
 
 ```mermaid
 flowchart TD
@@ -29,13 +30,11 @@ flowchart TD
   H -->|"5% false alarms"| HP["495 test +"]
   H -->|"specificity 95%"| HN["9,405 test −"]
 ```
-[[Sensitivity and Specificity|sensitivity and specificity]] are read down the branches. PPV and NPV are read across the bottom row: PPV = 90 / (90 + 495) ≈ 15%, NPV = 9,405 / (9,405 + 10) ≈ 99.9%. Made-up numbers.
+[[Sensitivity and Specificity|Sensitivity and specificity]] are read down the branches. The predictive values are read across the bottom row: the chance of being sick after a positive test is 90 / (90 + 495) ≈ 15%, and the chance of being healthy after a negative one is 9,405 / (9,405 + 10) ≈ 99.9%. These are made-up numbers.
 
-Without it, people confuse the two directions, which is how a positive screening result gets misread as near-certain disease. It is the engine behind [[Predictive Values and Prevalence]].
+Without Bayes' theorem, people mix up the two directions, and a positive screening result gets read as near-certain disease.
 
-For example:
-
-Book mammography example ([[References|Vu and Harrington 2020, Ch. 2]], pp. 112–116): prevalence 0.35%, sensitivity 0.89, specificity 0.93. Build a **hypothetical population** of 100,000 women:
+For example, in the book's mammography example ([[References|Vu and Harrington 2020, Ch. 2]], pp. 112–116), the prevalence is 0.35%, the sensitivity 0.89 and the specificity 0.93. Imagine 100,000 women:
 
 | | Cancer | No cancer | Total |
 |---|---|---|---|
@@ -43,12 +42,9 @@ Book mammography example ([[References|Vu and Harrington 2020, Ch. 2]], pp. 112�
 | Test − | 38.5 | 92,674.5 | 92,713 |
 | Total | 350 | 99,650 | 100,000 |
 
-$P(\text{cancer} \mid +) = 311.5 / 7{,}287 \approx 0.043$. About 4%.
+$P(\text{cancer} \mid +) = 311.5 / 7{,}287 \approx 0.043$, or about 4%.
 
-Common mistakes:
-
-- **"High sensitivity means a positive result is reliable."** Not when the condition is rare; prevalence drags the answer down.
-- **"Bayes' theorem is only for Bayesian statistics."** It is a basic probability rule; Bayesian analysis is a later, broader idea.
+A test that catches most cases doesn't make a positive result reliable when the condition is rare. And Bayes' theorem isn't only for "Bayesian statistics": it is a basic rule of probability.
 
 See also: [[Why a positive test can still mean you are probably healthy]].
 

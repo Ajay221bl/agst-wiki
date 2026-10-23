@@ -9,10 +9,9 @@ aliases:
 status: seedling
 ---
 
-`aggregate(y ~ group, data = d, FUN = mean)` computes one [[Parameter vs Statistic|statistic]] per group; `by(d$y, d$group, f)` runs any function (summary, shapiro.test) separately for each group.
+`aggregate(y ~ group, data = d, FUN = mean)` works out one [[Parameter vs Statistic|statistic]] for each group. `by(d$y, d$group, f)` runs any function, such as summary or shapiro.test, separately for each group.
 
-1. **Comparing groups starts with each group's summary** ([[Factors and Levels]]).
-2. **`aggregate()` applies one function to the response in each group,** using the formula `response ~ group` ([[Functions and Arguments]]):
+Comparing groups starts with a summary of each group ([[Factors and Levels]]). `aggregate()` applies one function to the response in each group, using the formula `response ~ group` ([[Functions and Arguments]]):
 
 ```r
 aggregate(score ~ major, data = frust, FUN = mean)   # group means
@@ -21,17 +20,12 @@ by(d, d$REGION, summary)                             # full summary per region
 by(frust$score, frust$major, shapiro.test)           # normality per group
 ```
 
-3. **Why group means:** they're the effect you're testing. **Why group SDs:** a quick screen for equal variances ([[Homogeneity of Variance]]).
-4. **`by()` runs any function on each group's slice,** which is how you get a Shapiro–Wilk test per group ([[shapiro.test()]]).
+The group means are the effect you are testing. The group standard deviations (SD) are a quick check of equal variances ([[Homogeneity of Variance]]). `by()` runs any function on each group's slice of the data, which is how you get a Shapiro–Wilk test for each group ([[shapiro.test()]]).
 
-t-tests and ANOVA compare groups, so every check (center, spread, [[Normality Checks|normality]]) has to be done per group. Similar group SDs are the first, informal sign that equal variances are reasonable ([[Homogeneity of Variance]]).
+t-tests and ANOVA compare groups, so every check (centre, spread, [[Normality Checks|normality]]) has to be done group by group. Similar group SDs are the first, informal sign that equal variances are reasonable.
 
-For example:
+For example, group SDs of 4.1, 4.8, 5.2 and 3.9 give a largest-to-smallest [[Variance|variance]] [[Ratios and Fractions|ratio]] of about 1.8, well under 9:1.
 
-Group SDs 4.1, 4.8, 5.2, 3.9 → largest/smallest [[Variance|variance]] [[Ratios and Fractions|ratio]] about 1.8 → well under 9:1.
-
-Common mistakes:
-
-- **"One Shapiro test on all the data is enough for ANOVA."** Check each group (or the [[Residuals|residuals]]).
+One Shapiro test on all the data isn't enough for ANOVA. Check each group, or the [[Residuals|residuals]].
 
 See also: [[leveneTest()]], [[aov()]].

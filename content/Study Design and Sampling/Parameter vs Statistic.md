@@ -13,13 +13,11 @@ aliases:
 status: seedling
 ---
 
-A statistic describes a sample and can be calculated; a parameter describes a population and is unknown. "Mind your P's and S's."
+A statistic describes a sample and can be calculated. A parameter describes a whole population and is unknown. An easy way to remember it: **S**ample goes with **S**tatistic, and **P**opulation goes with **P**arameter.
 
-1. **The same summary (a mean, an [[Standard Deviation|SD]]) can be computed for the population or for the sample** ([[Population and Sample]]).
-2. **Give them different names.** **S**ample → **S**tatistic. **P**opulation → **P**arameter.
-3. **And different symbols:** Greek (or capital) for parameters, Roman for statistics ([[Greek Letters and Symbols]]).
+The same kind of summary, such as a mean or a [[Standard Deviation|standard deviation]] (SD), can be worked out for the population or for the sample ([[Population and Sample]]). They get different names and different symbols: Greek (or capital) letters for parameters, ordinary letters for statistics ([[Greek Letters and Symbols]]).
 
-| | Sample (statistic, known, blue) | Population (parameter, unknown, red) |
+| | Sample (statistic, known) | Population (parameter, unknown) |
 |---|---|---|
 | Mean | $\bar{x}$ | $\mu$ |
 | SD | $s$ | $\sigma$ |
@@ -28,20 +26,10 @@ A statistic describes a sample and can be calculated; a parameter describes a po
 | [[Median]] | $\tilde{x}$ | population median |
 | Size | $n$ | $N$ |
 
-4. **The parameter is treated as fixed:** "one capital-T truth". **Statistics vary** from sample to sample. *Why this split matters:* hypotheses are about parameters, and the [[Variability|variation]] of statistics is what the [[Sampling Distribution]] describes.
-5. **A statistic is our estimate of the matching parameter** ([[Point Estimate]]).
+A parameter is treated as one fixed true value. Statistics change from sample to sample. This split matters: hypotheses are always about parameters, and how much statistics vary is what the [[Sampling Distribution|sampling distribution]] describes ([[Variability]]). A statistic is our estimate of the matching parameter ([[Point Estimate]], [[Unbiased Estimator]]). So the split tells you what can be calculated and what must be estimated. Every confidence interval and every [[Hypothesis Testing|hypothesis test]] is about an unknown population parameter.
 
-It tells you what can be calculated and what must be estimated. Every CI and every [[Hypothesis Testing|hypothesis test]] is about an **unknown population parameter**.
+For example, 24 lizards have a mean tail length of 8.958 cm. That is $\bar{x}$, a statistic, and it is known exactly. The mean tail length of all lizards of that species, $\mu$, is unknown. The 95% [[Confidence Interval|confidence interval]] of 8.29 to 9.50 cm estimates it ([[One-Sample t-Test]]).
 
-For example:
-
-24 lizards have a mean tail length of 8.958 cm. That is $\bar{x}$, a statistic, known exactly. The mean tail length of all lizards of that species, $\mu$, is unknown; the 95% CI of 8.29 to 9.50 cm estimates it ([[One-Sample t-Test]]).
-
-Common mistakes:
-
-- **"The population mean changes with each sample."** The population mean is fixed; the *sample* mean changes.
-- **"$H_0: \bar{x} = 10$."** Hypotheses use parameters ($\mu$), never statistics.
-
-See also: [[Confidence Interval]], [[Null and Alternative Hypotheses]], [[Unbiased Estimator]].
+The population mean doesn't change with each sample; it is fixed, and it is the sample mean that changes. And hypotheses use parameters, never statistics: write $H_0: \mu = 10$, not $H_0: \bar{x} = 10$ ([[Null and Alternative Hypotheses]]).
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]].

@@ -9,22 +9,15 @@ aliases:
 status: seedling
 ---
 
-The sample space is the list of every basic outcome a chance process can produce, and an event is any outcome or group of outcomes you care about.
+The sample space is the list of every basic outcome a chance process can produce. An event is any outcome, or group of outcomes, you care about.
 
-1. **Start with a procedure whose result is uncertain.** Flip a fair coin twice and write down what you see. Each possible result is an **outcome**.
-2. **List every basic outcome.** {HH, HT, TH, TT}. That complete list is the **sample space** ($S$ or $\Omega$). *Why list everything first:* a probability is a share of the possibilities, so you can't compute a share without knowing the whole.
-3. **A simple event can't be broken down further:** "two tails" (TT).
-4. **An event is any outcome or group of outcomes you care about:** "both flips show the same face" = {HH, TT}. It is not simple, because it splits into HH or TT. *Why group outcomes:* real questions ("at least one head", "same face") are about collections, not single outcomes.
-5. **Give each event a probability between 0 and 1:** $0 \le P(A) \le 1$. Impossible events get 0, certain ones get 1. *Why 0 to 1:* a probability is a proportion of the possibilities or of the long-run tries ([[Proportions and Percentages]], [[Classical vs Relative Frequency Probability]]).
-6. **Everything else in probability is built from this:** complements are "the rest of $S$" ([[Complementary Events]]), disjoint events share no outcomes ([[Disjoint Events]]), and a random variable assigns a number to each outcome ([[Random Variable]]).
+Flip a fair coin twice and write down what you see. Each possible result is an **outcome**, and the complete list, {HH, HT, TH, TT}, is the **sample space**, written $S$ or $\Omega$. You need the full list first because a probability is a share of the possibilities, and you can't work out a share without knowing the whole. A **simple event** can't be broken down further, like "two tails" (TT). An **event** can be any group of outcomes: "both flips show the same face" is {HH, TT}. Most real questions, such as "at least one head", are about groups like this.
 
-You cannot count "how likely" without first listing "what could happen". The [[Classical vs Relative Frequency Probability|classical approach]] divides the number of ways an event can happen by the size of the sample space, so the list has to be right. Many mistakes come from forgetting outcomes (HT and TH are different) or from mistranslating the words.
+Every event gets a probability between 0 and 1: $0 \le P(A) \le 1$. An impossible event gets 0 and a certain one gets 1, because a probability is a share of the possibilities or of the long-run tries ([[Proportions and Percentages]], [[Classical vs Relative Frequency Probability]]).
 
-For example:
+The rest of probability is built on this. The complement of an event is "the rest of $S$" ([[Complementary Events]]), [[Disjoint Events|disjoint events]] share no outcomes, and a [[Random Variable|random variable]] gives each outcome a number. Many mistakes come from leaving out outcomes or misreading the wording.
 
-$P(\text{at least one head in 2 flips})$: the outcomes with a head are HH, HT, TH, so 3/4.
-
-Shortcut: "at least one" is the opposite of "none", so $1 - P(TT) = 1 - 1/4 = 3/4$ ([[Complementary Events]]).
+For example, $P(\text{at least one head in 2 flips})$: the outcomes with a head are HH, HT and TH, so the answer is 3/4. A shortcut: "at least one" is the opposite of "none", so $1 - P(TT) = 1 - 1/4 = 3/4$.
 
 Turning words into symbols:
 
@@ -36,10 +29,7 @@ Turning words into symbols:
 | at least 2 | $\ge 2$ |
 | more than 2 | $> 2$ |
 
-Common mistakes:
-
-- **"HT and TH are the same outcome."** They are different simple events. Treating them as one makes the sample space wrong.
-- **"An event must be a single outcome."** An event can be a group of outcomes.
+HT and TH are two different outcomes; treating them as one makes the sample space wrong. And an event doesn't have to be a single outcome: it can be a whole group of them.
 
 See also: [[Variable and Observation]].
 

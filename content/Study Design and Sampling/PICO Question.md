@@ -11,31 +11,26 @@ aliases:
 status: seedling
 ---
 
-PICO (Patient or Problem, Intervention, Comparison, Outcome) is a framework for turning a vague scientific question into a statistical one with a specific, measurable outcome.
+PICO stands for Patient (or Problem), Intervention, Comparison and Outcome. It is a way to turn a vague scientific question into a statistical one with a specific, measurable outcome.
 
-1. **"Is this drug effective?" means nothing to statistics until "effective" is defined as a statistic:** a mean change? A [[Proportions and Percentages|proportion]] who improve? *Why:* statistics models [[Variability|variability]] from unit to unit, and needs a number to model ([[Parameter vs Statistic]]).
-2. **PICO forces the definition**, one letter per decision:
-   - **P**atient / Problem: who or what is studied. *Why:* that's the [[Population and Sample|population]] results apply to.
-   - **I**ntervention: the treatment or exposure (the IV).
-   - **C**omparison: what it is compared against. *Why:* "better" needs a baseline.
-   - **O**utcome: what is measured, and as which statistic (the DV) ([[Variable and Observation]]).
-3. **Template:** *"[Intervention], given to [population], will tend to result in [outcome] at a [rate/mean] that is [higher/lower/equal] compared to [comparison]."*
-4. **It then translates straight into hypotheses** about a parameter ([[Null and Alternative Hypotheses]]).
+"Is this drug effective?" means nothing to statistics until "effective" is pinned down as a number: a mean change, or the [[Proportions and Percentages|proportion]] of people who improve? Statistics models how things vary from unit to unit, and it needs a number to model ([[Variability]], [[Parameter vs Statistic]]). PICO forces you to decide, one letter at a time:
+- **Patient or Problem:** who or what is studied. This is the [[Population and Sample|population]] the results apply to.
+- **Intervention:** the treatment or exposure, which is the independent variable.
+- **Comparison:** what it is compared with. "Better" needs a baseline.
+- **Outcome:** what is measured, and which summary of it you will use. This is the dependent variable ([[Variable and Observation]]).
 
-A blood-pressure illustration, ten patients before and after a drug:
-- **Clear case:** BP drops for everyone. "Effective" is easy (a physician may still ask whether the drop is clinically meaningful).
-- **Not so clear:** a big drop for 9, terrible for 1. Is effectiveness the average drop or the share who improve?
-- **Mess:** a dramatic drop for 3 and a rise for 7. Now "do no harm" matters.
-How "effective" is defined decides the analysis.
+A useful template: *"[Intervention], given to [population], will tend to result in [outcome] at a [rate or mean] that is [higher, lower or equal] compared with [comparison]."* This then turns directly into hypotheses about a population value ([[Null and Alternative Hypotheses]]).
 
-For example:
+Here is why the outcome needs defining. Picture ten patients whose blood pressure is measured before and after a drug.
+- If everyone's blood pressure drops, "effective" is easy to judge, though a doctor may still ask whether the drop is big enough to matter.
+- If 9 patients have a big drop and 1 does terribly, is effectiveness the average drop or the share who improve?
+- If 3 have a dramatic drop and 7 get worse, avoiding harm becomes the main question.
 
-"Cholesterol-lowering drugs given to people over 50 with high cholesterol will tend to result in heart attacks **at a rate** lower than in the comparison group." The rate is the statistic, so now there is a population parameter to make [[Descriptive vs Inferential Statistics|inference]] about.
+How you define "effective" decides the analysis.
 
-Common mistakes:
+For example: "Cholesterol-lowering drugs given to people over 50 with high cholesterol will tend to result in heart attacks **at a rate** lower than in the comparison group." The rate is the number to estimate, so now there is a population value to make [[Descriptive vs Inferential Statistics|inferences]] about.
 
-- **"The comparison must be a placebo."** Any meaningful reference works.
-- **"Statistical significance answers the scientific question."** It answers the statistical one; you still bring it back to context ([[Statistical vs Practical Significance]]).
+The comparison doesn't have to be a placebo; any meaningful reference works. And a statistically significant result answers the statistical question, not the scientific one: you still have to bring it back to the real context ([[Statistical vs Practical Significance]]).
 
 See also: [[Experiment]], [[Independent and Dependent Variables]].
 

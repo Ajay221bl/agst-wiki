@@ -15,19 +15,18 @@ aliases:
 status: seedling
 ---
 
-R's p-functions (`pnorm`, `pt`, `pf`) turn a value into the area to its left; the q-functions (`qnorm`, `qt`, `qf`) turn an area into the value with that much area below it.
+R's p-functions (`pnorm`, `pt`, `pf`) turn a value into the area to its left. The q-functions (`qnorm`, `qt`, `qf`) do the reverse: they turn an area into the value with that much area below it.
 
-1. **Areas under a distribution curve are probabilities** ([[Probability Distribution]]).
-2. **Two questions come up again and again**: "how much area is below this value?" (for p-values) and "which value has this much area below it?" (for critical values) ([[P-Value]], [[Critical Value]]).
-3. **R names a function for each question and each curve**: `p` + name for the area, `q` + name for the value (the quantile; [[Percentiles and Quantiles]]). `norm` is the normal curve, `t` the t, `f` the F, `chisq` the [[Chi-Square Test|chi-square]].
-4. **They give the area to the left by default.** For a right tail use `lower.tail = FALSE` or 1 minus the answer ([[Tails of a Distribution]]).
-5. **The t, F and chi-square versions need df** ([[Degrees of Freedom]]).
-6. **Two-sided p-values double one tail**: `2 * pt(-abs(t), df)`. *Why `-abs`:* it puts the [[Parameter vs Statistic|statistic]] in the left tail whatever its sign, so one formula works for both ([[Absolute Value]]).
+Areas under a distribution curve are probabilities ([[Probability Distribution]]). Two questions come up again and again: "how much area is below this value?", for p-values, and "which value has this much area below it?", for critical values ([[P-Value]], [[Critical Value]]).
+
+R has a function for each question and each curve. `p` plus the curve's name gives the area, and `q` plus the name gives the value, called the quantile ([[Percentiles and Quantiles]]). `norm` is the normal curve, `t` the t, `f` the F, and `chisq` the [[Chi-Square Test|chi-square]].
+
+They give the area to the left by default. For a right tail, use `lower.tail = FALSE`, or 1 minus the answer ([[Tails of a Distribution]]). The t, F and chi-square versions need degrees of freedom ([[Degrees of Freedom]]). A two-sided p-value doubles one tail: `2 * pt(-abs(t), df)`. The `-abs` puts the [[Parameter vs Statistic|statistic]] in the left tail whatever its sign, so one formula works for both signs ([[Absolute Value]]).
 
 ![[Distribution functions in R.png|700]]
 The same 1.96 and 0.975, read in opposite directions.
 
-It replaces printed z, t and F tables. Any area or cut-off for any df is one line.
+These functions replace printed z, t and F tables: any area or cut-off, for any degrees of freedom, is one line.
 
 For example:
 
@@ -41,9 +40,6 @@ qchisq(0.95, df = 2)       # 5.99    5% chi-square cut-off
 ```
 All values checked in R.
 
-Common mistakes:
-
-- **"pnorm gives the area to the right."** Left, unless `lower.tail = FALSE`.
-- **"qnorm(0.95) is the 95% two-sided cut-off."** That is 1.645, the one-sided cut-off; two-sided 95% uses `qnorm(0.975)`.
+pnorm gives the area to the left, not the right, unless you set `lower.tail = FALSE`. And `qnorm(0.95)` isn't the two-sided 95% cut-off. It is 1.645, the one-sided cut-off; the two-sided 95% cut-off uses `qnorm(0.975)`.
 
 See also: [[Functions and Arguments]], [[Confidence Interval]], [[One-Sample t-Test]].

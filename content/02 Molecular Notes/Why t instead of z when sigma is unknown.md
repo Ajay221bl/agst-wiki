@@ -10,16 +10,16 @@ status: seedling
 
 Why switch from z to t once σ has to be estimated?
 
-The z formula needs the population [[Standard Deviation|SD]] σ, which we almost never know. Plugging in the sample SD adds extra uncertainty, so [[Test Statistic|test statistics]] land in the [[Tails of a Distribution|tails]] more often than the normal curve predicts. The t-distribution has fatter tails to account for that, and it approaches the normal as the sample grows.
+The z formula needs the population [[Standard Deviation|standard deviation]] (SD), σ, which we almost never know. Plugging in the sample SD adds extra uncertainty, so [[Test Statistic|test statistics]] land in the [[Tails of a Distribution|tails]] more often than the normal curve predicts. The t-distribution has fatter tails to allow for that, and it approaches the normal curve as the sample grows.
 
 ![[t-distribution vs normal.png|700]]
 With few degrees of freedom the t curve is lower in the middle and fatter in the tails, so cut-offs sit further out. By df = 30 it is almost the normal curve.
 
-1. The first intervals and tests used $\sigma/\sqrt{n}$ with σ known, which is rarely realistic ([[Confidence Interval]]).
-2. Replacing σ with $s$ means the SE is itself estimated: "an [[Point Estimate|estimate]] inside another estimate" ([[Standard Error]]).
-3. With small samples, $s$ can be too small by chance, making t large; extreme values happen more often than z allows.
-4. The t-distribution builds that in with fatter tails and bigger critical values (2.07 at df 23 vs 1.96) ([[t-Distribution]]).
-5. As df grows, $s$ becomes a reliable estimate of σ and t approaches z ([[Degrees of Freedom]]).
+1. The simplest intervals and tests use $\sigma/\sqrt{n}$ with σ known, which is rarely realistic ([[Confidence Interval]]).
+2. Replacing σ with $s$ means the standard error is itself estimated: an [[Point Estimate|estimate]] inside another estimate ([[Standard Error]]).
+3. With small samples, $s$ can come out too small by chance, which makes t large. So extreme values happen more often than z allows.
+4. The t-distribution builds that in, with fatter tails and bigger critical values: 2.07 at 23 degrees of freedom (df), against 1.96 for z ([[t-Distribution]]).
+5. As the df grow, $s$ becomes a reliable estimate of σ, and t approaches z ([[Degrees of Freedom]]).
 
 Using z with an estimated SD gives intervals that are too narrow and tests that reject too often, especially with small samples.
 
