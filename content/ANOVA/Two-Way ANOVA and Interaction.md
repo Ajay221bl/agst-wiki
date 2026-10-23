@@ -13,13 +13,13 @@ aliases:
 status: seedling
 ---
 
-**In one line:** a two-way ANOVA tests two factors at once: a **main effect** for each, plus an **interaction**, which asks whether one factor's effect depends on the level of the other. It comes next in the course.
+**In one line:** a two-way ANOVA tests two factors at once: a **main effect** for each, plus an **interaction**, which asks whether one factor's effect depends on the level of the other.
 
 > [!info] Before this, it helps to know
 > [[Factors and Levels]] · [[One-Way ANOVA]] · [[Statistical Model]]
 
-> [!note] Preview
-> A preview. This note gives the idea so the term makes sense where it appears.
+> [!note] Short note
+> A short note. It gives the idea so the term makes sense where it appears.
 
 ## Start from zero
 1. **A one-way ANOVA has one factor** with several levels ([[Factors and Levels]], [[One-Way ANOVA]]).

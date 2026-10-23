@@ -21,12 +21,12 @@ status: seedling
 1. **I want to know if the IV causes changes in the DV** ([[Independent and Dependent Variables]]).
 2. **Other variables also affect the DV.** Age, sex, barn location all change chicken weight. These are **nuisance variables**.
 3. **They become a problem when they line up with the IV.** I compare two chicken diets. Without thinking, I put all the older chickens on diet A. Diet A's chickens end up heavier. Was it the diet, or the age? I cannot tell: **age is confounded with diet**. Age is the "third variable".
-4. **Biostatistics splits these into confounders, moderators and mediators;** in this class they are all simply **nuisance variables**.
+4. **Biostatistics splits these into confounders, moderators and mediators;** here they are all simply **nuisance variables**.
 5. **The defense is to break the link between nuisance and IV.** Random assignment spreads every nuisance variable, measured or not, evenly over the groups on average ([[Random Assignment]]). *Why that's enough:* if age is no longer tied to diet, it can't masquerade as a diet effect ([[Internal Validity]]).
 
 ## Why it exists
 Confounding is the main threat to [[Internal Validity]]: the claim that the IV caused the change in the DV. There are three ways to handle a nuisance variable:
-1. **Control it in advance:** [[Random Assignment|random assignment]] spreads it evenly; **blocking** groups units by it and randomizes within each block (randomized block designs come later in the course).
+1. **Control it in advance:** [[Random Assignment|random assignment]] spreads it evenly; **blocking** groups units by it and randomizes within each block (randomized block designs build on this idea).
 2. **Adjust for it after the fact** statistically.
 3. **Report it as a limitation.** "You'll never go wrong by just stating what's happening in your study."
 

@@ -44,6 +44,5 @@ The book's blood-pressure example (SD 12, difference 3) works out to about 0.42 
 
 ## Connections
 - **Builds on:** [[Statistical Power]], [[Effect Size]]
-- **Leads to:** Course Project
 - **Part of:** [[MOC - R for Statistics]]
 - **Go deeper:** [[References|Vu and Harrington 2020, Ch. 5]] (§5.4)

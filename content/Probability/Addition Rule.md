@@ -32,7 +32,7 @@ $$P(A \text{ or } B) = P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 "Or" questions come up constantly (positive test or drug user; male or smoker), and simply adding probabilities overshoots whenever events overlap. If $A$ and $B$ are [[Disjoint Events|disjoint]], $P(A \cap B) = 0$ and it simplifies to $P(A) + P(B)$.
 
 ## A tiny example
-Drug test table from class (n = 1,000):
+A drug test table (n = 1,000):
 
 | | Positive | Negative | Total |
 |---|---|---|---|

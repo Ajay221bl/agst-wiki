@@ -17,7 +17,7 @@ Why use a nonparametric test, what does it cost, and why report it alongside the
 
 ## Built from
 - [[Ranks]]: replacing values by their order.
-- [[Nonparametric Alternatives]]: the rank-based tests in the course.
+- [[Nonparametric Alternatives]]: the common rank-based tests.
 - [[Robustness]]: how much a test cares about broken [[Test Assumptions|assumptions]].
 - [[Normality Checks]]: when the parametric test is in doubt.
 - [[Statistical Power]]: what is given up.

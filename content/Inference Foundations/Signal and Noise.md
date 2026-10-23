@@ -11,7 +11,7 @@ aliases:
 status: seedling
 ---
 
-**In one line:** every test statistic in the course is a [[Ratios and Fractions|ratio]] of signal (the effect you see) to noise (how much that effect would wobble by chance); a big ratio means the signal stands out.
+**In one line:** every test statistic is a [[Ratios and Fractions|ratio]] of signal (the effect you see) to noise (how much that effect would wobble by chance); a big ratio means the signal stands out.
 
 > [!info] Before this, it helps to know
 > [[Deviations from the Mean]] · [[Standard Error]] · [[Variance]]

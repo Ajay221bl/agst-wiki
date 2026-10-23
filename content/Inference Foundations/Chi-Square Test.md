@@ -11,13 +11,13 @@ aliases:
 status: seedling
 ---
 
-**In one line:** a chi-square ($\chi^2$) test compares the counts you observed in categories with the counts you would expect if $H_0$ were true; it is the test for two categorical variables, and comes later in the course.
+**In one line:** a chi-square ($\chi^2$) test compares the counts you observed in categories with the counts you would expect if $H_0$ were true; it is the test for two categorical variables.
 
 > [!info] Before this, it helps to know
 > [[Contingency Table]] · [[Independent Events]] · [[Test Statistic]] · [[Null Distribution]]
 
-> [!note] Preview
-> A preview. This note gives the idea so the term makes sense where it appears.
+> [!note] Short note
+> A short note. It gives the idea so the term makes sense where it appears.
 
 ## Start from zero
 1. **Two categorical variables give a table of counts** ([[Contingency Table]]).

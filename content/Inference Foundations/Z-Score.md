@@ -30,7 +30,7 @@ $$z = \frac{\text{observed} - \text{expected}}{\text{deviation measure}} = \frac
 *What to look at:* Each exam score becomes a distance from its own class mean in SDs, so three different exams sit on one axis. Chemistry (z = 0) is the relatively best score; psychology (z = −2) is right at the edge of unusual.
 
 ## Why it exists
-It is the template for **every test statistic in the course**: (observed − expected) / (a measure of spread). The t, F and [[Chi-Square Test|chi-square]] statistics all follow it ([[Test Statistic]]).
+It is the template for **every test statistic**: (observed − expected) / (a measure of spread). The t, F and [[Chi-Square Test|chi-square]] statistics all follow it ([[Test Statistic]]).
 
 For a sample mean, the spread is the standard error:
 $$z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}}$$

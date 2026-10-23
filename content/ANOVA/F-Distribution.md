@@ -15,8 +15,8 @@ status: seedling
 > [[Between- and Within-Group Variability]] (the two variances in the ratio) · [[Degrees of Freedom]] (it has two) · [[Null Distribution]] (F's null distribution) · [[Probability Distribution]] (it is a density curve)
 
 ## Start from zero
-1. **ANOVA's [[Test Statistic|test statistic]] is a ratio of two variances:** $F = MSG/MSE$ ([[Between- and Within-Group Variability]]). The F statistic is the course's first test statistic that is a **ratio of two variances**.
-2. **To get a p-value we need its distribution when $H_0$ is true** ([[Null Distribution]]). That distribution is the **F-distribution**, named after **Sir R. A. Fisher** (the pipe-smoking man on the day-one slides: "don't smoke").
+1. **ANOVA's [[Test Statistic|test statistic]] is a ratio of two variances:** $F = MSG/MSE$ ([[Between- and Within-Group Variability]]). The F statistic is the first common test statistic that is a **ratio of two variances**.
+2. **To get a p-value we need its distribution when $H_0$ is true** ([[Null Distribution]]). That distribution is the **F-distribution**, named after **Sir R. A. Fisher**.
 3. **Its shape follows from what it is:**
    - **Not [[Shape of a Distribution|symmetric]]:** usually right-skewed; can't be negative. *Why:* variances are ≥ 0, so the ratio is too.
    - **Centred near 1 under $H_0$.** *Why:* both mean squares [[Point Estimate|estimate]] the same $\sigma^2$.

@@ -28,7 +28,7 @@ status: seedling
 ## See it
 
 ![[Mean vs median - years in school.png|700]]
-*What to look at:* The class example: one value of 33 pulls the mean to 9 while four of the five people are at 6 or below. The median (3) stays with the typical person.
+*What to look at:* An example: one value of 33 pulls the mean to 9 while four of the five people are at 6 or below. The median (3) stays with the typical person.
 
 ![[Distribution shapes.png|700]]
 *What to look at:* Watch where the red mean line sits relative to the dashed median: they agree for symmetric data and the mean chases the long tail when the data are skewed.

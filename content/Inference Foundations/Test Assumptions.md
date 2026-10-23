@@ -12,7 +12,7 @@ aliases:
 status: seedling
 ---
 
-**In one line:** a test's assumptions are the conditions under which its null distribution, and so its p-value, are correct; for the course's tests they are independence, normality (of means, [[Residuals|residuals]] or differences) and, for some, equal variances.
+**In one line:** a test's assumptions are the conditions under which its null distribution, and so its p-value, are correct; for the common tests they are independence, normality (of means, [[Residuals|residuals]] or differences) and, for some, equal variances.
 
 > [!info] Before this, it helps to know
 > [[Null Distribution]] · [[P-Value]] · [[Statistical Model]]
@@ -21,7 +21,7 @@ status: seedling
 1. **A p-value is an area under a null distribution** ([[P-Value]], [[Null Distribution]]).
 2. **That distribution comes from a model of how the data arose** ([[Statistical Model]]). The t curve, for example, is exactly right only if the data are independent draws from a normal population.
 3. **The conditions in that model are the test's assumptions.** If they fail, the curve is wrong, so the p-value and α are wrong ([[Why check assumptions before trusting a test]]).
-4. **The course's tests share three:**
+4. **The common tests share three:**
    - **Independence** of observations, judged from the design ([[Why independence is judged from the design, not a test]]).
    - **Normality** of what the model calls chance: the mean ([[Central Limit Theorem|CLT]] helps), the differences, or the residuals ([[Normality Checks]], [[Why normality is checked on residuals or differences]]).
    - **Equal variances** for the [[Pooled Variance|pooled t-test]] and ANOVA ([[Homogeneity of Variance]]).

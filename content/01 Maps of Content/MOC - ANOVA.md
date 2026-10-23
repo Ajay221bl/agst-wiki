@@ -33,11 +33,11 @@ Comparing three or more group means with one test.
 
 ## 4. After a significant F
 - [[Post Hoc Tests]]: which pairs differ
-- [[Tukey HSD]]: the course default
+- [[Tukey HSD]]: a common default
 - [[Bonferroni Correction]]: simple and conservative
 - [[Compact Letter Display]]: letters for the write-up
 
-## 5. Next in the course
+## 5. Going further
 - [[Two-Way ANOVA and Interaction]]: two factors, and whether their effects add up
 
 ## Related molecular notes

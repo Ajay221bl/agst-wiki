@@ -25,7 +25,7 @@ status: seedling
    - **Massive data** (genomics, billions of points) can strain traditional methods
 
 ## Why it exists
-It is the [[Validity|validity]] type this course's analysis tools directly protect. Checking assumptions, running an omnibus ANOVA before [[Post Hoc Tests|post hocs]], and planning [[Sample Size|sample size]] are all statistical-conclusion-validity habits ([[Why check assumptions before trusting a test]]).
+It is the [[Validity|validity]] type that statistical analysis directly protects. Checking assumptions, running an omnibus ANOVA before [[Post Hoc Tests|post hocs]], and planning [[Sample Size|sample size]] are all statistical-conclusion-validity habits ([[Why check assumptions before trusting a test]]).
 
 ## A tiny example
 Running 15 t-tests at α = 0.05 for six groups gives over a 50% chance of at least one false positive: a direct threat to statistical conclusion validity ([[Why ANOVA instead of many t-tests]]).

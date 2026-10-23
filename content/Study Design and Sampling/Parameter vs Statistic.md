@@ -36,7 +36,7 @@ status: seedling
 5. **A statistic is our estimate of the matching parameter** ([[Point Estimate]]).
 
 ## Why it exists
-It tells you what can be calculated and what must be estimated. "You do not estimate a statistic, you calculate it. I'm 5'6". I don't have to infer that." Every CI and every [[Hypothesis Testing|hypothesis test]] in the course is about an **unknown population parameter**.
+It tells you what can be calculated and what must be estimated. Every CI and every [[Hypothesis Testing|hypothesis test]] is about an **unknown population parameter**.
 
 ## A tiny example
 24 lizards have a mean tail length of 8.958 cm. That is $\bar{x}$, a statistic, known exactly. The mean tail length of all lizards of that species, $\mu$, is unknown; the 95% CI of 8.29 to 9.50 cm estimates it ([[One-Sample t-Test]]).

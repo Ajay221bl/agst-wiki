@@ -13,13 +13,13 @@ aliases:
 status: seedling
 ---
 
-**In one line:** regression fits a line (or surface) that predicts a response from one or more predictors; simple linear regression fits $\hat{y} = b_0 + b_1 x$ by making the squared residuals as small as possible. It comes later in the course.
+**In one line:** regression fits a line (or surface) that predicts a response from one or more predictors; simple linear regression fits $\hat{y} = b_0 + b_1 x$ by making the squared residuals as small as possible.
 
 > [!info] Before this, it helps to know
 > [[Correlation]] · [[Statistical Model]] · [[Residuals]] · [[Independent and Dependent Variables]]
 
-> [!note] Preview
-> A preview. This note gives the idea so the term makes sense where it appears.
+> [!note] Short note
+> A short note. It gives the idea so the term makes sense where it appears.
 
 ## Start from zero
 1. **A statistical model splits each value into fit + residual** ([[Statistical Model]], [[Residuals]]).

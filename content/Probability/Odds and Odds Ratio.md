@@ -27,7 +27,7 @@ status: seedling
 *What to look at:* odds climb slowly at first and then shoot up as p nears 1. Probabilities of 0.5 and 0.2 differ by a factor of 2.5, but their odds differ by a factor of 4.
 
 ## Why it exists
-It is the standard effect size for a [[Types of Data|categorical]] outcome measured in two groups ([[Effect Size]]), and the course's later logistic regression is built on it.
+It is the standard effect size for a [[Types of Data|categorical]] outcome measured in two groups ([[Effect Size]]), and logistic regression is built on it.
 
 ## A tiny example
 Exact arithmetic: p = 0.5 gives odds 1; p = 0.2 gives odds 0.25; OR = 1 / 0.25 = 4, while the ratio of probabilities is 0.5 / 0.2 = 2.5.

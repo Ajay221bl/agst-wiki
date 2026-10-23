@@ -18,7 +18,7 @@ status: seedling
 ## Start from zero
 1. **If a new feed truly raises weight gain, will my study notice?** Power is that chance: P(reject $H_0$ | $H_0$ false) = 1 − β ([[Type I and Type II Errors]]). Low power means a real effect may come out "not significant".
 2. **The test notices when the [[Test Statistic|test statistic]] is large,** that is, when signal is big compared with noise ([[Signal and Noise]]). So power rises with anything that grows the signal, shrinks the noise or lowers the bar.
-3. **Ways to increase power** (from class), each through one of those routes:
+3. **Ways to increase power**, each through one of those routes:
    1. **Increase α** (0.05 → 0.10): lowers the bar. Raises power, but most researchers don't want the higher Type I risk.
    2. **Increase $n$:** shrinks the noise, because the SE is $s/\sqrt{n}$ ([[Standard Error]]). The simplest fix, not always practical (cost, rare animals).
    3. **Increase the effect size:** grows the signal ([[Effect Size]]). For a preliminary study, design **vastly different** treatment levels instead of six subtle ones; refine later with more funding.

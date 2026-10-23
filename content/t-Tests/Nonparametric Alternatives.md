@@ -35,7 +35,7 @@ status: seedling
 5. **The price is some [[Statistical Power|power]] when the data really are normal,** and the [[Null and Alternative Hypotheses|hypotheses]] are about typical values (medians, ranks) rather than means ([[Median]]). Bootstrapping is another option for small samples.
 
 ## Why it exists
-When normality is violated (small samples from clearly non-normal populations, [[Likert Scale|Likert-type survey scores]], heavy outliers), parametric p-values can mislead. The class rule for now: **say so, and say a nonparametric test should be used to confirm the robustness of the results** ([[Normality Checks]]).
+When normality is violated (small samples from clearly non-normal populations, [[Likert Scale|Likert-type survey scores]], heavy outliers), parametric p-values can mislead. A sensible rule: **say so, and say a nonparametric test should be used to confirm the robustness of the results** ([[Normality Checks]]).
 
 ## A tiny example
 Data 1, 2, 3, 4, 100 → ranks 1, 2, 3, 4, 5. The 100 counts the same as any largest value would; it cannot dominate the test.
@@ -69,7 +69,7 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)          # chi-squared = 5.7458,
 6. **Decide and report.** Compare with the parametric result. *Why compare:* agreement means the conclusion doesn't hinge on the normality assumption; disagreement says it does.
    - Wetsuits: the paired t (p < .001) and signed-rank (p = .002) agree.
    - Stem cells: [[Welch's t-Test|Welch]] (p = .002) and rank-sum (p = .003) agree.
-   - FAMuSS: the ANOVA (p = .040) is **not** confirmed by Kruskal–Wallis (p = .057). This is exactly the case where the class rule matters: say normality was doubtful and treat the ANOVA result as fragile ([[One-Way ANOVA]]).
+   - FAMuSS: the ANOVA (p = .040) is **not** confirmed by Kruskal–Wallis (p = .057). This is exactly the case where that rule matters: say normality was doubtful and treat the ANOVA result as fragile ([[One-Way ANOVA]]).
 
 ## Common confusions
 - **"Nonparametric tests have no assumptions."** They still assume independence, and some assume similar shapes across groups.

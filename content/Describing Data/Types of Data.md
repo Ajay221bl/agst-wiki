@@ -63,7 +63,7 @@ Choosing the right analysis starts here; the test-choice flow chart begins with 
 - In t-tests and ANOVA the [[Independent and Dependent Variables|explanatory variable]] is categorical (a factor) and the response is quantitative ([[Factors and Levels]]).
 
 ## A tiny example
-A class survey:
+A survey:
 
 | Variable | Type | Why |
 |---|---|---|

@@ -23,7 +23,7 @@ $$\sum_{i=1}^{n} x_i$$
 5. **A double sum, $\sum\sum$, adds over two indices**, for example every value $j$ in every group $i$ in ANOVA ([[Sums of Squares and Mean Squares]]).
 
 ## Why it exists
-Formulas in this course would be unreadable without it. The [[Mean]] is $\bar{x} = \sum x_i / n$. The [[Variance]] is $\sum (x_i - \bar{x})^2/(n-1)$. The ANOVA sums of squares are double sums, one over groups and one over observations within groups ([[ANOVA Table]]).
+Formulas would be unreadable without it. The [[Mean]] is $\bar{x} = \sum x_i / n$. The [[Variance]] is $\sum (x_i - \bar{x})^2/(n-1)$. The ANOVA sums of squares are double sums, one over groups and one over observations within groups ([[ANOVA Table]]).
 
 ## A tiny example
 Data 1, 2, 3, 6, 3.

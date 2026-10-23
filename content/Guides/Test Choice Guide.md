@@ -18,7 +18,7 @@ Frame every test choice as "what type is my [[Independent and Dependent Variable
 | Quantitative | categorical, 3+ levels, one factor | independent groups | [[One-Way ANOVA]], then [[Post Hoc Tests]] if significant |
 | Quantitative, assumptions badly violated | any of the above | | [[Nonparametric Alternatives]] |
 
-Coming later: [[Two-Way ANOVA and Interaction|two-way ANOVA]] (two factors), [[Regression|regression]] (quantitative IV), [[Chi-Square Test|chi-square]] (categorical DV and IV) and logistic regression (binary DV).
+Going further: [[Two-Way ANOVA and Interaction|two-way ANOVA]] (two factors), [[Regression|regression]] (quantitative IV), [[Chi-Square Test|chi-square]] (categorical DV and IV) and logistic regression (binary DV).
 
 ## See it as a flowchart
 
@@ -73,5 +73,5 @@ Each test note has a **How to run it** section that walks through all six steps 
 The raw data are in the vault's `Data` folder as CSV files, ready for `read.csv(file.choose())`.
 
 ## Connections
-- **Part of:** MOC - AGST Course, [[MOC - t-Tests]], [[MOC - ANOVA]]
+- **Part of:** [[MOC - t-Tests]], [[MOC - ANOVA]]
 - **Related:** [[Independent vs Paired Samples]], [[Factors and Levels]], [[Formula Sheet]]

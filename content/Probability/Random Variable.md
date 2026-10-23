@@ -25,7 +25,7 @@ status: seedling
 5. **This is the bridge to statistics.** A measurement on a randomly chosen unit is a random variable, and so is a [[Parameter vs Statistic|statistic]] like $\bar{x}$, whose distribution is the sampling distribution ([[Sampling Distribution]]).
 
 ## Why it exists
-Every test statistic in the course ($z$, $t$, $F$) is a random variable with a known distribution. That is what lets software turn a test statistic into a p-value: it measures an area under the right curve ([[P-Value]]).
+Every test statistic ($z$, $t$, $F$) is a random variable with a known distribution. That is what lets software turn a test statistic into a p-value: it measures an area under the right curve ([[P-Value]]).
 
 ## A tiny example
 Number of heads in 2 fair coin flips:

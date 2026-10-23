@@ -27,7 +27,7 @@ status: seedling
 *What to look at:* the same bag, the same question, two answers: 0.36 with replacement, 0.30 without.
 
 ## Why it exists
-Whether the draws are independent decides which multiplication rule applies, and independence is an [[Test Assumptions|assumption]] of every test in the course ([[Why independence is judged from the design, not a test]]).
+Whether the draws are independent decides which multiplication rule applies, and independence is an [[Test Assumptions|assumption]] of every test ([[Why independence is judged from the design, not a test]]).
 
 ## A tiny example
 Two clubs from a deck: without replacement $\frac{13}{52} \times \frac{12}{51} \approx 0.059$; with replacement $\frac{13}{52} \times \frac{13}{52} = 0.0625$ ([[Multiplication Rule]]).

@@ -39,7 +39,7 @@ Two coin flips: P(at least 1 head) = P(X ≥ 1) = 0.75, but P(more than 1 head) 
 
 ## Common confusions
 - **"At least 3" = "more than 3".** No: at least 3 includes 3 ($\ge$).
-- **"The null can be $\le$."** The course writes the null with "=" ("equality for H-O's").
+- **"The null can be $\le$."** These notes write the null with "=".
 
 ## Connections
 - **Builds on:** [[Absolute Value]], [[Greek Letters and Symbols]]

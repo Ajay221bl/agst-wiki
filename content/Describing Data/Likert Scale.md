@@ -30,7 +30,7 @@ status: seedling
 *What to look at:* five ordered boxes; the arrows show order, but nothing says the gaps are equal.
 
 ## Why it exists
-Most survey data in the course are of this kind, and the type decides which summaries and tests make sense.
+Most survey data are of this kind, and the type decides which summaries and tests make sense.
 
 ## A tiny example
 A 5-point item answered 1, 2, 2, 4, 5: the median (2) is a safe summary; the [[Mean|mean]] (2.8) treats the step from 2 to 4 as exactly twice the step from 1 to 2, which the scale never promised.

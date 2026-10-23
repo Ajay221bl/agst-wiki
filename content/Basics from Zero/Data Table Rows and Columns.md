@@ -22,7 +22,7 @@ status: seedling
 5. **This is the "tidy" layout, and software assumes it.** R calls such a table a [[Data Frames|data frame]], and most R functions, such as `aov()` and `t.test()` with a formula, expect it. When data arrive another way (one column per group), they have to be reshaped first ([[Wide vs Long Format]]).
 
 ## Why it exists
-If the layout is inconsistent, software cannot tell which numbers belong to the same unit or which column holds the groups. The classic case in this course: recording one column per [[Treatment and Control Groups|treatment group]] ("wide" format) is natural on paper, but `aov()` needs one column of responses and one column of group labels ("long" format). See [[Wide vs Long Format]].
+If the layout is inconsistent, software cannot tell which numbers belong to the same unit or which column holds the groups. The classic case: recording one column per [[Treatment and Control Groups|treatment group]] ("wide" format) is natural on paper, but `aov()` needs one column of responses and one column of group labels ("long" format). See [[Wide vs Long Format]].
 
 ## A tiny example
 Wide (how I might jot it down):

@@ -23,7 +23,7 @@ status: seedling
 5. **Notation:** lowercase $n$ = [[Sample Size|sample size]], capital $N$ = population size (fields differ). Numbers describing each side get different names and symbols ([[Parameter vs Statistic]]).
 
 ## Why it exists
-The whole course is one pipeline: take what you can see (the sample), use statistical theory, and say something about what you can't see (the population). Every [[Confidence Interval|confidence interval]] and every [[Hypothesis Testing|hypothesis test]] is about the population ([[Parameter vs Statistic]]).
+Statistics is one pipeline: take what you can see (the sample), use statistical theory, and say something about what you can't see (the population). Every [[Confidence Interval|confidence interval]] and every [[Hypothesis Testing|hypothesis test]] is about the population ([[Parameter vs Statistic]]).
 
 ## A tiny example
 A Gallup poll of **1,013 US adults** found 66% worried about identity theft. The 1,013 people are the sample; the more than 336 million US residents are the population.

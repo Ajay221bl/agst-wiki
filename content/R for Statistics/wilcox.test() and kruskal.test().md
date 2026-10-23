@@ -32,7 +32,7 @@ status: seedling
 *What to look at:* the outlying stem-cell sheep is far out as a value but only one step up as a rank.
 
 ## Why it exists
-It gives the course's rank-based check in one line per design, with the same formula style as the tests it checks.
+It gives a rank-based check in one line per design, with the same formula style as the tests it checks.
 
 ## A tiny example
 ```r

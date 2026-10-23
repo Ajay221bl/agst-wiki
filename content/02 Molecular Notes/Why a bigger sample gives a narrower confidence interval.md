@@ -12,7 +12,7 @@ status: seedling
 > A CI's half-width is a critical value times the standard error, $s/\sqrt{n}$. More data shrinks the SE ([[Population and Sample|sample]] means vary less), so the interval narrows. Higher confidence needs a bigger critical value, and more variable data a bigger $s$, so both widen it.
 
 ## The question
-A classic exam question: "All of these increase CI width *except*..." Why do confidence level, [[Variability|variability]] and [[Sample Size|sample size]] push the width the way they do?
+A classic question: "All of these increase CI width *except*..." Why do confidence level, [[Variability|variability]] and [[Sample Size|sample size]] push the width the way they do?
 
 ## Built from
 - [[Confidence Interval]]: [[Point Estimate|estimate]] ± critical value × SE.

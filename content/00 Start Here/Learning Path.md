@@ -9,7 +9,7 @@ aliases:
 status: seedling
 ---
 
-A suggested order for working through the vault. It follows the order of a first course in experimental statistics, and each stage builds on the one before. Tick items off and update each note's `status` as you go.
+A suggested order for working through the notes. It runs from the basics to one-way ANOVA, and each stage builds on the one before. Tick items off and update each note's `status` as you go.
 
 ## Stage 0: Basics from zero
 - [ ] [[Variable and Observation]], [[Data Table Rows and Columns]]
@@ -71,7 +71,7 @@ A suggested order for working through the vault. It follows the order of a first
 - [ ] [[Post Hoc Tests]], [[Tukey HSD]], [[Bonferroni Correction]], [[Compact Letter Display]]
 - [ ] R: [[Wide vs Long Format]], [[stack()]], [[leveneTest()]], [[aov()]], [[TukeyHSD()]], [[pairwise.t.test()]], [[emmeans() and cld()]]
 - [ ] Why: [[Why ANOVA instead of many t-tests]], [[Why analysis of variance can compare means]], [[Why post hoc tests only after a significant ANOVA]], [[Why a significant ANOVA can have no significant post hocs]], [[Why check assumptions before trusting a test]], [[Why use degrees of freedom as a sanity check]], [[Why a two-group ANOVA gives F equal to t squared]]
-- [ ] Preview of what comes next: [[Two-Way ANOVA and Interaction]], [[Regression]], [[Chi-Square Test]]
+- [ ] Going further: [[Two-Way ANOVA and Interaction]], [[Regression]], [[Chi-Square Test]]
 
 ## Stage 8: Put it together
 - [ ] [[Test Choice Guide]], [[Formula Sheet]]

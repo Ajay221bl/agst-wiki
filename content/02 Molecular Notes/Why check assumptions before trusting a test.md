@@ -14,7 +14,7 @@ status: seedling
 > A p-value is calculated from a [[Probability Distribution|probability model]], and that model assumes things: independent observations, roughly normal data or means, equal spreads for pooled tests. If those are badly wrong, the p-value and [[Confidence Interval|CI]] are wrong too. So check them with plots and tests, lean on robustness and the CLT where justified, and confirm with a nonparametric test when in doubt.
 
 ## The question
-Why does every R script in the course run Shapiro and Levene before the main test?
+Why does a careful R analysis run Shapiro and Levene before the main test?
 
 ## Built from
 - [[ANOVA Assumptions]]: independence, normality, equal variances.

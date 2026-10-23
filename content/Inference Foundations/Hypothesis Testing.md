@@ -18,7 +18,7 @@ status: seedling
 ## Start from zero
 1. **The logic is the rare event rule:** assume a claim, and if what you observe would be very rare under it, doubt the claim ([[Rare Event Rule]]).
 2. **Turn that into a procedure, used for every test.** Each step has a reason:
-   1. **State $H_0$ and $H_A$ about a [[Parameter vs Statistic|population parameter]]; set α** (class default 0.05) ([[Null and Alternative Hypotheses]], [[Significance Level]]). *Why first:* the hypotheses and cutoff must be fixed before the data can influence them ([[Why choose alpha and tails before seeing the data]]).
+   1. **State $H_0$ and $H_A$ about a [[Parameter vs Statistic|population parameter]]; set α** (usually 0.05) ([[Null and Alternative Hypotheses]], [[Significance Level]]). *Why first:* the hypotheses and cutoff must be fixed before the data can influence them ([[Why choose alpha and tails before seeing the data]]).
    2. **Check conditions:** random sample, independence, [[Normality Checks|normality]] or large $n$. *Why:* the null distribution in step 4 is only correct if these hold ([[Why check assumptions before trusting a test]]).
    3. **Turn the sample statistic into a test statistic** ([[Test Statistic]]). *Why:* putting the result on a standard scale (SEs from the null value) lets one known distribution serve every study.
    4. **Find the p-value:** the probability of a result as or more extreme, **assuming $H_0$ is true** ([[P-Value]], [[Null Distribution]]). Which [[Tails of a Distribution|tail]] depends on $H_A$ ([[One-Tailed vs Two-Tailed Tests]]).
@@ -41,7 +41,7 @@ flowchart TD
   G --> I["Conclusion in context<br>with CI and effect size"]
   H --> I
 ```
-*What to look at:* every test in the course follows this same path; only the test statistic in the middle changes.
+*What to look at:* every test follows this same path; only the test statistic in the middle changes.
 
 ## Why it exists
 It gives a disciplined, pre-specified way to decide whether an observed difference is bigger than chance alone would produce, while [[Experiment|controlling]] the false-alarm rate α.

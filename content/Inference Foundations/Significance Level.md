@@ -16,7 +16,7 @@ status: seedling
 
 ## Start from zero
 1. **A p-value needs a cutoff for "too rare to believe $H_0$".** Decide it **before collecting data**. *Why before:* choosing it after seeing p lets you pick whatever cutoff gives the answer you want ([[Why choose alpha and tails before seeing the data]]).
-2. **That threshold is α.** Common choices: **0.05** (class default), 0.01, sometimes 0.10.
+2. **That threshold is α.** Common choices: **0.05** (the usual default), 0.01, sometimes 0.10.
 3. **α is the false-alarm rate.** If $H_0$ is true, results this extreme happen with probability α, so you will wrongly reject it with probability α ([[Type I and Type II Errors]]).
 4. **On the null distribution, α is an area.** The **rejection region** is the set of [[Test Statistic|test statistics]] extreme enough to reject; its area is α, and its edge is the [[Critical Value]] ([[Null Distribution]]).
 5. **Lower α is not free.** Fewer false alarms means more missed real effects, so less power ([[Statistical Power]]).

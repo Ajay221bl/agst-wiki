@@ -21,7 +21,7 @@ status: seedling
    - `1.5e+04` = 15,000
    - `3.4e-3` = 0.0034
    - `2.2e-16` = 0.00000000000000022
-4. **Read the power first.** A more negative power means a smaller number: `1e-10` is far smaller than `1e-3`. *Why this matters in this course:* p-values are often tiny, and `p-value < 2.2e-16` just means "smaller than the smallest number R bothers to print", reported as p < 0.001 ([[P-Value]]).
+4. **Read the power first.** A more negative power means a smaller number: `1e-10` is far smaller than `1e-3`. *Why this matters:* p-values are often tiny, and `p-value < 2.2e-16` just means "smaller than the smallest number R bothers to print", reported as p < 0.001 ([[P-Value]]).
 
 ## Why it exists
 Printing sixteen zeros wastes space, and computers cannot store infinitely small numbers precisely. R prints `p-value < 2.2e-16` when the true p-value is smaller than the smallest gap it can reliably represent.

@@ -42,7 +42,7 @@ status: seedling
 *What to look at:* Four ways chance can pick a sample from the same population of 80 units (gray). Red dots are the units that end up in the sample.
 
 ## Why it exists
-A random sample is enough for almost all the procedures in this course, but real studies often need structure (strata) or convenience (clusters). Knowing the method tells you how far you can generalize and what biases to report ([[Sampling Bias]]).
+A random sample is enough for almost all the procedures, but real studies often need structure (strata) or convenience (clusters). Knowing the method tells you how far you can generalize and what biases to report ([[Sampling Bias]]).
 
 ## A tiny example
 **Stratified vs cluster:** stratified samples *within every* group, for representation; cluster samples *whole* groups, for convenience. Strata are internally similar to each other; clusters ideally each look like a mini-population.

@@ -27,7 +27,7 @@ status: seedling
 *What to look at:* each line is one value's deviation. The ones above and below the mean cancel; their squares don't.
 
 ## Why it exists
-Spread is "how far values are from the centre", and the deviation is that distance for one value. Every measure of spread and every [[Test Statistic|test statistic]] in the course is built from deviations.
+Spread is "how far values are from the centre", and the deviation is that distance for one value. Every measure of spread and every [[Test Statistic|test statistic]] is built from deviations.
 
 ## A tiny example
 Data 1, 2, 3, 6, 3 (mean 3). Deviations −2, −1, 0, 3, 0: they sum to 0. Squared: 4, 1, 0, 9, 0, which sum to 14, so $s^2 = 14/4 = 3.5$ ([[Variance]]).

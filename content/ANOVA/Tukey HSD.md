@@ -9,7 +9,7 @@ aliases:
 status: seedling
 ---
 
-**In one line:** Tukey's honestly significant difference (HSD) test compares every pair of group means with confidence intervals and p-values adjusted for all the comparisons at once; it is the class default post hoc.
+**In one line:** Tukey's honestly significant difference (HSD) test compares every pair of group means with confidence intervals and p-values adjusted for all the comparisons at once; it is a common default post hoc.
 
 > [!info] Before this, it helps to know
 > [[Post Hoc Tests]] (what it is one of) · [[Confidence Interval]] (how to read it) · [[Family-Wise Type I Error]] (what it controls)

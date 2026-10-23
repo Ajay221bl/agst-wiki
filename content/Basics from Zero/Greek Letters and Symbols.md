@@ -19,7 +19,7 @@ status: seedling
 2. **The same quantity exists in both worlds.** There's a population mean (unknown) and a sample mean (computed). We need different symbols so we never confuse them.
 3. **The convention: Greek for the population, Roman for the sample.** $\mu$ (mu) is the population mean, $\bar{x}$ (x-bar) the sample mean; $\sigma$ ([[Standard Deviation|sigma]]) is the population SD, $s$ the sample SD ([[Parameter vs Statistic]]). *Why it matters:* a sentence like "$H_0: \mu = 98.6$" is about the population, never about the sample you already have.
 4. **A "hat" means "an [[Point Estimate|estimate]] of".** $\hat{p}$ (p-hat) is the sample's estimate of the population [[Proportions and Percentages|proportion]] $p$.
-5. **The full list used in this course:**
+5. **The full list used in these notes:**
 
 | Symbol | Say | Means |
 |---|---|---|

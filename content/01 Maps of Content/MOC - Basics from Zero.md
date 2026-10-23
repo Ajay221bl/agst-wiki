@@ -9,7 +9,7 @@ status: growing
 > [!tip] New to this?
 > Start here if symbols, squares or spreadsheets feel shaky. Every later note assumes these, and none of them takes more than a few minutes.
 
-The small pieces of maths and data vocabulary that the course uses without stopping to explain.
+The small pieces of maths and data vocabulary that statistics uses without stopping to explain.
 
 ## 1. What data look like
 - [[Variable and Observation]]: the two words every other note uses

@@ -52,7 +52,7 @@ How one sample can say something about a whole population, and how sure I can be
 - [[Simulation]]: made-up data with a known truth, to watch a method work
 - [[Conservative Tests]]: erring towards fewer false positives
 
-## 6. Coming later in the course (previews)
+## 6. Going further
 - [[Chi-Square Test]]: observed vs expected counts
 - [[Regression]]: a line through a quantitative predictor
 

@@ -17,7 +17,7 @@ status: seedling
 ## Start from zero
 1. **The decision is already made:** reject or fail to reject $H_0$ ([[Hypothesis Testing]]).
 2. **Say it in words a reader can use, in context** (the plants, the patients), not just in symbols. *Why:* "reject $H_0$" means nothing to someone who never saw your hypotheses.
-3. **Use the class template:**
+3. **Use this template:**
    - **p ≤ α:** "We **reject $H_0$**. There **is** sufficient evidence to reject $H_0$ and to support the claim that [$H_A$ in words, in context]."
    - **p > α:** "We **fail to reject $H_0$**. There is **not** sufficient evidence to reject $H_0$, and there is **not** sufficient evidence to support the claim that [$H_A$ in words, in context]."
 4. **Never say the null is proven.** *Why the "not" wording:* failing to find evidence is not finding evidence of no effect ([[Why we never accept the null hypothesis]]).
@@ -40,7 +40,7 @@ flowchart TD
   G --> I["Conclusion in context<br>with CI and effect size"]
   H --> I
 ```
-*What to look at:* every test in the course follows this same path; only the test statistic in the middle changes.
+*What to look at:* every test follows this same path; only the test statistic in the middle changes.
 
 ## Why it exists
 A decision without context is useless to a reader, and loose wording ("proved", "accepted the null") claims more than a test can deliver ([[Why we never accept the null hypothesis]]).

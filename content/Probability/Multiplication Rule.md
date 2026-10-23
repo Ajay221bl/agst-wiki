@@ -40,7 +40,7 @@ flowchart LR
 Many questions ask about a chain of events. The rule extends to any length: $P(A \cap B \cap C) = P(A)\,P(B \mid A)\,P(C \mid A \cap B)$. Rearranged, it *is* the definition of [[Conditional Probability]].
 
 ## A tiny example
-Class examples:
+Examples:
 1. Two fives on two fair dice (independent): $\frac16 \times \frac16 = \frac{1}{36}$
 2. Two clubs [[Sampling With and Without Replacement|without replacement]] ("stair-step down"): $\frac{13}{52} \times \frac{12}{51} \approx 0.059$
 3. Marbles (5 red, 11 white, 4 blue = 20) drawn without replacement as red, red, white: $\frac{5}{20} \times \frac{4}{19} \times \frac{11}{18} \approx 0.032$

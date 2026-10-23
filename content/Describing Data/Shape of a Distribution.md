@@ -35,7 +35,7 @@ status: seedling
 ## Why it exists
 Shape decides which summaries to trust and which tests are safe.
 - Skew pulls the mean toward the tail, so the median becomes the better center ([[Why the median beats the mean for skewed data]]).
-- Most tests in this course assume roughly normal data or sample means ([[Normality Checks]]).
+- Most tests assume roughly normal data or sample means ([[Normality Checks]]).
 
 ## A tiny example
 Quick skew check with mean vs median:

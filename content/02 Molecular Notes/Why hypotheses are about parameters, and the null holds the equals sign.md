@@ -25,7 +25,7 @@ Why must a hypothesis be about a parameter, and why does H₀ contain the equals
 ## See it
 
 ![[Null distribution centred at mu0 - body temperature.png|700]]
-*What to look at:* The curve can only be drawn once H₀ names a centre (98.6). Then the observed 98.249 is 5.45 [[Standard Error|standard errors]] below it. Class body temperature output.
+*What to look at:* The curve can only be drawn once H₀ names a centre (98.6). Then the observed 98.249 is 5.45 [[Standard Error|standard errors]] below it. Body temperature output from R.
 
 ## The reasoning, step by step
 1. A statistic (x̄, s, p̂) is computed from the sample, so it is known exactly; a parameter (μ, σ, p) describes the whole population and is unknown ([[Parameter vs Statistic]]).

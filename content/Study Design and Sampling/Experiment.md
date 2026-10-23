@@ -19,7 +19,7 @@ status: seedling
 ## Start from zero
 1. **I want to know whether X causes Y** ([[Independent and Dependent Variables]]).
 2. **Watching what happens naturally isn't enough,** because something else might drive both ([[Nuisance Variables and Confounding]]).
-3. **So the class definition (Kirk 2013) requires three things,** each with a job:
+3. **So the standard definition (Kirk 2013) requires three things,** each with a job:
    1. **Manipulation** by the researcher of one or more IVs (2 mg, 4 mg or 8 mg of a substance). *Why:* the researcher, not some hidden variable, decides who gets what.
    2. **Random assignment** of experimental units to treatment groups (3 seeds here, 3 seeds there). *Why:* nuisance variables end up balanced across groups ([[Random Assignment]]).
    3. **Observation or measurement** of one or more DVs. *Why:* the effect has to show up in data.

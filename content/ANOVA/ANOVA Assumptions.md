@@ -22,7 +22,7 @@ status: seedling
    - **HOV:** one pooled MSE describes every group ([[Homogeneity of Variance]]).
 3. **The short answer:** independence, normality, homogeneity of variance (HOV); plus, the samples are categorized in only one way.
 
-| Assumption | Meaning | Check (in this class) | Want |
+| Assumption | Meaning | Usual check | Want |
 |---|---|---|---|
 | **Independence** | independent random samples; a between-subjects design | study design; assume it unless there's an obvious pairing | no quick fix: use an analysis that matches the design |
 | **Normality** | each group from a roughly normal population | `shapiro.test()` per group (later: on residuals); [[Q-Q Plot\|Q-Q plots]] | **large p** |

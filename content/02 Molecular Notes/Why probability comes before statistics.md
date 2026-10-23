@@ -10,10 +10,10 @@ status: seedling
 ---
 
 > [!summary] In plain words
-> Every hypothesis test asks "how likely is what I saw, if nothing is going on?", and that is a probability question. The p-value is a conditional probability, and the logic of rejecting a null is the rare event rule from the first week. So the course teaches probability first, even though the probability unit feels like a detour.
+> Every hypothesis test asks "how likely is what I saw, if nothing is going on?", and that is a probability question. The p-value is a conditional probability, and the logic of rejecting a null is the rare event rule. So probability comes first, even though it can feel like a detour.
 
 ## The question
-The first unit is all coins, cards and [[Contingency Table|contingency tables]]. Why does a course on experimentation start there instead of with data?
+Probability is all coins, cards and [[Contingency Table|contingency tables]]. Why does the statistics of experiments start there instead of with data?
 
 ## Built from
 - [[Rare Event Rule]]: the reasoning pattern every test reuses.

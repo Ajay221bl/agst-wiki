@@ -16,15 +16,15 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[References]]: The books and papers the notes cite
 
 ## 01 Maps of Content (9)
-- [[MOC - ANOVA]]: Unit 6: comparing three or more group means with one test, then post hocs
-- [[MOC - Basics from Zero]]: The small pieces of maths and data vocabulary that the course uses without stopping to explain
-- [[MOC - Describing Data]]: Unit 2: data types, centre, spread, shape and plots
-- [[MOC - Inference Foundations]]: Unit 4: how one sample can say something about a population, and how sure I can be
-- [[MOC - Probability]]: Unit 1: events, the probability rules, conditioning and diagnostic tests
-- [[MOC - R for Statistics]]: The R workflow taught in class, from opening RStudio to post hoc letters
-- [[MOC - Study Design and Sampling]]: Unit 3: what a study can conclude, decided before the data exist
-- [[MOC - t-Tests]]: Unit 5: tests for one or two means when σ is estimated, and effect sizes
-- [[MOC - Why We Do It This Way]]: The molecular notes, in roughly the order the course meets them
+- [[MOC - ANOVA]]: Comparing three or more group means with one test, then post hocs
+- [[MOC - Basics from Zero]]: The small pieces of maths and data vocabulary that statistics uses without stopping to explain
+- [[MOC - Describing Data]]: Data types, centre, spread, shape and plots
+- [[MOC - Inference Foundations]]: How one sample can say something about a population, and how sure I can be
+- [[MOC - Probability]]: Events, the probability rules, conditioning and diagnostic tests
+- [[MOC - R for Statistics]]: A complete R workflow, from opening RStudio to post hoc letters
+- [[MOC - Study Design and Sampling]]: What a study can conclude, decided before the data exist
+- [[MOC - t-Tests]]: Tests for one or two means when σ is estimated, and effect sizes
+- [[MOC - Why We Do It This Way]]: The molecular notes, in the order the ideas build on each other
 
 ## 02 Molecular Notes (43)
 - [[Why 95% confidence is not a 95% probability]]: The 95% describes the method: if we repeated the sampling many times, 95% of the intervals built this way would contain μ
@@ -43,10 +43,10 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[Why blinding is still needed after random assignment]]: Random assignment makes the groups alike at the start
 - [[Why check assumptions before trusting a test]]: A p-value is calculated from a probability model, and that model assumes things: independent observations, roughly normal data or means, equal spreads for pooled tests
 - [[Why choose alpha and tails before seeing the data]]: α and the direction of the test define what counts as "surprising"
-- [[Why every test statistic is signal over noise]]: Every test statistic in the course has the same shape: how far what I saw is from what H₀ expects, divided by how much that distance would vary by chance
+- [[Why every test statistic is signal over noise]]: Every test statistic has the same shape: how far what I saw is from what H₀ expects, divided by how much that distance would vary by chance
 - [[Why go with the confidence interval when the hypothesis is weak]]: A hypothesis test is only as good as the null value you test against; pick a silly one and the result is meaningless
 - [[Why hypotheses are about parameters, and the null holds the equals sign]]: We only test what we can't see
-- [[Why independence is judged from the design, not a test]]: Every test in the course assumes the observations are independent, but no output can confirm it
+- [[Why independence is judged from the design, not a test]]: Every test assumes the observations are independent, but no output can confirm it
 - [[Why normality is checked on residuals or differences]]: A test assumes normality only for the part it treats as chance
 - [[Why pairing, blocking and good measurement raise power]]: Power comes from a large signal-to-noise ratio
 - [[Why post hoc tests only after a significant ANOVA]]: The omnibus ANOVA is the gatekeeper: it asks, at one controlled error rate, whether any difference exists
@@ -153,7 +153,7 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[Sampling Methods]]: The ways of choosing a sample range from simple random sampling (the ideal) through stratified, cluster and systematic designs to convenience, snowball and...
 - [[Statistical Conclusion Validity]]: Statistical conclusion validity asks whether the statistical methods and the conclusions drawn from them are sound
 - [[Treatment and Control Groups]]: In an experiment the **treatment group** gets the thing being tested and the **control group** gets nothing, a placebo or the current standard, so the difference between them shows the treatment's...
-- [[Validity]]: Validity is how far a study's conclusion can be trusted; the course splits it into four kinds: statistical conclusion, internal, construct and external validity
+- [[Validity]]: Validity is how far a study's conclusion can be trusted; it is usually split into four kinds: statistical conclusion, internal, construct and external validity
 
 ## Inference Foundations (31)
 - [[Central Limit Theorem]]: For large enough samples, sample means are approximately normally distributed, centered at the population mean, with spread $\sigma/\sqrt{n}$, whatever the shape of...
@@ -175,13 +175,13 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[Robustness]]: A method is robust when it still gives nearly the right answer even though one of its assumptions is somewhat violated
 - [[Sample Size]]: The sample size $n$ is the number of independent units measured ($N$ for the total across groups, $n_i$ for group $i$); it sets the standard error, the degrees of freedom and the power
 - [[Sampling Distribution]]: A sampling distribution is the distribution of a statistic (like $\bar{x}$) over all possible samples of the same size from the same population
-- [[Signal and Noise]]: Every test statistic in the course is a ratio of signal (the effect you see) to noise (how much that effect would wobble by chance); a big ratio means the signal stands...
+- [[Signal and Noise]]: Every test statistic is a ratio of signal (the effect you see) to noise (how much that effect would wobble by chance); a big ratio means the signal stands...
 - [[Significance Level]]: The significance level α is the cutoff for "unusual" chosen before the study, and it equals the probability of a Type I error you are willing to accept
 - [[Simulation]]: A simulation makes up data on a computer from a model whose truth you choose, many times over, to see how a statistic or a method behaves
 - [[Standard Error]]: The standard error (SE) is the standard deviation of a sampling distribution: how much a statistic would bounce around from sample to sample
 - [[Statistical Power]]: Power is the probability that a test detects an effect that really exists: $1 - \beta$
 - [[Statistical vs Practical Significance]]: Statistical significance says a result is probably not just chance; practical (clinical, scientific) significance says it is big enough to matter, and the two can...
-- [[Test Assumptions]]: A test's assumptions are the conditions under which its null distribution, and so its p-value, are correct; for the course's tests they are independence, normality (of means, [[Residuals|residuals]...
+- [[Test Assumptions]]: A test's assumptions are the conditions under which its null distribution, and so its p-value, are correct; for the common tests they are independence, normality (of means, [[Residuals|residuals]...
 - [[Test Statistic]]: A test statistic turns the gap between what you observed and what $H_0$ predicts into a unitless number, scaled by how much that gap would vary by chance
 - [[Type I and Type II Errors]]: A Type I error is rejecting a null hypothesis that is actually true (a false positive); a Type II error is failing to reject a null that is actually false (a false...
 - [[Unbiased Estimator]]: An estimator is unbiased if, averaged over all possible samples, it hits the population value exactly: its sampling distribution is centered on the parameter

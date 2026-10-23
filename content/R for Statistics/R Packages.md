@@ -33,7 +33,7 @@ psych::describe(d)     # use one function without loading the whole package
 4. **Why `package::function`:** two packages can have functions with the same name; the prefix says which one you mean.
 
 ## Why it exists
-Base R lacks many tools the course uses. Packages used so far: `psych` (describe), `report` (report, [[report()|report_sample]]), `Amelia` (missmap), `ggpubr` (plots), `lsr` (cohensD), `car` (leveneTest), `emmeans` and `multcomp` (letters), `lattice`, `gridExtra`, `vcd`.
+Base R lacks many tools these notes use. Packages used: `psych` (describe), `report` (report, [[report()|report_sample]]), `Amelia` (missmap), `ggpubr` (plots), `lsr` (cohensD), `car` (leveneTest), `emmeans` and `multcomp` (letters), `lattice`, `gridExtra`, `vcd`.
 
 ## A tiny example
 Error "could not find function cohensD" → the `lsr` package isn't loaded. Run `library(lsr)`.

@@ -32,7 +32,7 @@ COVID[, c(7, 8)]    # keep two columns
 5. **Why keep only some columns:** dropping NAs later removes any row with a missing value in *any* column, so keeping just the needed ones keeps more rows ([[na.omit() and complete.cases()]]).
 
 ## Why it exists
-Almost every function in the course takes a data frame (`data = d`) or a column from one (`d$x`).
+Almost every function takes a data frame (`data = d`) or a column from one (`d$x`).
 
 ## A tiny example
 ```r

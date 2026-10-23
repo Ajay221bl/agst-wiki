@@ -9,7 +9,7 @@ status: growing
 > [!tip] New to this?
 > Each one answers a "why" question by combining several atomic notes.
 
-The molecular notes, in roughly the order the course meets them.
+The molecular notes, in the order the ideas build on each other.
 
 ## 1. Foundations
 - [[Why probability comes before statistics]]: a p-value is a conditional probability
@@ -67,4 +67,4 @@ The molecular notes, in roughly the order the course meets them.
 - [[Why you must say how missing values were handled]]: na.omit drops whole rows
 
 ## Related MOCs
-[[MOC - Inference Foundations]] · [[MOC - ANOVA]] · MOC - AGST Course · [[index|Home]]
+[[MOC - Inference Foundations]] · [[MOC - ANOVA]] · [[index|Home]]

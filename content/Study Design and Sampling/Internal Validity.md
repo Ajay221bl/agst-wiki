@@ -24,7 +24,7 @@ status: seedling
 3. **Any "third variable" that could explain the result instead of the treatment is a threat to internal validity** ([[Nuisance Variables and Confounding]]).
 4. **The defense is random assignment of individual units to treatment groups.** *Why:* it balances third variables between groups ([[Random Assignment]]). Some threats need more than that:
 
-| Threat | What happens | Class example |
+| Threat | What happens | Example |
 |---|---|---|
 | **Confounding** | a nuisance variable tied to both treatment and response | older chickens all on one diet |
 | **Maturation** | subjects change naturally over time | children's reading at age 6 and again at 9 |

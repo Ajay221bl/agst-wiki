@@ -39,7 +39,7 @@ flowchart TD
   G --> I["Conclusion in context<br>with CI and effect size"]
   H --> I
 ```
-*What to look at:* every test in the course follows this same path; only the [[Test Statistic|test statistic]] in the middle changes.
+*What to look at:* every test follows this same path; only the [[Test Statistic|test statistic]] in the middle changes.
 
 ## Why it exists
 Writing hypotheses before seeing the data fixes what counts as evidence and which tail to use. The direction of $H_A$ decides the test type ([[One-Tailed vs Two-Tailed Tests]]).

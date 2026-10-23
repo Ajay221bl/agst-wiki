@@ -25,7 +25,7 @@ status: seedling
 ## See it
 
 ![[Mean vs median - years in school.png|700]]
-*What to look at:* The class example: one value of 33 pulls the mean to 9 while four of the five people are at 6 or below. The median (3) stays with the typical person.
+*What to look at:* An example: one value of 33 pulls the mean to 9 while four of the five people are at 6 or below. The median (3) stays with the typical person.
 
 ## Why it exists
 Real data are often skewed: income, time outdoors, hospital stays. A few huge values drag the mean toward the long tail, so the mean no longer describes a "typical" value. The median does ([[Why the median beats the mean for skewed data]]).

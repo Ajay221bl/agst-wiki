@@ -10,7 +10,7 @@ aliases:
 status: seedling
 ---
 
-**In one line:** validity is how far a study's conclusion can be trusted; the course splits it into four kinds: statistical conclusion, internal, construct and external validity.
+**In one line:** validity is how far a study's conclusion can be trusted; it is usually split into four kinds: statistical conclusion, internal, construct and external validity.
 
 > [!info] Before this, it helps to know
 > [[Experiment]] · [[Population and Sample]] · [[Association vs Causation]]

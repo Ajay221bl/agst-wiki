@@ -10,7 +10,7 @@ status: seedling
 ---
 
 > [!summary] In plain words
-> Every test statistic in the course has the same shape: how far what I saw is from what H₀ expects, divided by how much that distance would vary by chance. A big [[Ratios and Fractions|ratio]] means the difference is hard to explain by chance alone, so the p-value is small. z, t and F differ only in what counts as signal and noise.
+> Every test statistic has the same shape: how far what I saw is from what H₀ expects, divided by how much that distance would vary by chance. A big [[Ratios and Fractions|ratio]] means the difference is hard to explain by chance alone, so the p-value is small. z, t and F differ only in what counts as signal and noise.
 
 ## The question
 Why do z, t and F all look like a fraction, and what makes one large?

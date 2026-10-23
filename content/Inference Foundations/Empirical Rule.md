@@ -26,7 +26,7 @@ status: seedling
 ## See it
 
 ![[Empirical rule - dog heights.png|700]]
-*What to look at:* With the class dog heights (mean 394 mm, SD 147), each band adds one SD on each side. Note that −3 SD is a negative height: the normal model is only an approximation.
+*What to look at:* With the dog heights example (mean 394 mm, SD 147), each band adds one SD on each side. Note that −3 SD is a negative height: the normal model is only an approximation.
 
 ## Why it exists
 It gives a quick sense of "usual" vs "unusual" without software:

@@ -37,7 +37,7 @@ status: seedling
 *What to look at:* If the data are normal, the points follow the red line. Systematic curving away at the ends (right panel) signals skew.
 
 ## Why it exists
-Most tests in the course assume normality somewhere. Which "somewhere" matters:
+Most tests assume normality somewhere. Which "somewhere" matters:
 
 | Test | Check normality of... |
 |---|---|

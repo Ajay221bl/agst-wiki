@@ -21,7 +21,7 @@ status: seedling
 5. **The square root undoes the square:** $\sqrt{9} = 3$. *Why we need it:* taking the root of the variance brings the units back, giving the [[Standard Deviation]] in kg. It also appears in $\sqrt{n}$ in the standard error, because the variance of a mean shrinks with $n$, so its SD shrinks with $\sqrt{n}$ ([[Standard Error]]).
 
 ## Why it exists
-Two places in this course depend on it:
+Two places depend on it:
 - **Spread:** raw deviations from the mean sum to zero, so [[Variance]] squares them first, and the SD takes the square root to return to the original units.
 - **[[Sample Size|Sample size]]:** the [[Standard Error]] is $s/\sqrt{n}$. Because of the square root, quadrupling $n$ only halves the SE.
 

@@ -29,7 +29,7 @@ status: seedling
 ## Why it exists
 It saves recalculation and catches trick questions ("the instrument was miscalibrated by 4 units; what is the new SD?" → the same SD).
 
-The proof from class: with new values $x_i + c$,
+The proof: with new values $x_i + c$,
 $$\bar{x}_{new} = \frac{\sum (x_i + c)}{n} = \bar{x} + c$$
 $$s^2_{new} = \frac{\sum \big((x_i + c) - (\bar{x} + c)\big)^2}{n-1} = \frac{\sum (x_i - \bar{x})^2}{n-1} = s^2$$
 The $c$'s cancel inside the deviations.

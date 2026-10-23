@@ -10,7 +10,7 @@ status: seedling
 ---
 
 > [!summary] In plain words
-> Every test in the course assumes the observations are independent, but no output can confirm it. Independence comes from how the data were collected: separate random samples, units that don't share pens, families or repeated measurements. You judge it by asking how the data arose, and if units are linked you choose a design that accounts for it, such as a paired test.
+> Every test assumes the observations are independent, but no output can confirm it. Independence comes from how the data were collected: separate random samples, units that don't share pens, families or repeated measurements. You judge it by asking how the data arose, and if units are linked you choose a design that accounts for it, such as a paired test.
 
 ## The question
 How do you check the independence assumption, and why can't software do it for you?

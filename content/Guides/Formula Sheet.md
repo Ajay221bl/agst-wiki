@@ -55,6 +55,6 @@ Every formula through one-way ANOVA in one place. Each row links to the note tha
 | η² | SSG / [[Sums of Squares and Mean Squares\|SST]] → [[Effect Size]] |
 
 ## Connections
-- **Part of:** MOC - AGST Course
+- **Part of:** [[index|Home]]
 - **Related:** [[Test Choice Guide]]
 - **Terms used:** [[Tails of a Distribution]]

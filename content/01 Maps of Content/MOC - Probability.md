@@ -7,7 +7,7 @@ status: growing
 ---
 
 > [!tip] New to this?
-> Read [[Why probability comes before statistics]] first. It explains why a stats course spends its first unit on dice and drug tests.
+> Read [[Why probability comes before statistics]] first. It explains why statistics starts with dice and drug tests.
 
 Probability is the language a p-value is written in.
 

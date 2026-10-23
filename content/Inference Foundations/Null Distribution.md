@@ -29,7 +29,7 @@ status: seedling
 *What to look at:* the grey bars are 10,000 t values from shuffled labels; the blue curve is the t-distribution R uses. They agree, and 14% of the shuffles are at least as extreme as the observed 1.50, close to R's p = 0.138.
 
 ## Why it exists
-It is the yardstick that turns "my statistic is 1.50" into "a statistic this big happens 14% of the time by chance alone". Every p-value in the course is an area of a null distribution.
+It is the yardstick that turns "my statistic is 1.50" into "a statistic this big happens 14% of the time by chance alone". Every p-value is an area of a null distribution.
 
 ## A tiny example
 Book births data, smokers vs nonsmokers: [[Welch's t-Test|Welch]] t = 1.50, R's p = 0.138. Shuffling the smoker labels 10,000 times ([[Simulation|simulated]]) gave a share of 0.141 at least as extreme: the same answer by brute force ([[Two-Sample Independent t-Test]]).

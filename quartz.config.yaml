@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: AGST Experimentation Wiki
+  pageTitle: Experimental Statistics Wiki
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true

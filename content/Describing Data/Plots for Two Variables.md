@@ -34,7 +34,7 @@ status: seedling
 *What to look at:* The plot follows the variable types: two quantitative variables give a scatter plot, a quantitative response by group gives side-by-side box plots, and two categorical variables give stacked or side-by-side bars.
 
 ## Why it exists
-**Always visualize.** Datasets with identical means, SDs and [[Correlation|correlations]] can look completely different (the "datasaurus" slide). A plot reveals curves, clusters, outliers and unequal spreads that summary numbers hide ([[Why visualize data before testing]]).
+**Always visualize.** Datasets with identical means, SDs and [[Correlation|correlations]] can look completely different (the "Datasaurus" example). A plot reveals curves, clusters, outliers and unequal spreads that summary numbers hide ([[Why visualize data before testing]]).
 
 ## A tiny example
 Book example: female frog body size vs clutch volume shows an upward trend with no extreme outliers, so a straight-line summary is reasonable.

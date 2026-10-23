@@ -52,4 +52,4 @@ What a study can conclude is decided before the data exist.
 - [[Why independence is judged from the design, not a test]]
 
 ## Related MOCs
-[[MOC - Inference Foundations]] · MOC - AGST Course · [[index|Home]]
+[[MOC - Inference Foundations]] · [[index|Home]]

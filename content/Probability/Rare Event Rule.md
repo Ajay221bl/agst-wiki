@@ -23,7 +23,7 @@ status: seedling
 7. **This is hypothesis testing in miniature.** The assumption is $H_0$, the probability is the p-value, and "extremely small" is decided in advance as α ([[Hypothesis Testing]], [[P-Value]], [[Significance Level]]).
 
 ## Why it exists
-This one sentence is the logic of every hypothesis test in the course.
+This one sentence is the logic of every hypothesis test.
 - The "assumption" is the null hypothesis ([[Null and Alternative Hypotheses]]).
 - The "probability of the observed event (or something more extreme)" is the [[P-Value]].
 - "Extremely small" is set by the [[Significance Level]] α.

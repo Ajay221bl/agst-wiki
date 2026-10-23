@@ -28,7 +28,7 @@ $$s_p^2 = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}$$
 ## Why it exists
 If the variances really are equal, pooling uses all the data to estimate one shared spread, which makes the test **slightly more powerful** (lower p-values) and gives a **whole-number df**.
 
-**Why the course shows it:** it leads straight to one-way ANOVA, which *assumes* equal variances and pools the within-group variance into the **MSE** ([[ANOVA Table]], [[Homogeneity of Variance]]).
+**Why it matters:** it leads straight to one-way ANOVA, which *assumes* equal variances and pools the within-group variance into the **MSE** ([[ANOVA Table]], [[Homogeneity of Variance]]).
 
 ## A tiny example
 Group 1: $n = 10$, $s^2 = 4$. Group 2: $n = 20$, $s^2 = 6$.

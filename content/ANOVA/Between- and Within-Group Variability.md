@@ -20,7 +20,7 @@ status: seedling
 1. **Picture three groups with means 10, 12 and 14.**
    - If each group is tight (values within ±0.5 of their mean), the groups clearly differ.
    - If each group sprawls from 0 to 25, the same means are lost in the noise.
-2. **The means did not change; only the within-group spread did.** So "do the means differ?" can only be answered **relative to the spread inside the groups** ([[Signal and Noise]]). The class slide showed exactly this: box plots with identical mean markers but different spreads.
+2. **The means did not change; only the within-group spread did.** So "do the means differ?" can only be answered **relative to the spread inside the groups** ([[Signal and Noise]]). A standard picture shows exactly this: box plots with identical mean markers but different spreads.
 3. **Measure "how different the group means are" as a variance of the means** around the grand mean ([[Mean]], [[Variance]]). Each group counts once per member, so weight by $n_i$:
    - **Between** (signal): $MSG = SSG/(k-1)$, with $SSG = \sum n_i(\bar{x}_i - \bar{x})^2$.
 4. **Measure the noise as the variance of values around their own group mean,** pooled over groups ([[Pooled Variance]]):

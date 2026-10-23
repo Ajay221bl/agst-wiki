@@ -11,7 +11,7 @@ status: seedling
 **In one line:** $P(A \mid B)$ is the chance of $A$ when you already know $B$ happened, found by shrinking the sample space down to $B$.
 
 > [!info] Before this, it helps to know
-> [[Sample Space and Events]] (what gets shrunk) · [[Contingency Table]] (where the course reads these off)
+> [[Sample Space and Events]] (what gets shrunk) · [[Contingency Table]] (where these are usually read off)
 
 ## Start from zero
 1. **Out of a whole class, what fraction smoke?** That's an ordinary probability: smokers ÷ everyone.
@@ -32,7 +32,7 @@ $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
 Most interesting questions are conditional: the chance of disease *given* a positive test, the chance of the data *given* that $H_0$ is true. The [[P-Value]] itself is a conditional probability ([[Why probability comes before statistics]]).
 
 ## A tiny example
-Tutoring visits table from class (n = 58): 13 part-time students, 2 of whom visited one time or fewer.
+A tutoring visits table (n = 58): 13 part-time students, 2 of whom visited one time or fewer.
 $$P(\le 1 \text{ visit} \mid \text{part-time}) = \frac{2/58}{13/58} = \frac{2}{13} \approx 0.154$$
 The 58s cancel, so you can go straight to "among the 13 part-time students, 2".
 

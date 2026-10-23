@@ -19,7 +19,7 @@ status: seedling
 ## Start from zero
 1. **Dividing answers "how many times bigger?"** 12 ÷ 3 = 4 means 12 holds four 3s. Written as a fraction, $\frac{12}{3}$: the top is the **numerator**, the bottom is the **denominator**.
 2. **A ratio is any comparison done this way.** It turns two numbers into one that has no units when both share the same units (seeds ÷ seeds, m/s ÷ m/s). *Why that matters:* a unit-free number can be compared across studies ([[Coefficient of Variation]]).
-3. **Bigger numerator → bigger ratio; bigger denominator → smaller ratio.** Almost every "why does this get significant?" question in the course is this one fact.
+3. **Bigger numerator → bigger ratio; bigger denominator → smaller ratio.** Almost every "why does this get significant?" question is this one fact.
 4. **Part ÷ whole is a proportion** ([[Proportions and Percentages]]), between 0 and 1. Other ratios can be any size.
 5. **Statistics' key ratio is signal ÷ noise.** A test statistic puts the effect you saw in the numerator and its [[Standard Error|standard error]] in the denominator ([[Signal and Noise]], [[Test Statistic]]). The F statistic is a ratio of two variances ([[F-Distribution]]). *Why a ratio:* "is this effect big?" only has an answer *relative to* how much it would wobble by chance.
 

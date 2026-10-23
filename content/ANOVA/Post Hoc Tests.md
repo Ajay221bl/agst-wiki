@@ -43,7 +43,7 @@ flowchart TD
 Adjustment is still needed *after* a significant ANOVA; you can't switch to plain t-tests just because you cleared the omnibus hurdle.
 
 Common methods ("no wrong way"; your advisor or field may have a default):
-- [[Tukey HSD]]: the class default.
+- [[Tukey HSD]]: a common default.
 - [[Bonferroni Correction]]: simplest, most [[Conservative Tests|conservative]].
 - Fisher's LSD, Holm, Scheffé, Dunnett (each vs a control).
 - Results summarized as SAS-style letters ([[Compact Letter Display]]).

@@ -26,7 +26,7 @@ $$P(A) \approx \frac{\text{number of times } A \text{ occurred}}{\text{number of
 5. **Statistics lives on the relative-frequency side**: a sample proportion is a relative frequency used to estimate an unknown probability ([[Parameter vs Statistic]]).
 
 ## Why it exists
-Most real questions have no neat sample space. Nobody can list "all the ways a person might be a smoker". So we estimate the probability from data, which is the bridge to everything else in the course: estimating unknown population values from observed samples ([[Population and Sample]]).
+Most real questions have no neat sample space. Nobody can list "all the ways a person might be a smoker". So we estimate the probability from data, which is the bridge to everything else in statistics: estimating unknown population values from observed samples ([[Population and Sample]]).
 
 ## A tiny example
 | Question | Approach | Answer |

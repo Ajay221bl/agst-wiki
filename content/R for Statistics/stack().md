@@ -27,7 +27,7 @@ str(frust)                                         # want: num score, Factor maj
 4. **Check with `str()`** ([[str()]]): one numeric response and one factor with the right number of levels ([[Data Frames]]).
 
 ## Why it exists
-It is the one-line base-R reshape that gets wide class data ready for `aov()` ([[aov()]]).
+It is the one-line base-R reshape that gets wide data ready for `aov()` ([[aov()]]).
 
 ## A tiny example
 Wide row 1: business 12, English 15, math 14, psychology 18 → long: four rows, (12, business), (15, English), (14, math), (18, psychology).

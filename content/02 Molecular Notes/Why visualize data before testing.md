@@ -32,7 +32,7 @@ status: seedling
 *What to look at:* Watch where the red mean line sits relative to the dashed [[Median|median]]: they agree for symmetric data and the mean chases the long [[Tails of a Distribution|tail]] when the data are skewed.
 
 ## The reasoning, step by step
-1. Means and SDs compress the data; very different datasets can share them (the "datasaurus" slide) ([[Plots for Two Variables]]).
+1. Means and SDs compress the data; very different datasets can share them (the "Datasaurus" example) ([[Plots for Two Variables]]).
 2. A plot shows **shape**: skew decides mean vs median ([[Why the median beats the mean for skewed data]]).
 3. It shows **outliers** that would drag means and inflate SDs ([[Outliers]]).
 4. It checks **assumptions**: Q-Q plots for normality; side-by-side boxes for equal spreads ([[Normality Checks]], [[Homogeneity of Variance]]).

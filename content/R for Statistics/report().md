@@ -26,7 +26,7 @@ report::report(t.test(COVID$distress, mu = 10))   # auto-written summary
 ```
 
 3. **Why `report_sample`:** a sample table (mean and [[Standard Deviation|SD]], or %) is the first thing a reader needs ([[Why report both center and spread]]).
-4. **Treat the output as a draft.** *Why:* it can't know your context, and its effect-size labels may differ from the class benchmarks ([[Cohen's d]]).
+4. **Treat the output as a draft.** *Why:* it can't know your context, and its effect-size labels may differ from the usual benchmarks ([[Cohen's d]]).
 
 ## Why it exists
 It saves time and shows the direction and a **[[Confidence Interval|CI]] for the effect size**, which `cohensD()` does not ([[cohensD()]]).

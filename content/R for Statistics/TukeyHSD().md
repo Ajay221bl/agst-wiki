@@ -33,7 +33,7 @@ plot(TukeyHSD(frustration.aov), las = 1)        # CIs; those crossing 0 are not 
 *What to look at:* Each row is one pair of groups with its adjusted 95% interval. Intervals that cross the dashed 0 line are not significant; red ones miss 0, so that pair differs.
 
 ## Why it exists
-The class default [[Post Hoc Tests|post hoc]], run **only after a significant ANOVA** ([[Why post hoc tests only after a significant ANOVA]]).
+A common default [[Post Hoc Tests|post hoc]], run **only after a significant ANOVA** ([[Why post hoc tests only after a significant ANOVA]]).
 
 ## A tiny example
 Row `psychology-English`: diff positive, lwr > 0 → psychology more frustrated than English.
