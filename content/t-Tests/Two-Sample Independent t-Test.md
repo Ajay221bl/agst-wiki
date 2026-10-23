@@ -11,12 +11,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** the two-sample independent t-test compares the means of two independent groups: a categorical [[Independent and Dependent Variables|IV]] with 2 levels and a [[Types of Data|quantitative]] DV.
+The two-sample independent t-test compares the means of two independent groups: a categorical [[Independent and Dependent Variables|IV]] with 2 levels and a [[Types of Data|quantitative]] DV.
 
-> [!info] Before this, it helps to know
-> [[Independent vs Paired Samples]] (when it applies) · [[Standard Error]] (the SE of a difference) · [[t-Distribution]] (its [[Null Distribution|null distribution]]) · [[Test Statistic]] (the template)
-
-## Start from zero
 1. **Two separate groups, one question: do their [[Population and Sample|population]] means differ?** ([[Independent vs Paired Samples]])
    - $H_0: \mu_1 - \mu_2 = 0$ vs $H_A: \mu_1 - \mu_2 <, >, \ne 0$ (R default two-sided).
 2. **The observed [[Signal and Noise|signal]] is $\bar{x}_1 - \bar{x}_2$.** The template says divide by its SE ([[Test Statistic]]).
@@ -25,20 +21,18 @@ status: seedling
 5. **If you can justify equal variances, pool them** (`var.equal = TRUE`): more powerful, df = $n_1 + n_2 - 2$, but equal variances is a strong assumption that needs a rationale ([[Pooled Variance]]).
 6. **[[Test Assumptions|Requirements]]:** two independent random samples; **each** group roughly normal or both $n$'s large (two Shapiro tests). *Why each group:* each mean must be roughly normal for t to follow the t-distribution. Later you'll check residuals instead ([[Residuals]]).
 
-## Why it exists
 It is the basic two-group comparison and the **precursor to one-way ANOVA** ([[One-Way ANOVA]]).
 
-## A tiny example
+For example:
+
 **Reading the [[Confidence Interval|CI]] for $\mu_1 - \mu_2$:**
 - **0 inside** → the means could be equal; not significant.
 - **Entirely negative** → $\mu_1 < \mu_2$; **entirely positive** → $\mu_1 > \mu_2$.
 
 mtcars MPG, automatic − manual: 95% CI **−11.28 to −3.21**, entirely negative. Automatics average 3.21 to 11.28 MPG lower than manuals.
 
-## How to run it
-
 ![[Worked example - two-sample t-test.png|700]]
-*What to look at:* left, almost every stem-cell sheep sits above almost every control sheep. Right, the CI for the difference stays clear of 0.
+Left, almost every stem-cell sheep sits above almost every control sheep. Right, the CI for the difference stays clear of 0.
 
 **Worked example: stem cells and sheep hearts** (Menard et al. 2005, in [[References|Vu and Harrington 2020, Ch. 5]], pp. 247–249). 18 sheep with induced heart attacks were randomly assigned to a transplant of embryonic stem cells (`esc`) or inert material (`ctrl`), 9 each. The response is the change in heart pumping capacity (after − before, in %). The data are in `Data/stem_cells.csv` (the book's `stem_cell` data).
 
@@ -81,11 +75,10 @@ cohensD(change ~ trmt, data = sheep)                   # 1.89
 6. **Decide and report.**
    > We reject $H_0$. There is sufficient evidence that stem-cell transplants change heart pumping capacity: sheep given stem cells improved by 7.83 [[Proportions and Percentages|percentage]] points more than controls, Welch *t*(12.2) = 4.01, *p* = .002, 95% CI [3.58, 12.08], Cohen's *d* = 1.89 (large).
 
-## Common confusions
+Common mistakes:
+
 - **"A negative t means an error."** It means group 1's mean is lower, given the order of subtraction.
 
-## Connections
-- **Builds on:** [[Independent vs Paired Samples]], [[Standard Error]], [[t-Distribution]], [[Test Statistic]]
-- **Leads to:** [[Pooled Variance]], [[One-Way ANOVA]], [[Cohen's d]]
-- **Part of:** [[MOC - t-Tests]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 5]] (§5.3, p. 247)
+See also: [[t-Distribution]], [[Null Distribution|null distribution]], [[Cohen's d]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (§5.3, p. 247).

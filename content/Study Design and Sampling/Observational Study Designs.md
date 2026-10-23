@@ -11,12 +11,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** in an observational study the researcher watches rather than assigns; the three main designs are cohort (follow forward), case-control (look backward from an outcome) and cross-sectional (a snapshot).
+In an observational study the researcher watches rather than assigns; the three main designs are cohort (follow forward), case-control (look backward from an outcome) and cross-sectional (a snapshot).
 
-> [!info] Before this, it helps to know
-> [[Randomized Controlled Trial]] (the comparison point) · [[Nuisance Variables and Confounding]] (the weakness they share)
-
-## Start from zero
 1. **Sometimes you can't assign the exposure** (smoking, a disease, a barn's location), so you observe it instead ([[Randomized Controlled Trial]]).
 2. **Without [[Random Assignment|random assignment]], nuisance variables can line up with the exposure** ([[Nuisance Variables and Confounding]]). Each design handles time and cost differently:
 
@@ -28,8 +24,6 @@ status: seedling
 
 3. **Why time order matters:** a cause must come before its effect. Cohorts see the order; cross-sectional studies can't.
 
-## See it
-
 ```mermaid
 flowchart TD
   A{"Does the researcher<br>manipulate the IV?"} -->|no| O["Observational study<br>cohort, case-control, cross-sectional"]
@@ -38,20 +32,19 @@ flowchart TD
   B -->|yes| E["Experiment<br>causal conclusions possible"]
   E --> R["Randomized controlled trial<br>plus control group and blinding"]
 ```
-*What to look at:* two yes/no questions separate the three kinds of study, and only the bottom path supports a [[Association vs Causation|causal]] claim.
+Two yes/no questions separate the three kinds of study, and only the bottom path supports a [[Association vs Causation|causal]] claim.
 
-## Why it exists
 Many exposures cannot be assigned (smoking, lead, diet over decades). Observational designs study them anyway. They show **association, not causation**, because of confounding: a variable tied to both the exposure and the outcome, such as sun exposure linking sunscreen use and skin cancer ([[References|Vu and Harrington 2020, Ch. 1]], pp. 27–29).
 
-## A tiny example
+For example:
+
 Long cohort studies can reveal unexpected links: smoking was tied to heart disease and to dental health. Such findings generate [[Null and Alternative Hypotheses|hypotheses]] for later RCTs.
 
-## Common confusions
+Common mistakes:
+
 - **"A strong association proves causation."** Without random assignment, a confounder may explain it.
 - **"Case-control studies follow people forward."** They start from the outcome and look backward.
 
-## Connections
-- **Builds on:** [[Randomized Controlled Trial]], [[Nuisance Variables and Confounding]]
-- **Leads to:** [[Internal Validity]], [[External Validity]], [[Quasi-Experiment]]
-- **Part of:** [[MOC - Study Design and Sampling]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 1]] (pp. 27–29)
+See also: [[Internal Validity]], [[External Validity]], [[Quasi-Experiment]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (pp. 27–29).

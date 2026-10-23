@@ -11,12 +11,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** in an experiment the researcher manipulates the independent variable and randomly assigns units to treatments, which is what allows a [[Association vs Causation|causal]] conclusion.
+In an experiment the researcher manipulates the independent variable and randomly assigns units to treatments, which is what allows a [[Association vs Causation|causal]] conclusion.
 
-> [!info] Before this, it helps to know
-> [[Independent and Dependent Variables]] (what is manipulated and measured) · [[Random Assignment]] (the ingredient that makes causation possible)
-
-## Start from zero
 1. **I want to know whether X causes Y** ([[Independent and Dependent Variables]]).
 2. **Watching what happens naturally isn't enough,** because something else might drive both ([[Nuisance Variables and Confounding]]).
 3. **So the standard definition (Kirk 2013) requires three things,** each with a job:
@@ -26,8 +22,6 @@ status: seedling
 4. **Together they let a difference in outcomes be blamed on the treatment.** R. A. Fisher: an experiment is "an experience carefully planned in advance and designed to form a secure basis of new knowledge." It **permits the [[Descriptive vs Inferential Statistics|inference]] of causation** ([[Internal Validity]]).
 5. **If manipulation or random assignment is impossible, it is a [[Quasi-Experiment]].**
 
-## See it
-
 ```mermaid
 flowchart TD
   A{"Does the researcher<br>manipulate the IV?"} -->|no| O["Observational study<br>cohort, case-control, cross-sectional"]
@@ -36,24 +30,23 @@ flowchart TD
   B -->|yes| E["Experiment<br>causal conclusions possible"]
   E --> R["Randomized controlled trial<br>plus control group and blinding"]
 ```
-*What to look at:* two yes/no questions separate the three kinds of study, and only the bottom path supports a causal claim.
+Two yes/no questions separate the three kinds of study, and only the bottom path supports a causal claim.
 
-## Why it exists
 Manipulation guarantees the IV came first. Random assignment means nuisance variables are balanced between groups on average, so the only systematic difference is the treatment. Together they protect [[Internal Validity]].
 
-## A tiny example
+For example:
+
 The book's four principles of experimental design ([[References|Vu and Harrington 2020, Ch. 1]], pp. 25–27):
 1. **Controlling:** treat the groups identically except for the treatment; use a [[Treatment and Control Groups|control group]] and, where possible, a [[Blinding and Placebo|placebo]].
 2. **Randomization:** randomly assign units so nuisance variables even out.
 3. **Replication:** use enough units (and replicate whole studies; science has "lots of one-offs").
 4. **Blocking:** group units by a known nuisance variable, then randomize within blocks ([[Nuisance Variables and Confounding]]).
 
-## Common confusions
+Common mistakes:
+
 - **"Any study with a control group is an experiment."** Without random assignment it is quasi-experimental.
 - **"Experiments generalize well."** Tight control often *lowers* [[External Validity|external validity]] ([[Why RCTs trade external validity for internal validity]]).
 
-## Connections
-- **Builds on:** [[Independent and Dependent Variables]], [[Random Assignment]]
-- **Leads to:** [[Quasi-Experiment]], [[Randomized Controlled Trial]], [[Internal Validity]]
-- **Part of:** [[MOC - Study Design and Sampling]]
-- **Go deeper:** [[References|Kirk 2013, Ch. 1]], [[References|Vu and Harrington 2020, Ch. 1]] (§1.3)
+See also: [[Randomized Controlled Trial]].
+
+Further reading: [[References|Kirk 2013, Ch. 1]], [[References|Vu and Harrington 2020, Ch. 1]] (§1.3).

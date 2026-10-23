@@ -14,12 +14,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** base R's quick exploratory plots: `hist()` for one [[Types of Data|quantitative]] variable, `boxplot(y ~ group)` for comparing groups, plus `plot()`, `barplot()`, `mosaicplot()` and `qqnorm()`.
+Base R's quick exploratory plots: `hist()` for one [[Types of Data|quantitative]] variable, `boxplot(y ~ group)` for comparing groups, plus `plot()`, `barplot()`, `mosaicplot()` and `qqnorm()`.
 
-> [!info] Before this, it helps to know
-> [[Histogram]] · [[Box Plot and Five-Number Summary]]
-
-## Start from zero
 1. **Plot before testing** ([[Why visualize data before testing]]). Base R has a function for each plot in Describing Data ([[Histogram]], [[Box Plot and Five-Number Summary]]):
 
 ```r
@@ -40,21 +36,17 @@ colors()                                                      # built-in colour 
 4. **Why `beside = TRUE`:** side-by-side bars share a baseline, stacked ones don't ([[Plots for Categorical Data]]).
 5. **Why `qqline`:** the reference line makes departures from normality visible ([[Q-Q Plot]]).
 
-## See it
-
 ![[Box plot anatomy - canopy trees.png|700]]
-*What to look at:* The canopy-tree numbers: the box is the [[Range and IQR|middle half]] (Q1 to Q3), the line inside is the median, whiskers stop at the last values inside the fences, and anything beyond a fence (here 25.2 m) is drawn as a separate point.
+The canopy-tree numbers: the box is the [[Range and IQR|middle half]] (Q1 to Q3), the line inside is the median, whiskers stop at the last values inside the fences, and anything beyond a fence (here 25.2 m) is drawn as a separate point.
 
-## Why it exists
 Fast looks at shape, [[Outliers|outliers]] and group differences before any test ([[Why visualize data before testing]]).
 
-## A tiny example
+For example:
+
 Mean line far right of the median line on a histogram → right skew.
 
-## Common confusions
+Common mistakes:
+
 - **"Bar graph and histogram are the same function."** Factor → `plot()`/`barplot()`; number → `hist()`.
 
-## Connections
-- **Builds on:** [[Histogram]], [[Box Plot and Five-Number Summary]]
-- **Leads to:** [[ggpubr Plots]], [[Normality Checks]]
-- **Part of:** [[MOC - R for Statistics]]
+See also: [[ggpubr Plots]], [[Normality Checks]].

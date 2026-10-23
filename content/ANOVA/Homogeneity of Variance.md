@@ -11,12 +11,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** homogeneity of variance (HOV, later "homoscedasticity") means every group has the same population variance; Levene's test checks it, and you want it not to reject.
+Homogeneity of variance (HOV, later "homoscedasticity") means every group has the same population variance; Levene's test checks it, and you want it not to reject.
 
-> [!info] Before this, it helps to know
-> [[Variance]] (what must be equal) · [[Pooled Variance]] (why equality is needed) · [[Absolute Value]] (Levene's test uses distances) · [[Null and Alternative Hypotheses]] (you want to [[Why we never accept the null hypothesis|fail to reject]])
-
-## Start from zero
 1. **ANOVA pools all groups' spreads into one MSE** ([[Pooled Variance]], [[Sums of Squares and Mean Squares]]).
 2. **That only makes sense if the groups share one spread.** If one group is ten times more variable, its [[Signal and Noise|noise]] dominates the pooled [[Point Estimate|estimate]] and the [[One-Way ANOVA|F-test]] is distorted. *Why:* the MSE would be wrong for every group, so F's [[Null Distribution|null distribution]] no longer applies.
 3. **First screen: compare the group SDs** ([[Standard Deviation]]). A common rule of thumb is that the largest should be less than about twice the smallest.
@@ -24,23 +20,19 @@ status: seedling
    - $H_0$: all variances equal (HOV holds) vs $H_A$: at least one differs. **You want to fail to reject** ([[Null and Alternative Hypotheses]]).
 5. **Alternatives include Bartlett, Brown–Forsythe and Fligner.** "HOV" here does not mean high-occupancy vehicle. When HOV fails for two groups, Welch's t-test avoids pooling ([[Welch's t-Test]]).
 
-## See it
-
 ![[Homogeneity of variance.png|700]]
-*What to look at:* Compare the heights of the boxes and [[Box Plot and Five-Number Summary|whiskers]], not where they sit. On the right, group C is far more spread out than group A.
+Compare the heights of the boxes and [[Box Plot and Five-Number Summary|whiskers]], not where they sit. On the right, group C is far more spread out than group A.
 
-## Why it exists
 It protects the pooled MSE, and therefore the F-test and the [[Post Hoc Tests|post hocs]] that use it ([[ANOVA Assumptions]]).
 
-## A tiny example
+For example:
+
 Group SDs 4.1, 4.8, 5.2, 3.9: [[Ratios and Fractions|ratio]] of largest to smallest variance is $5.2^2/3.9^2 \approx 1.8$, well under the 9:1 rule of thumb. HOV looks fine.
 
-## Common confusions
+Common mistakes:
+
 - **"[[Balanced Design|Equal sample sizes]] means equal variances."** They are separate; balanced designs do make ANOVA more robust to unequal variances.
 
-## Connections
-- **Builds on:** [[Variance]], [[Pooled Variance]], [[Absolute Value]], [[Null and Alternative Hypotheses]]
-- **Leads to:** [[ANOVA Assumptions]], [[leveneTest()]]
-- **Part of:** [[MOC - ANOVA]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 5]] (p. 265)
-- **Terms used:** [[Sample Size]]
+See also: [[Variance]], [[Why we never accept the null hypothesis|fail to reject]], [[leveneTest()]], [[Sample Size]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (p. 265).

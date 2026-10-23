@@ -14,12 +14,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** the ways of choosing a sample range from simple random sampling (the ideal) through stratified, cluster and systematic designs to convenience, snowball and voluntary-response samples (prone to bias).
+The ways of choosing a sample range from simple random sampling (the ideal) through stratified, cluster and systematic designs to convenience, snowball and voluntary-response samples (prone to bias).
 
-> [!info] Before this, it helps to know
-> [[Population and Sample]] (what is being sampled) · [[Random Sampling]] (the ideal the others are compared with)
-
-## Start from zero
 1. **The ideal is a simple random sample,** but it needs a full list of the population and can be expensive ([[Random Sampling]]).
 2. **Each other method trades some of that ideal for practicality or [[Random Error and Precision|precision]].** Ask of each: who could be chosen, and who chooses?
 
@@ -36,23 +32,20 @@ status: seedling
 
 3. **When the people doing the choosing are not chance, expect bias** ([[Sampling Bias]]).
 
-## See it
-
 ![[Sampling methods.png|700]]
-*What to look at:* Four ways chance can pick a sample from the same population of 80 units (gray). Red dots are the units that end up in the sample.
+Four ways chance can pick a sample from the same population of 80 units (gray). Red dots are the units that end up in the sample.
 
-## Why it exists
 A random sample is enough for almost all the procedures, but real studies often need structure (strata) or convenience (clusters). Knowing the method tells you how far you can generalize and what biases to report ([[Sampling Bias]]).
 
-## A tiny example
+For example:
+
 **Stratified vs cluster:** stratified samples *within every* group, for representation; cluster samples *whole* groups, for convenience. Strata are internally similar to each other; clusters ideally each look like a mini-population.
 
-## Common confusions
+Common mistakes:
+
 - **"Stratified and cluster are the same."** Opposite logic: sample from every stratum vs sample entire clusters.
 - **"A big voluntary sample is fine."** Self-selection biases it no matter the size.
 
-## Connections
-- **Builds on:** [[Population and Sample]], [[Random Sampling]]
-- **Leads to:** [[Sampling Bias]], [[External Validity]]
-- **Part of:** [[MOC - Study Design and Sampling]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 1]] (pp. 19–25)
+See also: [[Population and Sample]], [[External Validity]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (pp. 19–25).

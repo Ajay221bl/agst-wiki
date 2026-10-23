@@ -10,12 +10,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** one-way ANOVA tests whether the means of three or more independent groups are all equal, in a single omnibus test that compares variability between groups with variability within them.
+One-way ANOVA tests whether the means of three or more independent groups are all equal, in a single omnibus test that compares variability between groups with variability within them.
 
-> [!info] Before this, it helps to know
-> [[Two-Sample Independent t-Test]] (what it extends) · [[Factors and Levels]] (one factor, k levels) · [[Statistical Model]] (what it fits) · [[Between- and Within-Group Variability]] (how it decides)
-
-## Start from zero
 1. **One [[Types of Data|quantitative]] response, one categorical factor with $k$ levels** ([[Factors and Levels]]). It moves "on up" from the two-sample t-test (as in *The Jeffersons*) ([[Two-Sample Independent t-Test]]).
 2. **Running a t-test for every pair inflates [[Type I and Type II Errors|false positives]],** so we need one test for all the means at once ([[Family-Wise Type I Error]], [[Why ANOVA instead of many t-tests]]).
 3. **[[Null and Alternative Hypotheses|Hypotheses]]**
@@ -26,10 +22,8 @@ status: seedling
 5. **The [[Parameter vs Statistic|statistic]]:** $F = MSG/MSE$, between-group over within-group variability ([[Between- and Within-Group Variability]], [[F-Distribution]]). *Why it works:* under $H_0$ both [[Point Estimate|estimate]] the same noise, so F ≈ 1; a large F says the group means are further apart than noise explains.
 6. **A significant F says "some means differ", not which.** Post hoc tests answer that ([[Post Hoc Tests]]).
 
-## See it
-
 ![[Between vs within variability.png|700]]
-*What to look at:* The group means (black bars) are identical in both panels. On the left the points are tight, so the gaps between means stand out; on the right the same gaps are buried in noise. ANOVA's F is exactly this between-versus-within comparison.
+The group means (black bars) are identical in both panels. On the left the points are tight, so the gaps between means stand out; on the right the same gaps are buried in noise. ANOVA's F is exactly this between-versus-within comparison.
 
 ```mermaid
 flowchart TD
@@ -39,12 +33,12 @@ flowchart TD
   C -->|"yes: at least one mean differs"| E["Post hoc tests<br>Tukey HSD or Bonferroni"]
   E --> F["Which pairs differ?<br>report with letters (cld)"]
 ```
-*What to look at:* the ANOVA is a gate. Pairwise tests only run once the gate opens, which is what keeps the overall false-positive rate at α.
+The ANOVA is a gate. Pairwise tests only run once the gate opens, which is what keeps the overall false-positive rate at α.
 
-## Why it exists
 Running a t-test for every pair of groups multiplies the chance of a false positive ([[Why ANOVA instead of many t-tests]]). ANOVA asks the overall question once, as a "gatekeeper".
 
-## A tiny example
+For example:
+
 The workflow:
 1. **[[Exploratory Data Analysis|Explore]]:** descriptives by group; [[Box Plot and Five-Number Summary|box plots]] **with mean markers**; group SDs as a first equal-variance screen.
 2. **Check [[Test Assumptions|requirements]]:** independence, [[Normality Checks|normality]], equal variances ([[ANOVA Assumptions]]).
@@ -53,10 +47,8 @@ The workflow:
 5. **p ≤ α → post hoc tests** to find which means differ ([[Post Hoc Tests]]).
 6. **Report** in APA style, e.g. *F*(3, 116) = ..., *p* < .001, then the post hocs ([[Writing a Conclusion]]).
 
-## How to run it
-
 ![[Worked example - one-way ANOVA.png|700]]
-*What to look at:* left, the three means rise from CC to TT, and only CC and TT have no letter in common. Right, F = 3.23 sits in the upper [[Tails of a Distribution|tail]] of the F(2, 592) curve; the shaded area is the p-value.
+Left, the three means rise from CC to TT, and only CC and TT have no letter in common. Right, F = 3.23 sits in the upper [[Tails of a Distribution|tail]] of the F(2, 592) curve; the shaded area is the p-value.
 
 **Worked example: ACTN3 genotype and arm strength** (FAMuSS, [[References|Vu and Harrington 2020, Ch. 5]], pp. 264–271). 595 adults trained their non-dominant arm; the response is the % change in its strength (`ndrm.ch`), and the factor is genotype at one spot on the ACTN3 gene (CC, CT, TT). The data are in `Data/famuss.csv` (the book's `famuss` data, two columns).
 
@@ -112,13 +104,11 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)         # chi-squared = 5.75, df
 
    **The honest caveat:** normality was violated and the Kruskal–Wallis check (p = 0.057) does not confirm the result at 0.05, and η² says the effect is small. Report the result, but as borderline.
 
-## Common confusions
+Common mistakes:
+
 - **"Reject $H_0$ means all groups differ."** At least one differs.
 - **"ANOVA compares variances, so it tests variances."** It uses variances to test means ([[Why analysis of variance can compare means]]).
 
-## Connections
-- **Builds on:** [[Two-Sample Independent t-Test]], [[Factors and Levels]], [[Variance]], [[Statistical Model]], [[Between- and Within-Group Variability]]
-- **Leads to:** [[ANOVA Table]], [[ANOVA Assumptions]], [[Post Hoc Tests]], [[aov()]]
-- **Part of:** [[MOC - ANOVA]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 5]] (§5.5, p. 264)
-- **Terms used:** [[Chi-Square Test]], [[wilcox.test() and kruskal.test()]]
+See also: [[Variance]], [[ANOVA Table]], [[Chi-Square Test]], [[wilcox.test() and kruskal.test()]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (§5.5, p. 264).

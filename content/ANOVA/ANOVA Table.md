@@ -11,12 +11,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** the [[One-Way ANOVA|ANOVA]] table lists, for the factor and for the [[Residuals|residuals]], the degrees of freedom, sums of squares, mean squares, the F ratio and the p-value, and the numbers fit together like "a fun little sudoku".
+The [[One-Way ANOVA|ANOVA]] table lists, for the factor and for the [[Residuals|residuals]], the degrees of freedom, sums of squares, mean squares, the F ratio and the p-value, and the numbers fit together like "a fun little sudoku".
 
-> [!info] Before this, it helps to know
-> [[Sums of Squares and Mean Squares]] (where SS and MS come from) · [[Between- and Within-Group Variability]] (the two rows) · [[Degrees of Freedom]] (the df column) · [[F-Distribution]] (the F and p columns)
-
-## Start from zero
 1. **ANOVA splits the total [[Variability|variation]] into a between-groups part and a within-groups part** ([[Sums of Squares and Mean Squares]]).
 2. **The table lays out that split, one row per source, building left to right:** SS (how much variation), df (how many independent pieces), MS = SS/df (a variance), then F and p.
 
@@ -30,19 +26,17 @@ status: seedling
 4. **Why divide SS by df:** a sum of squares grows with the number of terms, so it has to be averaged before two of them can be compared ([[Degrees of Freedom]]).
 5. **The columns check each other:** df and SS each add up to the total, and $N - 1$ should match the number of rows R used ([[Why use degrees of freedom as a sanity check]]). $SSG/SST$ is η², the effect size ([[Effect Size]]).
 
-## See it
-
 ```mermaid
 flowchart TD
   T["Total df = N − 1<br>soy example: 80 − 1 = 79"] --> G["Factor (between groups) df = k − 1<br>4 − 1 = 3"]
   T --> E["Residual (within groups) df = N − k<br>80 − 4 = 76"]
 ```
-*What to look at:* the two rows of the ANOVA table split the total df (and the total sum of squares) between them, so 3 + 76 = 79. If R prints anything else, check the data.
+The two rows of the ANOVA table split the total df (and the total sum of squares) between them, so 3 + 76 = 79. If R prints anything else, check the data.
 
-## Why it exists
 It organizes the whole calculation, and it is the place to run **sanity checks**. Software computes it for you.
 
-## A tiny example
+For example:
+
 Book FAMuSS output from R ([[References|Vu and Harrington 2020, Ch. 5]], p. 269):
 ```
                     Df Sum Sq Mean Sq F value Pr(>F)
@@ -51,12 +45,10 @@ Residuals          592 645293    1090
 ```
 Check: 7043/2 ≈ 3522; 645293/592 ≈ 1090; 3522/1090 ≈ 3.23. df 2 → 3 genotypes; 2 + 592 + 1 = 595 participants.
 
-## Common confusions
+Common mistakes:
+
 - **"Residuals means mistakes."** It means within-group variability left over after group means are accounted for.
 
-## Connections
-- **Builds on:** [[Between- and Within-Group Variability]], [[Degrees of Freedom]], [[F-Distribution]], [[Sums of Squares and Mean Squares]]
-- **Leads to:** [[aov()]], [[Why use degrees of freedom as a sanity check]]
-- **Part of:** [[MOC - ANOVA]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 5]] (p. 269)
-- **Terms used:** [[Tails of a Distribution]]
+See also: [[Between- and Within-Group Variability]], [[F-Distribution]], [[aov()]], [[Tails of a Distribution]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (p. 269).

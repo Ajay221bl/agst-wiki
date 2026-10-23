@@ -10,12 +10,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** `mean(x)`, `median(x)` and `sd(x)` compute the basic summaries, and all return NA if any value is missing unless you add `na.rm = TRUE`.
+`mean(x)`, `median(x)` and `sd(x)` compute the basic summaries, and all return NA if any value is missing unless you add `na.rm = TRUE`.
 
-> [!info] Before this, it helps to know
-> [[Mean]] · [[Standard Deviation]] · [[Missing Data]]
-
-## Start from zero
 1. **Each summary in Describing Data has a one-word R function** ([[Mean]], [[Standard Deviation]]):
 
 ```r
@@ -30,20 +26,18 @@ var(x); range(x); IQR(x)
 3. **`sd()` and `var()` divide by $n - 1$** ([[Why we divide by n minus 1]]).
 4. **For groups, use `aggregate()`** ([[aggregate() and by()]]).
 
-## Why it exists
 `na.rm = TRUE` ("NA remove") makes the function skip missing values. Without it, one NA makes the whole answer NA, which is R being honest: it can't know the mean of values it doesn't have.
 
-## A tiny example
+For example:
+
 ```r
 x <- c(1, 2, 3, 6, NA)
 mean(x)                # NA
 mean(x, na.rm = TRUE)  # 3
 ```
 
-## Common confusions
+Common mistakes:
+
 - **"NA output means a bug."** It usually means missing values; add `na.rm = TRUE` and report how many there were.
 
-## Connections
-- **Builds on:** [[Mean]], [[Standard Deviation]], [[Missing Data]]
-- **Leads to:** [[describe() and describeBy()]], [[aggregate() and by()]]
-- **Part of:** [[MOC - R for Statistics]]
+See also: [[describe() and describeBy()]].

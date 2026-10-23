@@ -10,12 +10,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** independent samples come from two separate sampling processes with no natural link; paired (dependent) samples come in natural pairs, such as the same unit measured twice or matched units.
+Independent samples come from two separate sampling processes with no natural link; paired (dependent) samples come in natural pairs, such as the same unit measured twice or matched units.
 
-> [!info] Before this, it helps to know
-> [[Independent Events]] (what independence means) · [[Random Sampling]] (how each sample is drawn)
-
-## Start from zero
 1. **Two samples are independent when knowing a value in one tells you nothing about any particular value in the other** ([[Independent Events]]).
 2. **They are paired when each value in one sample is tied to one value in the other.** A pet-owner and lizard illustration:
    - **Independent:** a random sample of 50 pet owners and a separate random sample of 30 lizards. Isaac owns Milo the cat; no lizard in the sample is "his". [[Sample Size|Sample sizes]] can differ.
@@ -28,22 +24,19 @@ status: seedling
    - **The same unit, two [[Test Assumptions|conditions]]:** a car on regular vs premium gas; a swimmer in a wetsuit vs a regular suit.
 4. **The design decides the test, not the numbers.** *Why it matters:* pairs share everything except the treatment, so subtracting within each pair removes that shared [[Variability|variation]]. Ignoring the pairing throws that away; treating independent data as paired invents a link ([[Paired t-Test]], [[Two-Sample Independent t-Test]], [[Why use a paired test for paired data]]).
 
-## See it
-
 ![[Paired vs independent view.png|700]]
-*What to look at:* Left: units differ so much from each other that pre and post look similar. Right: taking post − pre within each unit removes that variation, and every unit clearly went up.
+Left: units differ so much from each other that pre and post look similar. Right: taking post − pre within each unit removes that variation, and every unit clearly went up.
 
-## Why it exists
 Paired data need a [[Paired t-Test]]; independent data need a [[Two-Sample Independent t-Test]]. Ignoring pairing throws information away: in the book's swim data it made the [[Standard Error|SE]] about 10× larger ([[Why use a paired test for paired data]]).
 
-## A tiny example
+For example:
+
 Four chickens weighed before and after a diet: the differences (+2.5, +4, +2, +0.5) are what matter, not the two columns separately.
 
-## Common confusions
+Common mistakes:
+
 - **"Two different physicians means independent."** The *measurements* are repeated on one tumor, so they are paired.
 
-## Connections
-- **Builds on:** [[Independent Events]], [[Random Sampling]]
-- **Leads to:** [[Paired t-Test]], [[Two-Sample Independent t-Test]], [[Why use a paired test for paired data]]
-- **Part of:** [[MOC - t-Tests]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 5]] (§5.2, p. 244)
+See also: [[Random Sampling]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (§5.2, p. 244).

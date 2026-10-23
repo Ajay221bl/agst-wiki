@@ -12,12 +12,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** ggpubr ("ggplot publication ready") wraps ggplot2 in simple functions for box plots, scatter plots, mean ± SE plots, [[Histogram|density plots]] and Q-Q plots, and can print a test's p-value on the plot.
+Ggpubr ("ggplot publication ready") wraps ggplot2 in simple functions for box plots, scatter plots, mean ± SE plots, [[Histogram|density plots]] and Q-Q plots, and can print a test's p-value on the plot.
 
-> [!info] Before this, it helps to know
-> [[R Packages]] · [[Plots for Two Variables]]
-
-## Start from zero
 1. **Base plots work, but publication-style plots with group colours and test results take many lines** ([[hist() and boxplot()]]).
 2. **ggpubr wraps them in one function per plot** ([[R Packages]], [[Plots for Two Variables]]):
 
@@ -37,16 +33,14 @@ ggqqplot(x)
 4. **Why `ggqqplot`:** it adds a confidence band, so you can see which deviations are bigger than expected ([[Q-Q Plot]]).
 5. Other tools: `lattice` (histograms by group) and `gridExtra::grid.arrange(p1, p2, ...)` to combine plots.
 
-## Why it exists
 Publication-quality plots in one line, with mean markers (`add = "mean"`) for comparing means.
 
-## A tiny example
+For example:
+
 `ggboxplot(..., add = "mean")` puts a dot at each group mean on top of the median-based box ([[Box Plot and Five-Number Summary]]).
 
-## Common confusions
+Common mistakes:
+
 - **"A p-value on the plot replaces the analysis."** It skips the [[Test Assumptions|assumption]] checks; run the full workflow.
 
-## Connections
-- **Builds on:** [[R Packages]], [[Plots for Two Variables]]
-- **Leads to:** [[Normality Checks]], [[emmeans() and cld()]]
-- **Part of:** [[MOC - R for Statistics]]
+See also: [[Normality Checks]], [[emmeans() and cld()]].

@@ -13,12 +13,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** a variable is either categorical (labels: nominal, ordinal or binary) or quantitative (numbers you can do arithmetic with: discrete or continuous), and that type decides which summaries and tests make sense.
+A variable is either categorical (labels: nominal, ordinal or binary) or quantitative (numbers you can do arithmetic with: discrete or continuous), and that type decides which summaries and tests make sense.
 
-> [!info] Before this, it helps to know
-> [[Variable and Observation]] (what is being classified)
-
-## Start from zero
 1. **Every variable records something about each observation** ([[Variable and Observation]]). Before summarizing it, ask one question: **does arithmetic make sense on these values?**
 2. **If not, the values are labels: categorical (qualitative).** You can count them, but not average them. *Why it matters:* the mean of "region" codes 1, 2, 3 is a meaningless number.
    - **Nominal:** no order (region, eye colour, favourite exercise, subject ID).
@@ -41,8 +37,6 @@ Data
 
 4. **The type decides everything downstream:** which centre (mode, [[Median|median]] or mean: [[Why the median beats the mean for skewed data]]), which plot ([[Plots for Categorical Data]], [[Histogram]]) and which test ([[Test Choice Guide]]). *Why:* each method uses only the operations the data type allows.
 
-## See it
-
 ```mermaid
 flowchart TD
   V["Variable"] --> C["Categorical<br>labels"]
@@ -53,16 +47,16 @@ flowchart TD
   Q --> D["Discrete<br>counts: number of bikes"]
   Q --> Ct["Continuous<br>measurements: weight in kg"]
 ```
-*What to look at:* the first split (labels vs numbers) decides which summaries and plots make sense; the second split refines it.
+The first split (labels vs numbers) decides which summaries and plots make sense; the second split refines it.
 
-## Why it exists
 Choosing the right analysis starts here; the test-choice flow chart begins with the data type ([[Test Choice Guide]]).
 - Only the **mode** is a meaningful center for unordered categories ([[Mode]]).
 - Categorical unordered variables have **no shape**; the bars can be rearranged ([[Shape of a Distribution]]).
 - Discrete counts often violate normality, which most classical tests assume ([[Normality Checks]]).
 - In t-tests and ANOVA the [[Independent and Dependent Variables|explanatory variable]] is categorical (a factor) and the response is quantitative ([[Factors and Levels]]).
 
-## A tiny example
+For example:
+
 A survey:
 
 | Variable | Type | Why |
@@ -74,12 +68,11 @@ A survey:
 | Favourite exercise | categorical nominal | no order |
 | Number of bikes owned | quantitative discrete | "number of" |
 
-## Common confusions
+Common mistakes:
+
 - **"If it's a number, it's quantitative."** ID numbers and treatment codes are labels.
 - **"Discrete means categorical."** Discrete is a kind of *quantitative* data (counts).
 
-## Connections
-- **Builds on:** [[Variable and Observation]]
-- **Leads to:** [[Mean]], [[Mode]], [[Factors and Levels]], [[Test Choice Guide]], [[Random Variable]]
-- **Part of:** [[MOC - Describing Data]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 1]] (§1.2, p. 15)
+See also: [[Mean]], [[Random Variable]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.2, p. 15).

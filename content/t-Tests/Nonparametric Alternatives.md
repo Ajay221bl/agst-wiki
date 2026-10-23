@@ -15,12 +15,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** nonparametric tests are rank-based versions of the t-tests and ANOVA that do not assume normality, used to confirm results when the normality assumption is doubtful.
+Nonparametric tests are rank-based versions of the t-tests and ANOVA that do not assume normality, used to confirm results when the normality assumption is doubtful.
 
-> [!info] Before this, it helps to know
-> [[Ranks]] (what these tests use) · [[Normality Checks]] (when you need them) · [[Median]] (they work with ranks and medians) · [[Robustness]] (why ranks resist [[Outliers|outliers]])
-
-## Start from zero
 1. **t-tests need roughly normal data or a large $n$.** With small, skewed or outlier-heavy samples that fails ([[Normality Checks]]).
 2. **Replace the values with their ranks** (smallest = 1, next = 2, ...) ([[Ranks]]). *Why:* ranks don't care how extreme an outlier is or how skewed the data are, so the test can't be thrown off by them ([[Robustness]]).
 3. **Compare the ranks between groups.** If one group's ranks are mostly high, its values tend to be larger. *Why this needs no normality:* under $H_0$ every arrangement of the ranks is equally likely, so the null distribution can be counted exactly ([[Null Distribution]]).
@@ -34,16 +30,14 @@ status: seedling
 
 5. **The price is some [[Statistical Power|power]] when the data really are normal,** and the [[Null and Alternative Hypotheses|hypotheses]] are about typical values (medians, ranks) rather than means ([[Median]]). Bootstrapping is another option for small samples.
 
-## Why it exists
 When normality is violated (small samples from clearly non-normal populations, [[Likert Scale|Likert-type survey scores]], heavy outliers), parametric p-values can mislead. A sensible rule: **say so, and say a nonparametric test should be used to confirm the robustness of the results** ([[Normality Checks]]).
 
-## A tiny example
+For example:
+
 Data 1, 2, 3, 4, 100 → ranks 1, 2, 3, 4, 5. The 100 counts the same as any largest value would; it cannot dominate the test.
 
-## How to run it
-
 ![[Worked example - rank-based test.png|700]]
-*What to look at:* top, the raw changes, with one stem-cell sheep far out at 14.25. Bottom, the same sheep as ranks: the outlier is just rank 18, one step above the next sheep.
+Top, the raw changes, with one stem-cell sheep far out at 14.25. Bottom, the same sheep as ranks: the outlier is just rank 18, one step above the next sheep.
 
 These are the standard steps, run on the same book data as the t-test and ANOVA worked examples. That lets you compare the answers directly.
 
@@ -71,12 +65,9 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)          # chi-squared = 5.7458,
    - Stem cells: [[Welch's t-Test|Welch]] (p = .002) and rank-sum (p = .003) agree.
    - FAMuSS: the ANOVA (p = .040) is **not** confirmed by Kruskal–Wallis (p = .057). This is exactly the case where that rule matters: say normality was doubtful and treat the ANOVA result as fragile ([[One-Way ANOVA]]).
 
-## Common confusions
+Common mistakes:
+
 - **"Nonparametric tests have no assumptions."** They still assume independence, and some assume similar shapes across groups.
 - **"Always use them to be safe."** They can have less power when the parametric assumptions hold.
 
-## Connections
-- **Builds on:** [[Normality Checks]], [[Median]], [[Ranks]], [[Robustness]]
-- **Leads to:** [[ANOVA Assumptions]], [[Why check assumptions before trusting a test]]
-- **Part of:** [[MOC - t-Tests]], [[MOC - ANOVA]]
-- **Terms used:** [[wilcox.test() and kruskal.test()]]
+See also: [[Outliers|outliers]], [[ANOVA Assumptions]], [[Why check assumptions before trusting a test]], [[wilcox.test() and kruskal.test()]].

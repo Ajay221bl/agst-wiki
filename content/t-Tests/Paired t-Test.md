@@ -9,12 +9,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** a paired t-test is a one-sample t-test on the differences within each pair.
+A paired t-test is a one-sample t-test on the differences within each pair.
 
-> [!info] Before this, it helps to know
-> [[Independent vs Paired Samples]] (when it applies) · [[Deviations from the Mean]] (differences are just numbers to summarize) · [[One-Sample t-Test]] (what it turns into)
-
-## Start from zero
 1. **Paired data come in linked pairs** (the same swimmer with and without a wetsuit) ([[Independent vs Paired Samples]]).
 2. **Within a pair, almost everything is shared** (the swimmer's fitness, technique). *Consequence:* the difference within each pair is free of that shared [[Variability|variation]].
 3. **So compute $d_i$ for every pair; the two original columns are no longer needed.**
@@ -25,21 +21,17 @@ status: seedling
 5. **[[Test Assumptions|Requirements]]:** pairs are a random sample and independent of each other; **the differences** are roughly normal (or there are many pairs). **Test normality of the differences, not each column** ([[Normality Checks]]). *Why:* the differences are the only data the test uses.
 6. **Payoff:** $s_d$ is usually far smaller than either column's [[Standard Deviation|SD]], so the same effect gives a much larger t (swim: paired t = 12.3 vs unpaired 1.37) ([[Why use a paired test for paired data]]).
 
-## See it
-
 ![[Paired vs independent view.png|700]]
-*What to look at:* Left: units differ so much from each other that pre and post look similar. Right: taking post − pre within each unit removes that variation, and every unit clearly went up.
+Left: units differ so much from each other that pre and post look similar. Right: taking post − pre within each unit removes that variation, and every unit clearly went up.
 
-## Why it exists
 Each unit acts as its own control, removing unit-to-unit variability from the comparison ([[Why use a paired test for paired data]]).
 
-## A tiny example
+For example:
+
 Chickens before and after: differences +2.5, +4, +2, +0.5. Mean difference 2.25; the test asks whether that mean is far enough from 0 given how much the differences vary.
 
-## How to run it
-
 ![[Worked example - paired t-test.png|700]]
-*What to look at:* left, the swimmers differ a lot from each other, but every line rises. Right, the 12 differences sit well away from 0, and so does their CI.
+Left, the swimmers differ a lot from each other, but every line rises. Right, the 12 differences sit well away from 0, and so does their CI.
 
 **Worked example: wetsuits and swim speed** ([[References|Vu and Harrington 2020, Ch. 5]], pp. 244–246). Twelve competitive swimmers each swam 1500 m twice, once in a wetsuit and once in a swimsuit, in random order. The data are in `Data/swim.csv` (the book's `swim` data).
 
@@ -82,12 +74,11 @@ cohensD(swim$wetsuit, swim$swimsuit, method = "paired")   # 3.56
 
 **What goes wrong if you ignore the pairing:** `t.test(swim$wetsuit, swim$swimsuit)` treats them as 24 different swimmers and gives t = 1.37, df 22.0, p = 0.185, with a CI from −0.040 to 0.195 that includes 0. The mean difference is the same, but the swimmer-to-swimmer spread swamps it: the SE is about ten times larger ([[Why use a paired test for paired data]]).
 
-## Common confusions
+Common mistakes:
+
 - **"Check normality of each column."** Check the differences.
 - **"A two-tailed paired test can't say which is bigger."** The decision is two-sided, but the sign of the CI shows the direction.
 
-## Connections
-- **Builds on:** [[Independent vs Paired Samples]], [[One-Sample t-Test]], [[Deviations from the Mean]]
-- **Leads to:** [[Cohen's d]], [[t.test()]]
-- **Part of:** [[MOC - t-Tests]]
-- **Go deeper:** [[References|Vu and Harrington 2020, Ch. 5]] (§5.2)
+See also: [[Deviations from the Mean]], [[Cohen's d]], [[t.test()]].
+
+Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (§5.2).

@@ -8,12 +8,8 @@ aliases:
 status: seedling
 ---
 
-**In one line:** statistical conclusion validity asks whether the statistical methods and the conclusions drawn from them are sound.
+Statistical conclusion validity asks whether the statistical methods and the conclusions drawn from them are sound.
 
-> [!info] Before this, it helps to know
-> [[Hypothesis Testing]] (the analysis being judged) · [[Statistical Power]] (its main helper) · [[Type I and Type II Errors]] (the two ways it fails)
-
-## Start from zero
 1. **A good design still ends with an analysis,** and the analysis can go wrong ([[Hypothesis Testing]]).
 2. **It fails in two ways:** a false finding (Type I) or a missed real one (Type II) ([[Type I and Type II Errors]]).
 3. **Statistical conclusion validity is whether the analysis supports its conclusion.** Common causes of failure: a test whose [[Test Assumptions|assumptions]] are broken, too many tests, unreliable measurements, too little data.
@@ -24,17 +20,14 @@ status: seedling
    - **Unreliable measures**, for example a person rating turfgrass colour by eye; changing who rates it adds unreliability. Extra [[Signal and Noise|noise]] lowers power.
    - **Massive data** (genomics, billions of points) can strain traditional methods
 
-## Why it exists
 It is the [[Validity|validity]] type that statistical analysis directly protects. Checking assumptions, running an omnibus ANOVA before [[Post Hoc Tests|post hocs]], and planning [[Sample Size|sample size]] are all statistical-conclusion-validity habits ([[Why check assumptions before trusting a test]]).
 
-## A tiny example
+For example:
+
 Running 15 t-tests at α = 0.05 for six groups gives over a 50% chance of at least one false positive: a direct threat to statistical conclusion validity ([[Why ANOVA instead of many t-tests]]).
 
-## Common confusions
+Common mistakes:
+
 - **"If the p-value is small, the conclusion is valid."** Not if the assumptions were broken or many tests were run.
 
-## Connections
-- **Builds on:** [[Hypothesis Testing]], [[Statistical Power]], [[Type I and Type II Errors]]
-- **Leads to:** [[ANOVA Assumptions]], [[Family-Wise Type I Error]], [[Why check assumptions before trusting a test]]
-- **Part of:** [[MOC - Study Design and Sampling]]
-- **Go deeper:** [[References|Kirk 2013, Ch. 1]]
+Further reading: [[References|Kirk 2013, Ch. 1]].
