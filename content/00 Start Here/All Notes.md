@@ -10,7 +10,7 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 *223 notes in total, including this one.*
 
 ## 00 Start Here (5)
-- [[Oral Exam Practice]]: Practice questions for an oral exam on experimental statistics, up to and including one-way ANOVA
+- [[Oral Exam Practice]]: These are practice questions for an oral exam on experimental statistics, up to one-way ANOVA
 - [[All Notes]]: Every note in one list, grouped by folder
 - [[index|Home]]: The home page: what these notes are and where to start
 - [[Learning Path]]: A suggested order for reading the notes
@@ -28,49 +28,49 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[MOC - Why We Do It This Way]]: The "why" notes, in the order the ideas build on each other
 
 ## 02 Molecular Notes (43)
-- [[Why 95% confidence is not a 95% probability]]: The 95% describes the method. If we repeated the sampling many times, 95% of the intervals built this way would contain μ
-- [[Why a 95% CI and a two-sided 0.05 test always agree]]: A 95% confidence interval (CI) is the set of null values that a two-sided test at α = 0.05 would not reject
-- [[Why a bigger sample can't fix a biased one]]: A larger sample shrinks random error: sample means cluster ever more tightly
-- [[Why a bigger sample gives a narrower confidence interval]]: Half the width of a confidence interval (CI) is a critical value times the standard error (SE), $s/\sqrt{n}$
-- [[Why a p-value is not always meaningful]]: No. A p-value only answers "how surprising are these data if $H_0$ is true?"
-- [[Why a p-value is not the probability the null is true]]: A p-value is worked out assuming H₀ is true: it is the probability of data at least this extreme, given H₀
-- [[Why a positive test can still mean you are probably healthy]]: When a condition is rare, healthy people far outnumber sick ones
-- [[Why a significant ANOVA can have no significant post hocs]]: Yes, it can happen, for four reasons. Post hoc tests are adjusted to be conservative
-- [[Why a two-group ANOVA gives F equal to t squared]]: With only two groups, a one-way ANOVA and the pooled (equal-variance) two-sample t-test are the same test
-- [[Why an interval beats a single number, and why no interval is 100%]]: A single best guess, called a point estimate, is almost certainly not exactly right, and it says nothing about how far off it might be
-- [[Why analysis of variance can compare means]]: Whether group means really differ depends on how much the values inside each group scatter
-- [[Why ANOVA instead of many t-tests]]: With three or more groups, testing every pair means many tests, and each one carries its own 5% risk of a false positive
-- [[Why big samples make almost everything significant]]: The standard error shrinks with the square root of n
-- [[Why blinding is still needed after random assignment]]: Random assignment makes the groups alike at the start
-- [[Why check assumptions before trusting a test]]: A p-value is calculated from a probability model, and that model assumes things: independent observations, roughly normal data or means, and equal spreads for pooled tests
-- [[Why choose alpha and tails before seeing the data]]: Α and the direction of the test define what counts as "surprising"
-- [[Why every test statistic is signal over noise]]: Every test statistic has the same shape: how far what you saw is from what H₀ expects, divided by how much that distance would vary by chance
-- [[Why go with the confidence interval when the hypothesis is weak]]: A hypothesis test is only as good as the null value you test against; pick a silly one and the result is meaningless
+- [[Why 95% confidence is not a 95% probability]]: Because the 95% belongs to the method, not to any one interval
+- [[Why a 95% CI and a two-sided 0.05 test always agree]]: Because they're the same calculation seen from two sides
+- [[Why a bigger sample can't fix a biased one]]: Because more data makes you more precise, not more right
+- [[Why a bigger sample gives a narrower confidence interval]]: Because the width is just a measure of how much you don't know, and each of these changes that
+- [[Why a p-value is not always meaningful]]: No. A p-value answers one narrow question: "how surprising are these data if $H_0$ is true?"
+- [[Why a p-value is not the probability the null is true]]: A p-value is worked out by assuming H₀ is true
+- [[Why a positive test can still mean you are probably healthy]]: Because when a condition is rare, false alarms can outnumber true hits
+- [[Why a significant ANOVA can have no significant post hocs]]: Yes, and it isn't a contradiction. The overall test looks at the whole picture at once, while each post hoc test looks at one pair, with less data and a stricter bar
+- [[Why a two-group ANOVA gives F equal to t squared]]: They're the same test. With only two groups, a one-way ANOVA and the pooled (equal-variance) two-sample t-test give exactly the same answer: F is t², the p-values are identical, and no post hoc test is needed because there's only one pair to compare
+- [[Why an interval beats a single number, and why no interval is 100%]]: A single best guess, called a point estimate, is almost certainly not exactly right, and on its own it says nothing about how far off it might be
+- [[Why analysis of variance can compare means]]: Because you can't tell whether means really differ without knowing how much the values scatter
+- [[Why ANOVA instead of many t-tests]]: Because every test is a small bet that chance won't fool you, and bets add up
+- [[Why big samples make almost everything significant]]: Because the standard error shrinks with the square root of n
+- [[Why blinding is still needed after random assignment]]: Because random assignment protects the start of the study, not the middle
+- [[Why check assumptions before trusting a test]]: Because a p-value is a calculation inside a model, and the model makes promises on your behalf
+- [[Why choose alpha and tails before seeing the data]]: Because they're the rules of the game, and you can't set the rules after you've seen the score. α and the direction of the test define what counts as "surprising"
+- [[Why every test statistic is signal over noise]]: Because they're all answering the same question: is what I saw bigger than what chance would give me anyway?
+- [[Why go with the confidence interval when the hypothesis is weak]]: A test is only as good as the question you put to it
 - [[Why hypotheses are about parameters, and the null holds the equals sign]]: We only test what we can't see
-- [[Why independence is judged from the design, not a test]]: Every test assumes the observations are independent, but no output can confirm it
-- [[Why normality is checked on residuals or differences]]: A test assumes normality only for the part it treats as chance
-- [[Why pairing, blocking and good measurement raise power]]: Power comes from a large ratio of signal to noise
-- [[Why post hoc tests only after a significant ANOVA]]: Only after a significant overall ANOVA. The overall test is the gatekeeper: it asks, at one controlled error rate, whether any difference exists
-- [[Why probability comes before statistics]]: Every hypothesis test asks "how likely is what I saw, if nothing is going on?", and that is a probability question
-- [[Why R must be told what kind of variable it has]]: R only knows what a column looks like, not what it means
-- [[Why R uses Welch's t-test by default]]: The pooled two-sample t-test assumes both populations have the same variance
+- [[Why independence is judged from the design, not a test]]: Because independence isn't in the numbers. It's in the story of how the numbers were collected
+- [[Why normality is checked on residuals or differences]]: Because a test only assumes normality for the part it treats as chance
+- [[Why pairing, blocking and good measurement raise power]]: Because power comes from a large ratio of signal to noise, and these three all attack the noise
+- [[Why post hoc tests only after a significant ANOVA]]: Only after a significant overall ANOVA. The overall test is the gatekeeper
+- [[Why probability comes before statistics]]: Because every hypothesis test is a probability question in disguise
+- [[Why R must be told what kind of variable it has]]: Because R knows what a column looks like, not what it means
+- [[Why R uses Welch's t-test by default]]: Because it's the better bet. The pooled two-sample t-test assumes both populations have the same variance
 - [[Why random assignment and random sampling protect different things]]: Random assignment decides which treatment each unit gets
-- [[Why rank tests trade power for robustness, and why run both]]: Rank tests replace each value by its rank, so an outlier or a long tail can pull no harder than one place in the order
-- [[Why RCTs trade external validity for internal validity]]: The more tightly a study controls who gets what and under which conditions, the more confidently it can claim causation, but the less its setting looks like real life
-- [[Why report an effect size with the p-value]]: The p-value says whether an effect is likely real; the effect size says how big it is
-- [[Why report both center and spread]]: A centre says where the data sit, but nothing about how scattered they are
-- [[Why t instead of z when sigma is unknown]]: The z formula needs the population standard deviation (SD), σ, which we almost never know
-- [[Why the median beats the mean for skewed data]]: The mean uses the size of every value, so a long tail of big values drags it towards the tail and away from the typical case
+- [[Why rank tests trade power for robustness, and why run both]]: Rank tests replace each value with its place in the order, so an outlier or a long tail can pull no harder than one step in the ranking
+- [[Why RCTs trade external validity for internal validity]]: Because control and realism pull in opposite directions
+- [[Why report an effect size with the p-value]]: They answer two different questions. The p-value says whether an effect is likely real
+- [[Why report both center and spread]]: Because a centre tells you where the data sit, and nothing about how much to trust that location
+- [[Why t instead of z when sigma is unknown]]: Because an estimate carries its own uncertainty, and an honest method has to pay for it
+- [[Why the median beats the mean for skewed data]]: The one the data can't fool. The mean uses the size of every value, so a long tail of big values drags it towards the tail and away from the typical case
 - [[Why the sampling distribution makes inference possible]]: You only ever see one sample. But theory, through the central limit theorem (CLT), tells you how all possible sample means would be spread: roughly normal, centred on the true mean, with spread $\sigma/\sqrt{n}$
-- [[Why use a paired test for paired data]]: When the same unit is measured twice, most of the variation between units (big animals and small ones, healthy people and sick ones) affects both measurements equally
-- [[Why use degrees of freedom as a sanity check]]: The degrees of freedom (df) in R's output are fixed by your sample size and the number of groups, which you already know
-- [[Why variance squares the deviations]]: Deviations from the mean always add up to zero, because the mean is the balance point
-- [[Why visualize data before testing]]: Plots show what summary numbers hide: shape, outliers, gaps, unequal spreads and data errors
+- [[Why use a paired test for paired data]]: Use the paired test when each measurement has a natural partner
+- [[Why use degrees of freedom as a sanity check]]: Because the degrees of freedom (df) are one of the few numbers in the output you can predict before you run anything, and anything you can predict, you can check
+- [[Why variance squares the deviations]]: Because the obvious approach gives zero every time
+- [[Why visualize data before testing]]: Plots show you what summary numbers throw away: shape, outliers, gaps, unequal spreads and data errors
 - [[Why we divide by n minus 1]]: The sample variance measures distances from the sample mean, and the sample mean is always the point that makes those distances as small as possible
-- [[Why we hope for a large p-value on assumption checks]]: In a test of normality or of equal variances, H₀ says the assumption holds
-- [[Why we never accept the null hypothesis]]: A test starts by assuming the null is true and only asks whether the data contradict it
-- [[Why you can't just delete an outlier]]: Whether a value counts as an outlier depends on the rule you use: the fences at 1.5 times the interquartile range (IQR), ±2 standard deviations (SD), which assumes normality, or ±3 SD for extreme values
-- [[Why you must say how missing values were handled]]: Missing values change an analysis without warning. na.omit() drops a whole row if any column is blank, so the sample shrinks and the degrees of freedom change, and if the people with missing values differ from the rest, the results are biased
+- [[Why we hope for a large p-value on assumption checks]]: Because in these tests, H₀ is the thing you want to keep
+- [[Why we never accept the null hypothesis]]: Because a test can only look for evidence against the null, never for it
+- [[Why you can't just delete an outlier]]: Because "outlier" isn't a fact about a value
+- [[Why you must say how missing values were handled]]: Because missing values change an analysis without warning. na.omit() drops a whole row if any column is blank, so the sample shrinks and the degrees of freedom change
 
 ## Basics from Zero (10)
 - [[Absolute Value]]: The absolute value of a number is its distance from 0

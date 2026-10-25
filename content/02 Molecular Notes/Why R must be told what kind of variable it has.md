@@ -11,18 +11,19 @@ status: seedling
 
 Why should you check str(), use factors and reshape the data to long format before running a test in R?
 
-R only knows what a column looks like, not what it means. Treatments coded 1 to 4 look like numbers, so R fits a straight line, and the ANOVA has the wrong degrees of freedom. Before any test, check the data with str(), turn grouping columns into factors, and put the data in long format, with one column for the response and one for the group.
+Because R knows what a column looks like, not what it means. You know that treatments coded 1 to 4 are four separate groups. R sees four numbers, fits a straight line through them, and gives you an ANOVA with the wrong degrees of freedom, without a single error message. So before any test, check the data with str(), turn grouping columns into factors, and put the data in long format, with one column for the response and one for the group.
 
 ![[Treatment codes - numbers vs factor.png|700]]
-The same 24 numbers. Read as numbers, R draws one line through the codes (Df = 1); read as a factor, it estimates one mean per treatment (Df = 3). [[Simulation|Simulated data]].
+The same 24 numbers. Read as numbers, R draws one line through the codes (Df = 1). Read as a factor, it estimates one mean per treatment (Df = 3). [[Simulation|Simulated data]].
 
-1. A variable's type comes from what it means, not from the symbols in the cell. An ID number or a treatment code from 1 to 4 is categorical ([[Types of Data]]).
-2. R can't see meaning. It reads a column of digits as numeric and a column of words as text ([[str()]]). This matters because every function decides what to do from that type.
-3. A numeric treatment column in `aov()` is treated as a slope: one line with 1 degree of freedom, instead of one mean per group with $k-1$ ([[Degrees of Freedom]]).
-4. Declaring the column a factor makes R [[Point Estimate|estimate]] a separate mean for each level ([[factor()]], [[Factors and Levels]]).
-5. The formula `response ~ group` also needs long format: one row per [[Variable and Observation|observation]], with one column for the response and one for the group. Data typed with one column per treatment (wide format) must be stacked first ([[Wide vs Long Format]]).
-6. So read the data, run `str()`, fix the types and the shape, and then check that the degrees of freedom in the output are what you expect.
+The root of the problem is a gap between meaning and symbols. A variable's type comes from what it means, not from what's written in the cell. An ID number is not a quantity. Neither is a treatment code from 1 to 4. Both are categories that happen to be written with digits ([[Types of Data]]).
 
-Otherwise the test runs without an error but answers a different question (a trend across the codes instead of differences between groups), and nothing warns you except the degrees of freedom.
+R can't see meaning. It sees a column of digits and calls it numeric, a column of words and calls it text ([[str()]]). And every function decides what to do from that type. So hand `aov()` a numeric treatment column and it does the sensible thing for a number: it fits a slope, one line with 1 degree of freedom, instead of one mean per group with $k-1$ ([[Degrees of Freedom]]). Declare the column a factor, and R [[Point Estimate|estimates]] a separate mean for each level, which is what you meant all along ([[factor()]], [[Factors and Levels]]).
+
+Shape matters the same way. The formula `response ~ group` expects long format: one row per [[Variable and Observation|observation]], one column for the response and one for the group. Data typed with one column per treatment, called wide format, has to be stacked first ([[Wide vs Long Format]]).
+
+So the routine is short. Read the data, run `str()`, fix the types and the shape, then check that the degrees of freedom in the output are what you expect.
+
+The danger here is silence. The test runs, the output looks normal, and it answers a different question: a trend across the codes instead of differences between groups. A computer will do exactly what you said, not what you meant. The only defence is to say it precisely.
 
 See also: [[t.test()|t.test]], [[Why use degrees of freedom as a sanity check]], [[Why visualize data before testing]].

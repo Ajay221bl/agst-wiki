@@ -11,17 +11,21 @@ status: seedling
 
 Why does [[t.test()|t.test]]() use Welch's version by default, and when would you use the pooled test?
 
-The pooled two-sample t-test assumes both populations have the same [[Variance|variance]]. When that holds, it is slightly more powerful, but it can mislead when the variances and group sizes differ. Welch's test drops that [[Test Assumptions|assumption]] and loses very little when the variances are equal, so R uses it by default. Use the pooled test only when you have a reason.
+Because it's the better bet. The pooled two-sample t-test assumes both populations have the same [[Variance|variance]]. When that's true, it gains a little power. When it's false, especially with groups of different sizes, it can give badly wrong p-values. Welch's test drops the [[Test Assumptions|assumption]] and costs almost nothing when the variances happen to be equal. Small downside, large upside, so R makes it the default. Use the pooled test only when you have a real reason to believe the variances match.
 
 ![[Pooled variance weighting.png|700]]
-Pooling averages the two variances weighted by df, so it leans towards the bigger group. If the variances really differ, one number misstates at least one group. Illustrative values.
+Pooling averages the two variances, weighted by degrees of freedom (df), so it leans towards the bigger group. If the variances really differ, one number misstates at least one group. Illustrative values.
 
-1. The pooled test estimates one shared variance from both groups ([[Pooled Variance]]). That is only right if the population variances really are equal ([[Homogeneity of Variance]]).
-2. When they are equal, pooling uses more information, so the test is slightly more powerful.
-3. When they differ, especially with [[Balanced Design|unequal group sizes]], the pooled [[Standard Error|standard error]] is wrong, and the p-value can be too small or too large.
-4. Welch's test keeps each group's own variance and adjusts the degrees of freedom (df), which is why R prints fractional df ([[Welch's t-Test]], [[Degrees of Freedom]]).
-5. Its cost when the variances are equal is small, and its protection when they aren't is large. That imbalance makes it the safe default.
+Think about what pooling actually does. It takes the two groups' variances and blends them into one shared estimate ([[Pooled Variance]]). That's only honest if there really is one shared variance underneath ([[Homogeneity of Variance]]).
 
-Using the pooled test by default would give misleading p-values in exactly the unbalanced, unequally spread data that field studies often produce.
+If there is, blending is smart. You're using both groups' information to estimate one thing, so the estimate is sharper and the test slightly more powerful.
+
+If there isn't, blending is a mistake. One number now has to stand in for two different spreads, and it can't describe both. It leans towards the bigger group, because the blend is weighted by size. With [[Balanced Design|unequal group sizes]], the pooled [[Standard Error|standard error]] comes out wrong, and the p-value can be too small or too large. You won't know which.
+
+Welch's test refuses to blend. It keeps each group's own variance and adjusts the degrees of freedom to match, which is why R prints df that aren't whole numbers ([[Welch's t-Test]], [[Degrees of Freedom]]).
+
+So compare the two bets. Choose Welch and the variances are equal: you lose a sliver of power. Choose pooled and the variances differ: your p-value can be misleading. When one choice risks a little and the other risks a lot, you don't need to know the future to decide. Pick the one that fails gracefully.
+
+That's why defaulting to the pooled test would mislead in exactly the unbalanced, unevenly spread data that field studies tend to produce.
 
 See also: [[Two-Sample Independent t-Test]], [[Why check assumptions before trusting a test]], [[Why a two-group ANOVA gives F equal to t squared]].

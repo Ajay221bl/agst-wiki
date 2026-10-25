@@ -11,18 +11,21 @@ status: seedling
 
 How are the two-sample t-test and one-way ANOVA related?
 
-With only two groups, a one-way ANOVA and the pooled (equal-variance) two-sample t-test are the same test. F is exactly t², the p-values are identical, and no post hoc test is needed because there is only one pair. The t-test is the two-group case of ANOVA.
+They're the same test. With only two groups, a one-way ANOVA and the pooled (equal-variance) two-sample t-test give exactly the same answer: F is t², the p-values are identical, and no post hoc test is needed because there's only one pair to compare. The t-test isn't a separate idea from ANOVA. It's ANOVA with two groups.
 
 ![[F equals t squared - sheep.png|700]]
 Same data, same p-value: 4.007² = 16.06. Book stem-cell sheep data, verified in R.
 
-1. Both tests ask whether group means differ more than chance allows, using the spread within groups as the [[Signal and Noise|noise]].
-2. With two groups, the mean square between groups has $k-1 = 1$ degree of freedom, and the mean square within groups is the pooled variance ([[Pooled Variance]]).
-3. With some algebra, $F = t^2$ for the pooled t-test, and an F with 1 numerator degree of freedom has the same [[Tails of a Distribution|tail]] probability as a two-sided t.
-4. In the sheep data, the pooled $t = 4.007$ with 16 degrees of freedom, the ANOVA gives $F = 16.06$ with 1 and 16 degrees of freedom, and both give $p = 0.0010$.
-5. With two groups, a significant F already says which pair differs, so post hoc tests add nothing ([[Post Hoc Tests]]).
-6. The match is with the pooled t-test. R's default, Welch's t-test, gives a slightly different p ([[Welch's t-Test]]).
+Most courses teach these as two chapters, so they feel like two things to memorize. Go to what each one is actually doing, and the wall between them disappears.
 
-Without seeing the link, ANOVA looks like a new idea to memorize rather than the t-test extended, and people run post hoc tests on two groups.
+Both ask the same question: do the group means differ more than chance allows? And both answer it the same way, by comparing the gap between means with the spread within groups, the [[Signal and Noise|noise]].
+
+Now set k = 2 in the ANOVA. The mean square between groups has $k-1 = 1$ degree of freedom. The mean square within groups is just the pooled variance, the same number the t-test uses ([[Pooled Variance]]). With a bit of algebra, $F = t^2$ for the pooled t-test. And an F with 1 numerator degree of freedom has the same [[Tails of a Distribution|tail]] probability as a two-sided t. Squaring t throws away its sign, which is exactly why F has no direction.
+
+The sheep data show it in numbers. The pooled $t = 4.007$ with 16 degrees of freedom. The ANOVA gives $F = 16.06$ with 1 and 16 degrees of freedom. Both give $p = 0.0010$.
+
+Two consequences follow. First, with two groups a significant F already tells you which pair differs, since there's only one, so post hoc tests add nothing ([[Post Hoc Tests]]). Second, the match is with the pooled t-test specifically. R's default, Welch's t-test, doesn't assume equal variances, so it gives a slightly different p ([[Welch's t-Test]]).
+
+This is what understanding feels like: fewer things to remember, because you've seen they were one thing all along. ANOVA is the t-test, extended to as many groups as you like.
 
 See also: [[Two-Sample Independent t-Test]], [[One-Way ANOVA]], [[F-Distribution]], [[Ratios and Fractions|numerator]], [[Why ANOVA instead of many t-tests]], [[Why analysis of variance can compare means]], [[Why R uses Welch's t-test by default]].
