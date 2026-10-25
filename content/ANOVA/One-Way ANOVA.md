@@ -12,7 +12,7 @@ status: seedling
 
 One-way ANOVA tests whether the means of three or more independent groups are all equal. It does this in a single overall test that compares the variability between the groups with the variability within them.
 
-There is one [[Types of Data|quantitative]] response and one categorical factor with $k$ levels ([[Factors and Levels]]). It is the next step up from the two-sample t-test ([[Two-Sample Independent t-Test]]). Running a t-test for every pair of groups would multiply the chance of [[Type I and Type II Errors|false positives]], so we need one test for all the means at once ([[Family-Wise Type I Error]], [[Why ANOVA instead of many t-tests]]).
+The real question is simple: do these groups differ, or are we looking at noise? There is one [[Types of Data|quantitative]] response and one categorical factor with $k$ levels ([[Factors and Levels]]). It is the next step up from the two-sample t-test ([[Two-Sample Independent t-Test]]). Running a t-test for every pair of groups would multiply the chance of [[Type I and Type II Errors|false positives]], so we need one test for all the means at once ([[Family-Wise Type I Error]], [[Why ANOVA instead of many t-tests]]).
 
 The [[Null and Alternative Hypotheses|hypotheses]]:
 - $H_0: \mu_1 = \mu_2 = \cdots = \mu_k$. In words: **the [factor] has no effect on the mean [response]**.
@@ -20,9 +20,9 @@ The [[Null and Alternative Hypotheses|hypotheses]]:
 
 Don't write $H_A$ as $\mu_1 \ne \mu_2 \ne \cdots \ne \mu_k$. One break anywhere in the chain of equalities is enough.
 
-ANOVA models each value as its group mean plus an error ([[Statistical Model]], [[Residuals]]). Splitting the total [[Variability|variation]] into "between groups" and "within groups" gives two variance estimates ([[Sums of Squares and Mean Squares]]). The [[Parameter vs Statistic|statistic]] is $F = MSG/MSE$: the mean square between groups over the mean square within groups ([[Between- and Within-Group Variability]], [[F-Distribution]]). If $H_0$ is true, both [[Point Estimate|estimate]] the same noise, so F is near 1. A large F says the group means are further apart than noise explains.
+Here's the clever part. ANOVA models each value as its group mean plus an error ([[Statistical Model]], [[Residuals]]). Splitting the total [[Variability|variation]] into "between groups" and "within groups" gives two variance estimates ([[Sums of Squares and Mean Squares]]). The [[Parameter vs Statistic|statistic]] is $F = MSG/MSE$: the mean square between groups over the mean square within groups ([[Between- and Within-Group Variability]], [[F-Distribution]]). If $H_0$ is true, both [[Point Estimate|estimate]] the same noise, so F is near 1. A large F says the group means are further apart than noise explains.
 
-A significant F says that some means differ, but not which ones. Post hoc tests answer that ([[Post Hoc Tests]]).
+Notice what this buys you: one question, one answer, one α. A significant F says that some means differ, but not which ones. Post hoc tests answer that ([[Post Hoc Tests]]).
 
 ![[Between vs within variability.png|700]]
 The group means (black bars) are identical in both panels. On the left the points are tight, so the gaps between means stand out; on the right the same gaps are buried in noise. ANOVA's F is exactly this between-versus-within comparison.
@@ -101,7 +101,7 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)         # chi-squared = 5.75, df
 
    An honest caveat: normality was violated, the Kruskal–Wallis check (p = 0.057) doesn't confirm the result at 0.05, and η² says the effect is small. Report the result, but as borderline.
 
-Rejecting $H_0$ doesn't mean all the groups differ, only that at least one does. And ANOVA doesn't test variances: it uses variances to test means ([[Why analysis of variance can compare means]]).
+If you remember one thing, make it this: ANOVA asks whether the gaps between groups are big compared to the noise inside them. Everything else is bookkeeping. Rejecting $H_0$ doesn't mean all the groups differ, only that at least one does. And ANOVA doesn't test variances: it uses variances to test means ([[Why analysis of variance can compare means]]).
 
 See also: [[Variance]], [[ANOVA Table]], [[wilcox.test() and kruskal.test()]].
 

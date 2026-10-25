@@ -11,7 +11,7 @@ status: seedling
 
 One-way ANOVA assumes independent observations, roughly normal data in each group, and equal variances across the groups (called homogeneity of variance). It also assumes the data are grouped by just one factor.
 
-The p-value comes from the F-distribution, which is only correct if the data behave in certain ways ([[F-Distribution]], [[Why check assumptions before trusting a test]]). Each assumption comes from one part of the calculation:
+An assumption isn't a rule someone invented to make your life harder. It's a part of the calculation you're trusting without checking. The p-value comes from the F-distribution, which is only correct if the data behave in certain ways ([[F-Distribution]], [[Why check assumptions before trusting a test]]). Each assumption comes from one part of the calculation:
 - **Independence:** the errors of different units are unrelated, so each observation adds new information ([[Independent Events]]).
 - **Normality:** the errors are normal, which makes F follow the F-distribution ([[Normality Checks]], [[Residuals]]).
 - **Homogeneity of variance:** one pooled within-group variance, the mean square error (MSE), describes every group ([[Homogeneity of Variance]]).
@@ -22,7 +22,7 @@ The p-value comes from the F-distribution, which is only correct if the data beh
 | **Normality** | each group from a roughly normal population | `shapiro.test()` per group, or on the residuals; [[Q-Q Plot\|Q-Q plots]] | **large p** |
 | **Equal variances** | $\sigma_1^2 = \cdots = \sigma_k^2$ | Levene's test, `car::leveneTest()`; first screen: the group standard deviations | **large p** |
 
-Independence is the one assumption no [[Parameter vs Statistic|statistic]] can rescue, because it comes from how the data were collected. Moderate non-normality matters less with large groups ([[Robustness]]). If it is severe, use the Kruskal–Wallis test ([[Nonparametric Alternatives]]).
+They're not equally important. Independence is the one assumption no [[Parameter vs Statistic|statistic]] can rescue, because it comes from how the data were collected. Moderate non-normality matters less with large groups ([[Robustness]]). If it is severe, use the Kruskal–Wallis test ([[Nonparametric Alternatives]]).
 
 ![[QQ plots - normal vs skewed.png|700]]
 If the data are normal, the points follow the red line. Systematic curving away at the ends (right panel) signals skew.
@@ -36,7 +36,7 @@ For example:
 - **Frustration by undergraduate major:** all four Shapiro p-values are above 0.05, and Levene's p is above 0.05 but close, so go ahead.
 - **Halloween costumes:** normality is fine in all four groups and Levene's p is high, so go ahead. One Superman [[Outliers|outlier]] is flagged.
 
-For Levene's test, a p below 0.05 isn't good news: it means equal variances are rejected.
+So the job isn't to tick boxes. It's to know which conditions your p-value is standing on, and how firmly. For Levene's test, a p below 0.05 isn't good news: it means equal variances are rejected.
 
 See also: [[Post Hoc Tests]].
 

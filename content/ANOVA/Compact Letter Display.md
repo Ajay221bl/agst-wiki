@@ -12,7 +12,7 @@ status: seedling
 
 A compact letter display labels each group with letters. Groups that share a letter are not significantly different, and groups with no letter in common are.
 
-Post hoc tests give one result for each pair of groups ([[Post Hoc Tests]]). With many groups, a table of every pairwise p-value is hard to read, because it has $k(k-1)/2$ rows. Letters compress it: groups that are not significantly different get a shared letter ([[Tukey HSD]]).
+The problem is a reading problem, not a maths problem. Post hoc tests give one result for each pair of groups ([[Post Hoc Tests]]). With many groups, a table of every pairwise p-value is hard to read, because it has $k(k-1)/2$ rows. Letters compress it: groups that are not significantly different get a shared letter ([[Tukey HSD]]).
 
 | Group | Mean | Letters |
 |---|---|---|
@@ -32,6 +32,6 @@ Letters are the standard way agricultural fields, and fields that learned statis
 
 For example, in the Halloween costume data, **Superman gets its own letter and the other three costumes share one**, which matches the Tukey result that only Superman differs.
 
-Different letters don't mean very different means. They mean significantly different, which depends on n and [[Variability|variability]] too.
+Once you see letters as a summary of pairwise tests, the apparent paradoxes go away. Different letters don't mean very different means. They mean significantly different, which depends on n and [[Variability|variability]] too.
 
 See also: [[emmeans() and cld()]].

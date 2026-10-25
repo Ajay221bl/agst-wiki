@@ -12,7 +12,7 @@ status: seedling
 
 To rank data, sort them and replace each value by its position, with 1 for the smallest. Tied values share the average of the positions they fill.
 
-A value carries two kinds of information: its order (bigger or smaller than the others) and its distance (how much bigger). Distances are where outliers and [[Shape of a Distribution|skew]] do damage. One huge value drags the mean and inflates the [[Standard Deviation|standard deviation]] ([[Outliers]], [[Mean]]).
+Sometimes the smartest move is to throw information away on purpose. A value carries two kinds of information: its order (bigger or smaller than the others) and its distance (how much bigger). Distances are where outliers and [[Shape of a Distribution|skew]] do damage. One huge value drags the mean and inflates the [[Standard Deviation|standard deviation]] ([[Outliers]], [[Mean]]).
 
 Ranking keeps only the order. Sort the values and number them 1, 2, 3 and so on. This tames outliers, because the largest value becomes rank n whether it is 9 or 9 trillion.
 
@@ -26,7 +26,7 @@ On the raw scale one value is far away; as ranks, it is just one step above the 
 ![[Worked example - rank-based test.png|700]]
 The stem-cell sheep with 14.25 becomes rank 18, one step above the next sheep.
 
-Ranks let tests compare groups using only order, so they don't depend on normality or on how extreme a few values are.
+It's a trade: you give up the distances, and in return nothing extreme can push you around. Ranks let tests compare groups using only order, so they don't depend on normality or on how extreme a few values are.
 
 For example, the data 1, 2, 3, 4, 100 become the ranks 1, 2, 3, 4, 5. The data 3, 5, 5, 9 become 1, 2.5, 2.5, 4.
 

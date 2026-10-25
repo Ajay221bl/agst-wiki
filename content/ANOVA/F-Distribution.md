@@ -11,9 +11,9 @@ status: seedling
 
 The F-distribution is the distribution of a [[Ratios and Fractions|ratio]] of two variances. It leans to the right, is never negative, and has two degrees of freedom (df). ANOVA's p-value is the area in its upper [[Tails of a Distribution|tail]].
 
-ANOVA's [[Test Statistic|test statistic]] is a ratio of two variances: $F = MSG/MSE$, the mean square between groups over the mean square within groups ([[Between- and Within-Group Variability]]). It is the first common test statistic that is a ratio of two variances. To get a p-value we need its distribution when $H_0$ is true ([[Null Distribution]]). That distribution is the **F-distribution**, named after **Sir R. A. Fisher**.
+Every test has the same structure: compute a number, then ask how surprising that number would be if nothing were going on. ANOVA's [[Test Statistic|test statistic]] is a ratio of two variances: $F = MSG/MSE$, the mean square between groups over the mean square within groups ([[Between- and Within-Group Variability]]). It is the first common test statistic that is a ratio of two variances. To get a p-value we need its distribution when $H_0$ is true ([[Null Distribution]]). That distribution is the **F-distribution**, named after **Sir R. A. Fisher**.
 
-Its shape follows from what it is:
+You don't need to memorize its shape. It follows from what it is:
 - **It isn't [[Shape of a Distribution|symmetric]].** It is usually skewed to the right and can't be negative, because variances are never negative, so neither is their ratio.
 - **It is centred near 1 when $H_0$ is true,** because both mean squares [[Point Estimate|estimate]] the same $\sigma^2$.
 - **It has two df:** the numerator $df_1 = k - 1$ and the denominator $df_2 = N - k$. They change its shape. There are two because each [[Variance|variance]] estimate has its own df ([[Degrees of Freedom]]).
@@ -31,7 +31,7 @@ For example:
 
 In the book's FAMuSS data, F = 3.23 on 2 and 592 df gives p ≈ 0.04 ([[References|Vu and Harrington 2020, Ch. 5]], p. 268).
 
-F can't be negative, even if group 1 is smaller: it is a ratio of quantities that are never negative. And an ANOVA p-value doesn't use both tails, only the upper one.
+So the whole distribution is just the answer to one question: how big does this ratio get by luck alone? F can't be negative, even if group 1 is smaller: it is a ratio of quantities that are never negative. And an ANOVA p-value doesn't use both tails, only the upper one.
 
 See also: [[Probability Distribution]], [[ANOVA Table]], [[One-Way ANOVA]].
 

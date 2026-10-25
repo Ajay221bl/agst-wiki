@@ -13,7 +13,7 @@ status: seedling
 
 Between-group variability is how far the group means sit from each other. Within-group variability is how spread out the values are inside each group. [[One-Way ANOVA|ANOVA]] compares the two.
 
-Picture three groups with means 10, 12 and 14. If each group is tight, with values within ±0.5 of their mean, the groups clearly differ. If each group sprawls from 0 to 25, the same means are lost in the noise. The means didn't change; only the spread within the groups did. So "do the means differ?" can only be answered **relative to the spread inside the groups** ([[Signal and Noise]]).
+This is the idea that makes ANOVA work, so go slowly. Picture three groups with means 10, 12 and 14. If each group is tight, with values within ±0.5 of their mean, the groups clearly differ. If each group sprawls from 0 to 25, the same means are lost in the noise. The means didn't change; only the spread within the groups did. So "do the means differ?" can only be answered **relative to the spread inside the groups** ([[Signal and Noise]]).
 
 ANOVA measures how different the group means are as a variance of the means around the grand mean ([[Mean]], [[Variance]]). Each group counts once for each of its members, so it is weighted by $n_i$. This is the **between** part, the signal, called the mean square for groups: $MSG = SSG/(k-1)$, with the sum of squares $SSG = \sum n_i(\bar{x}_i - \bar{x})^2$.
 
@@ -33,7 +33,7 @@ For example:
 
 Both rows have the same means (10, 12, 14) and so the same MSG. But MSE is tiny for the tight row and huge for the spread row, so F is large in the first case and small in the second.
 
-Big differences in means aren't always significant. They are only significant if they are big compared with the noise within the groups.
+So a difference is never big or small on its own. It's big or small compared to the noise around it. Big differences in means aren't always significant. They are only significant if they are big compared with the noise within the groups.
 
 See also: [[Grand Mean|grand mean]], [[Box Plot and Five-Number Summary]], [[ANOVA Table]].
 

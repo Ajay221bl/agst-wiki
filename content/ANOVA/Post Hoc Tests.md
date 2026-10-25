@@ -14,11 +14,11 @@ status: seedling
 
 Post hoc tests compare every pair of group means after a significant ANOVA. Their p-values are adjusted so that the overall chance of a Type I error stays controlled.
 
-A significant ANOVA says that at least one mean differs, but not which ([[One-Way ANOVA]]). Post hoc tests, also called pairwise comparisons or mean separation, find out. Each one is like a two-sided two-sample test of $H_0: \mu_i = \mu_j$, run for all $k(k-1)/2$ pairs ([[Two-Sample Independent t-Test]]).
+ANOVA tells you something is going on. It doesn't tell you where. A significant ANOVA says that at least one mean differs, but not which ([[One-Way ANOVA]]). Post hoc tests, also called pairwise comparisons or mean separation, find out. Each one is like a two-sided two-sample test of $H_0: \mu_i = \mu_j$, run for all $k(k-1)/2$ pairs ([[Two-Sample Independent t-Test]]).
 
 Their p-values are adjusted, because many comparisons, each at α, would inflate the chance of a false positive across the family ([[Family-Wise Type I Error]], [[Bonferroni Correction]], [[Tukey HSD]]).
 
-Run them only after a significant overall ANOVA. The ANOVA acts as a gatekeeper: if you [[Why we never accept the null hypothesis|fail to reject]], the gate stays shut, even if the software prints Tukey results by default ([[Why post hoc tests only after a significant ANOVA]]). The overall test protects the whole family, and skipping it reopens the multiple-testing problem. When there are many groups, summarize the results with letters ([[Compact Letter Display]]).
+Discipline matters more than method here. Run them only after a significant overall ANOVA. The ANOVA acts as a gatekeeper: if you [[Why we never accept the null hypothesis|fail to reject]], the gate stays shut, even if the software prints Tukey results by default ([[Why post hoc tests only after a significant ANOVA]]). The overall test protects the whole family, and skipping it reopens the multiple-testing problem. When there are many groups, summarize the results with letters ([[Compact Letter Display]]).
 
 ```mermaid
 flowchart TD
@@ -45,7 +45,7 @@ For example, in data on frustration by undergraduate major (Tukey's test), Engli
 
 In the Halloween costume data, only Superman differs: it is higher than Hulk, Ninja Turtle and Spider-Man.
 
-Don't read the post hoc tests whatever the ANOVA says; read them only after a significant ANOVA.
+The order is the whole point: first ask whether there's anything to find, then ask where it is. Don't read the post hoc tests whatever the ANOVA says; read them only after a significant ANOVA.
 
 See also: [[TukeyHSD()]].
 

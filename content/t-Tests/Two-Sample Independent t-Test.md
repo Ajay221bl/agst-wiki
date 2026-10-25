@@ -13,9 +13,9 @@ status: seedling
 
 The two-sample independent t-test compares the means of two independent groups. The [[Independent and Dependent Variables|independent variable]] (IV) is categorical with 2 levels, and the dependent variable (DV) is [[Types of Data|quantitative]].
 
-There are two separate groups and one question: do their [[Population and Sample|population]] means differ ([[Independent vs Paired Samples]])? The hypotheses are $H_0: \mu_1 - \mu_2 = 0$ against $H_A: \mu_1 - \mu_2 <, >$ or $\ne 0$. R's default is two-sided.
+This is probably the most common question in all of experimental science: is this group different from that one? There are two separate groups and one question: do their [[Population and Sample|population]] means differ ([[Independent vs Paired Samples]])? The hypotheses are $H_0: \mu_1 - \mu_2 = 0$ against $H_A: \mu_1 - \mu_2 <, >$ or $\ne 0$. R's default is two-sided.
 
-The observed [[Signal and Noise|signal]] is $\bar{x}_1 - \bar{x}_2$, and the test-statistic template says to divide it by its standard error (SE) ([[Test Statistic]]). The standard error of a difference between independent means comes from adding variances: $\sqrt{s_1^2/n_1 + s_2^2/n_2}$ ([[Standard Error]]). Each mean wobbles on its own, and independent wobbles add up in [[Variance|variance]].
+The observed [[Signal and Noise|signal]] is $\bar{x}_1 - \bar{x}_2$, and the test-statistic template says to divide it by its standard error (SE) ([[Test Statistic]]). The standard error of a difference between independent means comes from adding variances: $\sqrt{s_1^2/n_1 + s_2^2/n_2}$ ([[Standard Error]]). Each mean wobbles on its own, and independent wobbles add up in [[Variance|variance]]. Two uncertain things combined are more uncertain than either one, which is why the noise in a difference is bigger than the noise in each mean.
 
 That gives the Welch test, which allows unequal variances and is R's default:
 $$t = \dfrac{\bar{x}_1 - \bar{x}_2}{\sqrt{s_1^2/n_1 + s_2^2/n_2}}$$
@@ -75,7 +75,7 @@ cohensD(change ~ trmt, data = sheep)                   # 1.89
 6. **Decide and report.**
    > We reject $H_0$. There is sufficient evidence that stem-cell transplants change heart pumping capacity: sheep given stem cells improved by 7.83 [[Proportions and Percentages|percentage]] points more than controls, Welch *t*(12.2) = 4.01, *p* = .002, 95% CI [3.58, 12.08], Cohen's *d* = 1.89 (large).
 
-A negative t isn't an error. It means group 1's mean is lower, given the order of subtraction.
+Always remember what the test can and can't do: it tells you whether the gap is bigger than chance, and the interval tells you how big it might be. A negative t isn't an error. It means group 1's mean is lower, given the order of subtraction.
 
 See also: [[t-Distribution]], [[Null Distribution|null distribution]], [[Cohen's d]].
 

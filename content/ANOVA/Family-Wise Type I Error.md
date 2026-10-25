@@ -17,7 +17,7 @@ status: seedling
 
 When you run many tests, each at α, the chance of at least one false positive across the whole "family" of tests grows quickly. It equals $1 - (1 - \alpha)^c$ for $c$ independent tests.
 
-One test at α = 0.05 has a 5% risk of a false positive ([[Type I and Type II Errors]]). Each extra test is another 5% lottery ticket.
+Here's the trap. One test at α = 0.05 has a 5% risk of a false positive ([[Type I and Type II Errors]]). Each extra test is another 5% lottery ticket. Buy enough tickets and you're almost sure to win something, even if every prize is fake.
 
 "At least one false positive" is hard to count directly, but its opposite, "none", is easy ([[Complementary Events]]). With $c$ independent tests:
 - the chance of no Type I error on one test is $1 - \alpha$ (the complement rule);
@@ -42,7 +42,7 @@ For example:
 
 With ten groups, a false positive is almost certain. Note that $c$ counts *comparisons*, not groups.
 
-Each test is still at 5%, but the study as a whole isn't.
+This is why a careful analyst asks not only "is this test fair?" but "how many tests did I run to find it?" Each test is still at 5%, but the study as a whole isn't.
 
 See also: [[Post Hoc Tests]].
 

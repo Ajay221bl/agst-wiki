@@ -13,7 +13,7 @@ status: seedling
 
 The [[One-Way ANOVA|ANOVA]] table lists, for the factor and for the [[Residuals|residuals]], the degrees of freedom (df), sums of squares, mean squares, the F ratio and the p-value. The numbers fit together like a puzzle, so each one can be checked against the others.
 
-ANOVA splits the total [[Variability|variation]] into a between-groups part and a within-groups part ([[Sums of Squares and Mean Squares]]). The table lays out that split with one row per source, building from left to right: the sum of squares (SS, how much variation), the df (how many independent pieces), the mean square MS = SS/df (a variance), and then F and p.
+The ANOVA table looks intimidating, but it's just one idea written out in columns. ANOVA splits the total [[Variability|variation]] into a between-groups part and a within-groups part ([[Sums of Squares and Mean Squares]]). The table lays out that split with one row per source, building from left to right: the sum of squares (SS, how much variation), the df (how many independent pieces), the mean square MS = SS/df (a variance), and then F and p.
 
 | Source | df | SS | MS = SS/df | F | p |
 |---|---|---|---|---|---|
@@ -32,7 +32,7 @@ flowchart TD
 ```
 The two rows of the ANOVA table split the total df (and the total sum of squares) between them, so 3 + 76 = 79. If R prints anything else, check the data.
 
-The table organizes the whole calculation, and it is the place to run quick checks. Software works it out for you.
+The table organizes the whole calculation, and it's the place to run quick checks. Software works it out for you, so your job is to read it, and to notice when a number doesn't fit.
 
 For example, here is the book's FAMuSS output from R ([[References|Vu and Harrington 2020, Ch. 5]], p. 269):
 ```

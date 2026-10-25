@@ -11,9 +11,9 @@ status: seedling
 
 A paired t-test is a one-sample t-test on the differences within each pair.
 
-Paired data come in linked pairs, such as the same swimmer with and without a wetsuit ([[Independent vs Paired Samples]]). Within a pair almost everything is shared, such as the swimmer's fitness and technique. So the difference within each pair is free of that shared [[Variability|variation]].
+The paired t-test is a beautiful example of making a problem simpler instead of harder. Paired data come in linked pairs, such as the same swimmer with and without a wetsuit ([[Independent vs Paired Samples]]). Within a pair almost everything is shared, such as the swimmer's fitness and technique. So the difference within each pair is free of that shared [[Variability|variation]].
 
-So work out the difference $d_i$ for every pair; the two original columns are no longer needed. Use **after − before**, so that **positive means an increase** and **negative means a decrease**. Before − after also works, but every sign flips, which is confusing.
+That's the whole trick: turn two noisy columns into one clean column. So work out the difference $d_i$ for every pair; the two original columns are no longer needed. Use **after − before**, so that **positive means an increase** and **negative means a decrease**. Before − after also works, but every sign flips, which is confusing.
 
 Now there is one sample of differences, so run a one-sample t-test on it against 0 ([[One-Sample t-Test]]):
 - $H_0: \mu_d = 0$, against $H_A: \mu_d <, >$ or $\ne 0$. **State the order of subtraction**, for example "d = April − March", because the sign of every result depends on it.
@@ -72,7 +72,7 @@ cohensD(swim$wetsuit, swim$swimsuit, method = "paired")   # 3.56
 
 **What goes wrong if you ignore the pairing:** `t.test(swim$wetsuit, swim$swimsuit)` treats the data as 24 different swimmers and gives t = 1.37, df 22.0, p = 0.185, with a CI from −0.040 to 0.195 that includes 0. The mean difference is the same, but the spread between swimmers swamps it: the standard error is about ten times larger.
 
-Don't check the normality of each column; check the differences. And a two-tailed paired test can still say which is bigger: the decision is two-sided, but the sign of the CI shows the direction.
+The lesson generalizes: the best way to remove noise is to design the comparison so the noise cancels. Don't check the normality of each column; check the differences. And a two-tailed paired test can still say which is bigger: the decision is two-sided, but the sign of the CI shows the direction.
 
 See also: [[Deviations from the Mean]], [[Cohen's d]], [[t.test()]].
 

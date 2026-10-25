@@ -12,7 +12,7 @@ status: seedling
 
 A factor is a categorical grouping variable, such as the treatment or the independent variable (IV). Its levels are the groups it creates. "One-way" ANOVA means one factor, with any number of levels.
 
-When a study compares groups, the independent variable is categorical ([[Independent and Dependent Variables]], [[Types of Data]]). ANOVA calls that variable a **factor**, and its categories **levels**. For example, "time of day" is one factor, and morning, midday and evening are its three levels. Counting factors and levels names the design:
+Before you pick a test, you need to name the design, and naming the design comes down to two counts. When a study compares groups, the independent variable is categorical ([[Independent and Dependent Variables]], [[Types of Data]]). ANOVA calls that variable a **factor**, and its categories **levels**. For example, "time of day" is one factor, and morning, midday and evening are its three levels. Counting factors and levels names the design:
 
 | Factor | Levels | Design |
 |---|---|---|
@@ -30,7 +30,7 @@ Five groups are the five *levels* of **one** variable, not five factors. Two fac
 
 For example, four fertilizers coded A, B, C and D are one factor with four levels, so the ANOVA [[Ratios and Fractions|numerator]] degrees of freedom are k − 1 = 3. If they are coded 1, 2, 3, 4 and read as numbers, R gives 1 degree of freedom, which is a sign it treated fertilizer as a single number ([[Why use degrees of freedom as a sanity check]]).
 
-More groups don't mean more factors; they mean more levels of the same factor.
+The point is that the computer only knows what you tell it. More groups don't mean more factors; they mean more levels of the same factor.
 
 See also: [[One-Way ANOVA]], [[Wide vs Long Format]].
 

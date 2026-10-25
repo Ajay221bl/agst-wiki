@@ -11,7 +11,7 @@ status: seedling
 
 A one-sample t-test checks a claim about one [[Population and Sample|population]] mean. It uses the sample mean, the sample [[Standard Deviation|standard deviation]] (SD) and a t-distribution with $n - 1$ degrees of freedom (df).
 
-The question is whether a population mean differs from a known value $\mu_0$. For example, is the mean body temperature 98.6 °F? Write it as hypotheses about $\mu$ ([[Null and Alternative Hypotheses]]): $H_0: \mu = \mu_0$, against $H_A: \mu <, >$ or $\ne \mu_0$.
+This is the simplest complete test, and every other t-test is built from it, so it's worth understanding thoroughly. The question is whether a population mean differs from a known value $\mu_0$. For example, is the mean body temperature 98.6 °F? Write it as hypotheses about $\mu$ ([[Null and Alternative Hypotheses]]): $H_0: \mu = \mu_0$, against $H_A: \mu <, >$ or $\ne \mu_0$.
 
 Fill in the test-statistic template with the sample mean and its standard error ([[Test Statistic]], [[Standard Error]]):
 $$t = \dfrac{\bar{x} - \mu_0}{s/\sqrt{n}}, \qquad df = n - 1$$
@@ -21,7 +21,7 @@ Also give the range of believable means, the confidence interval (CI) $\bar{x} \
 
 The [[Test Assumptions|requirements]] are a random sample of independent observations, so that the standard error formula is right, and a roughly normal population **or** a large $n$ (more than 30), so that $\bar{x}$ is approximately normal ([[Central Limit Theorem]]). Check with a [[Histogram|histogram]], a [[Q-Q Plot|Q-Q plot]] or a Shapiro–Wilk test ([[Normality Checks]]). If they fail, use nonparametric methods or bootstrapping ([[Nonparametric Alternatives]]).
 
-This test compares one group's mean with a fixed reference value: a safety limit, a textbook value or a target. It is also the engine of the paired t-test ([[Paired t-Test]]).
+Notice the shape of the reasoning: the gap between what you saw and what you'd expect, divided by how much that gap would wobble by chance. This test compares one group's mean with a fixed reference value: a safety limit, a textbook value or a target. It is also the engine of the paired t-test ([[Paired t-Test]]).
 
 For example:
 
@@ -66,7 +66,7 @@ xbar + c(-1, 1) * qt(0.975, df = n - 1) * se    # 95% CI 0.249 to 0.325
 
    [[Effect Size|Effect size]]: d = (0.287 − 0.50)/0.069 = −3.09, far past 0.8, so large ([[Cohen's d]]).
 
-The default `t.test(x)` usually doesn't answer your question: it tests μ = 0 unless you set `mu =`.
+Software makes the calculation trivial, which means the thinking is the part that matters: which value to test against, and why. The default `t.test(x)` usually doesn't answer your question: it tests μ = 0 unless you set `mu =`.
 
 See also: [[Hypothesis Testing]], [[Two-Sample Independent t-Test]], [[pnorm(), qnorm(), pt() and qt()]].
 
