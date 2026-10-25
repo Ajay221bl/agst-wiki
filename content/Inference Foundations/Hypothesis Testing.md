@@ -12,7 +12,7 @@ status: seedling
 
 A hypothesis test assumes the null hypothesis is true and asks how surprising the data would be under that [[Test Assumptions|assumption]]. If the data would be very surprising, the test rejects the null.
 
-The logic is the rare event rule: assume a claim, and if what you observe would be very rare under it, doubt the claim ([[Rare Event Rule]]). Every test turns that into the same procedure, and each step has a reason:
+Strip away the formulas and a test is a very old kind of argument. You assume something, see what follows, and if what follows is badly contradicted by the facts, you drop the assumption. It's how a detective reasons, and how a scientist does. In statistics it's called the rare event rule: assume a claim, and if what you observe would be very rare under it, doubt the claim ([[Rare Event Rule]]). Every test turns that into the same procedure, and each step has a reason:
 1. **State the hypotheses and set α.** $H_0$ and $H_A$ are claims about a [[Parameter vs Statistic|population parameter]], and α is usually 0.05 ([[Null and Alternative Hypotheses]], [[Significance Level]]). These come first so the data can't influence them ([[Why choose alpha and tails before seeing the data]]).
 2. **Check the conditions:** a random sample, independence, and [[Normality Checks|normality]] or a large $n$. The null distribution in step 4 is only correct if these hold ([[Why check assumptions before trusting a test]]).
 3. **Turn the sample statistic into a test statistic** ([[Test Statistic]]). Putting the result on a standard scale, as standard errors away from the null value, lets one known distribution serve every study.
@@ -36,11 +36,11 @@ flowchart TD
 ```
 Every test follows this same path; only the test statistic in the middle changes.
 
-A test gives a disciplined way, fixed in advance, to decide whether an observed difference is bigger than chance alone would produce, while [[Experiment|controlling]] the false-alarm rate α.
+The point of all this structure is discipline. Our instinct is to see a difference and believe it. A test gives a way, fixed in advance, to decide whether an observed difference is bigger than chance alone would produce, while [[Experiment|controlling]] the false-alarm rate α.
 
 For example, think of a courtroom. $H_0$ is the presumption of innocence. Either there is enough evidence to reject it ("guilty") or there isn't ("not guilty"). "Not guilty" isn't the same as "innocent", which is why we never "accept" $H_0$.
 
-A test doesn't tell you the probability that $H_0$ is true. It tells you how unusual the data would be if $H_0$ were true. And failing to reject doesn't prove there is no effect; it means there isn't enough evidence.
+Be precise about what a test can and can't say. It doesn't tell you the probability that $H_0$ is true. It tells you how unusual the data would be if $H_0$ were true. And failing to reject doesn't prove there's no effect. It means there isn't enough evidence. A test is a filter against fooling yourself, not a machine that tells you the truth.
 
 See also: [[Sampling Distribution]], [[Type I and Type II Errors]].
 

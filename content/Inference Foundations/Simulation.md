@@ -12,7 +12,7 @@ status: seedling
 
 A simulation makes up data on a computer, many times over, from a model whose truth you choose. It shows how a statistic or a method behaves.
 
-With real data we never know the truth, so we can't check whether a method got it right ([[Parameter vs Statistic]]). But a computer can draw random samples from a population we define, with a known mean, [[Standard Deviation|standard deviation]] and shape ([[Random Sampling]]).
+Here's the frustrating thing about real data: we never know the truth, so we can never check whether a method got it right ([[Parameter vs Statistic]]). But a computer can draw random samples from a population we define, with a known mean, [[Standard Deviation|standard deviation]] and shape ([[Random Sampling]]).
 
 Repeat that thousands of times and record the statistic each time. The pile of results approximates the statistic's sampling distribution ([[Sampling Distribution]]). Many repeats are needed because relative frequencies settle down as the number of repeats grows ([[Law of Large Numbers]]).
 
@@ -23,7 +23,7 @@ But simulated numbers are not evidence about the real world. They show how a met
 ![[Central limit theorem.png|700]]
 Drawing many samples from very different populations and plotting their means shows the CLT at work, something you could never see from one real sample.
 
-Simulation turns abstract claims, such as "unbiased", "robust" or the central limit theorem, into something you can watch. It also checks methods where the theory is hard.
+It's like a flight simulator for statistics. You can crash a method a thousand times, in conditions you control, and see exactly when and how it fails. Simulation turns abstract claims, such as "unbiased", "robust" or the central limit theorem, into something you can watch. It also checks methods where the theory is hard.
 
 For example, in [[Robustness]], 20,000 simulated samples were drawn from a strongly skewed population. A 5% t-test wrongly rejected 11.9% of the time at n = 5, 7.2% at n = 30 and 5.8% at n = 100.
 

@@ -8,7 +8,7 @@ aliases:
 status: growing
 ---
 
-This guide picks the right test from two questions about your data. What type is your outcome, the [[Independent and Dependent Variables|dependent variable]] (DV)? And what type is the thing you compare by, the independent variable (IV)? This table covers the tests in this wiki.
+This guide picks the right test from two questions about your data. Choosing a test isn't a lookup exercise. Each test is built for one kind of question and one kind of data, and if you understand what your data are, the choice makes itself. What type is your outcome, the [[Independent and Dependent Variables|dependent variable]] (DV)? And what type is the thing you compare by, the independent variable (IV)? This table covers the tests in this wiki.
 
 | Outcome (dependent variable) | Explanatory (independent variable) | Design | Test |
 |---|---|---|---|

@@ -11,6 +11,8 @@ status: growing
 
 How to work in R, from opening RStudio to the letters that show which groups differ.
 
+R is a very literal colleague. It does exactly what you say, never what you meant, and it rarely complains. Most R mistakes in statistics aren't coding errors. They're silent misunderstandings: a group column read as a number, rows dropped without a word. So the notes here focus on what each function needs from you and how to check that it got it. Learn to check the output against what you expected, and R becomes a tool you can trust.
+
 ## 1. Getting started
 - [[RStudio and Scripts]]: always work in a saved script
 - [[R Objects and Assignment]]: storing a value under a name with `<-`

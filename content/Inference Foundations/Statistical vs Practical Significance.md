@@ -14,7 +14,7 @@ status: seedling
 
 Statistical significance says a result is probably not just chance. Practical significance (also called clinical or scientific significance) says it is big enough to matter. The two can disagree.
 
-A p-value answers "is there evidence of any effect?" ([[P-Value]]). An effect size answers "how big is it?" ([[Effect Size]]). These are different questions. They come apart because p depends on $n$. The [[Test Statistic|test statistic]] is signal ÷ (noise / $\sqrt{n}$), so with enough data any tiny effect gives a tiny p, and with too little data a big effect may not ([[Signal and Noise]], [[Statistical Power]]).
+There are two questions you can ask of any result, and most confusion in research comes from treating them as one. A p-value answers "is there evidence of any effect?" ([[P-Value]]). An effect size answers "how big is it?" ([[Effect Size]]). These are different questions. They come apart because p depends on $n$. The [[Test Statistic|test statistic]] is signal ÷ (noise / $\sqrt{n}$), so with enough data any tiny effect gives a tiny p, and with too little data a big effect may not ([[Signal and Noise]], [[Statistical Power]]).
 
 They can disagree in two ways:
 1. **Significant but meaningless.** p < 0.0001 and lots of asterisks, but the pH of the animals' diet changed by 0.01 over four weeks. This usually comes from high power and a large $n$.
@@ -31,6 +31,6 @@ For example:
 - In a COVID survey, a paired test of April minus March distress (n = 979) gave p ≈ 0.011. But the difference was about 0.21 points on a 20-point scale, and Cohen's d, a standard effect size, was negligible ([[Paired t-Test]]).
 - In a YouGov survey (n = 2,000), a barely visible trend in a scatter plot still gave a significant [[Correlation|correlation]] ([[Plots for Two Variables]]).
 
-Significant doesn't mean important; it means "unlikely if $H_0$ were true". And not significant doesn't mean unimportant; the study may have lacked power.
+So the word "significant" is a trap. In statistics, it doesn't mean important; it means "unlikely if $H_0$ were true". And not significant doesn't mean unimportant; the study may have lacked power. "Is it real?" is for the statistics. "Does it matter?" needs someone who knows the field.
 
 Further reading: [[References|Wasserstein and Lazar 2016]].

@@ -11,6 +11,8 @@ status: seedling
 
 A suggested order for reading the notes. It runs from the basics to one-way ANOVA, and each stage builds on the one before. Tick items off as you go.
 
+The order matters more than it looks. Statistics is a tower of ideas, and almost every confusion comes from a missing floor below. If a note stops making sense, don't push through. Go down a level, to the note it builds on, and come back. Slow and solid beats fast and shaky, because each idea you truly understand makes the next one cheaper.
+
 ## Stage 0: Basics from zero
 - [ ] [[Variable and Observation]], [[Data Table Rows and Columns]]
 - [ ] [[Proportions and Percentages]], [[Summation Notation]], [[Squares and Square Roots]], [[Absolute Value]], [[Ratios and Fractions]], [[Inequality Signs]]

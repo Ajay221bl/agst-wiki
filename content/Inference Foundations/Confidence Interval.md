@@ -13,9 +13,9 @@ status: seedling
 
 A confidence interval (CI) is a range of believable values for an unknown [[Parameter vs Statistic|population parameter]]. It is built as point estimate ± margin of error, at a chosen confidence level such as 95%.
 
-A single best guess is almost surely a little off, so give a range instead ([[Point Estimate]]). How wide should it be? By the central limit theorem, sample means scatter normally around $\mu$ with [[Standard Deviation|standard deviation]] $\sigma/\sqrt{n}$, called the standard error ([[Central Limit Theorem]], [[Standard Error]]). So 95% of all sample means lie within $1.96\,\sigma/\sqrt{n}$ of $\mu$ ([[Empirical Rule]]).
+Any single guess from a sample is almost surely a little off. So the honest move is to give a range instead, and say how sure you are ([[Point Estimate]]). The question is how wide to make it, and the answer comes from knowing how sample means behave. By the central limit theorem, sample means scatter normally around $\mu$ with [[Standard Deviation|standard deviation]] $\sigma/\sqrt{n}$, called the standard error ([[Central Limit Theorem]], [[Standard Error]]). So 95% of all sample means lie within $1.96\,\sigma/\sqrt{n}$ of $\mu$ ([[Empirical Rule]]).
 
-Now flip it around. If our $\bar{x}$ is one of those usual 95%, then $\mu$ is within $1.96\,\sigma/\sqrt{n}$ of $\bar{x}$. So a net of that width cast around *our* $\bar{x}$ catches $\mu$:
+Now comes the key move: flip it around. If our $\bar{x}$ is one of those usual 95%, then $\mu$ is within $1.96\,\sigma/\sqrt{n}$ of $\bar{x}$. So a net of that width cast around *our* $\bar{x}$ catches $\mu$:
 $$\bar{x} \pm z_{\alpha/2}\,\frac{\sigma}{\sqrt{n}} \qquad\text{(in practice: } \bar{x} \pm t^*_{n-1}\,\frac{s}{\sqrt{n}}\text{)}$$
 
 The multiplier is a [[Critical Value|critical value]]: 1.645 for 90%, 1.96 for 95%, and 2.58 for 99%. In practice $\sigma$ is unknown and we use $s$, which adds uncertainty, so a t value replaces z ([[Why t instead of z when sigma is unknown]]). The critical value times the standard error is the **margin of error**.
@@ -25,7 +25,7 @@ The multiplier is a [[Critical Value|critical value]]: 1.645 for 90%, 1.96 for 9
 ![[Confidence intervals - coverage.png|700]]
 Each line is one study's 95% CI. Most catch the true mean (dashed line); a few (red) miss it. The 95% describes how often the method works, not any single interval.
 
-A confidence interval answers "how big, and how sure?" in one statement, and it needs no hypothesis set in advance. When you are unsure which test to run, a confidence interval is a safe choice ([[Why go with the confidence interval when the hypothesis is weak]]).
+A confidence interval answers "how big, and how sure?" in one statement, and it needs no hypothesis set in advance. That makes it more useful than a test in many situations. A test answers yes or no about one value. An interval shows you every value the data can support. When you're unsure which test to run, a confidence interval is a safe choice ([[Why go with the confidence interval when the hypothesis is weak]]).
 
 For example, in the book's NHANES data on body mass index (BMI), $\bar{x} = 28.8$, $s = 6.7$ and $n = 134$. The standard error is $6.7/\sqrt{134} = 0.58$, and the 95% CI is $28.8 \pm 1.96(0.58) = (27.7, 29.9)$ kg/m² ([[References|Vu and Harrington 2020, Ch. 4]], p. 210).
 
@@ -44,7 +44,7 @@ What changes the width:
 
 There is no useful 100% CI: you would have to say "0 to 200, just in case", which tells you nothing.
 
-A confidence interval is a range for the population parameter, not for the sample mean. And it doesn't mean that 95% of the data fall inside it: it is about the mean, not individual values.
+Two misreadings to avoid. A confidence interval is a range for the population parameter, not for the sample mean. And it doesn't mean that 95% of the data fall inside it: it's about the mean, not individual values. The interval is a statement of what you know about the truth, and its width is an honest measure of what you don't.
 
 See also: [[Hypothesis Testing]], [[One-Sample t-Test]], [[Variability]], [[Sample Size]].
 

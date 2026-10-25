@@ -11,6 +11,8 @@ status: growing
 
 How one sample can tell you something about a whole population, and how sure you can be.
 
+This is the heart of the subject, and it rests on one surprising fact. You never see the population, and you only get one sample. Yet you can know, in advance, how sample means behave across all the samples you could have drawn. That knowledge turns a single number into evidence. Confidence intervals and hypothesis tests are just two ways of using it: one asks "where is the truth likely to be?", the other asks "is this claim believable?". Learn the sampling distribution properly and everything in this map follows from it.
+
 *Reading:* [[References|Vu and Harrington 2020, Ch. 3]], [[References|Vu and Harrington 2020, Ch. 4]].
 
 ## 1. The normal curve

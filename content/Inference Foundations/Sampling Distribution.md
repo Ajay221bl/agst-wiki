@@ -11,7 +11,7 @@ status: seedling
 
 A sampling distribution is the distribution of a statistic, such as the sample mean $\bar{x}$, over all possible samples of the same size from the same population.
 
-A statistic depends on which sample you happened to get. Measure 30 different plants and $\bar{x}$ comes out a bit different ([[Parameter vs Statistic]]). So before you sample, $\bar{x}$ is a random variable: a number decided by chance ([[Random Variable]]). Every random variable has a distribution: the values it can take and how likely each one is ([[Probability Distribution]]).
+This is the most important idea in inference, and the hardest to see, because it describes something nobody ever observes. Start here: a statistic depends on which sample you happened to get. Measure 30 different plants and $\bar{x}$ comes out a bit different ([[Parameter vs Statistic]]). So before you sample, $\bar{x}$ is a random variable: a number decided by chance ([[Random Variable]]). Every random variable has a distribution: the values it can take and how likely each one is ([[Probability Distribution]]).
 
 The sampling distribution is that distribution for a statistic: the values of $\bar{x}$ from *all possible* samples of size $n$, and how often each would occur. We need it because it tells us how far a sample statistic typically lands from the parameter, and every interval and test uses that ([[Why the sampling distribution makes inference possible]]).
 
@@ -24,7 +24,7 @@ Keep three distributions apart. Here the middle one is called the **data distrib
 | Known? | unknown, but fixed | known | **theoretical**; we only ever see one point on it |
 | Varies? | no | yes, each sample looks different | it *is* the distribution of that variation |
 
-We never see the sampling distribution directly; theory supplies it. Its centre and spread come from the [[Central Limit Theorem|central limit theorem]], and its spread is the [[Standard Error|standard error]].
+We never see the sampling distribution directly. We only ever get one point on it, our one $\bar{x}$. Theory supplies the rest. Its centre and spread come from the [[Central Limit Theorem|central limit theorem]], and its spread is the [[Standard Error|standard error]].
 
 ```mermaid
 flowchart LR
@@ -49,7 +49,7 @@ For example, take the population 2, 4, 6, with mean 4. Here are all samples of s
 
 The nine means average to exactly 4, which is $\mu$, and they bunch towards the middle more than the original values do.
 
-The sampling distribution isn't the [[Histogram|histogram]] of your data; that is the data distribution. And you can't observe a sampling distribution except in [[Simulation|simulations]]; in practice it is theoretical.
+It's a thought experiment, and a powerful one: by imagining every sample you could have drawn, you learn how much to trust the one you did. The sampling distribution isn't the [[Histogram|histogram]] of your data; that is the data distribution. And you can't observe a sampling distribution except in [[Simulation|simulations]]; in practice it is theoretical.
 
 See also: [[Population and Sample]], [[Unbiased Estimator]], [[Confidence Interval]], [[Variability]].
 

@@ -11,6 +11,8 @@ status: growing
 
 Probability is the language a p-value is written in.
 
+It can feel like a detour into coins and cards. It isn't. Every test you'll ever run asks "how likely is what I saw, if nothing is going on?", and that is a probability question. Learn the handful of rules here and the rest of statistics becomes something you can reason through, not just memorize. The most valuable idea in this map is conditioning, because our intuition gets it wrong so reliably, in medicine and in hypothesis testing alike.
+
 *Reading:* [[References|Vu and Harrington 2020, Ch. 2]].
 
 ## 1. The building blocks

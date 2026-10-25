@@ -14,7 +14,7 @@ status: seedling
 
 A critical value is the cut-off on a null distribution that leaves exactly α beyond it, or α/2 in each [[Tails of a Distribution|tail]] for a two-sided test. It sets both the line for rejecting in a test and the width of a confidence interval.
 
-Before collecting data, you choose α, the share of [[Type I and Type II Errors|false alarms]] you'll accept ([[Significance Level]]). Then you find the point on the null distribution with α beyond it. That point is the critical value, and the region beyond it is the **rejection region**. For a two-sided test, α is split, with α/2 in each tail ([[One-Tailed vs Two-Tailed Tests]]). Surprise in either direction counts, and the total false-alarm rate must still be α.
+A test has to draw a line somewhere: past this point, the data are too surprising to keep believing $H_0$. The critical value is that line. Before collecting data, you choose α, the share of [[Type I and Type II Errors|false alarms]] you're willing to accept ([[Significance Level]]). Then you find the point on the null distribution with α beyond it. That point is the critical value, and the region beyond it is the **rejection region**. For a two-sided test, α is split, with α/2 in each tail ([[One-Tailed vs Two-Tailed Tests]]). Surprise in either direction counts, and the total false-alarm rate must still be α.
 
 A critical value is a quantile ([[Percentiles and Quantiles]]). For a two-sided test at α = 0.05 on the normal curve, it is the 0.975 quantile, $z^* = 1.96$. For a one-sided test it is the 0.95 quantile, 1.645.
 
@@ -27,7 +27,7 @@ Critical values depend on the curve. The t-distribution has fatter tails than th
 ![[One vs two tailed rejection regions.png|700]]
 The red regions hold α. Splitting α over two tails pushes each cut-off further out (±1.96 instead of 1.645).
 
-Before software, tables of critical values were how tests were done. They are still the easiest way to see why higher confidence or smaller samples make intervals wider ([[Why a bigger sample gives a narrower confidence interval]]).
+Before software, tables of critical values were how tests were done. Software hides them now, but they're worth understanding. They are still the easiest way to see why higher confidence or smaller samples make intervals wider ([[Why a bigger sample gives a narrower confidence interval]]).
 
 For example:
 
@@ -39,7 +39,7 @@ For example:
 
 For ANOVA, the 5% critical value of F with df 2 and 592 is about 3.01. In the FAMuSS data, F = 3.23 is beyond it, which matches p = 0.040 ([[One-Way ANOVA]]).
 
-The critical value doesn't depend on the data. It depends only on α, the tails and the df, all fixed before looking. And 1.96 isn't always the cut-off; it is only for a two-sided 5% test on the normal curve.
+Notice what the critical value doesn't depend on: the data. It depends only on α, the tails and the degrees of freedom, all fixed before looking. That's the point. You draw the line first, then see where the data land, so the data can't move the line. And 1.96 isn't always the cut-off. It's only for a two-sided 5% test on the normal curve.
 
 See also: [[Null Distribution]].
 
