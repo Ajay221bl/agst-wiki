@@ -103,6 +103,6 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)         # chi-squared = 5.75, df
 
 Rejecting $H_0$ doesn't mean all the groups differ, only that at least one does. And ANOVA doesn't test variances: it uses variances to test means ([[Why analysis of variance can compare means]]).
 
-See also: [[Variance]], [[ANOVA Table]], [[Chi-Square Test]], [[wilcox.test() and kruskal.test()]].
+See also: [[Variance]], [[ANOVA Table]], [[wilcox.test() and kruskal.test()]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (§5.5, p. 264).

@@ -23,7 +23,7 @@ Comparing models is testing. ANOVA asks whether the group-means model explains e
 ![[Model and residuals - sheep.png|700]]
 The black bars are the fitted values (group means); each orange line is a residual, the part of that sheep's value the model doesn't explain.
 
-This frame is shared by t-tests, ANOVA and [[Regression|regression]]. In R, `aov(y ~ group)`, `lm()` and `glm()` all fit "response modelled by explanatory variable" ([[aov()]]).
+This frame is shared by t-tests, ANOVA and regression. In R, `aov(y ~ group)`, `lm()` and `glm()` all fit "response modelled by explanatory variable" ([[aov()]]).
 
 For example, for the stem-cell sheep, the fitted value for every `esc` sheep is 3.50 and for every `ctrl` sheep −4.33. The sheep that gained 14.25 has a residual of 14.25 − 3.50 = 10.75 ([[Two-Sample Independent t-Test]]).
 

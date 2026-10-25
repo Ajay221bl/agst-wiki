@@ -18,7 +18,6 @@ This guide picks the right test from two questions about your data. What type is
 | A measured amount | groups, 3 or more, from one factor | independent groups | [[One-Way ANOVA]], then [[Post Hoc Tests]] if it is significant |
 | A measured amount, with the assumptions badly broken | any of the above | | [[Nonparametric Alternatives]] |
 
-Going further: [[Two-Way ANOVA and Interaction|two-way ANOVA]] for two factors, [[Regression|regression]] when the independent variable is a measured amount, the [[Chi-Square Test|chi-square test]] when both variables are categories, and logistic regression when the outcome has only two possible values.
 
 ## See it as a flowchart
 

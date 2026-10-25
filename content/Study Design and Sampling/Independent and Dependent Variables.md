@@ -28,8 +28,8 @@ The types of the two variables pick the analysis:
 |---|---|---|
 | categorical, 2 levels | quantitative | two-sample t-test |
 | categorical, 3+ levels | quantitative | one-way ANOVA |
-| quantitative | quantitative | [[Correlation\|correlation]], [[Regression\|regression]] |
-| categorical | categorical | [[Chi-Square Test\|chi-square]] |
+| quantitative | quantitative | [[Correlation\|correlation]], regression |
+| categorical | categorical | chi-square |
 
 ```mermaid
 flowchart TD

@@ -37,9 +37,6 @@ One-way analysis of variance (ANOVA) compares the means of three or more groups 
 - [[Bonferroni Correction]]: a simple and cautious adjustment
 - [[Compact Letter Display]]: letters that show which groups differ, for the write-up
 
-## 5. Going further
-- [[Two-Way ANOVA and Interaction]]: two factors at once, and whether their effects simply add up
-
 ## Why notes on this topic
 - [[Why ANOVA instead of many t-tests]]
 - [[Why analysis of variance can compare means]]

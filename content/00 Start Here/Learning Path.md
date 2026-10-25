@@ -71,7 +71,6 @@ A suggested order for reading the notes. It runs from the basics to one-way ANOV
 - [ ] [[Post Hoc Tests]], [[Tukey HSD]], [[Bonferroni Correction]], [[Compact Letter Display]]
 - [ ] In R: [[Wide vs Long Format]], [[stack()]], [[leveneTest()]], [[aov()]], [[TukeyHSD()]], [[pairwise.t.test()]], [[emmeans() and cld()]]
 - [ ] Why notes: [[Why ANOVA instead of many t-tests]], [[Why analysis of variance can compare means]], [[Why post hoc tests only after a significant ANOVA]], [[Why a significant ANOVA can have no significant post hocs]], [[Why check assumptions before trusting a test]], [[Why use degrees of freedom as a sanity check]], [[Why a two-group ANOVA gives F equal to t squared]]
-- [ ] Going further: [[Two-Way ANOVA and Interaction]], [[Regression]], [[Chi-Square Test]]
 
 ## Stage 8: Put it together
 - [ ] [[Test Choice Guide]], [[Formula Sheet]]

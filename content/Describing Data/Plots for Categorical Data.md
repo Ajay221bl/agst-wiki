@@ -19,7 +19,7 @@ The main options, from most useful to least:
 - **Bar graph:** simple and clear. Bar heights side by side are easy to compare.
 - **Pareto chart:** a bar graph with the bars sorted by height.
 - **Side-by-side (grouped) bar graph:** splits each bar by a second variable (`beside = TRUE` in R). It is better than a **stacked** bar graph, because in a stack only the bottom segment sits on the shared baseline.
-- **Mosaic plot:** shows two categorical variables at once, and leads naturally to the [[Chi-Square Test|chi-square test]].
+- **Mosaic plot:** shows two categorical variables at once, and leads naturally to the chi-square test.
 - **Pie chart:** best avoided. Wedges are hard to compare, and tilted 3-D pies are worse.
 
 ![[Bar graph vs pie chart.png|700]]

@@ -18,7 +18,7 @@ The units cancel, so $z$ has no units. It measures **relative standing**, and va
 
 Read the sign first. If $z > 0$ the value is above the mean, if $z < 0$ it is below, and if $z = 0$ it is exactly at the mean. Then read the size with the empirical rule. A value is **unusual if $z < -2$ or $z > 2$**, assuming the data are roughly [[Normality Checks|normal]], because only about 5% of values lie that far out ([[Empirical Rule]]).
 
-The same template builds every test statistic: (observed − expected) ÷ a measure of spread. Swap the single value for a sample mean and the standard deviation for the standard error, and you have the z and t tests. The t, F and [[Chi-Square Test|chi-square]] statistics all follow it ([[Test Statistic]]). For a sample mean, the spread is the standard error:
+The same template builds every test statistic: (observed − expected) ÷ a measure of spread. Swap the single value for a sample mean and the standard deviation for the standard error, and you have the z and t tests. The t, F and chi-square statistics all follow it ([[Test Statistic]]). For a sample mean, the spread is the standard error:
 $$z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}}$$
 In a [[Hypothesis Testing|hypothesis test]], the value $\mu_0$ from $H_0$ goes in place of $\mu$.
 

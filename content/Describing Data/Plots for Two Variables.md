@@ -32,6 +32,6 @@ For example, in a book example, female frog body size against clutch volume show
 
 A significant correlation isn't necessarily a strong one: with a big sample, even weak correlations come out significant. Look at the plot and at $r$ itself ([[Effect Size]]). And error bars showing the mean ± its [[Standard Error|standard error]] don't show how spread out the data are. They show how uncertain the mean is, which shrinks as the sample grows, while the spread of the data doesn't.
 
-See also: [[Box Plot and Five-Number Summary]], [[Plots for Categorical Data]], [[Two-Sample Independent t-Test]], [[One-Way ANOVA]], [[Chi-Square Test]], [[Regression]].
+See also: [[Box Plot and Five-Number Summary]], [[Plots for Categorical Data]], [[Two-Sample Independent t-Test]], [[One-Way ANOVA]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.6, p. 38).

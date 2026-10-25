@@ -26,7 +26,7 @@ When a study compares groups, the independent variable is categorical ([[Indepen
 
 The number of levels decides the test. With 2 levels it is a two-sample t-test; with 3 or more you need ANOVA ([[Why ANOVA instead of many t-tests]]). In R, the variable must be stored as a factor, or `aov()` treats it as a number ([[factor()]]).
 
-Five groups are the five *levels* of **one** variable, not five factors. Two factors, such as sex and time of day, with a possible [[Two-Way ANOVA and Interaction|interaction]] between them, make a **two-way ANOVA**.
+Five groups are the five *levels* of **one** variable, not five factors. Two factors, such as sex and time of day, with a possible interaction between them, make a **two-way ANOVA**.
 
 For example, four fertilizers coded A, B, C and D are one factor with four levels, so the ANOVA [[Ratios and Fractions|numerator]] degrees of freedom are k − 1 = 3. If they are coded 1, 2, 3, 4 and read as numbers, R gives 1 degree of freedom, which is a sign it treated fertilizer as a single number ([[Why use degrees of freedom as a sanity check]]).
 

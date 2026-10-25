@@ -18,7 +18,7 @@ Rank tests replace values by their ranks, so [[Outliers|outliers]] and [[Shape o
 - `wilcox.test(y ~ group, data = d)`: rank-sum (Mann–Whitney) test, two groups.
 - `kruskal.test(y ~ group, data = d)`: Kruskal–Wallis test, 3 or more groups.
 
-Read the [[Parameter vs Statistic|statistic]] (V, W or chi-squared) and the p-value. Kruskal–Wallis reports a chi-squared value because its statistic is compared with a chi-square curve on k − 1 degrees of freedom ([[Chi-Square Test]]). Tied values give the warning "cannot compute exact p-value with ties". R then switches to an approximation; it isn't an error.
+Read the [[Parameter vs Statistic|statistic]] (V, W or chi-squared) and the p-value. Kruskal–Wallis reports a chi-squared value because its statistic is compared with a chi-square curve on k − 1 degrees of freedom (Chi-Square Test). Tied values give the warning "cannot compute exact p-value with ties". R then switches to an approximation; it isn't an error.
 
 Run them alongside the t-test or ANOVA, not instead of looking at the data. If they agree, the conclusion doesn't depend on normality ([[Why rank tests trade power for robustness, and why run both]]).
 

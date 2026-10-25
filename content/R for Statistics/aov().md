@@ -26,7 +26,7 @@ frustration.glm <- glm(score ~ major, family = gaussian, data = frust)
 anova(frustration.glm, test = "F")
 ```
 
-The `glm` lines give the same result because ANOVA is a special case of a general linear model with normal errors, the family of models that [[Regression|regression]] also belongs to.
+The `glm` lines give the same result because ANOVA is a special case of a general linear model with normal errors, the family of models that regression also belongs to.
 
 ```mermaid
 flowchart TD

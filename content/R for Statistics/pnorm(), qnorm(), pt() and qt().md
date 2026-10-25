@@ -19,7 +19,7 @@ R's p-functions (`pnorm`, `pt`, `pf`) turn a value into the area to its left. Th
 
 Areas under a distribution curve are probabilities ([[Probability Distribution]]). Two questions come up again and again: "how much area is below this value?", for p-values, and "which value has this much area below it?", for critical values ([[P-Value]], [[Critical Value]]).
 
-R has a function for each question and each curve. `p` plus the curve's name gives the area, and `q` plus the name gives the value, called the quantile ([[Percentiles and Quantiles]]). `norm` is the normal curve, `t` the t, `f` the F, and `chisq` the [[Chi-Square Test|chi-square]].
+R has a function for each question and each curve. `p` plus the curve's name gives the area, and `q` plus the name gives the value, called the quantile ([[Percentiles and Quantiles]]). `norm` is the normal curve, `t` the t, `f` the F, and `chisq` the chi-square.
 
 They give the area to the left by default. For a right tail, use `lower.tail = FALSE`, or 1 minus the answer ([[Tails of a Distribution]]). The t, F and chi-square versions need degrees of freedom ([[Degrees of Freedom]]). A two-sided p-value doubles one tail: `2 * pt(-abs(t), df)`. The `-abs` puts the [[Parameter vs Statistic|statistic]] in the left tail whatever its sign, so one formula works for both signs ([[Absolute Value]]).
 

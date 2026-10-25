@@ -7,9 +7,10 @@ status: seedling
 ---
 
 Every note in this wiki, grouped by folder. New to all this? Start with [[index|Home]] and [[MOC - Basics from Zero]], then follow the [[Learning Path]].
-*225 notes in total, including this one.*
+*223 notes in total, including this one.*
 
-## 00 Start Here (4)
+## 00 Start Here (5)
+- [[Oral Exam Practice]]: Practice questions for an oral exam on experimental statistics, up to and including one-way ANOVA
 - [[All Notes]]: Every note in one list, grouped by folder
 - [[index|Home]]: The home page: what these notes are and where to start
 - [[Learning Path]]: A suggested order for reading the notes
@@ -155,9 +156,8 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[Treatment and Control Groups]]: In an experiment, the treatment group gets the thing being tested
 - [[Validity]]: Validity is how far a study's conclusion can be trusted
 
-## Inference Foundations (31)
+## Inference Foundations (29)
 - [[Central Limit Theorem]]: The central limit theorem (CLT) says that for large enough samples, sample means are approximately normally distributed
-- [[Chi-Square Test]]: A chi-square ($\chi^2$) test compares the counts you observed in categories with the counts you would expect if the null hypothesis were true
 - [[Confidence Interval]]: A confidence interval (CI) is a range of believable values for an unknown population parameter
 - [[Conservative Tests]]: A conservative test or adjustment rejects the null hypothesis less often than its stated α allows
 - [[Critical Value]]: A critical value is the cut-off on a null distribution that leaves exactly α beyond it, or α/2 in each tail for a two-sided test
@@ -171,7 +171,6 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[P-Value]]: The p-value is the probability of getting a test statistic as extreme as, or more extreme than, the one observed, assuming the null hypothesis is true
 - [[Point Estimate]]: A point estimate is a single number used as the best guess for an unknown parameter, such as the sample mean $\bar{x}$ as a guess for the population mean $\mu$
 - [[Random Error and Precision]]: Random error is the chance scatter of an estimate around its target, and precision is how small that scatter is
-- [[Regression]]: Regression fits a line that predicts a response from one or more predictors
 - [[Robustness]]: A method is robust when it still gives nearly the right answer even though one of its assumptions is somewhat broken
 - [[Sample Size]]: The sample size $n$ is the number of independent units measured
 - [[Sampling Distribution]]: A sampling distribution is the distribution of a statistic, such as the sample mean $\bar{x}$, over all possible samples of the same size from the same population
@@ -203,7 +202,7 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[Two-Sample Independent t-Test]]: The two-sample independent t-test compares the means of two independent groups
 - [[Welch's t-Test]]: Welch's t-test compares two independent means without assuming that the groups have equal variances
 
-## ANOVA (17)
+## ANOVA (16)
 - [[ANOVA Assumptions]]: One-way ANOVA assumes independent observations, roughly normal data in each group, and equal variances across the groups (called homogeneity of variance)
 - [[ANOVA Table]]: The ANOVA table lists, for the factor and for the residuals, the degrees of freedom (df), sums of squares, mean squares, the F ratio and the p-value
 - [[Between- and Within-Group Variability]]: Between-group variability is how far the group means sit from each other
@@ -220,7 +219,6 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[Statistical Model]]: A statistical model writes each observation as a predictable part, the fitted value, plus a leftover part, the residual: data = fit + residual
 - [[Sums of Squares and Mean Squares]]: A sum of squares adds up squared deviations
 - [[Tukey HSD]]: Tukey's honestly significant difference (HSD) test compares every pair of group means
-- [[Two-Way ANOVA and Interaction]]: A two-way ANOVA tests two factors at once
 
 ## R for Statistics (30)
 - [[aggregate() and by()]]: `aggregate(y ~ group, data = d, FUN = mean)` works out one statistic for each group

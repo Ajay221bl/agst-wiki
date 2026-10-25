@@ -52,10 +52,6 @@ How one sample can tell you something about a whole population, and how sure you
 - [[Simulation]]: made-up data with a known truth, used to watch a method work
 - [[Conservative Tests]]: tests that lean toward fewer false positives
 
-## 6. Going further
-- [[Chi-Square Test]]: compares the counts you observed with the counts you would expect
-- [[Regression]]: fits a line when the predictor is a measured amount
-
 ## Why notes on this topic
 - [[Why the sampling distribution makes inference possible]]
 - [[Why a bigger sample gives a narrower confidence interval]]

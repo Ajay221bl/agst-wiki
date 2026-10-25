@@ -21,7 +21,7 @@ Tails describe shape. A long tail to the right means right skew, and a long tail
 
 The area in a tail is a probability: the area beyond a value is the chance of landing that far out. That is exactly what a p-value is: the tail area beyond the [[Test Statistic|test statistic]] you observed, assuming the null hypothesis is true ([[P-Value]]). The significance level α is the tail area beyond the [[Critical Value|critical value]] ([[Significance Level]]).
 
-Which tails count depends on the alternative hypothesis. A one-tailed test uses one tail, and a two-tailed test splits α between both tails ([[One-Tailed vs Two-Tailed Tests]]). F and chi-square tests use only the right tail, because their [[Parameter vs Statistic|statistic]] can't be negative ([[F-Distribution]], [[Chi-Square Test]]).
+Which tails count depends on the alternative hypothesis. A one-tailed test uses one tail, and a two-tailed test splits α between both tails ([[One-Tailed vs Two-Tailed Tests]]). F and chi-square tests use only the right tail, because their [[Parameter vs Statistic|statistic]] can't be negative ([[F-Distribution]], Chi-Square Test).
 
 ![[Tails of a distribution.png|700]]
 Left, a long right tail (shape); right, the two 2.5% tails of the [[Normal Distribution|standard normal]] beyond ±1.96 (probability).
