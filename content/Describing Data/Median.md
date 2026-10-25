@@ -11,7 +11,7 @@ status: seedling
 
 The median is the middle value once the data are put in order. Half the values are below it and half above.
 
-It is another way to say "typical": line everyone up by height and pick the person in the middle. With an odd number of values there is one middle value. With an even number, take the average of the two middle values.
+Sometimes the average lies, because a few extreme values drag it away from where most people are. It is another way to say "typical": line everyone up by height and pick the person in the middle. With an odd number of values there is one middle value. With an even number, take the average of the two middle values.
 
 The median only needs the order of the values, not how far apart they are ([[Ranks]]). That makes it work for ordinal data too, where a mean doesn't make sense ([[Types of Data]]). It also makes it robust: the median doesn't care whether the top value is 9 or 9 trillion ([[Robustness]]). The median is the 50th percentile, with half the data below it ([[Percentiles and Quantiles]]).
 
@@ -24,7 +24,7 @@ For example, put 1, 2, 3, 6, 3 in order: 1, 2, 3, 3, 6. The median is **3**. Cha
 
 With an even count, such as 2, 4, 7, 9, the median is (4 + 7)/2 = 5.5, which isn't one of the values.
 
-The mean is unbiased, but that doesn't make it always better: when data are skewed, the median's robustness can matter more.
+Which centre you choose is a judgment about your data, not a rule to memorize. The mean is unbiased, but that doesn't make it always better: when data are skewed, the median's robustness can matter more.
 
 See also: [[Range and IQR]], [[Box Plot and Five-Number Summary]], [[Nonparametric Alternatives]].
 

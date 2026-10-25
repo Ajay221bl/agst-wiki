@@ -11,7 +11,7 @@ status: seedling
 
 `TukeyHSD(model)` gives every pairwise difference between groups, with a 95% confidence interval (CI) and p-value adjusted for the whole family of comparisons. `plot()` on the result draws those intervals against a dashed line at 0.
 
-After a significant ANOVA, you need to find which pairs of groups differ ([[Tukey HSD]], [[Why post hoc tests only after a significant ANOVA]]). `TukeyHSD()` takes the stored `aov` fit ([[aov()]]), because it reuses the ANOVA's pooled within-group mean square as its [[Signal and Noise|noise]] [[Point Estimate|estimate]].
+The function is simple. The judgment about when to read it is the part that matters. After a significant ANOVA, you need to find which pairs of groups differ ([[Tukey HSD]], [[Why post hoc tests only after a significant ANOVA]]). `TukeyHSD()` takes the stored `aov` fit ([[aov()]]), because it reuses the ANOVA's pooled within-group mean square as its [[Signal and Noise|noise]] [[Point Estimate|estimate]].
 
 ```r
 TukeyHSD(frustration.aov, conf.level = 0.95)   # diff, lwr, upr, p adj for each pair
@@ -28,6 +28,6 @@ Tukey's test is a common default [[Post Hoc Tests|post hoc test]], run **only af
 
 For example, in the row `psychology-English`, the difference is positive and `lwr` is above 0, so psychology students are more frustrated than English students.
 
-Output doesn't mean significance. R prints it whether or not the ANOVA was significant.
+Software will answer any question you ask, even ones you shouldn't. Output doesn't mean significance. R prints it whether or not the ANOVA was significant.
 
 See also: [[emmeans() and cld()]].

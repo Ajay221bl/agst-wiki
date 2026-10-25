@@ -11,7 +11,7 @@ status: seedling
 
 A function is a named action, such as `mean()` or `t.test()`. The arguments inside the brackets tell it what to act on and how. Any argument you leave out takes its default value.
 
-A function is a named recipe: give it inputs, and it returns a result ([[R Objects and Assignment]]). The inputs are arguments, written in brackets: `t.test(x, mu = 10, alternative = "less", conf.level = 0.90)`.
+Once you understand how one function works, you understand how all of them work. A function is a named recipe: give it inputs, and it returns a result ([[R Objects and Assignment]]). The inputs are arguments, written in brackets: `t.test(x, mu = 10, alternative = "less", conf.level = 0.90)`.
 - `t.test` is the function.
 - `x` is the data, the first argument, matched by its position.
 - `mu =`, `alternative =` and `conf.level =` are **named arguments**. Naming them means their order doesn't matter, and the code reads like the [[Null and Alternative Hypotheses|hypotheses]].
@@ -29,6 +29,6 @@ sd(d$MHSAS_sum)                 # NA if any value is missing
 sd(d$MHSAS_sum, na.rm = TRUE)   # skip missing values
 ```
 
-Argument order does matter for unnamed arguments, which are matched by position. Name them when in doubt.
+Names make code readable to the computer and to the future you. Argument order does matter for unnamed arguments, which are matched by position. Name them when in doubt.
 
 See also: [[t.test()]], [[aov()]], [[mean() and sd()]].

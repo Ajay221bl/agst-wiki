@@ -14,7 +14,7 @@ status: seedling
 
 `str(d)` shows how R is storing each variable (int, num, chr or Factor), with its first few values. It is the first thing to check when something goes wrong.
 
-After loading data, confirm that R understood them the way you meant. Wrong types are the most common silent error ([[Types of Data]]). `str()` shows the structure:
+The most dangerous errors are the ones that don't produce an error message. After loading data, confirm that R understood them the way you meant. Wrong types are the most common silent error ([[Types of Data]]). `str()` shows the structure:
 
 ```r
 str(frust)
@@ -32,6 +32,6 @@ Read it line by line: the [[Sample Size|number of observations]] and variables, 
 
 For example, before an ANOVA you want `num score` and `Factor major (4 levels)`. Anything else needs fixing first.
 
-If it prints, the types still aren't necessarily right. A factor stored as numbers prints fine and is analysed wrongly.
+Never assume the computer understood you; check. If it prints, the types still aren't necessarily right. A factor stored as numbers prints fine and is analysed wrongly.
 
 See also: [[summary()]], [[aov()]].

@@ -13,7 +13,7 @@ status: seedling
 
 `emmeans()` estimates each group's mean from the model, with a [[Confidence Interval|confidence interval]] (CI). `multcomp::cld()` then assigns letters, so that groups sharing a letter are not significantly different.
 
-Many pairwise results are easier to read as letters ([[Compact Letter Display]]). There are three steps:
+When the table of comparisons gets too long to read, compress it. Many pairwise results are easier to read as letters ([[Compact Letter Display]]). There are three steps:
 1. Get each group's estimated mean and CI from the fitted model with `emmeans()` ([[aov()]]).
 2. Compare them with a Tukey adjustment and turn the results into letters with `cld()`. Tukey's adjustment controls the chance of any false positive across all the pairs ([[Tukey HSD]]).
 3. Plot the means, CIs and letters together ([[ggpubr Plots]]), so a reader sees size, [[Random Error and Precision|precision]] and significance in one picture.
@@ -36,6 +36,6 @@ Letters on a plot are a compact way to report which means differ ([[Post Hoc Tes
 
 For example, in the Halloween costume data, Superman's point gets a letter of its own, while Hulk, Ninja Turtle and Spider-Man share one.
 
-A shared letter doesn't mean equal means. It means not significantly different.
+Letters are a summary of tests, not a statement about truth. A shared letter doesn't mean equal means. It means not significantly different.
 
 See also: [[Writing a Conclusion]].

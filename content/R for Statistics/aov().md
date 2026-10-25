@@ -14,7 +14,7 @@ status: seedling
 
 `aov(response ~ factor, data = d)` fits a one-way ANOVA, and `summary()` on the result prints the ANOVA table with F and p.
 
-One-way ANOVA fits the model "response = group mean + error" ([[One-Way ANOVA]], [[Statistical Model]]). `aov()` fits it from a formula, `response ~ factor`. The data must be in long format and the group stored as a factor ([[Wide vs Long Format]], [[factor()]]). If the group were numeric, R would fit a straight line instead of separate means.
+This one line fits the whole idea of comparing groups against noise. One-way ANOVA fits the model "response = group mean + error" ([[One-Way ANOVA]], [[Statistical Model]]). `aov()` fits it from a formula, `response ~ factor`. The data must be in long format and the group stored as a factor ([[Wide vs Long Format]], [[factor()]]). If the group were numeric, R would fit a straight line instead of separate means.
 
 Store the fit, then ask for the table with `summary()` ([[ANOVA Table]]). Storing it matters because `TukeyHSD()`, `residuals()` and plots all need the fitted model. Check the degrees of freedom (df) first: $k - 1$ for the factor and $N - k$ for the [[Residuals|residuals]] ([[Why use degrees of freedom as a sanity check]]).
 
@@ -52,7 +52,7 @@ Residuals   116   ...     ...
 ```
 A df of 3 means 4 majors, and 3 + 116 + 1 = 120 students. If the first df is 1, the factor was read as a number.
 
-`aov()` doesn't print the table itself; print it with `summary()`.
+Fit first, then ask for the summary. `aov()` doesn't print the table itself; print it with `summary()`.
 
 See also: [[TukeyHSD()]], [[pairwise.t.test()]], [[emmeans() and cld()]].
 

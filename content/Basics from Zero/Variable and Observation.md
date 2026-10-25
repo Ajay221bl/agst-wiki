@@ -11,7 +11,7 @@ status: seedling
 
 A variable is a characteristic that changes from one thing to the next, such as height, diet or region. An observation is one thing you measured, together with its value for each variable.
 
-Say you weigh four chickens. Each chicken is one **observation**, also called a case or, in an [[Experiment|experiment]], an **experimental unit**. Weight is a **variable** because it varies from chicken to chicken. If you also note each chicken's diet, that is a second variable. Something that never changes in your study, like "species: chicken" when every animal is a chicken, isn't a variable there, because it gives you nothing to compare.
+Every data set is built from two simple ideas: the things you measured and what you measured about them. Say you weigh four chickens. Each chicken is one **observation**, also called a case or, in an [[Experiment|experiment]], an **experimental unit**. Weight is a **variable** because it varies from chicken to chicken. If you also note each chicken's diet, that is a second variable. Something that never changes in your study, like "species: chicken" when every animal is a chicken, isn't a variable there, because it gives you nothing to compare.
 
 [[Variability|Variation]] is the reason statistics exists. If every chicken weighed exactly the same, one weighing would tell you everything. Statistics deals with the differences from one unit to the next (person, animal, plant, farm) that come from things we didn't or couldn't measure perfectly.
 
@@ -28,6 +28,6 @@ For example:
 
 That is four observations and two variables. Weight varies within each diet, and the averages differ between the diets (2.25 against 2.75). Telling those two kinds of variation apart is what [[One-Way ANOVA]] does.
 
-An observation is a whole unit, usually one row, not a single number. And the [[Sample Size|sample size]] $n$ counts observations (rows), not variables (columns).
+Name the unit first; everything else follows from it. An observation is a whole unit, usually one row, not a single number. And the [[Sample Size|sample size]] $n$ counts observations (rows), not variables (columns).
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.2 data basics, p. 14).

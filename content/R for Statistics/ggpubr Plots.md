@@ -14,7 +14,7 @@ status: seedling
 
 The ggpubr package ("ggplot publication ready") wraps ggplot2 in simple functions for box plots, scatter plots, plots of means with standard error (SE) bars, [[Histogram|density plots]] and Q-Q plots. It can also print a test's p-value on the plot.
 
-Base R plots work, but publication-style plots with group colours and test results take many lines ([[hist() and boxplot()]]). ggpubr wraps each one in a single function ([[R Packages]], [[Plots for Two Variables]]):
+A good plot communicates in seconds what a table takes minutes to say. Base R plots work, but publication-style plots with group colours and test results take many lines ([[hist() and boxplot()]]). ggpubr wraps each one in a single function ([[R Packages]], [[Plots for Two Variables]]):
 
 ```r
 library(ggpubr)
@@ -32,6 +32,6 @@ Use `add = "mean"` because the box shows the [[Median|median]], while the mean m
 
 For example, `ggboxplot(..., add = "mean")` puts a dot at each group mean on top of the median-based box ([[Box Plot and Five-Number Summary]]).
 
-A p-value on the plot doesn't replace the analysis. It skips the [[Test Assumptions|assumption]] checks, so run the full workflow.
+Make the plot beautiful, but keep the analysis honest. A p-value on the plot doesn't replace the analysis. It skips the [[Test Assumptions|assumption]] checks, so run the full workflow.
 
 See also: [[Normality Checks]], [[emmeans() and cld()]].

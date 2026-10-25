@@ -16,7 +16,7 @@ status: seedling
 
 These are base R's quick plots for exploring data: `hist()` for one [[Types of Data|quantitative]] variable, `boxplot(y ~ group)` for comparing groups, plus `plot()`, `barplot()`, `mosaicplot()` and `qqnorm()`.
 
-Plot before testing ([[Why visualize data before testing]]). Base R has a function for each of the common plots ([[Histogram]], [[Box Plot and Five-Number Summary]]):
+The fastest way to understand data is to draw it. Plot before testing ([[Why visualize data before testing]]). Base R has a function for each of the common plots ([[Histogram]], [[Box Plot and Five-Number Summary]]):
 
 ```r
 hist(d$ACE_total, main = "ACE total", xlab = "ACE score", col = "lavender")
@@ -44,6 +44,6 @@ These give fast looks at shape, [[Outliers|outliers]] and group differences befo
 
 For example, if the mean line sits far to the right of the median line on a histogram, the data are skewed to the right.
 
-A bar graph and a histogram aren't the same function. A factor goes to `plot()` or `barplot()`; a number goes to `hist()`.
+Match the plot to the kind of data you have. A bar graph and a histogram aren't the same function. A factor goes to `plot()` or `barplot()`; a number goes to `hist()`.
 
 See also: [[ggpubr Plots]], [[Normality Checks]].

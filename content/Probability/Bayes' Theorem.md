@@ -11,7 +11,7 @@ status: seedling
 
 Bayes' theorem turns a conditional probability around. It goes from "how likely is a positive test if you have the disease?" to "how likely is the disease if you test positive?".
 
-A test maker reports $P(+ \mid \text{disease})$, but a patient wants $P(\text{disease} \mid +)$. These are different numbers because they are shares of different groups ([[Conditional Probability]]). To get from one to the other:
+This is one of the most counterintuitive ideas in all of probability, and one of the most practical: the answer you want is usually the reverse of the answer you're given. A test maker reports $P(+ \mid \text{disease})$, but a patient wants $P(\text{disease} \mid +)$. These are different numbers because they are shares of different groups ([[Conditional Probability]]). To get from one to the other:
 
 1. Start from the definition: $P(A \mid B) = P(A \cap B)/P(B)$.
 2. Rewrite the top with the [[Multiplication Rule]]: $P(A \cap B) = P(B \mid A)P(A)$. This is the "true" route to a positive test.
@@ -44,7 +44,7 @@ For example, in the book's mammography example ([[References|Vu and Harrington 2
 
 $P(\text{cancer} \mid +) = 311.5 / 7{,}287 \approx 0.043$, or about 4%.
 
-A test that catches most cases doesn't make a positive result reliable when the condition is rare. And Bayes' theorem isn't only for "Bayesian statistics": it is a basic rule of probability.
+The lesson reaches far beyond medicine: always ask how common the thing was before the evidence came in. A test that catches most cases doesn't make a positive result reliable when the condition is rare. And Bayes' theorem isn't only for "Bayesian statistics": it is a basic rule of probability.
 
 See also: [[Why a positive test can still mean you are probably healthy]].
 

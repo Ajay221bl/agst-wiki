@@ -13,7 +13,7 @@ status: seedling
 
 RStudio is a program for running R. Write your code in a saved script (an `.R` file) rather than the console, so the analysis can be rerun, shared and reused.
 
-R does arithmetic and statistics when you give it written commands; RStudio is the window you type them in. It has four panes, each with a job:
+The most useful habit in data analysis is making your work repeatable. R does arithmetic and statistics when you give it written commands; RStudio is the window you type them in. It has four panes, each with a job:
 - **Script (`.R` file):** where you write and save your work. It can be rerun at any time, on any computer, and adapted to new data.
 - **Console:** where the code actually runs. Anything typed only here **disappears when the session ends**.
 - **Environment:** the objects you have created, for example `YouGov`: 2000 obs. of 25 variables. Looking here confirms that the data loaded with the size you expected.
@@ -34,6 +34,6 @@ YouGov <- read.csv(file.choose(), header = TRUE)
 summary(YouGov)
 ```
 
-Running code in the console doesn't save it; only the script is saved.
+If it isn't in the script, it didn't happen. Running code in the console doesn't save it; only the script is saved.
 
 See also: [[Functions and Arguments]], [[R Packages]].

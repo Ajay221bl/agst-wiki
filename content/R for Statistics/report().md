@@ -12,7 +12,7 @@ status: seedling
 
 The `report` package writes summaries for you. `report_sample()` makes a "Table 1" describing the sample, and `report()` turns a test result into a paragraph of text that includes the [[Effect Size|effect size]].
 
-Results have to be written up in words, with the numbers that support them ([[Writing a Conclusion]]). The `report` package drafts that text from a data frame or a test result ([[R Packages]]):
+Writing up results is tedious, and a tool can draft it for you, but not think for you. Results have to be written up in words, with the numbers that support them ([[Writing a Conclusion]]). The `report` package drafts that text from a data frame or a test result ([[R Packages]]):
 
 ```r
 report::report_sample(d)                 # mean (SD) for numbers, % for categories
@@ -26,6 +26,6 @@ It saves time, and it shows the direction of the effect and a **[[Confidence Int
 
 For example, for a paired test, `report()` gives the sign of Cohen's d (which depends on the order of subtraction) and labels its size, such as "negligible" or "small".
 
-The report's wording isn't final. It is a draft, and it may not match your [[Null and Alternative Hypotheses|hypotheses]], your α or your context.
+Let it write the first draft; you write the final one. The report's wording isn't final. It is a draft, and it may not match your [[Null and Alternative Hypotheses|hypotheses]], your α or your context.
 
 See also: [[Descriptive vs Inferential Statistics]].

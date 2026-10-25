@@ -11,7 +11,7 @@ status: seedling
 
 Classical probability counts equally likely outcomes on paper. Relative frequency probability counts how often something actually happened over many tries.
 
-Take the question "how likely is drawing a spade?". The classical way lists every possible outcome ([[Sample Space and Events]]) and, if each is equally likely, divides:
+There are two honest ways to put a number on chance: reason about it, or watch it happen many times. Take the question "how likely is drawing a spade?". The classical way lists every possible outcome ([[Sample Space and Events]]) and, if each is equally likely, divides:
 $$P(A) = \frac{\text{number of ways } A \text{ can occur}}{\text{number of simple events in } S}$$
 A deck has 52 cards and 13 are spades, so the answer is 13/52. This only works if every outcome is equally likely; a loaded die breaks it.
 
@@ -30,7 +30,7 @@ For example:
 | Die roll less than 5 | classical | 4/6 |
 | Smoker, from a survey of 1,010 adults with 202 smokers | relative frequency | ≈ 0.20 |
 
-Two outcomes don't mean 50/50: winning or losing the lottery is two outcomes, nowhere near equally likely. And a relative frequency is only an estimate of the true probability, a rough one when the number of tries is small.
+Reasoning works when you know the setup; counting works when you don't. Use whichever the situation allows. Two outcomes don't mean 50/50: winning or losing the lottery is two outcomes, nowhere near equally likely. And a relative frequency is only an estimate of the true probability, a rough one when the number of tries is small.
 
 See also: [[Proportions and Percentages]].
 

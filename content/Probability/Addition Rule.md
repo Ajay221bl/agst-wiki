@@ -10,7 +10,7 @@ status: seedling
 
 The chance that $A$ or $B$ happens is the chance of $A$, plus the chance of $B$, minus the chance of both. Subtracting "both" stops the overlap being counted twice.
 
-In probability, "A or B" means A, or B, or both. Suppose you want the chance that a student takes biology or chemistry. If you simply add the biology students and the chemistry students, anyone taking both subjects gets counted twice ([[Sample Space and Events]]). So you subtract the overlap once:
+Most probability rules are just careful counting, and this one is about not counting anything twice. In probability, "A or B" means A, or B, or both. Suppose you want the chance that a student takes biology or chemistry. If you simply add the biology students and the chemistry students, anyone taking both subjects gets counted twice ([[Sample Space and Events]]). So you subtract the overlap once:
 $$P(A \text{ or } B) = P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 
 If the two events can't happen together, the overlap is 0 and the rule shrinks to $P(A) + P(B)$ ([[Disjoint Events]]). The overlap itself, $P(A \cap B)$, comes from the [[Multiplication Rule]] or can be read straight from a [[Contingency Table]].
@@ -32,6 +32,6 @@ $P(\text{positive or user}) = \frac{134}{1000} + \frac{50}{1000} - \frac{44}{100
 
 You can check this by adding the cells that are positive or a user, each counted once: $(44 + 90 + 6)/1000 = 0.14$.
 
-Remember that "or" includes "both", and that plain adding only works when the events can't happen together.
+Draw the overlap and the rule writes itself. Remember that "or" includes "both", and that plain adding only works when the events can't happen together.
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (pp. 94–96).

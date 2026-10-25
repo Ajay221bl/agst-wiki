@@ -13,7 +13,7 @@ status: seedling
 
 In an observational study the researcher watches rather than assigns. The three main designs are cohort studies, which follow people forward; case-control studies, which look back from an outcome; and cross-sectional studies, which take a snapshot.
 
-Sometimes you can't assign the exposure, such as smoking, a disease or where an animal lives in a barn, so you observe it instead. Without [[Random Assignment|random assignment]], other variables can line up with the exposure ([[Nuisance Variables and Confounding]]). Each design handles time and cost differently:
+Most of what we know about health, behaviour and the wider world comes from watching, not from experiments, so it pays to watch well. Sometimes you can't assign the exposure, such as smoking, a disease or where an animal lives in a barn, so you observe it instead. Without [[Random Assignment|random assignment]], other variables can line up with the exposure ([[Nuisance Variables and Confounding]]). Each design handles time and cost differently:
 
 | Design | How it works | Strength | Weakness |
 |---|---|---|---|
@@ -37,7 +37,7 @@ Many exposures can't be assigned, like smoking, lead, or diet over decades, and 
 
 For example, long cohort studies can reveal unexpected links: smoking was tied to heart disease and to dental health. Findings like these suggest [[Null and Alternative Hypotheses|hypotheses]] to test later in a [[Randomized Controlled Trial|randomized trial]].
 
-A strong association doesn't prove causation: without random assignment, a confounder may explain it. And case-control studies don't follow people forward; they start from the outcome and look back.
+Observation is powerful for finding patterns and weak for proving causes, and knowing that difference is half the skill. A strong association doesn't prove causation: without random assignment, a confounder may explain it. And case-control studies don't follow people forward; they start from the outcome and look back.
 
 See also: [[Internal Validity]], [[External Validity]], [[Quasi-Experiment]].
 

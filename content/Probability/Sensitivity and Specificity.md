@@ -13,7 +13,7 @@ status: seedling
 
 Sensitivity is how often a test is positive in people who have the condition. Specificity is how often it is negative in people who don't.
 
-A diagnostic test can be right in two ways and wrong in two ways:
+No test is perfect, so the useful question is how it fails. A diagnostic test can be right in two ways and wrong in two ways:
 
 | | Has condition | Doesn't |
 |---|---|---|
@@ -46,7 +46,7 @@ For example, here is the SimpliRED D-dimer test for blood clots in the leg (DVT)
 - Sensitivity $= 51/59 \approx 0.864$, using only the DVT column.
 - Specificity $= 30/62 \approx 0.484$, which is poor.
 
-Sensitivity is not "the chance I'm sick if I test positive"; that is the [[Predictive Values and Prevalence|positive predictive value]]. And a sensitive test isn't automatically specific: the D-dimer test is very sensitive but poorly specific.
+These numbers describe the test, not your result. That's the distinction most people miss. Sensitivity is not "the chance I'm sick if I test positive"; that is the [[Predictive Values and Prevalence|positive predictive value]]. And a sensitive test isn't automatically specific: the D-dimer test is very sensitive but poorly specific.
 
 See also: [[Conditional Probability]], [[Contingency Table]], [[Type I and Type II Errors]].
 

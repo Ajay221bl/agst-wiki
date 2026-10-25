@@ -11,7 +11,7 @@ status: seedling
 
 A randomized controlled trial (RCT) randomly assigns units to a treatment or a control group, ideally with nobody knowing who is in which. It is the gold standard for showing that a treatment causes an effect.
 
-The steps:
+The randomized controlled trial is the cleanest way humans have found to answer "does this work?" Each step closes a door that bias could walk through. The steps:
 1. Recruit participants.
 2. Use a computerized coin flip to put each one in the treatment or control group. Random assignment balances everything else between the groups ([[Random Assignment]]).
 3. Give the [[Treatment and Control Groups|control group]] a placebo, so both groups believe they might be treated and belief can't explain a difference ([[Blinding and Placebo]]).
@@ -39,7 +39,7 @@ As control goes up, internal validity goes up and external validity tends to go 
 
 For example, in an arrhythmia trial described in the book, researchers expected a new drug to reduce deaths. The trial was stopped when the drug turned out to be almost 4 times as likely to kill patients as a placebo ([[References|Vu and Harrington 2020, Ch. 4]], p. 223). A randomized trial can reveal harm because it compares like with like.
 
-Trial results apply most clearly to people like the volunteers who were studied, not automatically to everyone. And "randomized" refers to random assignment, not random sampling ([[Why random assignment and random sampling protect different things]]).
+Its strength is certainty about cause; its price is a narrow slice of the world. Trial results apply most clearly to people like the volunteers who were studied, not automatically to everyone. And "randomized" refers to random assignment, not random sampling ([[Why random assignment and random sampling protect different things]]).
 
 See also: [[Observational Study Designs]].
 

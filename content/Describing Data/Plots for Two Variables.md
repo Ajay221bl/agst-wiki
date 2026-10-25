@@ -13,7 +13,7 @@ status: seedling
 
 The right plot for two variables depends on their types. Use a scatter plot for two quantitative variables, side-by-side box plots for a quantitative measurement compared across groups, and mosaic or grouped bar plots for two categorical variables.
 
-The question about two variables is always "are they related?", and what a relationship can look like depends on their types ([[Types of Data]]). Pick the plot that shows that relationship directly:
+Before you compute any statistic about a relationship, look at it. The picture often answers the question by itself. The question about two variables is always "are they related?", and what a relationship can look like depends on their types ([[Types of Data]]). Pick the plot that shows that relationship directly:
 
 | Variables | Plot | Later analysis |
 |---|---|---|
@@ -30,7 +30,7 @@ Always plot. Data sets with identical means, standard deviations and [[Correlati
 
 For example, in a book example, female frog body size against clutch volume shows an upward trend with no extreme outliers, so summarizing it with a straight line is reasonable.
 
-A significant correlation isn't necessarily a strong one: with a big sample, even weak correlations come out significant. Look at the plot and at $r$ itself ([[Effect Size]]). And error bars showing the mean ± its [[Standard Error|standard error]] don't show how spread out the data are. They show how uncertain the mean is, which shrinks as the sample grows, while the spread of the data doesn't.
+Let the plot tell you what's going on, and let the numbers confirm it. A significant correlation isn't necessarily a strong one: with a big sample, even weak correlations come out significant. Look at the plot and at $r$ itself ([[Effect Size]]). And error bars showing the mean ± its [[Standard Error|standard error]] don't show how spread out the data are. They show how uncertain the mean is, which shrinks as the sample grows, while the spread of the data doesn't.
 
 See also: [[Box Plot and Five-Number Summary]], [[Plots for Categorical Data]], [[Two-Sample Independent t-Test]], [[One-Way ANOVA]].
 

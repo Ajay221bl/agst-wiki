@@ -16,7 +16,7 @@ status: seedling
 
 There are many ways to choose a sample. They range from simple random sampling, the ideal, through stratified, cluster and systematic sampling, to convenience, snowball and voluntary-response samples, which are prone to bias.
 
-The ideal is a simple random sample, but it needs a full list of the population and can be expensive ([[Random Sampling]]). Every other method gives up some of that ideal for practicality or [[Random Error and Precision|precision]]. For each one, ask: who could be chosen, and who does the choosing?
+Every sampling method is a trade between the ideal and what you can actually do. The ideal is a simple random sample, but it needs a full list of the population and can be expensive ([[Random Sampling]]). Every other method gives up some of that ideal for practicality or [[Random Error and Precision|precision]]. For each one, ask: who could be chosen, and who does the choosing?
 
 | Method | How it works | Why use it, and its cost |
 |---|---|---|
@@ -38,7 +38,7 @@ A random sample is enough for almost all the methods in these notes, but real st
 
 For example, stratified and cluster sampling follow opposite logic. Stratified sampling takes some units from every group, so all groups are represented. Cluster sampling takes whole groups, for convenience. Strata are groups whose members are alike; each cluster should ideally look like a small copy of the population.
 
-A big voluntary sample isn't fine just because it is big: people choosing themselves biases it at any size.
+The question to ask of any method is not "how many?" but "who decided who got in?" A big voluntary sample isn't fine just because it is big: people choosing themselves biases it at any size.
 
 See also: [[Population and Sample]].
 

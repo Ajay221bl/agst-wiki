@@ -12,7 +12,7 @@ status: seedling
 
 A contingency table counts how many observations fall into each combination of two categorical variables, with row and column totals around the edge.
 
-Suppose you record two yes-or-no facts about the same people, such as "uses drugs" and "tested positive" ([[Types of Data]]). Every person lands in exactly one combination, so you can lay the combinations out as a grid of cells and count. Then add up each row, each column and the grand total. Those totals around the edge matter, because each probability question uses a different total as its whole. A contingency table is like a [[Venn Diagram|Venn diagram]] that has already been drawn and counted for you.
+A lot of probability becomes simple once you put the counts in a grid and look. Suppose you record two yes-or-no facts about the same people, such as "uses drugs" and "tested positive" ([[Types of Data]]). Every person lands in exactly one combination, so you can lay the combinations out as a grid of cells and count. Then add up each row, each column and the grand total. Those totals around the edge matter, because each probability question uses a different total as its whole. A contingency table is like a [[Venn Diagram|Venn diagram]] that has already been drawn and counted for you.
 
 Every basic probability rule becomes a matter of picking cells:
 
@@ -38,7 +38,7 @@ For example:
 - $P(\text{positive} \mid \text{user}) = 44/50 = 0.88$
 - $P(\text{user} \mid \text{positive}) = 44/134 \approx 0.33$
 
-A conditional probability uses only the total of the row or column you condition on, not the grand total. And the table holds counts; you get probabilities by dividing.
+When in doubt, build the table. It turns abstract rules into plain division. A conditional probability uses only the total of the row or column you condition on, not the grand total. And the table holds counts; you get probabilities by dividing.
 
 See also: [[Proportions and Percentages]], [[Sensitivity and Specificity]], [[Bayes' Theorem]], [[Ratios and Fractions]].
 

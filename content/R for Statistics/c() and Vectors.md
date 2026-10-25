@@ -11,7 +11,7 @@ status: seedling
 
 `c()` combines values into a vector, R's basic list of values of the same type. Every column of a data frame is a vector.
 
-One variable has many values ([[Variable and Observation]]), and R holds them together in a **vector**. `c()` combines values into one; the c stands for "combine":
+Everything in R is built from lists of values, and `c()` is how you make one. One variable has many values ([[Variable and Observation]]), and R holds them together in a **vector**. `c()` combines values into one; the c stands for "combine":
 
 ```r
 x <- c(2.5, 4, 2, 0.5)       # numeric vector
@@ -31,6 +31,6 @@ mean(diffs)                  # 2.25
 t.test(diffs, mu = 0)        # a paired t-test is a one-sample test on the differences
 ```
 
-A vector can't mix numbers and text: mixing turns everything into text.
+One vector, one type. A vector can't mix numbers and text: mixing turns everything into text.
 
 See also: [[R Objects and Assignment]], [[t.test()]], [[factor()]].

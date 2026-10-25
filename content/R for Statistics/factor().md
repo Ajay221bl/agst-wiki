@@ -13,7 +13,7 @@ status: seedling
 
 `factor()` tells R that a variable is categorical, with a fixed set of levels. ANOVA, grouped summaries and bar charts all need it.
 
-A categorical variable needs to be stored as categories ([[Types of Data]], [[Factors and Levels]]). Unless told otherwise, R stores text as "character" and numbers as "numeric". That is a problem for group codes: codes 1, 2, 3 would be treated as amounts, and `aov()` would fit a line instead of comparing groups. A factor is a categorical variable with a defined list of levels:
+R only knows what you tell it. If you don't tell it a variable is a group, it may treat it as a number. A categorical variable needs to be stored as categories ([[Types of Data]], [[Factors and Levels]]). Unless told otherwise, R stores text as "character" and numbers as "numeric". That is a problem for group codes: codes 1, 2, 3 would be treated as amounts, and `aov()` would fit a line instead of comparing groups. A factor is a categorical variable with a defined list of levels:
 
 ```r
 d$year <- factor(d$year)                     # numbers → categories
@@ -31,6 +31,6 @@ Why it matters:
 
 For example, `str()` before shows `$ trt: int 1 2 3 4 1 2 ...`. After `d$trt <- factor(d$trt)`, it shows `$ trt: Factor w/ 4 levels "1","2","3","4"`.
 
-Changing the order of the levels doesn't change the data. It only changes the order R uses.
+Tell R what kind of thing each variable is, and it will treat it right. Changing the order of the levels doesn't change the data. It only changes the order R uses.
 
 See also: [[aov()]], [[t.test()]].

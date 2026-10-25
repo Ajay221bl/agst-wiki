@@ -15,7 +15,7 @@ status: seedling
 
 Internal validity is how confidently you can say that the treatment, and not something else, caused the change in the outcome.
 
-A study's claim is usually "the independent variable caused the change in the dependent variable" ([[Independent and Dependent Variables]]). Internal validity is how far that claim can be trusted. Anything else that could explain the result, a "third variable", is a threat to it ([[Nuisance Variables and Confounding]]). The main defence is randomly assigning individual units to the treatment groups, which balances third variables between the groups ([[Random Assignment]]). Some threats need more than that:
+Think of internal validity as the question a sceptical friend would ask: "Are you sure it was the treatment?" A study's claim is usually "the independent variable caused the change in the dependent variable" ([[Independent and Dependent Variables]]). Internal validity is how far that claim can be trusted. Anything else that could explain the result, a "third variable", is a threat to it ([[Nuisance Variables and Confounding]]). The main defence is randomly assigning individual units to the treatment groups, which balances third variables between the groups ([[Random Assignment]]). Some threats need more than that:
 
 | Threat | What happens | Example |
 |---|---|---|
@@ -43,7 +43,7 @@ A study can be perfectly analysed and still mislead if a third variable produced
 
 For example, pens of animals placed side by side might share air, noise or disease, so the treatment could spread between them. A reviewer could raise this, and the "limitations" section of a paper is often about issues like it.
 
-Internal validity isn't about generalizing to other settings; that is [[External Validity|external validity]]. And a big [[Population and Sample|sample]] doesn't protect it: size doesn't fix confounding, but randomization does.
+The deep point is that size can't buy you this. Only design can. Internal validity isn't about generalizing to other settings; that is [[External Validity|external validity]]. And a big [[Population and Sample|sample]] doesn't protect it: size doesn't fix confounding, but randomization does.
 
 See also: [[Why random assignment and random sampling protect different things]], [[Why RCTs trade external validity for internal validity]], [[Validity]].
 

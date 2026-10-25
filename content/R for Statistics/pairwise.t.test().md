@@ -13,7 +13,7 @@ status: seedling
 
 `pairwise.t.test(y, group, p.adjust.method = "bonferroni")` runs t-tests between every pair of groups and prints a table of adjusted p-values.
 
-Post hoc tests run many pairwise tests, so the p-values must be adjusted ([[Family-Wise Type I Error]]). `pairwise.t.test()` runs a t-test for every pair and adjusts:
+Many tests need a correction, and this function builds it in for you. Post hoc tests run many pairwise tests, so the p-values must be adjusted ([[Family-Wise Type I Error]]). `pairwise.t.test()` runs a t-test for every pair and adjusts:
 
 ```r
 pairwise.t.test(frust$score, frust$major, p.adjust.method = "bonferroni")
@@ -26,7 +26,7 @@ It is an alternative to [[Tukey HSD|Tukey's test]] in the Bonferroni style. Each
 
 For example, a cell of 0.012 is significant at 0.05 after adjustment.
 
-Don't compare the table with 0.05/6. The p-values are already adjusted, so compare them with 0.05.
+Know whether a number has already been adjusted before you adjust it again. Don't compare the table with 0.05/6. The p-values are already adjusted, so compare them with 0.05.
 
 See also: [[Post Hoc Tests]].
 

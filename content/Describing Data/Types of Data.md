@@ -15,7 +15,7 @@ status: seedling
 
 Every variable is either categorical (labels) or quantitative (numbers you can do arithmetic with), and its type decides which summaries, plots and tests make sense.
 
-Every variable records something about each observation ([[Variable and Observation]]). Before summarizing it, ask one question: does arithmetic make sense on these values?
+Before any summary or test, you need to know what kind of thing you're looking at. Get this wrong and every later step goes wrong with it. Every variable records something about each observation ([[Variable and Observation]]). Before summarizing it, ask one question: does arithmetic make sense on these values?
 
 If not, the values are labels, and the variable is **categorical** (also called qualitative). You can count labels, but not average them: the mean of region codes 1, 2 and 3 is a meaningless number. Categorical variables come in three kinds:
 - **Nominal:** no order, such as region, eye colour, favourite exercise or ID number.
@@ -62,7 +62,7 @@ For example, the variables in a survey:
 | Favourite exercise | categorical nominal | no order |
 | Number of bikes owned | quantitative discrete | "number of" |
 
-Being a number doesn't make a variable quantitative: ID numbers and treatment codes are labels. And discrete doesn't mean categorical: discrete data are quantitative counts.
+The question is never "is it a number?" but "does arithmetic on it mean anything?" Being a number doesn't make a variable quantitative: ID numbers and treatment codes are labels. And discrete doesn't mean categorical: discrete data are quantitative counts.
 
 See also: [[Random Variable]].
 

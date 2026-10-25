@@ -12,7 +12,7 @@ status: seedling
 
 `mean(x)`, `median(x)` and `sd(x)` work out the basic summaries. All of them return NA (missing) if any value is missing, unless you add `na.rm = TRUE`.
 
-Each basic summary has a one-word R function ([[Mean]], [[Standard Deviation]]):
+The basic summaries are one word each. The only trap is missing values. Each basic summary has a one-word R function ([[Mean]], [[Standard Deviation]]):
 
 ```r
 mean(d$ACE_total, na.rm = TRUE)
@@ -32,6 +32,6 @@ mean(x)                # NA
 mean(x, na.rm = TRUE)  # 3
 ```
 
-An NA answer doesn't usually mean a bug. It usually means there are missing values: add `na.rm = TRUE` and report how many there were.
+R refuses to guess, which is a feature, not a bug. An NA answer doesn't usually mean a bug. It usually means there are missing values: add `na.rm = TRUE` and report how many there were.
 
 See also: [[describe() and describeBy()]].

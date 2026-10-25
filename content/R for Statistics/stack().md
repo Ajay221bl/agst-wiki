@@ -9,7 +9,7 @@ status: seedling
 
 `stack(wide)` turns a table with one column per group into long format, with a `values` column and an `ind` column naming the group.
 
-Sometimes data arrive wide, with one column per group ([[Wide vs Long Format]]). `stack()` piles the columns into one, and adds a column saying which original column each value came from:
+Reshaping data sounds hard, but here it's one function. Sometimes data arrive wide, with one column per group ([[Wide vs Long Format]]). `stack()` piles the columns into one, and adds a column saying which original column each value came from:
 
 ```r
 frust <- read.csv(file.choose(), header = TRUE)   # wide: business, English, math, psychology
@@ -24,4 +24,4 @@ It is the one-line base R reshape that gets wide data ready for `aov()` ([[aov()
 
 For example, a wide row of business 12, English 15, math 14 and psychology 18 becomes four long rows: (12, business), (15, English), (14, math) and (18, psychology).
 
-stack() doesn't need the tidyverse; it is part of base R.
+The simplest tool that works is usually the best one. stack() doesn't need the tidyverse; it is part of base R.

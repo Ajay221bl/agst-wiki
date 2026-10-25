@@ -10,7 +10,7 @@ status: seedling
 
 The absolute value of a number is its distance from 0. It is written $|x|$ and is never negative: $|-3| = |3| = 3$.
 
-A number has two parts: a sign, which says which side of 0 it is on, and a size, which says how far away it is. Sometimes only the size matters. If you are 3 km from home, you are equally far whether you went east or west. The absolute value keeps the size and drops the sign: $|x| = x$ when $x \ge 0$, and $|x| = -x$ when $x < 0$.
+Sometimes you only care how far, not which way. A number has two parts: a sign, which says which side of 0 it is on, and a size, which says how far away it is. Sometimes only the size matters. If you are 3 km from home, you are equally far whether you went east or west. The absolute value keeps the size and drops the sign: $|x| = x$ when $x \ge 0$, and $|x| = -x$ when $x < 0$.
 
 Squaring is the other way to drop a sign ([[Squares and Square Roots]]). Squaring changes the units and makes big values even bigger, but it has tidy algebra, which is why the [[Variance]] uses squares rather than absolute values.
 
@@ -21,6 +21,6 @@ Statistics often asks "how far is this from what we expected?", and a big gap co
 
 For example, a test on mercury in fish gave $t = -11.96$. For a two-sided p-value, what matters is $|t| = 11.96$: how far out it sits, on either side ([[One-Sample t-Test]]).
 
-Absolute value doesn't "flip" a number. A positive number stays exactly as it is. And $|a - b|$ is not the same as $a - b$: the first gives only the size of the gap, while the second also tells you which number is bigger.
+Think distance, and the rules take care of themselves. Absolute value doesn't "flip" a number. A positive number stays exactly as it is. And $|a - b|$ is not the same as $a - b$: the first gives only the size of the gap, while the second also tells you which number is bigger.
 
 See also: [[Greek Letters and Symbols]], [[Variable and Observation]], [[Deviations from the Mean]], [[Homogeneity of Variance]], [[Parameter vs Statistic]].

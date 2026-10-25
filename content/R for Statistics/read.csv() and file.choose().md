@@ -15,7 +15,7 @@ status: seedling
 
 `read.csv(file.choose(), header = TRUE)` opens a file browser, reads the chosen CSV (comma-separated values) file, and returns it as a data frame.
 
-The data live in a file, and R needs them as a data frame ([[Data Frames]]). `read.csv()` reads a comma-separated file into one. Each argument answers a question R can't guess:
+Every analysis starts by getting the data in correctly. Small mistakes here travel all the way to the conclusion. The data live in a file, and R needs them as a data frame ([[Data Frames]]). `read.csv()` reads a comma-separated file into one. Each argument answers a question R can't guess:
 
 ```r
 getwd()    # where R currently looks for and saves files
@@ -33,6 +33,6 @@ Then check what arrived with `str()` ([[str()]]). Getting the data into R is oft
 
 For example, after reading, check `head(YouGov)`, `str(YouGov)` and `summary(YouGov)` ([[summary()]]).
 
-Blank cells aren't automatically treated as missing. In text columns they may come in as empty text unless `""` is in `na.strings`.
+Check what came in before you trust it. Blank cells aren't automatically treated as missing. In text columns they may come in as empty text unless `""` is in `na.strings`.
 
 See also: [[na.omit() and complete.cases()]].

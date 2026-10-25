@@ -12,7 +12,7 @@ status: seedling
 
 A random variable is a number whose value is decided by chance. Its probability distribution says how likely each value, or range of values, is.
 
-Many chance outcomes are numbers already, or can be turned into numbers. Roll two dice and record the total. Before you roll, you don't know the total, but you know the possible values (2 to 12) and how likely each is. Turning outcomes into numbers is useful because numbers can be averaged and compared, while outcomes like "heads, tails" can't. List the values with their probabilities and you have the [[Probability Distribution|probability distribution]].
+To do arithmetic with chance, you first need to turn outcomes into numbers. Many chance outcomes are numbers already, or can be turned into numbers. Roll two dice and record the total. Before you roll, you don't know the total, but you know the possible values (2 to 12) and how likely each is. Turning outcomes into numbers is useful because numbers can be averaged and compared, while outcomes like "heads, tails" can't. List the values with their probabilities and you have the [[Probability Distribution|probability distribution]].
 
 There are two kinds, matching the two kinds of numerical data ([[Types of Data]]). A **discrete** random variable takes countable values ("the number of..."). Its distribution lists each value with a probability, and the probabilities add to 1, since exactly one value must happen. A **continuous** random variable can take any value on a scale. Its distribution is a curve with a total area of 1, and the probability of a range is the area above it.
 
@@ -26,7 +26,7 @@ For example, the number of heads in 2 fair coin flips:
 
 The probabilities add to 1. The [[Expected Value|expected value]] is $0(0.25) + 1(0.5) + 2(0.25) = 1$ head.
 
-For a continuous variable, the chance of any single exact value, such as P(X = 3.0), is 0; only ranges have probabilities. And for [[Independent and Dependent Variables|independent variables]], the variance of a difference is the sum of their variances, not the difference.
+It's a rule for turning chance into numbers, and that rule is what lets everything else in probability work. For a continuous variable, the chance of any single exact value, such as P(X = 3.0), is 0; only ranges have probabilities. And for [[Independent and Dependent Variables|independent variables]], the variance of a difference is the sum of their variances, not the difference.
 
 See also: [[Sample Space and Events]], [[Normal Distribution]], [[Variable and Observation]].
 

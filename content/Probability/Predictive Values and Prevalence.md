@@ -14,7 +14,7 @@ status: seedling
 
 The positive predictive value (PPV) is the chance you really have a condition after a positive test. The negative predictive value (NPV) is the chance you are really clear after a negative test. Both depend on how common the condition is, which is called the prevalence.
 
-[[Sensitivity and Specificity|Sensitivity and specificity]] describe how a test performs in people whose true status is known. A patient doesn't know their status, only their result, so they need the question turned around:
+A test result is only as meaningful as the population it's used in. This is where most people's intuition about testing breaks. [[Sensitivity and Specificity|Sensitivity and specificity]] describe how a test performs in people whose true status is known. A patient doesn't know their status, only their result, so they need the question turned around:
 - PPV $= P(\text{disease} \mid +)$
 - NPV $= P(\text{healthy} \mid -)$
 
@@ -40,7 +40,7 @@ For example:
 - For a blood clot (DVT) test, PPV $= 51/83 \approx 0.614$: take only the row of positive tests ([[Sensitivity and Specificity]]).
 - In the book's mammography example, the prevalence is 0.35%, which gives a PPV of about **0.043**. A positive mammogram means about a 4% chance of cancer ([[Bayes' Theorem]]).
 
-PPV is not a fixed property of a test: move the test to a population with a different prevalence and the PPV moves too. And a 4% PPV doesn't make a test useless. It still raises the chance from 0.35% to 4%, which is enough to justify follow-up testing.
+Before trusting a positive result, ask how common the condition was to begin with. PPV is not a fixed property of a test: move the test to a population with a different prevalence and the PPV moves too. And a 4% PPV doesn't make a test useless. It still raises the chance from 0.35% to 4%, which is enough to justify follow-up testing.
 
 See also: [[Conditional Probability]], [[Why a positive test can still mean you are probably healthy]].
 
