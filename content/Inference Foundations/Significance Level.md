@@ -9,25 +9,29 @@ aliases:
 status: seedling
 ---
 
-The significance level α is the cutoff for "unusual" chosen before the study. It equals the probability of a Type I error, a false positive, that you are willing to accept.
+The significance level, α, is how surprised you agree to be before you'll reject the boring story. It's also exactly how often you'll raise a false alarm when the boring story is actually true.
 
-A p-value tells you how surprising the data are. But at some point you have to decide, and a decision needs a line. A p-value needs a cutoff for "too rare to believe $H_0$". You decide it **before collecting data**. Choosing it after seeing p would let you pick whatever cutoff gives the answer you want ([[Why choose alpha and tails before seeing the data]]). That cutoff is α. Common choices are **0.05** (the usual default), 0.01, and sometimes 0.10.
+Think about a smoke detector. Make it very sensitive and it catches every real fire, but it also goes off every time you make toast. Make it dull and it stops bothering you about toast, but it might sleep through a real fire. You have to set the knob somewhere. There's no setting that's perfect.
 
-α is the false-alarm rate. If $H_0$ is true, results this extreme happen with probability α, so you will wrongly reject it with probability α ([[Type I and Type II Errors]]). On the null distribution, α is an area. The **rejection region** is the set of [[Test Statistic|test statistics]] extreme enough to reject; its area is α, and its edge is the [[Critical Value|critical value]] ([[Null Distribution]]).
+A test has the same knob. The p-value tells you how surprising the data would be if $H_0$ were true ([[P-Value]]). But at some point you have to *decide*, and a decision needs a line: "if p is below this, I stop believing $H_0$." That line is α. The usual choice is **0.05**; sometimes 0.01, sometimes 0.10.
 
-There's no free lunch here. A lower α isn't free. Fewer false alarms means more missed real effects, so less power ([[Statistical Power]]).
+Here's what α really is. Suppose $H_0$ is true, nothing is going on. How often will you still reject it? Exactly α of the time, because by design, results that extreme turn up α of the time just by luck. So α is your false-alarm rate, the chance of a Type I error you've agreed to live with ([[Type I and Type II Errors]]). On the picture of the null distribution, α is an area: the rejection region, the set of [[Test Statistic|test statistics]] extreme enough to reject, whose edge is the [[Critical Value|critical value]] ([[Null Distribution]]).
 
 ![[One vs two tailed rejection regions.png|700]]
 The 5% rejection region goes wherever the alternative points. A two-tailed test splits it, so each cut-off is further out (±1.96 instead of 1.645).
 
-Choosing α (book pp. 221–222):
-- If a **Type I error is more costly**, use a smaller α, such as 0.01. A drug regulator, for example, wants to avoid approving a drug that doesn't work.
-- If a **Type II error is more costly**, a larger α, such as 0.10, may be reasonable.
+And you set the knob **before** you look at the data. Why? Because if you look first, you'll be tempted to pick whatever line gives the answer you'd like. That's not testing, that's decorating ([[Why choose alpha and tails before seeing the data]]).
 
-For example, take a pacemaker battery. Claiming it lasts more than 300 days when it doesn't means patients skip check-ups they need, which could be fatal. That Type I error is worse, so use a smaller α.
+So how do you choose? The smoke detector tells you: think about what each mistake costs (book pp. 221–222).
+- If a **false alarm is the worse mistake**, use a smaller α, like 0.01. A drug regulator doesn't want to approve a drug that does nothing.
+- If **missing something real is worse**, a larger α, like 0.10, may be fine.
 
-So α isn't a technical setting. It's a judgment about consequences: which mistake can you least afford? And α isn't the p-value: α is fixed in advance, while the p-value comes from the data. And a smaller α isn't always better. It raises the Type II error rate unless $n$ grows.
+For example, take a pacemaker battery. Claiming it lasts more than 300 days when it doesn't means patients skip check-ups they need, which could be fatal. That false alarm is the worse mistake, so use a smaller α.
 
-See also: [[P-Value]], [[Hypothesis Testing]], [[Bonferroni Correction]].
+But there's no free lunch. Turn the knob down and you'll miss more real effects; your test loses power ([[Statistical Power]]). Unless you collect more data, fewer false alarms always means more misses.
+
+Try it yourself. Is α the same as the p-value? No. α is the line you drew in advance; the p-value is where the data landed. You compare the two. And α isn't "the chance I made a mistake in this study". It's how often you'd raise a false alarm *if* $H_0$ were true.
+
+See also: [[Hypothesis Testing]], [[Bonferroni Correction]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 4]] (pp. 221–222).

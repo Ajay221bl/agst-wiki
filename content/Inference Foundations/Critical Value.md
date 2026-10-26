@@ -12,22 +12,22 @@ aliases:
 status: seedling
 ---
 
-A critical value is the cut-off on a null distribution that leaves exactly α beyond it, or α/2 in each [[Tails of a Distribution|tail]] for a two-sided test. It sets both the line for rejecting in a test and the width of a confidence interval.
+A critical value is the line you draw in advance on the "nothing is going on" curve: if your test statistic lands beyond it, you reject. The same number also sets how wide a confidence interval is.
 
-A test has to draw a line somewhere: past this point, the data are too surprising to keep believing $H_0$. The critical value is that line. Before collecting data, you choose α, the share of [[Type I and Type II Errors|false alarms]] you're willing to accept ([[Significance Level]]). Then you find the point on the null distribution with α beyond it. That point is the critical value, and the region beyond it is the **rejection region**. For a two-sided test, α is split, with α/2 in each tail ([[One-Tailed vs Two-Tailed Tests]]). Surprise in either direction counts, and the total false-alarm rate must still be α.
+Imagine a high jump bar. The bar is set before anyone jumps. Then each jumper either clears it or doesn't. Nobody gets to move the bar after seeing how high they jumped.
 
-A critical value is a quantile ([[Percentiles and Quantiles]]). For a two-sided test at α = 0.05 on the normal curve, it is the 0.975 quantile, $z^* = 1.96$. For a one-sided test it is the 0.95 quantile, 1.645.
+A test needs a bar too. First you choose α, the share of false alarms you'll accept ([[Significance Level]], [[Type I and Type II Errors|false alarms]]). Then you go to the null distribution, the curve of results chance alone would give, and find the point with exactly α of the curve beyond it ([[Null Distribution]]). That point is the critical value. Everything beyond it is the **rejection region**. For a two-sided test you split α, with α/2 beyond the line in each [[Tails of a Distribution|tail]] ([[One-Tailed vs Two-Tailed Tests]]).
 
-The [[Hypothesis Testing|decision rule]] is: reject $H_0$ if the [[Test Statistic|test statistic]] lands beyond the critical value. This is the same as $p \le \alpha$, because landing beyond the cut-off means the tail area beyond your [[Parameter vs Statistic|statistic]] is at most α.
+In other words, a critical value is just a quantile ([[Percentiles and Quantiles]]). On the normal curve, the point with half of 5% beyond it is the 0.975 quantile, $z^* = 1.96$. For a one-sided test at 5%, it's the 0.95 quantile, 1.645.
 
-The same number builds intervals. A 95% confidence interval is [[Point Estimate|estimate]] ± critical value × [[Standard Error|standard error]] ([[Confidence Interval]]). It is the same number because the interval holds every $\mu_0$ that a two-sided test at α = 0.05 would *not* reject.
-
-Critical values depend on the curve. The t-distribution has fatter tails than the normal, so $t^*$ is bigger, and fewer degrees of freedom (df) make it bigger still ([[t-Distribution]]).
+Then the rule is simple: if the [[Test Statistic|test statistic]] lands beyond the bar, reject $H_0$ ([[Hypothesis Testing|decision rule]]). That's the same as checking p ≤ α. Landing beyond the bar means the area past your result is at most α. Two ways of saying one thing.
 
 ![[One vs two tailed rejection regions.png|700]]
 The red regions hold α. Splitting α over two tails pushes each cut-off further out (±1.96 instead of 1.645).
 
-Before software, tables of critical values were how tests were done. Software hides them now, but they're worth understanding. They are still the easiest way to see why higher confidence or smaller samples make intervals wider ([[Why a bigger sample gives a narrower confidence interval]]).
+Here's a nice surprise: the same number builds confidence intervals. A 95% confidence interval is [[Point Estimate|estimate]] ± critical value × [[Standard Error|standard error]] ([[Confidence Interval]]). Why the same number? Because the interval is exactly the set of values a two-sided test at 0.05 would *not* reject. The bar and the net are made from the same measurement.
+
+The bar's height depends on the curve. The t-distribution has fatter tails than the normal, so its bar is higher, and with fewer degrees of freedom, fatter still ([[t-Distribution]]).
 
 For example:
 
@@ -37,10 +37,12 @@ For example:
 | $t^*$, df 14 (croaker) | 1.761 | 2.145 | |
 | $t^*$, df 11 (wetsuits) | | 2.201 | |
 
-For ANOVA, the 5% critical value of F with df 2 and 592 is about 3.01. In the FAMuSS data, F = 3.23 is beyond it, which matches p = 0.040 ([[One-Way ANOVA]]).
+For ANOVA, the 5% critical value of F with 2 and 592 degrees of freedom is about 3.01. In the FAMuSS data, F = 3.23 cleared it, which matches p = 0.040 ([[One-Way ANOVA]]).
 
-Notice what the critical value doesn't depend on: the data. It depends only on α, the tails and the degrees of freedom, all fixed before looking. That's the point. You draw the line first, then see where the data land, so the data can't move the line. And 1.96 isn't always the cut-off. It's only for a two-sided 5% test on the normal curve.
+Notice what the bar doesn't depend on: your data. Only on α, how many tails, and the degrees of freedom, all fixed before you look. That's the whole point. Software hides critical values now, but they're still the easiest way to see why higher confidence or smaller samples make intervals wider ([[Why a bigger sample gives a narrower confidence interval]]).
 
-See also: [[Null Distribution]].
+Try it yourself. Is 1.96 always the cut-off? No. It's only for a two-sided 5% test on the normal curve. Change α, switch to one tail, or use the t-distribution, and the bar moves.
+
+See also: [[Parameter vs Statistic|statistic]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 4]].

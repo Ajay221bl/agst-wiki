@@ -8,17 +8,22 @@ aliases:
 status: seedling
 ---
 
-Degrees of freedom (df) count how many values are free to vary once the quantities you estimated are fixed. In practice, they are the [[Sample Size|sample size]] minus the number of quantities estimated from the data.
+Degrees of freedom (df) count how many of your numbers are still free to wander once you've used the data to pin some things down. Roughly: the sample size minus the number of things you estimated from it.
 
-The name sounds abstract, but the idea is simple once you play with it. Suppose three numbers must average 10. You can pick the first two freely, say 8 and 15, but then the third is forced to be 7. Once the mean is fixed, only $n - 1 = 2$ values are free. You spent one degree of freedom when you fixed the mean.
+Let's play a game. I tell you: "Pick three numbers, any you like, but they must average 10." Go ahead. Pick the first: say 8. Pick the second: say 15. Now pick the third. Can you? No! It's forced. The three must add to 30, so the third has to be 7. You had three numbers but only two choices. Fixing the average used up one freedom.
 
-The same thing happens to deviations. Deviations from $\bar{x}$ must add up to zero, so once $n - 1$ of them are known, the last one is forced ([[Deviations from the Mean]]). So the [[Sums of Squares and Mean Squares|sum of squares]] holds only $n - 1$ independent pieces of information, which is why the sample variance divides by $n - 1$ ([[Variance]], [[Why we divide by n minus 1]]).
+That's all degrees of freedom are. Each time you calculate something from the data and then hold it fixed, you lose one free choice.
 
-That gives the general rule: each [[Parameter vs Statistic|parameter]] you estimate from the data costs one degree of freedom. Think of your data as a budget of information. Every quantity you estimate spends some of it, and the degrees of freedom are what's left over for judging the noise. The textbook definition, "the number of sample values that can vary after certain restrictions have been imposed", is vague. In practice, df depends on the **sample size and the number of parameters estimated**.
+Why does this matter? Look at deviations from the mean, $x - \bar{x}$. They always add up to zero ([[Deviations from the Mean]]). So once you know all but one of them, the last one is forced, just like the third number in the game. That means the [[Sums of Squares and Mean Squares|sum of squared deviations]] only contains $n - 1$ genuinely independent pieces of information. And that's exactly why the sample variance divides by $n - 1$ instead of $n$ ([[Variance]], [[Why we divide by n minus 1]]).
 
-Why care? Because the leftover budget tells you how much to trust the [[Point Estimate|estimate]] of spread, and so they set the shape of the t and F distributions. Fewer df means heavier [[Tails of a Distribution|tails]] and larger critical values ([[t-Distribution]], [[F-Distribution]], [[Critical Value]]).
+So here's the general rule: every [[Parameter vs Statistic|parameter]] you estimate from the data costs one degree of freedom. Think of your data as a budget of information. Estimating things spends some of it, and what's left is what you have for judging how noisy things are. The textbook definition, "the number of sample values that can vary after certain restrictions have been imposed", says the same thing in a vaguer way. In practice, df depends on the **sample size and the number of parameters estimated**.
 
-Applying the rule to each test:
+And the leftover budget matters, because it decides how much you can trust your [[Point Estimate|estimate]] of the noise. Less budget, shakier estimate, so the t and F curves get fatter [[Tails of a Distribution|tails]] and the [[Critical Value|cut-offs]] move further out ([[t-Distribution]], [[F-Distribution]]).
+
+![[t-distribution vs normal.png|700]]
+With few degrees of freedom the t curve is lower in the middle and fatter in the tails, so cut-offs sit further out. By df = 30 it is almost the normal curve.
+
+Now you can work out every df in the course by counting what was estimated. You don't have to memorize this table; you can rebuild it:
 
 | Setting | df | Why |
 |---|---|---|
@@ -30,10 +35,7 @@ Applying the rule to each test:
 | One-way ANOVA within (denominator) | $N - k$ | $N$ values, minus $k$ group means |
 | ANOVA total | $N - 1$ | $N$ values, minus the grand mean |
 
-The df in R's output is also the best quick check in any output. It tells you how many observations R actually used ([[Why use degrees of freedom as a sanity check]]).
-
-![[t-distribution vs normal.png|700]]
-With few degrees of freedom the t curve is lower in the middle and fatter in the tails, so cut-offs sit further out. By df = 30 it is almost the normal curve.
+And here's a practical trick: df is the best quick check on any R output, because it tells you how many observations R actually used ([[Why use degrees of freedom as a sanity check]]).
 
 For example:
 - A COVID survey had 1,000 rows, but `na.omit` left 939, so **df = 938** ([[Missing Data]]).
@@ -41,8 +43,8 @@ For example:
 - ANOVA df of 2 and 12 means $k = 3$ groups and $N = 15$ observations. A soy study with $N = 80$ and $k = 4$ gives 3 and 76 ([[ANOVA Table]]).
 - A [[Ratios and Fractions|numerator]] df of 1 with 4 treatments means R read the treatment codes as numbers ([[Factors and Levels]]).
 
-So degrees of freedom aren't just n. They're n minus what you spent estimating things. And a decimal df isn't an error: Welch's df is often fractional, which is normal. Once you see them as a budget, the formulas in the table stop being things to memorize. You can work each one out by counting what was estimated.
+Try it yourself. A one-way ANOVA compares 4 groups with 2 animals in each. What are the two df? Between groups: 4 group means, minus the [[Grand Mean|grand mean]], so 3. Within groups: 8 animals minus 4 group means, so 4. If R shows anything else, something went wrong with the data. (And a decimal df isn't an error: Welch's df is often fractional.)
 
-See also: [[Grand Mean]].
+See also: [[Sample Size|sample size]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 5]].

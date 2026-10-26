@@ -13,32 +13,36 @@ aliases:
 status: seedling
 ---
 
-A Type I error is rejecting a [[Null and Alternative Hypotheses|null hypothesis]] that is actually true: a false positive. A Type II error is failing to reject a null that is actually false: a false negative.
+A Type I error is a false alarm: you conclude there's an effect when there really isn't. A Type II error is a miss: there really is an effect and you don't catch it.
 
-Any decision made under uncertainty can go wrong in exactly two ways: you can see something that isn't there, or miss something that is. A test makes a decision without knowing the truth. The truth ($H_0$ true or false) and the decision (reject or not) give four combinations, and two of them are mistakes ([[Hypothesis Testing]]):
+Think of a doctor looking at an X-ray for a broken bone. There are four ways it can go. The bone is broken and the doctor sees it: good. The bone is fine and the doctor says so: good. The bone is fine but the doctor says "broken": a false alarm. The bone is broken but the doctor says "fine": a miss. Two right answers, two kinds of wrong.
+
+A test is in the same spot. It has to decide without ever seeing the truth. The truth is either "$H_0$ is true" or "$H_0$ is false", and the decision is either "reject" or "don't". Lay them out and you get four boxes, two of them mistakes ([[Hypothesis Testing]], [[Null and Alternative Hypotheses|null hypothesis]]):
 
 | | $H_0$ actually true | $H_0$ actually false |
 |---|---|---|
 | **Reject $H_0$** | **Type I error**, probability **α** | correct, probability = **power** = 1 − β |
 | **[[Why we never accept the null hypothesis\|Fail to reject]]** | correct, probability 1 − α | **Type II error**, probability **β** |
 
-A Type I error is finding a significant result that isn't really there. Its probability is α because, if $H_0$ is true, results land in the rejection region exactly α of the time ([[Significance Level]]). A Type II error is missing a real effect, often because the study had too little power, for example a small $n$ ([[Statistical Power]]).
+Why is the false-alarm chance exactly α? Because if $H_0$ is true, results land in the rejection region α of the time, by construction; that's how we set the line ([[Significance Level]]). The chance of a miss is called β, and it's big when the study is too small or the effect is subtle. Its flip side, 1 − β, is called power: the chance of catching an effect that's really there ([[Statistical Power]]).
 
-It is the same table as for a medical test: a false positive is a Type I error and a false negative is a Type II error ([[Sensitivity and Specificity]]). The two errors trade off. Lowering α makes Type I errors rarer and Type II errors more common, unless $n$ increases.
+It's the same table as for a medical test: a false positive is a Type I error, and a false negative is a Type II error ([[Sensitivity and Specificity]]).
 
 ![[Type I and II errors and power.png|700]]
 Blue is the world where H₀ is true, orange the world with a real effect. Red (α) is a false alarm, gray (β) a missed effect, green is power. Moving the dashed [[Critical Value|cut-off]] right shrinks red but grows gray.
 
-Here's the uncomfortable part. You never know whether you made an error; you might have drawn a very unusual sample. What you do know is **which** error you *could* have made: after rejecting, a Type I error; after failing to reject, a Type II error. Weighing their costs is how α gets chosen.
+Look at that picture. The cut-off line slides left and right. Push it right, and the red area, false alarms, shrinks. But the grey area, misses, grows. You can't shrink both by sliding the line. The only way to shrink both at once is to make the two humps overlap less, and the usual way to do that is more data.
+
+Here's an uncomfortable fact. In a real study you never know whether you made an error. But you do know *which* error you could have made. If you rejected $H_0$, the only possible mistake is a false alarm. If you didn't, the only possible mistake is a miss.
 
 For example, take a pacemaker battery, with $H_0: \mu \le 300$ days and $H_A: \mu > 300$.
 - **Type I error:** telling patients the battery lasts more than 300 days when it doesn't. They book their check-up for day 500, and the battery may fail before then.
 - **Type II error:** failing to find evidence that it lasts beyond 300 days when it does. Patients come in at day 295, which is safe.
 
-The Type I error is worse, so use a smaller α.
+Here the false alarm could kill someone and the miss costs a little inconvenience, so you'd use a smaller α.
 
-Neither error is worse in general, only worse for a given decision. That's what makes choosing α a judgment, not a formula. And α isn't the chance that you made a Type I error in this particular study. It is the error rate *if $H_0$ is true*, and for any one study you don't know which world you are in.
+Try it yourself. Which error is worse, in general? Neither. It depends entirely on what each one costs in your situation. That's why choosing α is a judgment, not a formula.
 
-See also: [[Family-Wise Type I Error]].
+See also: [[Family-Wise Type I Error]], [[Why we never accept the null hypothesis|fail to reject]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 4]] (pp. 220–222).

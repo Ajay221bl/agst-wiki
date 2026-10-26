@@ -11,11 +11,15 @@ aliases:
 status: seedling
 ---
 
-An estimator is unbiased if, averaged over all possible samples, it hits the population value exactly. In other words, its sampling distribution is centred on the parameter.
+An estimator is unbiased if, averaged over every sample you could have drawn, it lands exactly on the true value. Any one guess can miss, but it doesn't miss in a favourite direction.
 
-A statistic is used to guess a parameter, such as $\bar{x}$ for $\mu$ ([[Parameter vs Statistic]]). Any one guess misses a little, because each sample is different ([[Sampling Distribution]]). So you can't judge an estimator by one guess. You judge the method, by how it behaves over all the guesses it could make.
+Back to darts. You throw a dart at a bullseye. It misses a little. Is your aim bad? You can't tell from one dart. Throw a hundred. If they scatter around the bullseye, centred on it, your aim is fine; you just wobble. If they all cluster to the upper left, your aim is off. That's bias.
 
-Imagine throwing darts. **Unbiased** means the darts are centred on the bullseye on average, even if any single dart misses. **Biased** means they are centred somewhere else. More formally, the sampling distribution of the statistic is centred on the parameter.
+A statistic, like $\bar{x}$, is a dart thrown at a parameter, like $\mu$ ([[Parameter vs Statistic]]). Each sample is one throw. Any one throw misses a bit, because each sample is different ([[Sampling Distribution]]). So you can't judge the method by one throw. You judge it by where the throws land *on average*. If that's right on the target, the estimator is unbiased. In more formal words: its sampling distribution is centred on the parameter.
+
+Let's check one completely. Take the tiny population 2, 4, 6, with $\mu = 4$. List all nine possible samples of size 2, taken [[Sampling With and Without Replacement|with replacement]], and their means. They average exactly 4. That's unbiased, and you can see it with your own eyes.
+
+Which common statistics are unbiased?
 
 | Statistic | Estimates | Unbiased? |
 |---|---|---|
@@ -26,17 +30,15 @@ Imagine throwing darts. **Unbiased** means the darts are centred on the bullseye
 | sample median | population median | technically biased |
 | sample range | population range | biased low, because a sample rarely catches the most extreme values |
 
-Unbiased is not the same as precise. Darts can be centred on the bullseye and still widely scattered; the scatter is measured by the [[Standard Error|standard error]].
+The variance is the interesting one. Why divide by $n - 1$ instead of $n$? Because deviations are measured from the *sample's* mean, which sits closer to its own data than the true mean does. So the deviations come out a little too small, and dividing by $n$ would underestimate $\sigma^2$ every time. Dividing by $n - 1$ exactly corrects it ([[Why we divide by n minus 1]], [[Variance]]).
 
 ![[Dividing by n minus 1.png|700]]
 Averaged over many samples, the divide-by-n [[Variance|variance]] (red) comes out too small, especially for small n. Dividing by n − 1 (green) lands on the true value.
 
-Unbiased estimators are convenient, especially in theory, which is why the mean and $s^2$ are the defaults. Dividing by $n$ instead of $n - 1$ would always tend to underestimate $\sigma^2$.
+The trap: unbiased doesn't mean precise. Darts can be centred on the bullseye and still scattered all over the board; that scatter is measured by the [[Standard Error|standard error]]. And unbiased doesn't mean your one result is right. It's a property of the method, averaged over all samples, not a promise about yours.
 
-For example, take the population 2, 4, 6, with $\mu = 4$. The nine possible means of samples of size 2, taken [[Sampling With and Without Replacement|with replacement]], average exactly 4. That is what unbiased means.
+Try it yourself. Is the sample range unbiased for the population range? No. A sample rarely catches the very biggest and very smallest values in the population, so its range comes out too small on average. That's a bias with a direction.
 
-Unbiased doesn't mean accurate every time. It's a property of the method, not a guarantee about your result. Any one sample can miss badly; unbiased is about the average over all samples.
-
-See also: [[Point Estimate]], [[Why the median beats the mean for skewed data]].
+See also: [[Point Estimate]], [[Why the median beats the mean for skewed data]], [[Squares and Square Roots|square root]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 4]].

@@ -9,13 +9,19 @@ aliases:
 status: seedling
 ---
 
-The standard error (SE) is the standard deviation of a sampling distribution: how much a [[Parameter vs Statistic|statistic]] would bounce around from sample to sample.
+The standard error (SE) tells you how much an estimate, like a sample mean, would bounce around if you repeated the study with new samples. Small standard error, steady estimate.
 
-The standard deviation (SD) describes how much individual values vary ([[Standard Deviation]]). A statistic also varies, from sample to sample ([[Sampling Distribution]]). The SD of that sampling distribution is the standard error.
+Think about one person's height versus the average height of a group of 9 people. Pick people one at a time and the heights jump all over the place: a tall one, a short one. Now pick groups of 9 and average each group. Those averages jump around much less. Why? Because inside each group, the tall ones and the short ones partly cancel. A group would need to be *all* tall to give a very high average, and that's rare.
 
-Here's the question that matters: how much does the mean bounce? Averages vary less than individual values, because in a mean, high and low values partly cancel. How much less? The [[Variance|variance]] of a mean of $n$ independent values is $\sigma^2/n$. This is because the variance of a sum of independent values is the sum of their variances, $n\sigma^2$, and dividing the sum by $n$ divides its variance by $n^2$.
+So there are two different "spreads" here, and it's worth keeping them apart:
+- How much **individual values** vary. That's the standard deviation (SD) ([[Standard Deviation]]).
+- How much **averages** vary from sample to sample. That's the standard error. Officially, it's the standard deviation of the sampling distribution ([[Sampling Distribution]]).
 
-Taking the square root gets back to an SD: $SE = \sigma/\sqrt{n}$ ([[Squares and Square Roots]]). So to halve the standard error you need four times the data ([[Why a bigger sample gives a narrower confidence interval]]). In practice $\sigma$ is unknown, so we plug in $s$ and use $s/\sqrt{n}$. That extra uncertainty is why the t-distribution replaces the normal ([[Why t instead of z when sigma is unknown]]).
+How much smaller is the second one? Let's figure it out. The [[Variance|variance]] of a sum of $n$ independent values is $n$ times the variance of one, $n\sigma^2$, because independent variances add. An average is that sum divided by $n$, and dividing a quantity by $n$ divides its variance by $n^2$. So the variance of an average is $n\sigma^2/n^2 = \sigma^2/n$. Take the square root to get back to an SD ([[Squares and Square Roots]]):
+$$SE = \frac{\sigma}{\sqrt{n}}$$
+Notice it's $\sqrt{n}$, not $n$. That has a sobering consequence: to cut the standard error in half, you need four times as much data ([[Why a bigger sample gives a narrower confidence interval]]). In practice we don't know $\sigma$, so we use the sample's $s$ instead, $s/\sqrt{n}$. That extra guesswork is why the t-distribution replaces the normal ([[Why t instead of z when sigma is unknown]]).
+
+The same idea gives a standard error for other statistics:
 
 | Statistic | Standard error |
 |---|---|
@@ -28,16 +34,18 @@ Taking the square root gets back to an SD: $SE = \sigma/\sqrt{n}$ ([[Squares and
 ![[Standard error vs sample size.png|700]]
 The SE drops fast at first and then slowly: going from 4 to 16 observations halves it, and halving it again needs 64.
 
-So the standard error is the yardstick of uncertainty. It's the answer to "if I did this again, how different might my estimate be?" The **margin of error** of a confidence interval is a [[Critical Value|critical value]] times the standard error ([[Confidence Interval]]), and test statistics divide by it ([[Test Statistic]]).
-
 For example, with $s = 12$:
 - $n = 9$ gives SE = 12/3 = 4
 - $n = 36$ gives SE = 12/6 = 2
 
-To halve the standard error you need four times the [[Sample Size|sample size]].
+Four times the [[Sample Size|sample size]], half the standard error.
 
-The common mistake is mixing up the two spreads. Don't report the standard error just because it looks smaller. Report what answers the question: the SD to describe data, and the standard error (or a confidence interval) to describe the [[Random Error and Precision|precision]] of an [[Point Estimate|estimate]]. The standard error doesn't measure the data's spread; it measures how precise the statistic is.
+Why care? Because the standard error is the ruler for everything in inference. A confidence interval is your estimate plus or minus a few standard errors; the "plus or minus" part is called the **margin of error**, a [[Critical Value|critical value]] times the standard error ([[Confidence Interval]]). A test statistic counts how many standard errors your result is from the boring prediction ([[Test Statistic]]).
 
-See also: [[Pooled Variance]].
+The trap: people sometimes report the standard error instead of the SD because it's smaller and looks tidier. But they answer different questions. Want to describe how varied the data are? Use the SD. Want to say how precisely you've pinned down the mean? Use the standard error, or better, a confidence interval ([[Random Error and Precision|precision]], [[Point Estimate|estimate]]).
+
+Try it yourself. A sample of 4 has a standard error of 6. How big a sample gives a standard error of 3? Halving needs four times the data, so 16.
+
+See also: [[Pooled Variance]], [[Parameter vs Statistic|statistic]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 4]] (§4.1).

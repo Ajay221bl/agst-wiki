@@ -11,20 +11,22 @@ aliases:
 status: seedling
 ---
 
-The normal distribution is the symmetric, bell-shaped curve. It is written $N(\mu, \sigma)$: it is centred at its mean, and its standard deviation sets its spread.
+The normal distribution is the famous bell curve: symmetric, one hump in the middle, thinning out evenly on both sides. Its centre is the mean and its width is set by the standard deviation.
 
-Why does this one curve show up everywhere? Start with what you'd see. Many measurements pile up around a [[Median|middle value]] and thin out evenly on both sides: heights, weights, [[Random Error and Precision|measurement errors]]. A histogram of them looks like a hill ([[Histogram]]). Smooth the hill into a curve with total area 1, and the area over any interval is the probability of landing there ([[Probability Distribution]]).
+Measure the heights of a thousand adults and make a [[Histogram|histogram]]. You'll see a hill: lots of people near the middle, fewer and fewer as you go taller or shorter, about the same on both sides. Do the same with errors when people measure the same thing, or with weights of eggs, and you get the same kind of hill again ([[Random Error and Precision|measurement errors]]). Why does nature keep drawing the same shape?
 
-The ideal version of that hill is the normal distribution. It is [[Types of Data|continuous]], has one peak, is symmetric and bell-shaped ([[Shape of a Distribution]]), and its [[Tails of a Distribution|tails]] drop off quickly. And it shows up so often for a deep reason: a value made of many small independent effects added together tends towards this shape. Your height is the sum of many genes and many meals. The ups and downs cancel, and most people end up near the middle. That is also why sample means are approximately normal ([[Central Limit Theorem]]).
+Here's the reason, and it's a lovely one. Your height isn't decided by one thing. It's the sum of many small nudges: lots of genes, lots of meals, a bit of luck. Some nudge you up, some down. For you to be extremely tall, nearly *all* of them would have to push the same way, which is rare. Usually they partly cancel, so most people land near the middle. Whenever something is the sum of many small independent bits, you get this bell. That's also exactly why averages of samples come out bell-shaped ([[Central Limit Theorem]]).
 
-Two numbers pin it down completely: the centre $\mu$ ([[Mean]]) and the spread $\sigma$ ([[Standard Deviation]]). If you know those two, you know every area under the curve. So one standard version is enough. Converting to z-scores moves any normal curve onto the **standard normal**, with $\mu = 0$ and $\sigma = 1$, so one table, or `pnorm()` in R ([[pnorm(), qnorm(), pt() and qt()]]), serves all of them ([[Z-Score]]). Its best-known areas are the [[Empirical Rule]].
+Smooth that hill into a curve with total area 1, and the area over any stretch is the probability of landing there ([[Probability Distribution]]). The idealized version is the normal distribution: [[Types of Data|continuous]], one peak, symmetric, and with [[Tails of a Distribution|tails]] that drop off fast ([[Shape of a Distribution]]).
 
 ![[Normal curves.png|700]]
 The mean μ moves the whole bell left or right; σ decides how wide and flat it is. The total area under every curve is 1.
 
-Many tests assume the data, or the [[Residuals|residuals]], come from roughly normal populations ([[Normality Checks]]). And even when the data are not normal, **sample means** are approximately normal for large $n$. That is why the normal curve sits under [[Confidence Interval|confidence intervals]] and tests.
+Here's the remarkable part: just two numbers pin it down completely. Where it's centred, $\mu$ ([[Mean]]), and how wide it is, $\sigma$ ([[Standard Deviation]]). We write $N(\mu, \sigma)$. Know those two and you know every area under the curve. That means all normal curves are really the same curve, just slid and stretched. Measure distances in standard deviations, which is what a z-score does, and they all become the **standard normal**, with $\mu = 0$ and $\sigma = 1$ ([[Z-Score]]). So one table, or `pnorm()` in R, works for all of them ([[pnorm(), qnorm(), pt() and qt()]]). The most famous areas are the [[Empirical Rule|empirical rule]].
 
-For example, these [[Critical Value|critical values]] are used throughout ([[References|Vu and Harrington 2020, Ch. 4]]):
+Many tests assume the data, or the [[Residuals|residuals]], come from roughly normal populations ([[Normality Checks]]). And even when the data aren't normal, *sample means* are approximately normal for large $n$. That's why this curve sits underneath [[Confidence Interval|confidence intervals]] and tests.
+
+For example, these [[Critical Value|critical values]] are used everywhere ([[References|Vu and Harrington 2020, Ch. 4]]):
 
 | Confidence | $z^*$ |
 |---|---|
@@ -34,8 +36,10 @@ For example, these [[Critical Value|critical values]] are used throughout ([[Ref
 
 In R, `qnorm(0.975)` gives 1.96, and `pnorm(-1.96)` gives about 0.025.
 
-Keep it in proportion. Real data are never exactly normal, only approximately, and not every bell shape is normal: the t-distribution is bell-shaped with fatter tails ([[t-Distribution]]). The normal curve is a model, a very good one. Its power isn't that the world is normal. It's that averages are.
+Now a word of honesty. Real data are never *exactly* normal; it's a model, a very good one. And not every bell is normal: the t-distribution is a bell with fatter tails ([[t-Distribution]]). The deep reason the normal curve matters isn't that the world is normal. It's that averages are.
 
-See also: [[Random Variable]].
+Try it yourself. Two normal curves have the same mean but one has twice the standard deviation. What does it look like? Same centre, but wider and flatter, because the total area must still be 1.
+
+See also: [[Random Variable]], [[Median|middle value]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 3]] (§3.3, p. 152).

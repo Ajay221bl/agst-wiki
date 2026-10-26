@@ -8,29 +8,33 @@ aliases:
 status: seedling
 ---
 
-For roughly normal data, about 68% of values fall within 1 standard deviation (SD) of the mean, 95% within 2 SD, and 99.7% within 3 SD.
+For data shaped like a bell, about 68% of values sit within 1 standard deviation (SD) of the mean, about 95% within 2, and about 99.7% within 3.
 
-Here's why such a simple rule can work for heights, test scores and measurement errors alike. For a normal curve, the share of values within a given distance of the mean depends only on that distance measured in SDs. The curve is fixed by $\mu$ and $\sigma$ alone, so measuring in SDs makes every normal curve look the same ([[Normal Distribution]]). So the SD works like a ruler for bell-shaped data ([[Standard Deviation]]):
+Here's a party trick. Tell me only the average and the standard deviation of something bell-shaped, dog heights, say, and I can tell you the range where most dogs fall, without seeing a single dog. How?
+
+Because every bell curve is the same curve, just slid over and stretched ([[Normal Distribution]]). So if you measure distances in SDs instead of millimetres, every bell looks identical, and the share of values within "1 SD of the middle" is always the same. The SD becomes a ruler that works for any bell ([[Standard Deviation]]):
 - **68%** fall within $\bar{x} \pm 1s$
 - **95%** fall within $\bar{x} \pm 2s$ (more precisely 1.96)
 - **99.7%** fall within $\bar{x} \pm 3s$
 
-As areas: the area under the standard normal curve between $z = -1$ and $1$ is about 0.68, and between $-2$ and $2$ it is about 0.95 ([[Probability Distribution]]).
-
-This is where our sense of "unusual" comes from, and it's worth knowing that it's a convention, not a law of nature. Only about 5% of values lie beyond ±2 SD, so a value there is called unusual ([[Z-Score]], [[Outliers]]), and 1.96 is the 95% critical value ([[Critical Value]]). The rule only holds for roughly bell-shaped data. For skewed data the [[Tails of a Distribution|tails]] hold different shares, so the percentages are wrong.
+In area language: under the standard normal curve, the area between $z = -1$ and $1$ is about 0.68, and between $-2$ and $2$ about 0.95 ([[Probability Distribution]]).
 
 ![[Empirical rule - dog heights.png|700]]
 With the dog heights example (mean 394 mm, SD 147), each band adds one SD on each side. Note that −3 SD is a negative height: the normal model is only an approximation.
 
-The rule gives a quick sense of usual and unusual without software. It is used to flag outliers beyond ±2 SD (±3 for extreme ones), to define unusual z-scores, and it is the basis of confidence intervals: 95% of sample means fall within about 2 [[Standard Error|standard errors]] of $\mu$ ([[Confidence Interval]]).
-
 For example, dog heights have mean 394 mm and SD 147:
 - 68%: 394 ± 147, so 247 to 541
 - 95%: 394 ± 294, so 100 to 688
-- 99.7%: 394 ± 441, so −47 to 835 (heights below 0 are impossible, because the normal curve is only an approximation)
+- 99.7%: 394 ± 441, so −47 to 835
+
+Wait, −47 mm? A dog with negative height? That's the curve telling you something honest: it's only a model. Real heights can't go below zero, so the bell is a good approximation in the middle and a poor one far out.
 
 Chick-fil-A fillets: 68% weigh between 144 and 231 g, and 95% between 100.4 and 274.8 g.
 
-The catch is the word "normal". The rule doesn't work for any data, only for roughly normal ([[Shape of a Distribution|symmetric]], single-peaked) data. For skewed data, use the interquartile range (IQR) rule instead. A ruler is only useful if you know what it was built to measure.
+This rule is where our everyday sense of "unusual" comes from. Only about 5% of values lie beyond 2 SDs, so a value out there gets called unusual ([[Z-Score]], [[Outliers]]), and 1.96 becomes the 95% [[Critical Value|critical value]]. It's a convention, not a law of nature. And it's the root of confidence intervals: about 95% of sample means land within 2 [[Standard Error|standard errors]] of $\mu$ ([[Confidence Interval]]).
+
+But notice the catch, right there in the first sentence: *bell-shaped*. For skewed data the [[Tails of a Distribution|tails]] hold different shares, and the percentages are just wrong. Use the interquartile range (IQR) rule instead ([[Shape of a Distribution|symmetric]]).
+
+Try it yourself. Using the dog heights, roughly what share of dogs are taller than 688 mm? 688 is 2 SDs above the mean. About 95% are within 2 SDs, so about 5% are outside, split between the two ends: about 2 to 3% above 688.
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 3]] (§3.3).

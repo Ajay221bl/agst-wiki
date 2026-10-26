@@ -157,35 +157,35 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[Validity]]: Validity is how far a study's conclusion can be trusted
 
 ## Inference Foundations (29)
-- [[Central Limit Theorem]]: The central limit theorem (CLT) says that for large enough samples, sample means are approximately normally distributed
-- [[Confidence Interval]]: A confidence interval (CI) is a range of believable values for an unknown population parameter
-- [[Conservative Tests]]: A conservative test or adjustment rejects the null hypothesis less often than its stated α allows
-- [[Critical Value]]: A critical value is the cut-off on a null distribution that leaves exactly α beyond it, or α/2 in each tail for a two-sided test
-- [[Degrees of Freedom]]: Degrees of freedom (df) count how many values are free to vary once the quantities you estimated are fixed
-- [[Empirical Rule]]: For roughly normal data, about 68% of values fall within 1 standard deviation (SD) of the mean, 95% within 2 SD, and 99.7% within 3 SD
-- [[Hypothesis Testing]]: A hypothesis test assumes the null hypothesis is true and asks how surprising the data would be under that assumption
-- [[Normal Distribution]]: The normal distribution is the symmetric, bell-shaped curve
-- [[Null and Alternative Hypotheses]]: The null hypothesis ($H_0$) is the claim of no effect, or that nothing has changed, and it contains an equals sign
-- [[Null Distribution]]: The null distribution is the distribution a test statistic would have if the null hypothesis were true
-- [[One-Tailed vs Two-Tailed Tests]]: A one-tailed test looks for a difference in one stated direction
-- [[P-Value]]: The p-value is the probability of getting a test statistic as extreme as, or more extreme than, the one observed, assuming the null hypothesis is true
-- [[Point Estimate]]: A point estimate is a single number used as the best guess for an unknown parameter, such as the sample mean $\bar{x}$ as a guess for the population mean $\mu$
-- [[Random Error and Precision]]: Random error is the chance scatter of an estimate around its target, and precision is how small that scatter is
-- [[Robustness]]: A method is robust when it still gives nearly the right answer even though one of its assumptions is somewhat broken
-- [[Sample Size]]: The sample size $n$ is the number of independent units measured
-- [[Sampling Distribution]]: A sampling distribution is the distribution of a statistic, such as the sample mean $\bar{x}$, over all possible samples of the same size from the same population
-- [[Signal and Noise]]: Every test statistic is a ratio of signal to noise
-- [[Significance Level]]: The significance level α is the cutoff for "unusual" chosen before the study
-- [[Simulation]]: A simulation makes up data on a computer, many times over, from a model whose truth you choose
-- [[Standard Error]]: The standard error (SE) is the standard deviation of a sampling distribution: how much a statistic would bounce around from sample to sample
-- [[Statistical Power]]: Power is the probability that a test detects an effect that really exists
-- [[Statistical vs Practical Significance]]: Statistical significance says a result is probably not just chance
-- [[Test Assumptions]]: A test's assumptions are the conditions under which its null distribution, and so its p-value, are correct
-- [[Test Statistic]]: A test statistic turns the gap between what you observed and what the null hypothesis predicts into a number without units, scaled by how much that gap would vary by chance
-- [[Type I and Type II Errors]]: A Type I error is rejecting a null hypothesis that is actually true: a false positive
-- [[Unbiased Estimator]]: An estimator is unbiased if, averaged over all possible samples, it hits the population value exactly
-- [[Writing a Conclusion]]: A test's conclusion states the decision (reject or fail to reject the null hypothesis), what that means for the claim in plain words and in context, and the numbers behind it
-- [[Z-Score]]: A z-score says how many standard deviations a value sits above (+) or below (−) the mean
+- [[Central Limit Theorem]]: The central limit theorem (CLT) says something almost magical: if you take big enough samples, the averages of those samples pile up in a bell shape around the true mean, even when the individual values are lopsided or weird
+- [[Confidence Interval]]: A confidence interval (CI) is a range of believable values for something you can't measure directly, like a population average
+- [[Conservative Tests]]: A conservative test raises false alarms *less* often than its stated α promises, which sounds safe but means it misses more real effects
+- [[Critical Value]]: A critical value is the line you draw in advance on the "nothing is going on" curve: if your test statistic lands beyond it, you reject
+- [[Degrees of Freedom]]: Degrees of freedom (df) count how many of your numbers are still free to wander once you've used the data to pin some things down
+- [[Empirical Rule]]: For data shaped like a bell, about 68% of values sit within 1 standard deviation (SD) of the mean, about 95% within 2, and about 99.7% within 3
+- [[Hypothesis Testing]]: A hypothesis test is a careful way of asking "could this just be chance?"
+- [[Normal Distribution]]: The normal distribution is the famous bell curve: symmetric, one hump in the middle, thinning out evenly on both sides
+- [[Null and Alternative Hypotheses]]: The null hypothesis ($H_0$) is the boring story: no effect, no difference, nothing has changed
+- [[Null Distribution]]: The null distribution is the pile of results you'd get if you ran your study over and over in a world where nothing is going on
+- [[One-Tailed vs Two-Tailed Tests]]: A one-tailed test only looks for a difference in one direction you named in advance
+- [[P-Value]]: The p-value answers one question: if nothing were really going on, how often would chance alone give a result at least as extreme as yours?
+- [[Point Estimate]]: A point estimate is a single best guess for something you can't measure directly, like using your sample's average as your guess for the whole population's average
+- [[Random Error and Precision]]: Random error is the chance scatter of your estimate around the truth, and precision is how small that scatter is
+- [[Robustness]]: A method is robust if it still gives nearly the right answer when its assumptions are a bit off
+- [[Sample Size]]: The sample size, $n$, is how many independent things you measured
+- [[Sampling Distribution]]: A sampling distribution shows how a statistic, like the sample mean, would come out if you could take every possible sample of the same size and calculate it each time
+- [[Signal and Noise]]: Every test asks the same thing: is the signal louder than the noise?
+- [[Significance Level]]: The significance level, α, is how surprised you agree to be before you'll reject the boring story
+- [[Simulation]]: A simulation is a pretend world on a computer: you make up data, many times over, from a population where *you* set the truth, and watch how a statistic or a test behaves
+- [[Standard Error]]: The standard error (SE) tells you how much an estimate, like a sample mean, would bounce around if you repeated the study with new samples
+- [[Statistical Power]]: Power is the chance that your study will catch an effect that really exists
+- [[Statistical vs Practical Significance]]: Statistically significant means "probably not just chance"
+- [[Test Assumptions]]: A test's assumptions are the conditions under which its p-value can be trusted
+- [[Test Statistic]]: A test statistic measures how far your result is from what the boring story predicts, counted in units of "how much this would wobble by chance anyway"
+- [[Type I and Type II Errors]]: A Type I error is a false alarm: you conclude there's an effect when there really isn't
+- [[Unbiased Estimator]]: An estimator is unbiased if, averaged over every sample you could have drawn, it lands exactly on the true value
+- [[Writing a Conclusion]]: A conclusion says what you decided (reject or fail to reject the null hypothesis), what that means in plain words about the real thing you studied, and the numbers that back it up
+- [[Z-Score]]: A z-score tells you how many standard deviations a value is above (+) or below (−) the average
 
 ## t-Tests (13)
 - [[Cohen's d]]: Cohen's d is the difference between two means divided by a standard deviation (SD), so the effect is measured in SD units

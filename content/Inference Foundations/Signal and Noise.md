@@ -11,25 +11,29 @@ aliases:
 status: seedling
 ---
 
-Every test statistic is a [[Ratios and Fractions|ratio]] of signal to noise. The signal is the effect you see; the noise is how much that effect would wobble by chance. A big ratio means the signal stands out.
+Every test asks the same thing: is the signal louder than the noise? The signal is the effect you see. The noise is how much that effect would bounce around by chance. Divide one by the other, and that's the test statistic.
 
-This is the one idea that, once you see it, makes every test feel familiar. An observed difference has two possible sources: a real effect, or chance variation between samples. You can't judge the difference on its own. For example, the same 0.4 lb gap is huge if babies' weights barely vary, and trivial if they vary a lot.
+Imagine trying to hear a friend whisper across a room. In a quiet library, you'd hear every word. At a rock concert, the same whisper vanishes. The whisper didn't change; the background did. Whether you can hear it depends on the whisper *compared to* the noise.
 
-The **signal** is the effect in the data: a gap between a mean and $\mu_0$, a gap between two means, or how spread out several group means are. The **noise** is how much that signal would vary by chance. For a mean, it is the [[Standard Error|standard error]], $s/\sqrt{n}$. For several groups, it is the [[Variability|variability]] inside the groups ([[Between- and Within-Group Variability]]).
+Data work the same way. Say two groups of babies differ in average weight by 0.4 lb. Is that a real difference? You can't tell from 0.4 alone. If babies' weights barely vary, 0.4 lb stands out like a whisper in a library. If they vary a lot, 0.4 lb is lost in the din. A difference only means something compared to the background wobble.
 
-Dividing signal by noise gives a number with no units, so it can be compared with a single null distribution ([[Null Distribution]]):
+So let's give them names. The **signal** is the effect in the data: how far a mean is from $\mu_0$, how far apart two means are, or how spread out several group means are. The **noise** is how much that signal would wobble by chance alone. For a mean, the noise is the [[Standard Error|standard error]], $s/\sqrt{n}$. For several groups, it's how much values vary *inside* the groups ([[Between- and Within-Group Variability]], [[Variability]]).
+
+Divide signal by noise, and the units cancel, so the result can be compared with one standard curve of what chance produces ([[Null Distribution]]):
 - t-tests: $t = \dfrac{\text{difference}}{SE}$
 - ANOVA: $F = \dfrac{MSG}{MSE} = \dfrac{\text{between-group variance}}{\text{within-group variance}}$, where each mean square is a variance estimate.
-
-There are three ways to make the ratio bigger: a bigger real effect, less noisy measurements (pairing, careful lab work), or more data, since a bigger n shrinks the standard error. This matters for design because only the first is outside your control ([[Why use a paired test for paired data]], [[Statistical Power]]).
 
 ![[Between vs within variability.png|700]]
 The same gaps between means (signal) are obvious when the groups are tight (left) and lost when they are spread out (right, more noise).
 
-Whatever the test, the question is the same: is the signal louder than the noise? This one idea ties together t, paired t, [[Welch's t-Test|Welch's]] t and F. Once you know it, you can predict what any change to the design does to the test.
+Look at the two panels. The group means are in exactly the same places. On the left you'd say "obviously different". On the right you'd say "who knows?" Same signal, different noise.
 
-For example, with wetsuits the signal is 0.0775 m/s and the noise (the standard error of the differences) is 0.0063, so t = 12.32. Treat the same swimmers as two independent groups and the signal stays the same, but the noise is about ten times bigger, and t drops to 1.37 ([[Paired t-Test]]).
+Now you can see every way to make a test more sensitive. There are only three: a bigger real effect, less noisy measurements (careful lab work, or pairing each unit with itself), or more data, since a bigger $n$ shrinks the standard error ([[Why use a paired test for paired data]], [[Statistical Power]]). And notice: the first one is mostly out of your hands. The other two are design choices.
 
-One caution. A big t doesn't mean a big effect. It can come from a small signal with very little noise, for example with a huge n ([[Statistical vs Practical Significance]]).
+For example, with wetsuits the signal is 0.0775 m/s and the noise (the standard error of the differences) is 0.0063, so t = 12.32. Treat the same swimmers as two independent groups and the signal stays the same, but the noise is about ten times bigger, and t drops to 1.37 ([[Paired t-Test]]). Same data, different noise, completely different verdict.
 
-See also: [[Deviations from the Mean]], [[Variance]], [[Test Statistic]].
+The trap: a big t doesn't mean a big effect. A tiny signal with almost no noise also gives a big t, which is what happens with huge samples ([[Statistical vs Practical Significance]]).
+
+Try it yourself. You double the measurement error in your lab by using a cheaper scale. What happens to t, if the true effect stays the same? The noise grows, so t shrinks, and the test becomes less likely to notice the effect.
+
+See also: [[Deviations from the Mean]], [[Variance]], [[Test Statistic]], [[Ratios and Fractions|ratio]], [[Welch's t-Test|Welch's]] t.
