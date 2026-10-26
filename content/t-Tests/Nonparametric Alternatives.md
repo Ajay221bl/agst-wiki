@@ -15,11 +15,13 @@ aliases:
 status: seedling
 ---
 
-Nonparametric tests are rank-based versions of the t-tests and ANOVA that don't assume normality. They are used to confirm results when normality is doubtful.
+Nonparametric tests are back-up versions of the t-tests and ANOVA that work on ranks instead of raw values, so they don't need the data to be normal. Use them to check that a result holds up when normality is doubtful.
 
-Every method rests on assumptions, so a good analyst keeps a second method in reserve that rests on different ones. t-tests need roughly normal data or a large $n$. With small, skewed or outlier-heavy samples, that fails ([[Normality Checks]]). The fix is to replace the values with their ranks: the smallest is 1, the next is 2, and so on ([[Ranks]]). Ranks don't care how extreme an outlier is or how skewed the data are, so the test can't be thrown off by them ([[Robustness]]).
+Say you're comparing two groups of sheep, and one sheep has a wildly high value, way above everyone else. That one sheep drags its group's mean up and inflates the spread. Your t-test might come out "significant" mostly because of one animal. How would you know whether to trust it?
 
-The test then compares the ranks between groups. If one group's ranks are mostly high, its values tend to be larger. No normality is needed, because if $H_0$ is true every arrangement of the ranks is equally likely, so the null distribution can be counted exactly ([[Null Distribution]]).
+Ask the question a different way, a way that one wild sheep can't distort. Instead of "how big are the values?", ask "who's on top?" Replace every value by its rank: smallest is 1, next is 2, and so on ([[Ranks]]). Now that wild sheep is just "the biggest", one step above the next, no matter how far out it really was. Skew and [[Outliers|outliers]] lose their grip ([[Robustness]]).
+
+Then compare the ranks between groups. If one group's ranks are mostly high, its values tend to be bigger. And here's the beautiful part: no normality needed. If the groups really don't differ, every shuffle of the ranks is equally likely, so the null distribution can be counted exactly ([[Null Distribution]], [[Normality Checks]]).
 
 Each standard test has a rank-based partner:
 
@@ -29,9 +31,9 @@ Each standard test has a rank-based partner:
 | [[Two-Sample Independent t-Test\|two-sample t]] | Wilcoxon rank-sum / Mann–Whitney U | `wilcox.test(y ~ group)` |
 | one-way ANOVA | Kruskal–Wallis (+ Dunn [[Post Hoc Tests\|post hoc]]) | `kruskal.test(y ~ group)` |
 
-Nothing is free, of course. The price is some [[Statistical Power|power]] when the data really are normal. Also, the [[Null and Alternative Hypotheses|hypotheses]] are about typical values (medians, ranks) rather than means ([[Median]]). Bootstrapping is another option for small samples.
+Nothing is free, of course. When the data really are normal, rank tests have a bit less [[Statistical Power|power]]. And their [[Null and Alternative Hypotheses|hypotheses]] are about typical values and ranks, not means ([[Median]]). Bootstrapping is another option for small samples.
 
-When normality fails, for example with small samples from clearly non-normal populations, [[Likert Scale|Likert-type survey scores]] or heavy outliers, the usual p-values can mislead. A sensible rule is to **say so, and run a nonparametric test to confirm the results hold up**.
+So when do you reach for them? When normality is doubtful: small samples from clearly non-normal populations, [[Likert Scale|Likert-type survey scores]], heavy outliers. A sensible rule is to **say so, and run a nonparametric test to confirm the result holds up**.
 
 For example, the data 1, 2, 3, 4, 100 become the ranks 1, 2, 3, 4, 5. The 100 counts the same as any largest value would, so it can't dominate the test.
 
@@ -64,6 +66,8 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)          # chi-squared = 5.7458,
    - Stem cells: [[Welch's t-Test|Welch's test]] (p = .002) and the rank-sum test (p = .003) agree.
    - FAMuSS: the ANOVA (p = .040) is **not** confirmed by Kruskal–Wallis (p = .057). This is exactly the case the rule is for: say normality was doubtful, and treat the ANOVA result as fragile ([[One-Way ANOVA]]).
 
-The real value here is the comparison. When two methods built on different assumptions agree, you can trust the answer more than either one alone. Nonparametric tests aren't free of assumptions. They still assume independence, and some assume similar shapes across groups. And they aren't always the safe choice: they can have less power when the usual assumptions hold.
+That comparison is the real value. When two methods built on different assumptions agree, you can trust the answer more than either one alone. When they disagree, you've learned the result depends on an assumption, and that's worth saying.
 
-See also: [[Outliers|outliers]], [[ANOVA Assumptions]], [[Why check assumptions before trusting a test]], [[wilcox.test() and kruskal.test()]].
+Try it yourself. Are rank tests assumption-free? No. They still need independent observations, and comparing locations cleanly needs groups with similar shapes. They just don't need normality.
+
+See also: [[ANOVA Assumptions]], [[Why check assumptions before trusting a test]], [[wilcox.test() and kruskal.test()]].

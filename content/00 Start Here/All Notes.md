@@ -188,19 +188,19 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 - [[Z-Score]]: A z-score tells you how many standard deviations a value is above (+) or below (−) the average
 
 ## t-Tests (13)
-- [[Cohen's d]]: Cohen's d is the difference between two means divided by a standard deviation (SD), so the effect is measured in SD units
-- [[Effect Size]]: An effect size measures how big an effect is, whatever the sample size
-- [[Independent vs Paired Samples]]: Independent samples come from two separate sampling processes with no natural link between them
-- [[Nonparametric Alternatives]]: Nonparametric tests are rank-based versions of the t-tests and ANOVA that don't assume normality
-- [[Normality Checks]]: To check whether data are roughly normal, use both a formal test (Shapiro–Wilk, where you want a large p-value) and pictures (a histogram and a normal Q-Q plot)
-- [[One-Sample t-Test]]: A one-sample t-test checks a claim about one population mean
-- [[Paired t-Test]]: A paired t-test is a one-sample t-test on the differences within each pair
-- [[Pooled Variance]]: Pooled variance combines two groups' variances into one weighted estimate
-- [[Q-Q Plot]]: A normal Q-Q plot puts each sorted data value against where that value "should" be if the data were normal
-- [[Ranks]]: To rank data, sort them and replace each value by its position, with 1 for the smallest
-- [[t-Distribution]]: The t-distribution is a bell curve like the standard normal but with fatter tails
-- [[Two-Sample Independent t-Test]]: The two-sample independent t-test compares the means of two independent groups
-- [[Welch's t-Test]]: Welch's t-test compares two independent means without assuming that the groups have equal variances
+- [[Cohen's d]]: Cohen's d measures how far apart two group averages are, in units of standard deviations
+- [[Effect Size]]: An effect size tells you how big an effect is, in a way that doesn't depend on how much data you collected
+- [[Independent vs Paired Samples]]: Two samples are independent when they come from separate groups with no link between them
+- [[Nonparametric Alternatives]]: Nonparametric tests are back-up versions of the t-tests and ANOVA that work on ranks instead of raw values, so they don't need the data to be normal
+- [[Normality Checks]]: To check whether data are roughly normal, look at them two ways: a picture (a histogram and a normal Q-Q plot) and a formal test (Shapiro–Wilk, where you *want* a large p-value)
+- [[One-Sample t-Test]]: A one-sample t-test asks whether the average of one group differs from some fixed number, like a safety limit or a textbook value
+- [[Paired t-Test]]: A paired t-test is for data that come in natural pairs, like the same swimmer with and without a wetsuit
+- [[Pooled Variance]]: Pooled variance combines two groups' spreads into one, weighting the bigger group more
+- [[Q-Q Plot]]: A normal Q-Q plot lines up each of your sorted values against where it "should" be if the data were perfectly normal
+- [[Ranks]]: To rank data, sort it and replace each value with its position: 1 for the smallest, 2 for the next, and so on
+- [[t-Distribution]]: The t-distribution is a bell curve like the normal, but with fatter tails
+- [[Two-Sample Independent t-Test]]: The two-sample independent t-test asks whether two separate groups have different averages, like sheep given stem cells versus sheep given a dummy treatment
+- [[Welch's t-Test]]: Welch's t-test compares the averages of two separate groups without assuming the two groups are equally spread out
 
 ## ANOVA (16)
 - [[ANOVA Assumptions]]: One-way ANOVA assumes independent observations, roughly normal data in each group, and equal variances across the groups (called homogeneity of variance)
