@@ -10,22 +10,28 @@ aliases:
 status: seedling
 ---
 
-One-way ANOVA tests whether the means of three or more independent groups are all equal. It does this in a single overall test that compares the variability between the groups with the variability within them.
+One-way ANOVA asks whether three or more groups have the same average, all in one test. It does it by comparing how spread out the group averages are with how spread out the values are inside each group.
 
-The real question is simple: do these groups differ, or are we looking at noise? There is one [[Types of Data|quantitative]] response and one categorical factor with $k$ levels ([[Factors and Levels]]). It is the next step up from the two-sample t-test ([[Two-Sample Independent t-Test]]). Running a t-test for every pair of groups would multiply the chance of [[Type I and Type II Errors|false positives]], so we need one test for all the means at once ([[Family-Wise Type I Error]], [[Why ANOVA instead of many t-tests]]).
+Picture three fields of corn, each with a different fertilizer. You measure the plants. The averages come out a bit different, as they always will. Is the fertilizer doing something, or are we just seeing the ordinary plant-to-plant variation?
 
-The [[Null and Alternative Hypotheses|hypotheses]]:
-- $H_0: \mu_1 = \mu_2 = \cdots = \mu_k$. In words: **the [factor] has no effect on the mean [response]**.
-- $H_A$: **at least one population mean differs**. In words: **the [factor] has a significant effect on the mean [response]**.
-
-Don't write $H_A$ as $\mu_1 \ne \mu_2 \ne \cdots \ne \mu_k$. One break anywhere in the chain of equalities is enough.
-
-Here's the clever part. ANOVA models each value as its group mean plus an error ([[Statistical Model]], [[Residuals]]). Splitting the total [[Variability|variation]] into "between groups" and "within groups" gives two variance estimates ([[Sums of Squares and Mean Squares]]). The [[Parameter vs Statistic|statistic]] is $F = MSG/MSE$: the mean square between groups over the mean square within groups ([[Between- and Within-Group Variability]], [[F-Distribution]]). If $H_0$ is true, both [[Point Estimate|estimate]] the same noise, so F is near 1. A large F says the group means are further apart than noise explains.
-
-Notice what this buys you: one question, one answer, one α. A significant F says that some means differ, but not which ones. Post hoc tests answer that ([[Post Hoc Tests]]).
+Here's the key insight, and it's so simple it's almost a joke. Look at how much the plants vary *inside* each field. That's what chance alone does: same fertilizer, same field, and still the plants differ. Now look at how far apart the field averages are. If the averages are no more spread out than you'd expect from that chance variation, there's nothing to explain. If they're much further apart than chance would put them, something is going on.
 
 ![[Between vs within variability.png|700]]
 The group means (black bars) are identical in both panels. On the left the points are tight, so the gaps between means stand out; on the right the same gaps are buried in noise. ANOVA's F is exactly this between-versus-within comparison.
+
+That's the whole method. Everything else is bookkeeping ([[Between- and Within-Group Variability]], [[Signal and Noise]]).
+
+Now let's do the bookkeeping. There's one [[Types of Data|quantitative]] response and one categorical factor with $k$ levels ([[Factors and Levels]]). The [[Null and Alternative Hypotheses|hypotheses]]:
+- $H_0: \mu_1 = \mu_2 = \cdots = \mu_k$. In words: **the [factor] has no effect on the mean [response]**.
+- $H_A$: **at least one population mean differs**. In words: **the [factor] has a significant effect on the mean [response]**.
+
+Don't write $H_A$ as $\mu_1 \ne \mu_2 \ne \cdots \ne \mu_k$. The boring story breaks if even one mean is different.
+
+ANOVA thinks of each value as its group's mean plus a bit of individual noise ([[Statistical Model]], [[Residuals]]). It splits all the [[Variability|variation]] into two piles, "between groups" and "within groups", and turns each into an estimate of variance ([[Sums of Squares and Mean Squares]]). The test [[Parameter vs Statistic|statistic]] is their ratio, $F = MSG/MSE$, the between-group mean square over the within-group mean square ([[F-Distribution]]). Now think: if $H_0$ is true, the group means only differ by chance, so *both* piles are measuring the same chance noise, and F should be around 1. If the fertilizers matter, the between pile gets extra, and F grows ([[Point Estimate|estimate]]).
+
+Why not just run a t-test on every pair of fields? Because every test is a small chance of a false alarm, and with many pairs those chances pile up ([[Family-Wise Type I Error]], [[Type I and Type II Errors|false positives]], [[Why ANOVA instead of many t-tests]]). ANOVA asks one question with one α. It's the natural next step after the two-sample t-test ([[Two-Sample Independent t-Test]]).
+
+But one question gets one answer: a significant F tells you *some* mean differs, not which. Finding which is the job of post hoc tests, and you only open that door if F says there's something to find ([[Post Hoc Tests]]).
 
 ```mermaid
 flowchart TD
@@ -101,7 +107,7 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)         # chi-squared = 5.75, df
 
    An honest caveat: normality was violated, the Kruskal–Wallis check (p = 0.057) doesn't confirm the result at 0.05, and η² says the effect is small. Report the result, but as borderline.
 
-If you remember one thing, make it this: ANOVA asks whether the gaps between groups are big compared to the noise inside them. Everything else is bookkeeping. Know where this test stops. One-way means the groups are sorted by one factor only, and the groups must be independent. When the same units are measured under every level, the matching design is repeated-measures ANOVA, the many-group cousin of the paired t-test. A design with both kinds of factor is a mixed-model ANOVA. Rejecting $H_0$ doesn't mean all the groups differ, only that at least one does. And ANOVA doesn't test variances: it uses variances to test means ([[Why analysis of variance can compare means]]).
+Try it yourself. ANOVA has "variance" in its name. Is it testing whether the groups have different spreads? No! It uses two measures of spread to test whether the *means* differ ([[Why analysis of variance can compare means]]). And know where it stops. One-way means the groups are sorted by one factor only, and the groups must be independent. When the same units are measured under every level, the matching design is repeated-measures ANOVA, the many-group cousin of the paired t-test; a design with both kinds of factor is a mixed-model ANOVA. And rejecting $H_0$ means at least one group differs, not that all of them do.
 
 See also: [[Variance]], [[ANOVA Table]], [[wilcox.test() and kruskal.test()]].
 

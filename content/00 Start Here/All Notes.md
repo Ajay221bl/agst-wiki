@@ -204,20 +204,20 @@ Every note in this wiki, grouped by folder. New to all this? Start with [[index|
 
 ## ANOVA (16)
 - [[ANOVA Assumptions]]: One-way ANOVA assumes independent observations, roughly normal data in each group, and equal variances across the groups (called homogeneity of variance)
-- [[ANOVA Table]]: The ANOVA table lists, for the factor and for the residuals, the degrees of freedom (df), sums of squares, mean squares, the F ratio and the p-value
-- [[Between- and Within-Group Variability]]: Between-group variability is how far the group means sit from each other
+- [[ANOVA Table]]: The ANOVA table is a summary of the whole ANOVA in one grid: for the groups and for the leftover noise, it shows the degrees of freedom (df), sums of squares, mean squares, F and the p-value
+- [[Between- and Within-Group Variability]]: Between-group variability is how far apart the group averages are
 - [[Bonferroni Correction]]: The Bonferroni correction divides α by the number of comparisons, or equivalently multiplies each p-value by it
 - [[Compact Letter Display]]: A compact letter display labels each group with letters
-- [[F-Distribution]]: The F-distribution is the distribution of a ratio of two variances
+- [[F-Distribution]]: The F-distribution is the curve that tells you how big the ANOVA ratio, F, tends to get by luck alone
 - [[Factors and Levels]]: A factor is a categorical grouping variable, such as the treatment or the independent variable (IV)
 - [[Family-Wise Type I Error]]: When you run many tests, each at α, the chance of at least one false positive across the whole "family" of tests grows quickly
 - [[Grand Mean]]: The grand mean $\bar{x}$ is the mean of all $N$ observations taken together
 - [[Homogeneity of Variance]]: Homogeneity of variance (also called homoscedasticity) means every group has the same population variance
-- [[One-Way ANOVA]]: One-way ANOVA tests whether the means of three or more independent groups are all equal
+- [[One-Way ANOVA]]: One-way ANOVA asks whether three or more groups have the same average, all in one test
 - [[Post Hoc Tests]]: Post hoc tests compare every pair of group means after a significant ANOVA
 - [[Residuals]]: A residual is an observed value minus the model's fitted value for it
 - [[Statistical Model]]: A statistical model writes each observation as a predictable part, the fitted value, plus a leftover part, the residual: data = fit + residual
-- [[Sums of Squares and Mean Squares]]: A sum of squares adds up squared deviations
+- [[Sums of Squares and Mean Squares]]: A sum of squares adds up squared distances
 - [[Tukey HSD]]: Tukey's honestly significant difference (HSD) test compares every pair of group means
 
 ## R for Statistics (30)
