@@ -27,4 +27,6 @@ For example, in the FAMuSS data the three genotype means differ by about 9 [[Pro
 
 Learn to respect variation rather than fight it; statistics is the art of seeing a signal through it. Variability isn't just error: much of it is real differences between units. And the standard deviation and the standard error measure different things. The standard deviation describes how the data vary; the standard error describes how a [[Parameter vs Statistic|statistic]] varies between samples.
 
+Try it yourself. If every tomato plant of a variety grew to exactly the same height, how many would you need to measure to know the average, and would you need statistics? One plant, and no. Statistics exists because things vary.
+
 See also: [[Variable and Observation]], [[Mean]].

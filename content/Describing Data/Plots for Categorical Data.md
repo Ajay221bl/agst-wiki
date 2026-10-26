@@ -29,6 +29,8 @@ For example, here are made-up counts of health ratings: Poor 120, Fair 410, Good
 
 Pick the plot that answers your question, then make it easy to read. For unordered categories, the order of the bars is arbitrary, so a bar chart of them has no "shape" to describe ([[Shape of a Distribution]]).
 
+Try it yourself. You want to show what share of farmers grow each of 6 crops. Bar chart or pie chart? A bar chart. Comparing bar heights is easy; comparing the angles of 6 pie slices is hard, especially when they're similar in size.
+
 See also: [[Proportions and Percentages]], [[Contingency Table]], [[Plots for Two Variables]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.5, p. 37).

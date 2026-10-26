@@ -31,6 +31,8 @@ The book adds that multiplying every value by $a$ multiplies the mean and the st
 
 So adding a constant moves the whole distribution without changing its [[Variability|spread]], but multiplying does change the spread. Think it through physically and you'll never have to memorize the rules.
 
+Try it yourself. Every student gets 5 bonus points on a test. What happens to the mean and to the standard deviation? The mean goes up by 5; the standard deviation stays the same, because everyone moved together and the gaps between them didn't change.
+
 See also: [[Z-Score]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]].

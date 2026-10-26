@@ -24,4 +24,6 @@ For example, comparing six groups with 15 separate t-tests at α = 0.05 gives ov
 
 A number is only as trustworthy as the process that produced it. A small p-value doesn't make a conclusion valid if the assumptions were broken or many tests were run.
 
+Try it yourself. A study with 4 animals per group finds no significant effect and concludes the treatment doesn't work. Which threat to statistical conclusion validity is this? Low power: with so few animals, even a real effect could easily be missed. All the study can say is that it didn't find evidence.
+
 Further reading: [[References|Kirk 2013, Ch. 1]].

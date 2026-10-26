@@ -26,6 +26,8 @@ With an even count, such as 2, 4, 7, 9, the median is (4 + 7)/2 = 5.5, which isn
 
 Which centre you choose is a judgment about your data, not a rule to memorize. The mean is unbiased, but that doesn't make it always better: when data are skewed, the median's robustness can matter more.
 
+Try it yourself. The values 1, 2, 3, 3 and 6 have median 3. Change the 6 to a thousand. What's the new median? Still 3. The middle value didn't move, which is exactly why the median is safe against extreme values.
+
 See also: [[Range and IQR]], [[Box Plot and Five-Number Summary]], [[Nonparametric Alternatives]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).

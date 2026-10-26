@@ -21,6 +21,8 @@ For example, colours are coded 1 = red, 2 = green, 3 = orange and 4 = blue, and 
 
 Its real value is often as a warning: more than one peak usually means more than one group. The mode is rarely the best centre for continuous data, but spotting two peaks in a histogram is important information. And there isn't always exactly one mode: there can be [[Ranks|ties]], or no clear peak at all.
 
+Try it yourself. Ask 8 people their favourite fruit: apple, banana, apple, cherry, banana, apple, grape, cherry. What's the mode? Apple, which appears 3 times. Could you take a mean here? No, you can't average fruits.
+
 See also: [[Plots for Categorical Data]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4–1.5).

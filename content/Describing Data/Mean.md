@@ -30,6 +30,8 @@ For example, five people's years in school after a bachelor's degree are 1, 2, 3
 
 The mean is a fair share, and fair shares can be pulled around by a few big values. The middle line of a box plot is the median, not the mean ([[Box Plot and Five-Number Summary]]). And the mean isn't always the best centre: for skewed data the median usually describes a typical value better.
 
+Try it yourself. The values 1, 2, 3, 6 and 3 have mean 3. Replace the 6 with 10. What happens to the mean? The total grows by 4, so the mean goes up by 4 ÷ 5, to a bit under 4. One value moved, and the mean followed it.
+
 See also: [[Variance]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4, p. 30).

@@ -29,4 +29,6 @@ For example, a randomized trial run on volunteers at one farm has strong interna
 
 So don't ask "is this study valid?" as if it were one thing. Ask which link is weakest. Valid doesn't mean [[Statistical vs Practical Significance|statistically significant]]: significance speaks only to statistical conclusion validity. And reliable doesn't mean valid: a scale that is always 2 kg off is reliable but not valid.
 
+Try it yourself. A well-run, double-blind trial of a vitamin finds no effect, but the "vitamin pill" was later found to contain almost no vitamin. Which kind of validity failed? Construct validity: the treatment didn't actually deliver the thing the study was about.
+
 See also: [[Experiment]], [[Population and Sample]].

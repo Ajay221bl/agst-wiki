@@ -32,6 +32,8 @@ For example, 22 canopy tree heights have a minimum of 25.2, $Q_1$ of 35.2, a med
 
 Good summaries are the ones a single strange value can't hijack. The interquartile range holds the middle 50% of the data, but that doesn't make it half the range; it depends on the shape of the data. And quartiles aren't always data values: software uses several rules and may interpolate.
 
+Try it yourself. The values 2, 3, 3, 4 and 9 have a range of 7. If the 9 were a typo for 5, what would the range be? 3. One value changed the range a lot. The IQR, which only looks at the middle half, would barely change.
+
 See also: [[Standard Deviation]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).

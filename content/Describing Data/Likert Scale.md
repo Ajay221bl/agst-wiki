@@ -27,3 +27,5 @@ Most survey data are like this, and the type of data decides which summaries and
 For example, a 5-point item answered 1, 2, 2, 4, 5 has a median of 2, which is a safe summary. The [[Mean|mean]], 2.8, treats the step from 2 to 4 as exactly twice the step from 1 to 2, which the scale never promised.
 
 The rule is to respect what the data really are, not what they've been coded as. Being coded 1 to 5 doesn't make an item quantitative. But ordinal data can still be analysed well, with medians, proportions and rank-based tests.
+
+Try it yourself. On a 1-to-5 agreement scale, is the gap between "disagree" (2) and "neutral" (3) the same size as between "agree" (4) and "strongly agree" (5)? Nobody knows. The order is real, the spacing isn't, which is why the median and rank-based tests often suit these answers better than the mean.

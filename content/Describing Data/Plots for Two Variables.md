@@ -32,6 +32,8 @@ For example, in a book example, female frog body size against clutch volume show
 
 Let the plot tell you what's going on, and let the numbers confirm it. A significant correlation isn't necessarily a strong one: with a big sample, even weak correlations come out significant. Look at the plot and at $r$ itself ([[Effect Size]]). And error bars showing the mean ± its [[Standard Error|standard error]] don't show how spread out the data are. They show how uncertain the mean is, which shrinks as the sample grows, while the spread of the data doesn't.
 
+Try it yourself. You want to see whether fertilizer type (A, B or C) affects plant height. Which plot? Side-by-side box plots: one box per fertilizer, so you can compare centres and spreads at a glance. A scatter plot is for two numerical variables, like height and weight.
+
 See also: [[Box Plot and Five-Number Summary]], [[Plots for Categorical Data]], [[Two-Sample Independent t-Test]], [[One-Way ANOVA]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.6, p. 38).

@@ -40,6 +40,8 @@ For example, stratified and cluster sampling follow opposite logic. Stratified s
 
 The question to ask of any method is not "how many?" but "who decided who got in?" A big voluntary sample isn't fine just because it is big: people choosing themselves biases it at any size.
 
+Try it yourself. A country has many villages, and visiting all of them is too expensive. You pick a few villages at random and survey everyone in them. Which method is that, and what's its cost? Cluster sampling. It's cheap, but people in the same village tend to be alike, so you learn less than from the same number of people spread across the country.
+
 See also: [[Population and Sample]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (pp. 19–25).

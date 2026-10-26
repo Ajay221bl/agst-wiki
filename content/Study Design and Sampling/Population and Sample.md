@@ -24,4 +24,6 @@ For example, a Gallup poll of **1,013 US adults** found that 66% worried about i
 
 So always ask what the sample stands for, not just how big it is. There is no point testing whether your sample mean equals some number: you already know it. Tests are about population values ([[Null and Alternative Hypotheses]]). And a large sample isn't automatically a good one: being representative matters more than size.
 
+Try it yourself. A researcher measures 200 corn plants from fields across Arkansas. What's the population and what's the sample? The population is every plant of that variety in Arkansas; the 200 are the sample. The study is only useful because it lets you say something about the plants you didn't measure.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.3, p. 18).

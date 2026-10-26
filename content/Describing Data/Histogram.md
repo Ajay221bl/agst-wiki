@@ -29,4 +29,6 @@ For example, the canopy trees give bars of 2 (25 to 30 m), 3 (30 to 35), 10 (35 
 
 Draw one before you compute anything; it's the fastest way to see what you're dealing with. In R, `plot(x)` on a column of numbers doesn't draw a histogram: it plots each value against its row number. Use `hist()`. And a bar chart of a categorical variable isn't a histogram and has no shape ([[Plots for Categorical Data]]).
 
+Try it yourself. You draw a histogram of exam scores and see two separate humps, one near the bottom and one near the top. What might be going on? There may be two different groups mixed together, such as students who studied and students who didn't. A single average would describe neither.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).

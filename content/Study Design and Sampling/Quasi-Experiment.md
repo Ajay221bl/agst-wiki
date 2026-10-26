@@ -34,6 +34,8 @@ For example, in a study of blood lead level (low, medium or high) and IQ analyse
 
 The mature view is not "experiments good, everything else bad" but "know what each design can and can't claim". Quasi-experiments aren't bad science; they are often the only ethical option, as long as you state the limitation. They are close cousins of observational studies, but usually involve a planned comparison of defined groups, often with some researcher control.
 
+Try it yourself. You want to know if smoking during pregnancy affects birth weight. Can you run a true experiment? No: you can't ethically assign mothers to smoke. So you compare mothers who smoked with those who didn't, a quasi-experiment, and you have to worry about everything else that differs between the two groups.
+
 See also: [[Observational Study Designs]], [[Internal Validity]].
 
 Further reading: [[References|Kirk 2013, Ch. 1]].

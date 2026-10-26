@@ -28,6 +28,8 @@ For example, take the data 1, 2, 3, 6, 3, with mean 3. The deviations are −2, 
 
 The variance is the working tool; the standard deviation is the version you can picture. The variance and the standard deviation aren't two different measures of two different things: the standard deviation is just the square root of the variance. And dividing by $n$ is the formula for a whole population; for a sample, divide by $n - 1$.
 
+Try it yourself. The data 1, 2, 3, 6 and 3 have mean 3 and variance 3.5. If you doubled every value, what would happen to the variance? It would go up four times, because each deviation doubles and then gets squared. The standard deviation would only double.
+
 See also: [[Mean]], [[Pooled Variance]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).

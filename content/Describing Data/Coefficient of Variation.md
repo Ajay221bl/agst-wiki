@@ -27,4 +27,6 @@ These numbers are for illustration. The dragons' SD is tiny in pounds, but compa
 
 The general lesson is that a number means little until you know what to compare it with. A smaller SD only means less variability when the things being compared are on the same scale; the CV adjusts for scale. And the CV doesn't work for every variable: a mean near zero makes it explode.
 
+Try it yourself. Mice weigh a few grams with an SD of 2 grams; elephants weigh thousands of kilograms with an SD of hundreds of kilograms. Which group is relatively more variable? You can't tell from the SDs, because the scales are so different. Divide each SD by its mean, and compare the CVs.
+
 See also: [[Mean]], [[Z-Score]], [[Variability]].

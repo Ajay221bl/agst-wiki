@@ -22,4 +22,6 @@ For example, a COVID survey has 1,000 rows. After `na.omit()`, 939 complete rows
 
 Always ask why a value is missing, not only how to remove it. `na.omit()` doesn't just drop the missing values in the column you care about: it drops any row with a missing value in **any** column. Select your columns first, or use `complete.cases()` on just the ones you need ([[na.omit() and complete.cases()]]). And a few missing values can still bias results if they aren't missing at random.
 
+Try it yourself. In a study of plant growth, the smallest, sickliest plants are the ones most likely to die before the final measurement. If you just drop the missing values, what happens to the average growth you report? It's too high, because the plants that would have pulled it down are gone. That's why you must say what was missing and why.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.3 non-response).

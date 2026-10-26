@@ -28,6 +28,8 @@ Both rules agree here.
 
 So treat an outlier as a question to answer, not a nuisance to remove. Many outliers are real and informative, so delete one only with a documented reason. And the z-score rule doesn't suit every data set: for skewed data, use the interquartile range rule.
 
+Try it yourself. A data set has Q₁ = 4 and Q₃ = 6. Is a value of 10 an outlier by the box-plot rule? The IQR is 2, and 1.5 × 2 = 3, so the upper fence is 6 + 3 = 9. 10 is beyond it, so yes, it's flagged. Then the real work starts: is it a mistake or a real value?
+
 See also: [[Box Plot and Five-Number Summary]], [[Why the median beats the mean for skewed data]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).

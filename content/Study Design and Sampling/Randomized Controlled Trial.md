@@ -44,6 +44,8 @@ For example, in an arrhythmia trial described in the book, researchers expected 
 
 Its strength is certainty about cause; its price is a narrow slice of the world. Trial results apply most clearly to people like the volunteers who were studied, not automatically to everyone. And "randomized" refers to random assignment, not random sampling ([[Why random assignment and random sampling protect different things]]).
 
+Try it yourself. A trial randomizes patients, but the doctors measuring recovery know who got the real drug. Which part of the RCT recipe is missing, and why does it matter? Blinding. Doctors who know might rate the treated patients more hopefully, and random assignment can't undo that.
+
 See also: [[Observational Study Designs]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.3).

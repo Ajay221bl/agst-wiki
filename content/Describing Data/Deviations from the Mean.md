@@ -24,6 +24,8 @@ For example, take the data 1, 2, 3, 6, 3, whose mean is 3. The deviations are �
 
 Almost every measure of spread in this wiki is built from these simple distances, so it's worth seeing them clearly. A deviation isn't an error; it is just a distance from the mean, and nothing has gone wrong.
 
+Try it yourself. The values 2, 4 and 6 have mean 4. What are the deviations, and what do they add up to? −2, 0 and 2, which add to 0. That always happens, which is why the variance has to square them first.
+
 See also: [[Summation Notation]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).

@@ -36,6 +36,8 @@ The same mean, but completely different data.
 
 The standard deviation describes the data; almost everything else in inference is about something else. Don't confuse the SD with the [[Standard Error|standard error]] (SE). The SD describes how individual values vary. The SE, $s/\sqrt{n}$, describes how a [[Parameter vs Statistic|statistic]] such as the mean would vary from one sample to the next. Also, a bigger sample doesn't make the SD shrink; it settles towards the population value $\sigma$. It is the SE that shrinks.
 
+Try it yourself. Two classes both average 7 out of 10 on a quiz. One has SD 1, the other SD 3. In which class is a score of 7 a better description of a typical student? The first: most students there scored close to 7. In the second, scores are all over the place.
+
 See also: [[Coefficient of Variation]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).

@@ -27,6 +27,8 @@ For example, a rare berry grows in only one corner of Arkansas, and you measure 
 
 Describe first, infer second. Skipping the first step is how good tests give bad answers. Descriptive statistics aren't just a warm-up: they are how you check assumptions and spot problems before any test. And a [[Confidence Interval|confidence interval]] doesn't describe the sample. It is inferential, because it estimates a population value ([[Parameter vs Statistic]]).
 
+Try it yourself. "The 30 plants we grew had an average height of so many centimetres" is descriptive or inferential? Descriptive: it's just about the plants you measured. "Plants of this variety grow to about that height on average" is inferential: it reaches beyond your 30 to plants you never saw.
+
 See also: [[Mean]], [[Hypothesis Testing]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]].

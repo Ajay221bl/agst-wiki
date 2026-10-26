@@ -64,6 +64,8 @@ For example, the variables in a survey:
 
 The question is never "is it a number?" but "does arithmetic on it mean anything?" Being a number doesn't make a variable quantitative: ID numbers and treatment codes are labels. And discrete doesn't mean categorical: discrete data are quantitative counts.
 
+Try it yourself. Is a postcode a quantitative variable? It's written in digits, but no. Adding two postcodes or averaging them means nothing. It's a label, so it's categorical.
+
 See also: [[Random Variable]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.2, p. 15).

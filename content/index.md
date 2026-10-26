@@ -8,7 +8,16 @@ aliases:
 
 Most of statistics comes down to one problem. The world is noisy, and we're very good at seeing patterns in noise. We see a difference between two groups and want to believe it. Statistics is the discipline of asking, before you believe it, whether chance alone could have produced it.
 
-Once you see it that way, the subject stops being a pile of formulas. Every method is an answer to some version of that question. This wiki builds those answers from the ground up, from probability to one-way ANOVA. Each note holds one idea and builds it from simpler ones, so nothing has to be memorized. If you understand why something is true, you can rebuild it whenever you need it.
+Once you see it that way, the subject stops being a pile of formulas. Every method is an answer to some version of that question. This wiki builds those answers from the ground up, from probability to one-way ANOVA, and nothing has to be memorized. If you understand why something is true, you can rebuild it whenever you need it.
+
+## How each note teaches
+Every note follows the same path, because that's how ideas actually stick:
+1. **The idea in one or two plain sentences.** Read this first; it's also what the flashcards use.
+2. **Something you can picture.** A coin, a smoke alarm, a darts game, a bent rifle sight. You meet the idea in a situation you already understand.
+3. **Work it out together.** Small steps, real numbers, and a question at each turn: why would that be?
+4. **Then the name.** The technical word comes last, as a label for something you already get.
+5. **The trap.** The mistake people really make, said plainly.
+6. **Try it yourself.** A short question with its answer. If you can answer it without peeking, you've got the idea. If you can't, read the note again; that's the note's fault, not yours.
 
 ## Right now: the oral exam
 The wiki is set up for an oral exam. Oral questions test understanding, not recall: explain an idea, compare two, say why a method is used. Formulas and R code aren't asked, so they're here as background.

@@ -52,6 +52,8 @@ For example, in a COVID survey, "child under 12 at home" (no or yes) is an indep
 
 Name these two first and most of the design decisions follow. "Independent" here has nothing to do with statistical independence; it just means "explanatory". And the independent variable doesn't have to be set by the researcher. In observational studies it isn't, and then causal claims are weaker ([[Quasi-Experiment]]).
 
+Try it yourself. A study asks whether hours of sunlight affect how sweet strawberries are. Which is the independent variable and which is the dependent? Sunlight is independent: it's the possible cause. Sweetness is dependent: it's the outcome you measure, and it "depends" on the sunlight, if the idea is right.
+
 See also: [[Nuisance Variables and Confounding]].
 
 Further reading: [[References|Kirk 2013, Ch. 1]].

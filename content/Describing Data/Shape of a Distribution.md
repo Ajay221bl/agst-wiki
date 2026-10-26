@@ -17,6 +17,8 @@ status: seedling
 
 The shape of a distribution is how its values pile up: how many peaks it has, whether it is symmetric or has a long [[Tails of a Distribution|tail]] on one side (skew), and how peaked or flat it is.
 
+Think of how people's incomes pile up in a town. Most people earn a modest amount, so a tall heap sits on the left. A few earn much more, and they trail away to the right in a long, thin tail. That lopsided pile has a shape, and the shape tells you which summary to trust: here, the median, because the long tail drags the mean away from the heap.
+
 Shape matters because it decides which summaries you can trust and which tests you can use. Draw a [[Histogram|histogram]] and describe its outline with three questions.
 
 **How many peaks?** One peak is unimodal, two is [[Mode|bimodal]], several is multimodal, and none (flat) is uniform. Two peaks often mean two different groups have been mixed together.
@@ -43,6 +45,8 @@ For example, comparing the mean with the median gives a quick check of skew:
 For time spent outdoors, the mean is 3.72 hours and the median is 1.07 hours, so the data are right-skewed.
 
 A shape is a clue about the process that produced the data, so read it before you summarize. Right skew doesn't mean most values are on the right: the tail is on the right, and most values pile up on the left. And symmetric doesn't mean normal: a uniform distribution is symmetric but flat.
+
+Try it yourself. A histogram has a long tail to the right. Which is bigger, the mean or the median? The mean. The few large values in the tail pull it towards them, while the median stays with the bulk.
 
 See also: [[Outliers]].
 

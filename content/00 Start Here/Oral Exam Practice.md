@@ -16,9 +16,10 @@ How to use this page: read the question, cover the answer, and talk it through o
 
 > [!tip] What a good spoken answer sounds like
 > - Begin with what the idea is for. Every method exists to solve some problem, so name the problem.
+> - Reach for something concrete early. "Imagine flipping a coin ten times" makes the examiner see what you see, and it keeps you from hiding behind jargon.
 > - Build from there, one step at a time. The examiner wants to see you think, not recite.
 > - Give an example, ideally one from your own field. An example proves you can use the idea.
-> - Define your words. If you say "significant", say what you mean by it.
+> - Define your words. If you say "significant", say what you mean by it. A good test: could you explain it to a friend who has never taken statistics? If not, you've found the part you don't understand yet.
 > - If you get stuck, go back to what you know for sure and reason forward. That counts.
 
 ## Describing data

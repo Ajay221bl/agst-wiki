@@ -25,4 +25,6 @@ For example, in a study on sheep with heart damage, 9 got stem cells (treatment)
 
 The control group is your answer to the question "compared to what?" A control group doesn't have to get nothing at all. It can get a placebo or the current standard treatment; what matters is that it differs only in the treatment. And comparing the same units before and after isn't a control: without a separate control group, changes over time aren't ruled out ([[Internal Validity]]).
 
+Try it yourself. A new fertilizer is used on a field and the yield is higher than last year. Without a control group, what else could explain it? Better weather, a different seed batch, or just luck. A control field, treated the same but without the fertilizer, in the same year, would separate those from the fertilizer's effect.
+
 See also: [[Randomized Controlled Trial]].

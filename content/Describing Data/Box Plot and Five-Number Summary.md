@@ -14,6 +14,8 @@ status: seedling
 
 The five-number summary is the minimum, the first quartile ($Q_1$), the median, the third quartile ($Q_3$) and the maximum. A box plot draws these five numbers as a box with whiskers, and marks unusual values separately.
 
+Imagine lining up everyone in a class from shortest to tallest, then putting up four flags: one at the shortest person, one a quarter of the way along, one in the middle, one three quarters along, and one at the tallest. Those five flags tell you a lot: where the middle is, how bunched up the middle half is, and how far the ends stretch. A box plot is a drawing of those flags.
+
 A box plot is a way to see a whole distribution in one glance, using only five numbers. Learn to read it once and you'll read it everywhere. The box runs from $Q_1$ to $Q_3$, so it holds the middle half of the data. Its length is the interquartile range (IQR) ([[Range and IQR]]). The line inside the box is the [[Median|median]], not the [[Mean|mean]]: everything in a box plot is based on the order of the values, which makes it hard for extreme values to distort. The whiskers reach out towards the smallest and largest values.
 
 Most software draws a "modified" box plot. Any point below $Q_1 - 1.5\,IQR$ or above $Q_3 + 1.5\,IQR$ is drawn as a separate dot, an outlier, and the whiskers stop at the most extreme value that isn't one ([[Outliers]]).
@@ -29,5 +31,7 @@ For example, 22 canopy tree heights have the five-number summary 25.2 / 35.2 / 3
 - The lower fence is 35.2 − 7.95 = 27.25, so the minimum of 25.2 **is** an outlier and is drawn as a dot.
 
 The trick is to look at sizes, not just positions: a long box means a lot of spread, a lopsided box means skew. The middle line is the median, not the mean. And long whiskers don't mean outliers: in a modified box plot, outliers are the separate dots beyond the whiskers. Check how your software defines them.
+
+Try it yourself. In a box plot, the box is short but one whisker is very long. What does that tell you? The middle half of the data is tightly packed, but a few values stretch far out on one side, so the data are skewed in that direction.
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4).
