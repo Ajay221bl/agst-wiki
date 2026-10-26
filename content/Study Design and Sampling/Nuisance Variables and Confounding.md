@@ -20,7 +20,7 @@ The defence is to break the link between the nuisance variable and the treatment
 
 There are three ways to deal with a nuisance variable:
 1. **Control it in advance.** [[Random Assignment|Random assignment]] spreads it evenly. **Blocking** groups units by it and then randomizes within each group; randomized block designs build on this idea.
-2. **Adjust for it statistically** after the fact.
+2. **Adjust for it statistically** after the fact. Analysis of covariance (ANCOVA), for example, removes the part of the outcome's variation that a measured nuisance variable explains, then compares the groups.
 3. **Report it as a limitation.** Saying plainly what happened in your study is always safe.
 
 For example, in a case study in the book (§5.3), an apparent difference in spending between ethnic groups disappeared once people were compared **within age groups**. Age was the confounder ([[References|Vu and Harrington 2020, Ch. 5]]).

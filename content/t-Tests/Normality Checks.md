@@ -23,6 +23,8 @@ You can never prove data are normal. What you can do is look for evidence that t
 - **Here you want a large p-value**, which means you [[Why we never accept the null hypothesis|fail to reject]] and have no evidence against normality. This is the reverse of the usual hope ([[Null and Alternative Hypotheses]]).
 - With large samples, it nearly always rejects, because trivial departures become significant. Genomic-scale data will probably never pass. Like every test, its [[Statistical Power|power]] grows with $n$. So add pictures.
 
+Shapiro–Wilk isn't the only formal test. Kolmogorov–Smirnov, Anderson–Darling and Cramér–von Mises ask the same question in slightly different ways, and they share the same weakness with big samples. Shapiro–Wilk is the usual default.
+
 **The visual checks.**
 - A **histogram** with a normal curve laid over it: is it roughly bell-shaped ([[Histogram]])?
 - A **normal Q-Q plot** (`qqnorm` + `qqline`, or `ggqqplot`). Points near the straight line mean the data are approximately normal. Systematic curves or bends mean [[Shape of a Distribution|skew]] or heavy [[Tails of a Distribution|tails]] ([[Q-Q Plot]], [[References|Vu and Harrington 2020, Ch. 3]], pp. 163–167). Lines are easier to judge than bell shapes, especially with few points.

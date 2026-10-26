@@ -33,12 +33,12 @@ The ANOVA is a gate. Pairwise tests only run once the gate opens, which is what 
 ![[Tukey intervals.png|700]]
 Each row is one pair of groups with its adjusted 95% interval. Intervals that cross the dashed 0 line are not significant; red ones miss 0, so that pair differs.
 
-Adjustment is still needed *after* a significant ANOVA. Clearing the overall test doesn't mean you can switch to plain t-tests.
+There's one case where you don't need them at all. If the factor has only two levels, a significant F already tells you which pair differs, because there is only one pair. Adjustment is still needed *after* a significant ANOVA. Clearing the overall test doesn't mean you can switch to plain t-tests.
 
 There are several common methods, and your field or advisor may have a default:
 - [[Tukey HSD|Tukey's honestly significant difference (HSD)]]: a common default.
 - [[Bonferroni Correction|The Bonferroni correction]]: the simplest, and the most [[Conservative Tests|conservative]].
-- Fisher's least significant difference, Holm, Scheffé, and Dunnett (each group against a control).
+- Fisher's least significant difference, Holm, Scheffé, Duncan's, Student–Newman–Keuls, and Dunnett (each group against a control).
 - Results summarized as letters, in the style of the SAS software ([[Compact Letter Display]]).
 
 For example, in data on frustration by undergraduate major (Tukey's test), English − business, math − business and psychology − business are all positive, with confidence intervals that are entirely positive, so business students have the lowest frustration. Psychology − English is positive, so psychology students are more frustrated than English students. English against math and math against psychology are not significant.

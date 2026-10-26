@@ -33,6 +33,9 @@ Two yes-or-no questions about the independent variable (IV) separate the three k
 | Maximum control, with little room for [[Nuisance Variables and Confounding\|confounding]] | Unrealistic for **rare outcomes** |
 | The exposure clearly comes before the outcome | Blinding isn't always possible (knee surgery against therapy: everyone knows their group) |
 | **The highest internal validity** | People drop out before the end |
+| | Some exposures can't be assigned at all, for ethical or practical reasons |
+| | Effects that take years to appear are hard to wait for |
+| | Some people don't follow the treatment they were given |
 | | **Lower external validity**: volunteers can differ from typical patients, and a strict trial routine isn't real life |
 
 As control goes up, internal validity goes up and external validity tends to go down ([[Why RCTs trade external validity for internal validity]], [[External Validity]]).

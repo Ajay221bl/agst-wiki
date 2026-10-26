@@ -24,6 +24,7 @@ Imagine throwing darts. **Unbiased** means the darts are centred on the bullseye
 | $s^2$ (dividing by $n-1$) | $\sigma^2$ | yes, which is why we divide by $n-1$ ([[Why we divide by n minus 1]]) |
 | $s$ | $\sigma$ | slightly biased, because the [[Squares and Square Roots\|square root]] breaks it, but the bias is small enough to ignore |
 | sample median | population median | technically biased |
+| sample range | population range | biased low, because a sample rarely catches the most extreme values |
 
 Unbiased is not the same as precise. Darts can be centred on the bullseye and still widely scattered; the scatter is measured by the [[Standard Error|standard error]].
 

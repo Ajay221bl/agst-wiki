@@ -24,6 +24,15 @@ flowchart LR
 ```
 The two random steps happen at different places and do different jobs. Sampling protects generalization; assignment protects [[Association vs Causation|causation]].
 
+Sampling isn't the only thing that limits reach. The study itself can create conditions that don't exist outside it:
+- **Volunteers and convenience samples.** People who sign up, or who are easy to reach, may not be like everyone else.
+- **Reactive arrangements.** People act differently when they know they're being watched, so the result belongs to the watched version of them.
+- **Repeated testing.** A pre-test can change how people respond to the treatment, so the effect may not appear in people who were never pre-tested.
+- **Multiple treatments.** If units get several treatments in turn, earlier ones can colour later ones, and the result may only hold in that exact sequence.
+- **Selection and treatment together.** A treatment may work only for the kind of units you happened to pick.
+
+Each of these is the same question in a different form: is the world of the study the world you want to talk about?
+
 For example, a random sample of Prosecco brands tells you about Prosecco, not about all wine or about Merlot. A random sample of adults in Arkansas tells you about Arkansas adults.
 
 So when you read a result, always ask: whose world was this measured in, and is that my world? High internal validity doesn't imply high external validity; the two often trade off. And [[Random Assignment|random assignment]] doesn't help you generalize. It improves internal validity, while generalizing needs random sampling.

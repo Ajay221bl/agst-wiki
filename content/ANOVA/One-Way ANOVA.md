@@ -101,7 +101,7 @@ kruskal.test(ndrm.ch ~ genotype, data = famuss)         # chi-squared = 5.75, df
 
    An honest caveat: normality was violated, the Kruskal–Wallis check (p = 0.057) doesn't confirm the result at 0.05, and η² says the effect is small. Report the result, but as borderline.
 
-If you remember one thing, make it this: ANOVA asks whether the gaps between groups are big compared to the noise inside them. Everything else is bookkeeping. Rejecting $H_0$ doesn't mean all the groups differ, only that at least one does. And ANOVA doesn't test variances: it uses variances to test means ([[Why analysis of variance can compare means]]).
+If you remember one thing, make it this: ANOVA asks whether the gaps between groups are big compared to the noise inside them. Everything else is bookkeeping. Know where this test stops. One-way means the groups are sorted by one factor only, and the groups must be independent. When the same units are measured under every level, the matching design is repeated-measures ANOVA, the many-group cousin of the paired t-test. A design with both kinds of factor is a mixed-model ANOVA. Rejecting $H_0$ doesn't mean all the groups differ, only that at least one does. And ANOVA doesn't test variances: it uses variances to test means ([[Why analysis of variance can compare means]]).
 
 See also: [[Variance]], [[ANOVA Table]], [[wilcox.test() and kruskal.test()]].
 

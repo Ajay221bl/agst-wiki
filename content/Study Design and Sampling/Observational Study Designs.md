@@ -21,6 +21,11 @@ Most of what we know about health, behaviour and the wider world comes from watc
 | **Case-control (retrospective)** | Find **cases** with the outcome (birds with a rare disease) and matched **controls** without it, then look back at their exposures | Efficient for **rare outcomes**; many risk factors at once | Cases must be defined carefully (long-sick or newly diagnosed); problems with memory and with who gets selected |
 | **Cross-sectional** | One point in time ("this animal is sick, eats this diet, lives in this part of the barn") | **Cheapest** and fastest | **Can't tell which came first** |
 
+A few details decide whether each design works:
+- **Cohort studies** can also run backwards in time, using records that already exist. That is cheaper, but the records were often kept for some other purpose. A cohort can track many outcomes at once, but struggles with exposures whose effects take years to appear.
+- **Case-control studies** live or die on their cases and controls. Newly diagnosed cases are preferred over everyone who currently has the condition, because people who live with it for a long time would otherwise be over-represented. Controls should come from the same population that produced the cases, be like them in every way except the outcome, and be chosen without looking at their exposure.
+- **Cross-sectional studies** take their snapshot either at a calendar date or at the moment of some event, such as a diagnosis.
+
 Time order matters because a cause must come before its effect. Cohort studies can see the order; cross-sectional studies can't.
 
 ```mermaid

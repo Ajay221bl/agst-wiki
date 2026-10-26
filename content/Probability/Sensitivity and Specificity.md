@@ -22,6 +22,8 @@ No test is perfect, so the useful question is how it fails. A diagnostic test ca
 
 So judge the test separately in the two groups, because a test can be good at catching sick people and bad at clearing healthy ones, or the other way round. Among people who have the condition, the **sensitivity**, or true positive rate, is $P(+ \mid \text{disease})$: the share the test catches. Among people who don't, the **specificity**, or true negative rate, is $P(- \mid \text{healthy})$: the share it correctly clears. The error rates are what's left over: the false positive rate is $1 - \text{specificity}$ and the false negative rate is $1 - \text{sensitivity}$ ([[Complementary Events]]).
 
+Which error matters more depends on what it costs. Missing a serious disease that is treatable calls for high sensitivity, so few cases slip through. When a false alarm leads to a risky or expensive follow-up, high specificity matters more. There's no rule that settles this; it's a judgment about consequences.
+
 These numbers describe the test, not the patient. They let you compare tests, and they don't change with how common the condition is. A patient needs the question turned around, $P(\text{disease} \mid +)$, which does depend on how common the condition is ([[Predictive Values and Prevalence]], [[Bayes' Theorem]]).
 
 ```mermaid

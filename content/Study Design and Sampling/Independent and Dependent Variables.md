@@ -20,7 +20,9 @@ The independent variable (IV) is the one you think drives the outcome, and often
 
 Every study is a question of the form "does this affect that?", and these two names are just the "this" and the "that". A study asks whether one variable affects another ([[Variable and Observation]]). In a fertilizer trial, you choose the fertilizer: that is the independent variable. It is also called the explanatory variable or predictor, and in ANOVA the **factor** ([[Factors and Levels]]). The crop yield is the dependent variable, because it depends on the fertilizer. It is also called the response or outcome.
 
-Either one can be any type of data ([[Types of Data]]). The independent variable can be categorical or quantitative, and set by the researcher or simply part of the subject. Sex is categorical and part of the subject; a dose of 2, 4 or 8 mg is quantitative and set by the researcher. Only an independent variable that the researcher sets, and assigns at random, supports a [[Association vs Causation|causal]] claim ([[Experiment]]).
+Either one can be any type of data ([[Types of Data]]). The independent variable can be categorical or quantitative, and set by the researcher or simply part of the subject. One that is part of the subject is called **intrinsic**: you can measure it but never assign it. Sex is categorical and part of the subject; a dose of 2, 4 or 8 mg is quantitative and set by the researcher. Only an independent variable that the researcher sets, and assigns at random, supports a [[Association vs Causation|causal]] claim ([[Experiment]]).
+
+The number of outcomes matters too. With one dependent variable you use univariate methods, such as t-tests, ANOVA and regression. With several measured on the same units, there are multivariate methods, such as multivariate analysis of variance (MANOVA), that analyse them together. Everything on this site is univariate.
 
 The types of the two variables pick the analysis:
 

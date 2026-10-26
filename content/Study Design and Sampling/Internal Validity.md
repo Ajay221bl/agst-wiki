@@ -20,9 +20,11 @@ Think of internal validity as the question a sceptical friend would ask: "Are yo
 | Threat | What happens | Example |
 |---|---|---|
 | **Confounding** | another variable is tied to both the treatment and the outcome | older chickens all on one diet |
+| **History** | something outside the study happens during it and moves everyone's outcome | a heatwave halfway through a feeding trial |
 | **Maturation** | subjects change naturally over time | children's reading at age 6 and again at 9 |
 | **Testing effects** | repeated testing improves scores by itself | taking the same exam three times |
 | **Attrition** | units drop out or die | people lost to follow-up in long trials |
+| **Instrument changes** | the measuring tool or the person scoring drifts over time | a scale recalibrated between the before and after weighings |
 | **Diffusion of treatment** | the treatment leaks between groups | participants share information |
 | **Compensatory rivalry** | the control group works harder to prove itself | trying to show they can do well without the treatment |
 | **Resentful demoralization** | the control group gives up | losing interest after missing out on the treatment |

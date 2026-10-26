@@ -40,6 +40,10 @@ For example:
 - For a blood clot (DVT) test, PPV $= 51/83 \approx 0.614$: take only the row of positive tests ([[Sensitivity and Specificity]]).
 - In the book's mammography example, the prevalence is 0.35%, which gives a PPV of about **0.043**. A positive mammogram means about a 4% chance of cancer ([[Bayes' Theorem]]).
 
+That suggests the practical fix: test twice. A positive first result moves a person from the general population into a group where the condition is far more common. Run a second, independent test on that group and its predictive value is much higher, because the prevalence it works against is now much higher. This is why screening is usually followed by confirmation.
+
+So each pair of numbers has its own job. Sensitivity and specificity describe the test and travel between populations; predictive values are what a patient or clinician actually needs, and they change with prevalence.
+
 Before trusting a positive result, ask how common the condition was to begin with. PPV is not a fixed property of a test: move the test to a population with a different prevalence and the PPV moves too. And a 4% PPV doesn't make a test useless. It still raises the chance from 0.35% to 4%, which is enough to justify follow-up testing.
 
 See also: [[Conditional Probability]], [[Why a positive test can still mean you are probably healthy]].

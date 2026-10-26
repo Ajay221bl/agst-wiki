@@ -19,7 +19,7 @@ You don't need a formal test to start. A first screen is to compare the group st
 
 Levene's test makes the check formal. It measures each value's distance from its group centre, $|x_{ij} - \text{centre}_i|$ ([[Absolute Value]]), and runs an ANOVA on those distances. This works because a group with a bigger spread has bigger average distances. Its hypotheses are $H_0$: all variances are equal, against $H_A$: at least one differs. **You want to fail to reject** ([[Null and Alternative Hypotheses]]).
 
-Other tests include Bartlett's, Brown–Forsythe and Fligner's. When equal variances fail for two groups, Welch's t-test avoids pooling ([[Welch's t-Test]]).
+Other tests include Hartley's F-max, which is simply the largest group variance divided by the smallest, as well as Bartlett's, Brown–Forsythe and Fligner's. Each suits different situations; Bartlett's, for example, is sensitive to non-normal data, which Levene's and Brown–Forsythe handle better. When equal variances fail for two groups, Welch's t-test avoids pooling ([[Welch's t-Test]]).
 
 ![[Homogeneity of variance.png|700]]
 Compare the heights of the boxes and [[Box Plot and Five-Number Summary|whiskers]], not where they sit. On the right, group C is far more spread out than group A.
