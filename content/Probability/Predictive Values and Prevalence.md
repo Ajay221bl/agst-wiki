@@ -46,6 +46,8 @@ So each pair of numbers has its own job. Sensitivity and specificity describe th
 
 Before trusting a positive result, ask how common the condition was to begin with. PPV is not a fixed property of a test: move the test to a population with a different prevalence and the PPV moves too. And a 4% PPV doesn't make a test useless. It still raises the chance from 0.35% to 4%, which is enough to justify follow-up testing.
 
+Try it yourself. The same test is used in a specialist clinic, where most patients really have the disease, and in a general screening of everyone in a town. Where is a positive result more trustworthy? In the clinic. The test is the same, but higher prevalence means a positive is far more likely to be a true positive.
+
 See also: [[Conditional Probability]], [[Why a positive test can still mean you are probably healthy]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (pp. 112–116).

@@ -24,3 +24,5 @@ It is a "generic" function: what it prints depends on what you give it. A data f
 For example, a mean much bigger than the [[Median|median]] in the output means [[Shape of a Distribution|right skew]], so report the median ([[Why the median beats the mean for skewed data]]).
 
 Know what a tool leaves out, not only what it gives. summary() doesn't give the [[Standard Deviation|standard deviation]]. Use `sd()` or `describe()` for that ([[mean() and sd()]], [[describe() and describeBy()]]).
+
+Try it yourself. You run `summary()` on a column and see `NA's: 2`. What does that tell you? Two values are missing. Before testing, decide how to handle them, and say what you did.

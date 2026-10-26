@@ -26,4 +26,6 @@ For example, a variable with mean 4.6, median 1.7 and skew 2.3 is strongly skewe
 
 Know what every column means before you report it. The `se` column isn't the SD. It is the standard error of the mean ([[Standard Error]]).
 
+Try it yourself. You want the mean, SD, skew and n for each group in one go, before running an ANOVA. Which function? `describeBy(score, group = major)` from the psych package. It's a quick way to see whether the groups' spreads look similar.
+
 See also: [[aggregate() and by()]], [[report()]].

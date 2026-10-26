@@ -34,4 +34,6 @@ You can check this by adding the cells that are positive or a user, each counted
 
 Draw the overlap and the rule writes itself. Remember that "or" includes "both", and that plain adding only works when the events can't happen together.
 
+Try it yourself. On one roll of a die, what's the chance of an even number or a number above 3? Even is {2, 4, 6}, above 3 is {4, 5, 6}. Add them and you'd count 4 and 6 twice. So it's 3/6 + 3/6 − 2/6 = 4/6. Check by listing: {2, 4, 5, 6}, which is 4 out of 6.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (pp. 94–96).

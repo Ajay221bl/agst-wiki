@@ -39,6 +39,8 @@ For example, "In my sample of 24 lizards, $\bar{x} = 8.96$ cm; I want an interva
 
 Greek for what's true, Roman for what you saw. Keep that in mind and most formulas become readable. $\sigma$ and $s$ are not interchangeable. $\sigma$ is the population value and is almost never known, while $s$ comes from the data. Having to use $s$ is exactly why we need the [[t-Distribution]]. Also, not everyone uses $N$ the same way: some papers write $N$ for the [[Sample Size|sample size]], and in ANOVA $N$ is often the total number of observations across all groups ([[ANOVA Table]]).
 
+Try it yourself. In "x̄ = 5 and μ is unknown", which describes the sample and which the population? x̄ (a Roman letter with a bar) is the sample mean you calculated. μ (Greek) is the population mean you're trying to learn about.
+
 See also: [[Variable and Observation]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]].

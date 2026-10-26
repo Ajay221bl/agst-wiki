@@ -35,6 +35,8 @@ Some examples:
 
 Tell the story in order, and at each step ask what you know by then. You can only multiply the plain probabilities when the events are independent. Without replacement, the second factor must be the conditional one. Also, "and" always makes a probability smaller: both things happening is less likely than either one alone.
 
+Try it yourself. What's the chance of rolling a 6 and then another 6 with a fair die? The second roll doesn't care about the first, so it's 1/6 × 1/6 = 1/36. Now: what's the chance of drawing two aces in a row from a deck without putting the first back? 4/52 × 3/51, because after the first ace, there are only 3 aces and 51 cards left.
+
 See also: [[Family-Wise Type I Error]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (§2.2, p. 106).

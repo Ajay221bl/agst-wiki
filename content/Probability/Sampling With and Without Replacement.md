@@ -23,3 +23,5 @@ This matters because whether the draws are independent decides which multiplicat
 For example, the chance of two clubs from a deck is $\frac{13}{52} \times \frac{12}{51} \approx 0.059$ without replacement and $\frac{13}{52} \times \frac{13}{52} = 0.0625$ with replacement.
 
 Always ask what the bag looks like at the moment you draw. Drawing without replacement makes events dependent, not mutually exclusive ([[Disjoint Events]]). And a sample doesn't need replacement to be random. Random sampling is normally done without replacement, and independence is close enough when the sample is small compared with the population.
+
+Try it yourself. A bag holds 3 red and 2 blue marbles. You draw two. What's the chance both are red, with and without replacement? With: 3/5 × 3/5, a bit over a third. Without: 3/5 × 2/4 = 3/10. Taking a red marble out makes the next red less likely.

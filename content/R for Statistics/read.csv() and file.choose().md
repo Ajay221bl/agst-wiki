@@ -35,4 +35,6 @@ For example, after reading, check `head(YouGov)`, `str(YouGov)` and `summary(You
 
 Check what came in before you trust it. Blank cells aren't automatically treated as missing. In text columns they may come in as empty text unless `""` is in `na.strings`.
 
+Try it yourself. You load a file and every column comes in as text. What's the first thing to check? Open the file and look: often the first rows are notes, not data, or numbers use a comma as the decimal point. Then run `str()` to confirm R read it right.
+
 See also: [[na.omit() and complete.cases()]].

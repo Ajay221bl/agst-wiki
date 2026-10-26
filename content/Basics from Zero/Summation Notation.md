@@ -27,6 +27,8 @@ That last sum is always 0, which is why the variance squares the deviations firs
 
 Read every formula from the inside out, and do what it says in that order. Don't confuse $\sum x_i^2$ with $(\sum x_i)^2$. The first squares each value and then adds; the second adds and then squares. With 1, 2 and 3, they give 14 and 36.
 
+Try it yourself. If x₁ = 1 and x₂ = 2, what are Σxᵢ and Σxᵢ²? Σxᵢ = 1 + 2 = 3. Σxᵢ² means square first, then add: 1 + 4 = 5. The order matters: (Σxᵢ)² would be 9.
+
 See also: [[Greek Letters and Symbols]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.4 numerical summaries).

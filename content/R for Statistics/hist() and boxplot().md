@@ -46,4 +46,6 @@ For example, if the mean line sits far to the right of the median line on a hist
 
 Match the plot to the kind of data you have. A bar graph and a histogram aren't the same function. A factor goes to `plot()` or `barplot()`; a number goes to `hist()`.
 
+Try it yourself. You want to check whether one group's values are roughly normal. Which plot? A histogram, or better, a Q-Q plot. To compare the spreads of several groups at once, use side-by-side box plots.
+
 See also: [[ggpubr Plots]], [[Normality Checks]].

@@ -26,4 +26,6 @@ For example, R prints `t = -5.4548, df = 129, p-value = 2.411e-07`. Read the p-v
 
 Count the places and you'll never misread one. The `e` here has nothing to do with Euler's number; it is just shorthand for $\times 10^{-16}$ and the like. And `p-value < 2.2e-16` does not mean the p-value is exactly 2.2e-16. It means it is smaller than that.
 
+Try it yourself. R prints a p-value as `3e-04`. Is that big or small, and what is it as a decimal? Small: 3 × 10 to the power −4 means move the point 4 places left, which gives three ten-thousandths.
+
 See also: [[Proportions and Percentages]], [[Squares and Square Roots]], [[t.test()]], [[shapiro.test()]].

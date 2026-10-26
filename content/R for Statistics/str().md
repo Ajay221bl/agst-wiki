@@ -34,4 +34,6 @@ For example, before an ANOVA you want `num score` and `Factor major (4 levels)`.
 
 Never assume the computer understood you; check. If it prints, the types still aren't necessarily right. A factor stored as numbers prints fine and is analysed wrongly.
 
+Try it yourself. `str(d)` shows `$ treatment: int 1 2 3 4 1 2 ...`. Is that ready for an ANOVA? No: it's stored as an integer, so `aov()` would fit a line. Convert it with `factor()` first.
+
 See also: [[summary()]], [[aov()]].

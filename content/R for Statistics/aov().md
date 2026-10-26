@@ -54,6 +54,8 @@ A df of 3 means 4 majors, and 3 + 116 + 1 = 120 students. If the first df is 1, 
 
 Fit first, then ask for the summary. `aov()` doesn't print the table itself; print it with `summary()`.
 
+Try it yourself. You run `summary(aov(score ~ major))` on 4 majors and the factor row shows 1 degree of freedom. What's wrong? With 4 groups you should see 3. R read `major` as a number. Convert it with `factor()` and run it again.
+
 See also: [[TukeyHSD()]], [[pairwise.t.test()]], [[emmeans() and cld()]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (p. 269).

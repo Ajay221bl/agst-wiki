@@ -27,6 +27,8 @@ For example, for the standard normal curve, P(−1 < Z < 1) is the area between 
 
 Once you can picture the distribution, every probability question becomes a question about area. For a continuous variable, the height of the curve is not a probability; only areas are. And a distribution is not a data set. A data set is one sample, while the distribution describes all the values the process could produce and how often.
 
+Try it yourself. For one roll of a fair die, write down the probability distribution. Each value 1 to 6 has probability 1/6, and they add up to 1. That's it: a list of every possible value and how likely each one is.
+
 See also: [[Sample Space and Events]], [[Classical vs Relative Frequency Probability]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 3]].

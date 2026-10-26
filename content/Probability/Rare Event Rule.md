@@ -29,4 +29,6 @@ Three heads in a row is mildly suspicious; twenty is very hard to believe.
 
 Surprise is evidence, not proof. That's the whole spirit of testing. A rare result doesn't prove the assumption false. It makes it hard to believe, not impossible: rare things do happen, and that is exactly what a Type I error is ([[Type I and Type II Errors]]). And a result that isn't rare doesn't prove the assumption true. It only means there is no strong evidence against it ([[Why we never accept the null hypothesis]]).
 
+Try it yourself. A friend claims they can tell by taste whether milk was poured before or after the tea. You test them on 8 cups and they get all 8 right. If they were only guessing, the chance of that would be (1/2) to the power 8, well under 1%. Do you still think they're guessing? Probably not. That's the rare event rule.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 4]] (§4.3).

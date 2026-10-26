@@ -36,4 +36,6 @@ summary(YouGov)
 
 If it isn't in the script, it didn't happen. Running code in the console doesn't save it; only the script is saved.
 
+Try it yourself. Why write your analysis in a script instead of typing straight into the console? Because a script is a record. Tomorrow, or when your data change, you can run the whole thing again and get the same steps, and someone else can check exactly what you did.
+
 See also: [[Functions and Arguments]], [[R Packages]].

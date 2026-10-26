@@ -33,6 +33,8 @@ These are made-up but typical numbers. The proportion wanders early, then settle
 
 Patience, not luck, is what makes averages reliable. After five tails, heads is not "due". That belief is the gambler's fallacy: each flip is still 50/50 ([[Independent Events]]). The law works by dilution, not correction. And a huge sample only gets close to the truth if it is unbiased and representative.
 
+Try it yourself. You flip a fair coin 10 times and get 7 heads. Is the coin unfair? Not necessarily: with only 10 flips, that's well within luck. Flip it thousands of times and the share of heads will settle close to a half. The law of large numbers is about the long run, not about evening out the next few flips.
+
 See also: [[Why a bigger sample gives a narrower confidence interval]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (p. 92).

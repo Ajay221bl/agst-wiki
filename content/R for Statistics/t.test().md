@@ -40,4 +40,6 @@ For example, the output lists **t, the degrees of freedom (df), the p-value, the
 
 Defaults answer someone's question. Make sure it's yours. The default doesn't test your hypothesis; it tests μ = 0 unless `mu =` is set. And the order of subtraction matters: it sets the sign of t and the CI, and which `alternative` is correct.
 
+Try it yourself. You run `t.test(after, before, paired = TRUE)` and get a positive mean difference. Did the values go up or down? Up: R subtracts in the order you gave, after minus before.
+
 See also: [[cohensD()]], [[shapiro.test()]], [[report()]].

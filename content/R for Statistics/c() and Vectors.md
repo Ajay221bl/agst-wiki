@@ -33,4 +33,6 @@ t.test(diffs, mu = 0)        # a paired t-test is a one-sample test on the diffe
 
 One vector, one type. A vector can't mix numbers and text: mixing turns everything into text.
 
+Try it yourself. What does `c(1, 2, 3) * 2` give? `2 4 6`. R does the multiplication to every element at once, which is why vectors make statistics in R so short to write.
+
 See also: [[R Objects and Assignment]], [[t.test()]], [[factor()]].

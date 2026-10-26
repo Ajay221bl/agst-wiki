@@ -34,4 +34,6 @@ The second line changes the column names of the stored object.
 
 The computer is perfectly literal, so be precise. R cares about capital letters: `Frust` and `frust` are different objects. And spaces in names break code, so use `_` or `.` instead.
 
+Try it yourself. You type `m <- mean(c(2, 4, 6))`. Nothing prints. Did it work? Yes. The answer, 4, was stored in `m` instead of printed. Type `m` to see it.
+
 See also: [[Functions and Arguments]].

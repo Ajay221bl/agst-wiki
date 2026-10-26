@@ -38,4 +38,6 @@ For example, in the Halloween costume data, Superman's point gets a letter of it
 
 Letters are a summary of tests, not a statement about truth. A shared letter doesn't mean equal means. It means not significantly different.
 
+Try it yourself. `cld()` gives groups the letters a, ab and b. Which pair differs? The "a" group and the "b" group, because they share no letter. The "ab" group can't be told apart from either.
+
 See also: [[Writing a Conclusion]].

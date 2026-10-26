@@ -34,4 +34,6 @@ For example, `ggboxplot(..., add = "mean")` puts a dot at each group mean on top
 
 Make the plot beautiful, but keep the analysis honest. A p-value on the plot doesn't replace the analysis. It skips the [[Test Assumptions|assumption]] checks, so run the full workflow.
 
+Try it yourself. Before running an ANOVA, why plot the groups side by side? To see at a glance whether the means look different, whether the spreads look similar, and whether there are outliers. A test gives you one p-value; the plot shows you why.
+
 See also: [[Normality Checks]], [[emmeans() and cld()]].

@@ -22,6 +22,8 @@ And for the SE: with $s = 10$, a sample of $n = 25$ gives $10/5 = 2$, while $n =
 
 Square to get rid of signs, take the root to get back to real units. One subtle point: the sample variance $s^2$ is unbiased for the population variance $\sigma^2$, but its square root $s$ is very slightly biased for $\sigma$. In practice this doesn't matter ([[Unbiased Estimator]]).
 
+Try it yourself. To halve the width of a confidence interval, how much must the sample grow? The width shrinks with the square root of n, and √4 = 2, so you need 4 times as many observations. That's why precision gets expensive fast.
+
 See also: [[Summation Notation]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (variance and SD, §1.4).

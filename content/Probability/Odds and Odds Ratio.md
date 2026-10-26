@@ -22,4 +22,6 @@ For example, a probability of 0.5 gives odds of 1, and a probability of 0.2 give
 
 Know which one you're looking at before you say "twice as likely". Odds and probability are not the same thing: a probability of 0.75 is odds of 3. And an odds ratio of 2 means twice the odds, not "twice as likely". For common outcomes the two can differ a lot.
 
+Try it yourself. If the probability of rain is 1/5, what are the odds of rain? The chance it rains divided by the chance it doesn't: (1/5) ÷ (4/5) = 1/4, often said "1 to 4". An odds ratio above 1 means the odds are higher in the first group; exactly 1 means no difference.
+
 See also: [[Contingency Table]].

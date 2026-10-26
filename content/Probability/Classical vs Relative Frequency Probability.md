@@ -32,6 +32,8 @@ For example:
 
 Reasoning works when you know the setup; counting works when you don't. Use whichever the situation allows. Two outcomes don't mean 50/50: winning or losing the lottery is two outcomes, nowhere near equally likely. And a relative frequency is only an estimate of the true probability, a rough one when the number of tries is small.
 
+Try it yourself. What's the probability that a thumbtack, dropped on a table, lands point up? Can you work it out classically? No: the two outcomes aren't equally likely, and there's no symmetry to reason from. You'd have to drop it many times and count. That's relative frequency.
+
 See also: [[Proportions and Percentages]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (§2.1, pp. 90–93).

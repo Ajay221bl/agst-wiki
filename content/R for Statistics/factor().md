@@ -33,4 +33,6 @@ For example, `str()` before shows `$ trt: int 1 2 3 4 1 2 ...`. After `d$trt <- 
 
 Tell R what kind of thing each variable is, and it will treat it right. Changing the order of the levels doesn't change the data. It only changes the order R uses.
 
+Try it yourself. You have a column `dose` with values 1, 2 and 3 meaning low, medium and high. When should it be a factor, and when a number? A factor when you want a separate mean for each dose (one-way ANOVA). A number when you think the effect rises in a straight line with dose (regression).
+
 See also: [[aov()]], [[t.test()]].

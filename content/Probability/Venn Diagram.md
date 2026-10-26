@@ -22,4 +22,6 @@ For example, with $P(A) = 0.5$, $P(B) = 0.35$ and $P(A \text{ and } B) = 0.175$,
 
 Use the picture to count, but don't let it fool you about independence. Overlapping circles don't mean the events are independent; overlap only means they can happen together. Independence is a statement about probabilities ([[Independent Events]]). And separate circles mean disjoint, which actually makes the events strongly dependent.
 
+Try it yourself. Draw two overlapping circles, A and B, inside a box. Shade "A and not B". Which region is it? The part of circle A that's outside circle B: the crescent on A's side. Most probability rules become obvious once you can shade the right region.
+
 See also: [[Proportions and Percentages]], [[Contingency Table]].

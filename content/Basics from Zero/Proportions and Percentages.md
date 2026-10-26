@@ -21,6 +21,8 @@ As another example, 10 people taste a new feed: four like it and six don't. Code
 
 Whenever you see a count, ask for the whole it came from. Watch the format: 0.05 is 5%, not 5. Writing "p = 5" is an error, since a p-value can never be bigger than 1. And a bigger count only means a bigger rate when the wholes are the same size.
 
+Try it yourself. In one small group, 3 of 5 students cycle to school. In another, 4 of 10 do. Which group cycles more? The counts say the second, but 3/5 is more than half and 4/10 is less than half, so the first group does. Always ask "out of how many?"
+
 See also: [[Variable and Observation]], [[Contingency Table]], [[Sampling Distribution]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.5 [[Types of Data|categorical]] data).

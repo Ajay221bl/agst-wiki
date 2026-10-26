@@ -24,3 +24,5 @@ Inference uses expected values all the time ([[Descriptive vs Inferential Statis
 For example, for heads in two fair flips, $E(X) = 0(0.25) + 1(0.5) + 2(0.25) = 1$ head.
 
 It's a long-run average, which is exactly why it's useful for decisions you'll make again and again. The expected value isn't necessarily the most likely value. For one die it is 3.5, which never comes up. And "expected" doesn't mean guaranteed: it is a long-run average, and any single result can be far from it.
+
+Try it yourself. A game costs nothing to play. Roll a die: on a 6 you win 6 coins, otherwise you win nothing. What's the expected value? 6 × 1/6 + 0 × 5/6 = 1 coin per game. You'll never win exactly 1 coin in a single game, but over many games you'll average about 1.

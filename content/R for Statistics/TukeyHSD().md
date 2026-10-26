@@ -30,4 +30,6 @@ For example, in the row `psychology-English`, the difference is positive and `lw
 
 Software will answer any question you ask, even ones you shouldn't. Output doesn't mean significance. R prints it whether or not the ANOVA was significant.
 
+Try it yourself. A `TukeyHSD()` row reads `B-A` with `lwr` negative and `upr` positive. Do B and A differ? No: the interval contains 0, so no difference is a believable value. Check `p adj` too; it will be above α.
+
 See also: [[emmeans() and cld()]].

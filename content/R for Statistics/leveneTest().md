@@ -33,4 +33,6 @@ For example, Pr(>F) = 0.08 means you [[Why we never accept the null hypothesis|f
 
 Same letter, different question. The F here isn't the ANOVA F. It is Levene's own [[Parameter vs Statistic|statistic]], about spreads, not means.
 
+Try it yourself. `leveneTest()` gives a large p-value. Can you go ahead with a pooled ANOVA? Yes, as far as variances go. A large p means no evidence that the spreads differ. A small one would be the warning.
+
 See also: [[aov()]].

@@ -24,4 +24,6 @@ If $P(A) = 0.50$ and $P(B) = 0.35$, and the events are independent:
 
 The test is always the same: does knowing one change your belief about the other? Independent doesn't mean "can't happen together"; that is [[Disjoint Events|disjoint]]. Independent events can, and usually do, happen together. And dependent doesn't mean one causes the other. It only means the probabilities are linked: drawing [[Sampling With and Without Replacement|without replacement]] creates dependence without any cause and effect ([[Association vs Causation]]).
 
+Try it yourself. You flip a fair coin and get heads 5 times in a row. What's the chance the next flip is heads? Still 1/2. The coin has no memory: each flip is independent of the ones before. Feeling that tails is "due" is called the gambler's fallacy.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (p. 105, p. 111).

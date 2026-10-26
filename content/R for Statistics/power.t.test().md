@@ -31,4 +31,6 @@ For example, the book's blood-pressure example (SD 12, difference 3) works out t
 
 Plan the study so it can actually find what you're looking for. `n` isn't the total sample size. For two-sample designs it is the number per group.
 
+Try it yourself. You want to know how many animals per group you need to detect a given difference with 80% power. Which argument do you leave out? `n`. `power.t.test()` solves for whichever one argument you leave blank.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (§5.4).

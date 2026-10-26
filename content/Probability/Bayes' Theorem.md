@@ -46,6 +46,8 @@ $P(\text{cancer} \mid +) = 311.5 / 7{,}287 \approx 0.043$, or about 4%.
 
 The lesson reaches far beyond medicine: always ask how common the thing was before the evidence came in. A test that catches most cases doesn't make a positive result reliable when the condition is rare. And Bayes' theorem isn't only for "Bayesian statistics": it is a basic rule of probability.
 
+Try it yourself. A test almost always catches a disease, and rarely gives false alarms, but the disease is extremely rare. You test positive. Should you panic? Not yet. Because healthy people vastly outnumber sick ones, even a few false alarms among them can outnumber the true positives. Bayes' theorem tells you to weigh the result by how rare the disease was to begin with.
+
 See also: [[Why a positive test can still mean you are probably healthy]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (pp. 111–116).

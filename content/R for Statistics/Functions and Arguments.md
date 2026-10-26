@@ -31,4 +31,6 @@ sd(d$MHSAS_sum, na.rm = TRUE)   # skip missing values
 
 Names make code readable to the computer and to the future you. Argument order does matter for unnamed arguments, which are matched by position. Name them when in doubt.
 
+Try it yourself. In `mean(x, na.rm = TRUE)`, what's the function, and what are the arguments? `mean` is the function; `x` is the data you give it, and `na.rm = TRUE` is an extra instruction: drop missing values first.
+
 See also: [[t.test()]], [[aov()]], [[mean() and sd()]].

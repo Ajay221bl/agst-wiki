@@ -50,6 +50,8 @@ For example, here is the SimpliRED D-dimer test for blood clots in the leg (DVT)
 
 These numbers describe the test, not your result. That's the distinction most people miss. Sensitivity is not "the chance I'm sick if I test positive"; that is the [[Predictive Values and Prevalence|positive predictive value]]. And a sensitive test isn't automatically specific: the D-dimer test is very sensitive but poorly specific.
 
+Try it yourself. A smoke detector goes off every time there's a fire, but also whenever someone makes toast. Is its sensitivity or its specificity poor? Specificity: it catches all the real fires (high sensitivity) but raises false alarms on non-fires (low specificity).
+
 See also: [[Conditional Probability]], [[Contingency Table]], [[Type I and Type II Errors]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (pp. 112–114).

@@ -32,4 +32,6 @@ names(long) <- c("score", "major")
 
 Wide is for people reading, long is for models. Long format doesn't lose information. It holds the same numbers, rearranged.
 
+Try it yourself. Your file has one column per fertilizer, with heights underneath. Can you run `aov(height ~ fertilizer)` on it? Not yet. There's no `height` column and no `fertilizer` column. Stack it into long format first, so each row is one plant with its height and its fertilizer.
+
 See also: [[aov()]].

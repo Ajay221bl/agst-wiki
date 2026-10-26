@@ -37,4 +37,6 @@ COVIDtime$April - COVIDtime$March   # the paired differences
 
 When in doubt, be explicit about rows and columns. `d[15]` and `d[, 15]` are close but not the same: `d[, 15]` returns the column's values. Use `[rows, columns]` to be clear.
 
+Try it yourself. You have a data frame `d` with columns `height` and `diet`. How do you get just the heights? `d$height`. The `$` reaches into the table and pulls out one column, which is a vector.
+
 See also: [[R Objects and Assignment]], [[str()]], [[Wide vs Long Format]].

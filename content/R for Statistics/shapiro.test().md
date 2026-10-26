@@ -34,4 +34,6 @@ For example, `W = 0.97, p-value < 2.2e-16` on n = 939 means normality is rejecte
 
 Read the hypothesis before you read the p-value. A small p isn't good news: it rejects normality.
 
+Try it yourself. `shapiro.test()` on one group gives a small p-value. Good or bad news? Bad: it's evidence that the group isn't normal. But look at a Q-Q plot too. With big samples this test flags tiny wobbles that don't matter.
+
 See also: [[Nonparametric Alternatives]], [[aov()]].

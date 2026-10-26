@@ -28,6 +28,8 @@ The probabilities add to 1. The [[Expected Value|expected value]] is $0(0.25) + 
 
 It's a rule for turning chance into numbers, and that rule is what lets everything else in probability work. For a continuous variable, the chance of any single exact value, such as P(X = 3.0), is 0; only ranges have probabilities. And for [[Independent and Dependent Variables|independent variables]], the variance of a difference is the sum of their variances, not the difference.
 
+Try it yourself. Flip a coin 3 times and let X be the number of heads. What values can X take? 0, 1, 2 or 3. Before flipping, you don't know which you'll get, but you know the possibilities and their chances. That's what makes X a random variable.
+
 See also: [[Sample Space and Events]], [[Normal Distribution]], [[Variable and Observation]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 3]] (§3.1, p. 140).

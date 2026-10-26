@@ -25,3 +25,5 @@ It is the one-line base R reshape that gets wide data ready for `aov()` ([[aov()
 For example, a wide row of business 12, English 15, math 14 and psychology 18 becomes four long rows: (12, business), (15, English), (14, math) and (18, psychology).
 
 The simplest tool that works is usually the best one. stack() doesn't need the tidyverse; it is part of base R.
+
+Try it yourself. Your data are in wide format, one column per treatment. After `stack()`, what columns do you get? Two: `values`, holding every measurement, and `ind`, holding which treatment each came from. That's long format, ready for `aov(values ~ ind)`.

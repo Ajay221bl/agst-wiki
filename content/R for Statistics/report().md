@@ -28,4 +28,6 @@ For example, for a paired test, `report()` gives the sign of Cohen's d (which de
 
 Let it write the first draft; you write the final one. The report's wording isn't final. It is a draft, and it may not match your [[Null and Alternative Hypotheses|hypotheses]], your α or your context.
 
+Try it yourself. `report()` writes a full sentence about your test. Should you paste it straight into your thesis? Use it as a draft. Check every number against the output, and make sure the sentence says what your hypothesis actually was.
+
 See also: [[Descriptive vs Inferential Statistics]].

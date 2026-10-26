@@ -23,4 +23,6 @@ For example, a test on mercury in fish gave $t = -11.96$. For a two-sided p-valu
 
 Think distance, and the rules take care of themselves. Absolute value doesn't "flip" a number. A positive number stays exactly as it is. And $|a - b|$ is not the same as $a - b$: the first gives only the size of the gap, while the second also tells you which number is bigger.
 
+Try it yourself. What are |−7| and |7|? Both are 7: each is 7 steps from 0, one to the left and one to the right. And what is |5 − 8|? |−3| = 3, the distance between 5 and 8, whichever way round you subtract.
+
 See also: [[Greek Letters and Symbols]], [[Variable and Observation]], [[Deviations from the Mean]], [[Homogeneity of Variance]], [[Parameter vs Statistic]].

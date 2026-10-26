@@ -27,6 +27,8 @@ The 58s cancel, so you can go straight to "2 out of the 13 part-time students".
 
 Always ask: out of whom? Most probability mistakes come from answering for the wrong group. $P(A \mid B)$ and $P(B \mid A)$ are almost never equal. The chance of a positive test given disease can be 0.89 while the chance of disease given a positive test is 0.04 ([[Why a positive test can still mean you are probably healthy]]). And for a conditional probability, divide by the total of the condition only, not the grand total.
 
+Try it yourself. In a class of 10 students, 4 are women, and 1 of those women smokes. What is P(smokes | woman)? Shrink your attention to the 4 women: 1 of them smokes, so it's 1/4. Notice it's not 1/10. The "given" changes what you're dividing by.
+
 See also: [[Sensitivity and Specificity]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (§2.2, pp. 106–111).

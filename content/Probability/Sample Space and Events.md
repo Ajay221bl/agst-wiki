@@ -31,6 +31,8 @@ Turning words into symbols:
 
 Most probability errors are listing errors, so list carefully. HT and TH are two different outcomes; treating them as one makes the sample space wrong. And an event doesn't have to be a single outcome: it can be a whole group of them.
 
+Try it yourself. Roll one die. Write down the sample space and the event "a number greater than 4". The sample space is {1, 2, 3, 4, 5, 6}; the event is {5, 6}. Its probability is 2/6, because 2 of the 6 equally likely outcomes are in it.
+
 See also: [[Variable and Observation]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (§2.1, p. 90).

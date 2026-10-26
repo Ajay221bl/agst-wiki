@@ -42,4 +42,6 @@ All values checked in R.
 
 Sketch the curve and shade the area you want before you type anything. pnorm gives the area to the left, not the right, unless you set `lower.tail = FALSE`. And `qnorm(0.95)` isn't the two-sided 95% cut-off. It is 1.645, the one-sided cut-off; the two-sided 95% cut-off uses `qnorm(0.975)`.
 
+Try it yourself. One family answers "what's the area?", the other "where's the cut-off?". Which is which? The p-functions (`pnorm`, `pt`) give an area, such as a p-value. The q-functions (`qnorm`, `qt`) give a value, such as a critical value.
+
 See also: [[Functions and Arguments]], [[Confidence Interval]], [[One-Sample t-Test]].

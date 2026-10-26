@@ -37,4 +37,6 @@ In the long version every row is a chicken and every column is a variable.
 
 One row per thing you measured, one column per thing you recorded: that's the whole rule. Wide data aren't wrong. They are fine for reading and for paired data, and only need reshaping for functions that want a group column. In a tidy table a row is always an observation, never a variable.
 
+Try it yourself. You record 3 plants, each with its fertilizer and height. How many rows and columns should the table have? 3 rows, one per plant, and 2 columns, one for fertilizer and one for height. If you add a fourth plant, you add a row; if you also measure leaf count, you add a column.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (data matrices, §1.2).

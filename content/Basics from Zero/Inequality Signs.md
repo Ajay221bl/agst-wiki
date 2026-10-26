@@ -26,4 +26,6 @@ For example, with two coin flips, the probability of at least 1 head is P(X ≥ 
 
 Always ask whether the boundary itself is in or out. "At least 3" is not the same as "more than 3": at least 3 includes 3. These notes always write the null hypothesis with "=", never with $\le$ or $\ge$.
 
+Try it yourself. Write "p is at most α" with a sign. p ≤ α: "at most" means it can equal α too, so the sign includes the line underneath. "p is less than α" would be p < α, which leaves out α itself.
+
 See also: [[Greek Letters and Symbols]], [[Complementary Events]], [[Absolute Value]].

@@ -21,4 +21,6 @@ For example, on one die, $P(2 \text{ or } 5) = 1/6 + 1/6 = 2/6$.
 
 Disjoint is about whether events can share outcomes; independence is about whether one tells you about the other. Disjoint is not the same as independent. It is nearly the opposite: two disjoint events that each have some chance of happening are never independent. If one happens, the other's chance drops to 0, so knowing one tells you about the other ([[Independent Events]]). Also, disjoint events only add to 1 if together they cover every outcome. A 2 and a 5 are disjoint, but together they make only 1/3.
 
+Try it yourself. Are "roll a 2" and "roll an even number" disjoint on one die? No, because a 2 is both. They overlap, so you can't simply add their probabilities; you'd count the 2 twice.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (pp. 93–96).

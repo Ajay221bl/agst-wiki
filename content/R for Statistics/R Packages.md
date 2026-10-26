@@ -32,4 +32,6 @@ For example, the error "could not find function cohensD" means the `lsr` package
 
 Install once, load every time. You don't need to install a package every time: install once, and load it in every session.
 
+Try it yourself. You run `leveneTest(...)` and R says it can't find the function. What's the likely fix? The function lives in the car package, so run `library(car)` first, after installing it once with `install.packages("car")`.
+
 See also: [[describe() and describeBy()]], [[ggpubr Plots]], [[leveneTest()]], [[cohensD()]].

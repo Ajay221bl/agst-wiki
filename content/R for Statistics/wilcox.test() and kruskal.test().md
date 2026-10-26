@@ -38,4 +38,6 @@ Checked in R on the book data ([[Nonparametric Alternatives]]).
 
 Ranks trade a little power for a lot of robustness. wilcox.test is really two tests: the signed-rank test (one sample or paired) and the rank-sum test (two groups), chosen by the arguments. And a tie warning doesn't mean the result is invalid, only that the p-value is approximate.
 
+Try it yourself. Your two groups are small and badly skewed. Which function might you run alongside `t.test()`? `wilcox.test()`, which works on ranks. For three or more groups, `kruskal.test()` plays the same role next to `aov()`.
+
 See also: [[Functions and Arguments]], [[Test Choice Guide]].

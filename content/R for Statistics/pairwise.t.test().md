@@ -28,6 +28,8 @@ For example, a cell of 0.012 is significant at 0.05 after adjustment.
 
 Know whether a number has already been adjusted before you adjust it again. Don't compare the table with 0.05/6. The p-values are already adjusted, so compare them with 0.05.
 
+Try it yourself. You run `pairwise.t.test(score, group, p.adjust.method = "bonferroni")`. What has happened to the p-values it prints? They've already been multiplied by the number of comparisons (capped at 1), so you compare them with the usual α directly.
+
 See also: [[Post Hoc Tests]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (pp. 269–270).

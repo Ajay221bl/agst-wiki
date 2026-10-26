@@ -20,6 +20,8 @@ For example, the probability of at least one six in 3 rolls of a fair die. Count
 
 When a question says "at least one", reach for the complement first. Be careful with boundaries. The complement of "at least 2" is "at most 1" (fewer than 2), not "at most 2", because the value 2 belongs to the event itself.
 
+Try it yourself. What's the chance of at least one head in 3 flips of a fair coin? Counting all the ways to get one, two or three heads is fiddly. The opposite, no heads at all, is just TTT, with chance 1/8. So the answer is 1 − 1/8 = 7/8.
+
 See also: [[Family-Wise Type I Error]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 2]] (§2.1).

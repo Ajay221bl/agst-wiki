@@ -34,4 +34,6 @@ mean(x, na.rm = TRUE)  # 3
 
 R refuses to guess, which is a feature, not a bug. An NA answer doesn't usually mean a bug. It usually means there are missing values: add `na.rm = TRUE` and report how many there were.
 
+Try it yourself. `mean(x)` returns `NA`. Why, and what's the fix? There's at least one missing value in `x`, and R won't guess what to do with it. Use `mean(x, na.rm = TRUE)`, and say in your write-up that missing values were dropped.
+
 See also: [[describe() and describeBy()]].

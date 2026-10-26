@@ -24,4 +24,6 @@ For example, in the book's swimming data, wetsuits added 0.0775 m/s to swimmers'
 
 Read every ratio as a comparison: how big is the top compared to the bottom? Two common slips: a bigger denominator makes the result smaller, not bigger, which is why more noise hides an effect. And a ratio of 2 means "twice as much", not "2 more".
 
+Try it yourself. A test statistic is a difference divided by its noise. If the difference is 6 and the noise is 2, what's the ratio, and what does it mean? 3: the difference is three times bigger than the noise. If the noise were 6, the ratio would be 1, and the difference would be no bigger than noise.
+
 See also: [[Variable and Observation]], [[Odds and Odds Ratio]].

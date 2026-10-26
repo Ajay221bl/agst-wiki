@@ -28,4 +28,6 @@ For example, group SDs of 4.1, 4.8, 5.2 and 3.9 give a largest-to-smallest [[Var
 
 Check what the test actually assumes, group by group. One Shapiro test on all the data isn't enough for ANOVA. Check each group, or the [[Residuals|residuals]].
 
+Try it yourself. You want the mean height for each fertilizer. Which kind of tool do you need: one that works on the whole column, or one that splits it by group first? Split first. `aggregate(height ~ fertilizer, data = d, FUN = mean)` gives one mean per group.
+
 See also: [[leveneTest()]], [[aov()]].

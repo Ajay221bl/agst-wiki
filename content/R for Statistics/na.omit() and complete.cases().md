@@ -29,4 +29,6 @@ For example, in a COVID survey, `na.omit` on the full data left 939 rows for a o
 
 Choose your columns first, then clean. na.omit doesn't only remove missing values in the variable you are analysing; it looks at every column.
 
+Try it yourself. Your data have 10 rows, and 2 of them have a blank in a column you're not using. What happens if you run `na.omit()` on the whole table? Those 2 rows disappear, and your test runs on 8 rows. Select the columns you need first, then drop missing values.
+
 See also: [[Degrees of Freedom]], [[t.test()]].

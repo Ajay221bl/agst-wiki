@@ -40,6 +40,8 @@ For example:
 
 When in doubt, build the table. It turns abstract rules into plain division. A conditional probability uses only the total of the row or column you condition on, not the grand total. And the table holds counts; you get probabilities by dividing.
 
+Try it yourself. A table shows 6 people who exercise, of whom 4 sleep well, and 4 who don't exercise, of whom 1 sleeps well. What fraction of all 10 people sleep well? 5/10. What fraction of exercisers? 4/6. Reading a contingency table is mostly choosing the right row or column to divide by.
+
 See also: [[Proportions and Percentages]], [[Sensitivity and Specificity]], [[Bayes' Theorem]], [[Ratios and Fractions]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.5 contingency tables), [[References|Vu and Harrington 2020, Ch. 2]].

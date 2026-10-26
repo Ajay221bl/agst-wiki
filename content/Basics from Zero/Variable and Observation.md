@@ -30,4 +30,6 @@ That is four observations and two variables. Weight varies within each diet, and
 
 Name the unit first; everything else follows from it. An observation is a whole unit, usually one row, not a single number. And the [[Sample Size|sample size]] $n$ counts observations (rows), not variables (columns).
 
+Try it yourself. You record the height, age and species of 5 trees. How many observations and how many variables? 5 observations, one per tree, and 3 variables: height, age and species.
+
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (§1.2 data basics, p. 14).
