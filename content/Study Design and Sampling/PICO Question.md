@@ -34,7 +34,7 @@ For example: "Cholesterol-lowering drugs given to people over 50 with high chole
 
 A sharp question does half the work. The comparison doesn't have to be a placebo; any meaningful reference works. And a statistically significant result answers the statistical question, not the scientific one: you still have to bring it back to the real context ([[Statistical vs Practical Significance]]).
 
-Try it yourself. Turn "does yoga help back pain?" into a PICO question. For example: in adults with long-term back pain (P), does a weekly yoga class (I), compared with usual care (C), lower pain scores after a few months (O)? Now it's something you can measure and test.
+Try it yourself. How would you turn "does yoga help back pain?" into a PICO question? For example: in adults with long-term back pain (P), does a weekly yoga class (I), compared with usual care (C), lower pain scores after a few months (O)? Now it's something you can measure and test.
 
 See also: [[Experiment]], [[Independent and Dependent Variables]].
 
