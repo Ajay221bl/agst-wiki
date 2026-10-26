@@ -12,7 +12,7 @@ status: seedling
 
 Validity is how far a study's conclusion can be trusted. It is usually split into four kinds: statistical conclusion, internal, construct and external validity.
 
-Think of a study as a chain of reasoning from data to a claim about the world. It's only as strong as its weakest link. A study ends with a claim, such as "the treatment raised yield in these fields, and would elsewhere". That claim depends on several links, and each one can break. Validity checks them one at a time:
+A study ends with a claim, such as "the treatment raised yield in these fields, and would elsewhere". That claim depends on several links, and each one can break. Validity checks them one at a time:
 - **Is there really a relationship in the data?** This is statistical conclusion validity: the right test, its [[Test Assumptions|assumptions]] met, and enough [[Statistical Power|power]] ([[Statistical Conclusion Validity]]).
 - **Is the relationship causal?** This is internal validity: could something other than the treatment explain it ([[Internal Validity]], [[Association vs Causation]])?
 - **Did we measure what we meant to?** This is construct validity: does the measurement capture the idea ([[Construct Validity]])?
@@ -27,8 +27,6 @@ Four questions, one for each link from data to conclusion.
 
 For example, a randomized trial run on volunteers at one farm has strong internal validity, weaker external validity (one farm, volunteers), and construct validity that depends on whether yield was measured the same way on every plot.
 
-So don't ask "is this study valid?" as if it were one thing. Ask which link is weakest. Valid doesn't mean [[Statistical vs Practical Significance|statistically significant]]: significance speaks only to statistical conclusion validity. And reliable doesn't mean valid: a scale that is always 2 kg off is reliable but not valid.
-
-Try it yourself. A well-run, double-blind trial of a vitamin finds no effect, but the "vitamin pill" was later found to contain almost no vitamin. Which kind of validity failed? Construct validity: the treatment didn't actually deliver the thing the study was about.
+Valid doesn't mean [[Statistical vs Practical Significance|statistically significant]]: significance speaks only to statistical conclusion validity. And reliable doesn't mean valid: a scale that is always 2 kg off is reliable but not valid.
 
 See also: [[Experiment]], [[Population and Sample]].

@@ -13,7 +13,7 @@ status: seedling
 
 The mean is the ordinary average: add up all the values and divide by how many there are.
 
-Most people think they know what an average is. The interesting part is knowing when it misleads you. You often want one number for a typical value of a quantitative variable ([[Types of Data]]). The mean shares the total out equally:
+You often want one number for a typical value of a quantitative variable ([[Types of Data]]). The mean shares the total out equally:
 $$\bar{x} = \frac{\sum x_i}{n}$$
 ([[Summation Notation]]). It is the value everyone would have if the total were split evenly. It is also the balance point: picture the values as weights on a ruler, and the mean is where the ruler balances. The distances above it exactly cancel the distances below ([[Deviations from the Mean]]).
 
@@ -28,9 +28,7 @@ For example, five people's years in school after a bachelor's degree are 1, 2, 3
 - The mean is 15/5 = **3**.
 - Change one 3 to **33** and the mean becomes 45/5 = **9**, while the median stays at 3.
 
-The mean is a fair share, and fair shares can be pulled around by a few big values. The middle line of a box plot is the median, not the mean ([[Box Plot and Five-Number Summary]]). And the mean isn't always the best centre: for skewed data the median usually describes a typical value better.
-
-Try it yourself. The values 1, 2, 3, 6 and 3 have mean 3. Replace the 6 with 10. What happens to the mean? The total grows by 4, so the mean goes up by 4 ÷ 5, to a bit under 4. One value moved, and the mean followed it.
+The middle line of a box plot is the median, not the mean ([[Box Plot and Five-Number Summary]]). And the mean isn't always the best centre: for skewed data the median usually describes a typical value better.
 
 See also: [[Variance]].
 

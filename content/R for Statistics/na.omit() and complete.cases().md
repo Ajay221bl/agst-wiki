@@ -12,7 +12,7 @@ status: seedling
 
 `na.omit(d)` drops every row that has a missing value (NA) in any column. `d[complete.cases(d), ]` does the same, and is easy to aim at only the columns you need.
 
-Dropping missing data is easy. Dropping only what you meant to is the skill. Missing values stop many functions and change $n$ ([[Missing Data]]). Decide which rows to keep, then drop the rest on purpose:
+Missing values stop many functions and change $n$ ([[Missing Data]]). Decide which rows to keep, then drop the rest on purpose:
 
 ```r
 d <- na.omit(d)                                     # any NA anywhere → row dropped
@@ -27,8 +27,6 @@ Tests need complete observations, but dropping rows changes $n$, the degrees of 
 
 For example, in a COVID survey, `na.omit` on the full data left 939 rows for a one-sample test (938 degrees of freedom). The paired analysis, which kept only the March and April columns, kept 979. Different choices give a different $n$.
 
-Choose your columns first, then clean. na.omit doesn't only remove missing values in the variable you are analysing; it looks at every column.
-
-Try it yourself. Your data have 10 rows, and 2 of them have a blank in a column you're not using. What happens if you run `na.omit()` on the whole table? Those 2 rows disappear, and your test runs on 8 rows. Select the columns you need first, then drop missing values.
+na.omit doesn't only remove missing values in the variable you are analysing; it looks at every column.
 
 See also: [[Degrees of Freedom]], [[t.test()]].

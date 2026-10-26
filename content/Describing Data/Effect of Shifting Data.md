@@ -11,7 +11,7 @@ status: seedling
 
 Adding the same amount to every value moves the mean and the [[Median|median]] by that amount, but leaves the [[Standard Deviation|standard deviation]], the variance, the range and the [[Range and IQR|interquartile range]] unchanged.
 
-You don't need formulas for this. You need one good picture. Imagine everyone in a group photo standing on a 10 cm box. Every height goes up by 10 cm, so the average height goes up by 10 cm too ([[Mean]]). But each person and the mean both moved by the same amount, so each person's distance from the mean is unchanged ([[Deviations from the Mean]]). All the measures of spread are built from those distances, so none of them change ([[Variance]]). This is handy: switching units by adding a constant, such as from degrees Celsius to kelvin, doesn't affect any measure of spread or any [[Test Statistic|t statistic]].
+Imagine everyone in a group photo standing on a 10 cm box. Every height goes up by 10 cm, so the average height goes up by 10 cm too ([[Mean]]). But each person and the mean both moved by the same amount, so each person's distance from the mean is unchanged ([[Deviations from the Mean]]). All the measures of spread are built from those distances, so none of them change ([[Variance]]). This is handy: switching units by adding a constant, such as from degrees Celsius to kelvin, doesn't affect any measure of spread or any [[Test Statistic|t statistic]].
 
 Multiplying is different. Multiply every value by 2 and both the mean and the standard deviation double, while the variance becomes four times as big.
 
@@ -29,9 +29,7 @@ For example, scores of 60, 70 and 80 have a mean of 70 and a standard deviation 
 
 The book adds that multiplying every value by $a$ multiplies the mean and the standard deviation by $|a|$, and the variance by $a^2$. Converting centimetres to millimetres multiplies the standard deviation by 10.
 
-So adding a constant moves the whole distribution without changing its [[Variability|spread]], but multiplying does change the spread. Think it through physically and you'll never have to memorize the rules.
-
-Try it yourself. Every student gets 5 bonus points on a test. What happens to the mean and to the standard deviation? The mean goes up by 5; the standard deviation stays the same, because everyone moved together and the gaps between them didn't change.
+So adding a constant moves the whole distribution without changing its [[Variability|spread]], but multiplying does change the spread.
 
 See also: [[Z-Score]].
 

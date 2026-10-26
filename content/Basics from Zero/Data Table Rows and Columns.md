@@ -11,7 +11,7 @@ status: seedling
 
 In a data table, each row is one observation and each column is one variable. This is the layout R expects.
 
-How you lay out a table seems trivial until software misreads it. One simple convention prevents most of the trouble. Say you weigh several chickens and note each one's diet. Give each chicken its own row, so adding a chicken just means adding a row. Give each measured thing (diet, weight) its own column, so every value in a column is the same kind of thing and the column can be averaged or counted. Put a single value in each cell: a cell that says "2.1 kg, healthy" can't be used in a calculation. A table built this way is called "tidy" ([[Variable and Observation]]).
+Say you weigh several chickens and note each one's diet. Give each chicken its own row, so adding a chicken just means adding a row. Give each measured thing (diet, weight) its own column, so every value in a column is the same kind of thing and the column can be averaged or counted. Put a single value in each cell: a cell that says "2.1 kg, healthy" can't be used in a calculation. A table built this way is called "tidy" ([[Variable and Observation]]).
 
 R stores such a table as a [[Data Frames|data frame]], and most R functions, such as `aov()` and `t.test()` with a formula, assume this layout. If the layout is messy, the software can't tell which numbers belong to the same chicken or which column holds the groups.
 
@@ -35,8 +35,6 @@ And the same numbers in long format, the way R's modeling functions want them:
 
 In the long version every row is a chicken and every column is a variable.
 
-One row per thing you measured, one column per thing you recorded: that's the whole rule. Wide data aren't wrong. They are fine for reading and for paired data, and only need reshaping for functions that want a group column. In a tidy table a row is always an observation, never a variable.
-
-Try it yourself. You record 3 plants, each with its fertilizer and height. How many rows and columns should the table have? 3 rows, one per plant, and 2 columns, one for fertilizer and one for height. If you add a fourth plant, you add a row; if you also measure leaf count, you add a column.
+Wide data aren't wrong. They are fine for reading and for paired data, and only need reshaping for functions that want a group column. In a tidy table a row is always an observation, never a variable.
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 1]] (data matrices, §1.2).

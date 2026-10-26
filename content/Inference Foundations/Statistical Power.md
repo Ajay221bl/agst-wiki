@@ -10,17 +10,17 @@ aliases:
 status: seedling
 ---
 
-Power is the chance that your study will catch an effect that really exists. A low-power study can look right at a real effect and still say "nothing here".
+Power is the probability that a test detects an effect that really exists. It equals $1 - \beta$, where β is the chance of missing the effect.
 
-Picture looking for a faint star with a cheap telescope. The star is really there. But your telescope is small, the sky is a bit hazy, and the star is dim. You look and see nothing. Does that mean there's no star? Of course not. Your instrument just wasn't good enough to see it.
+Suppose a new feed truly raises weight gain. Will your study notice? Power is that chance: the probability of rejecting $H_0$ when $H_0$ is false, which is 1 − β ([[Type I and Type II Errors]]). With low power, a real effect may come out "not significant".
 
-A study is a telescope for effects. Suppose a new feed truly makes chickens gain more weight. Will your study notice? Not necessarily. The chance that it does, that it rejects $H_0$ when $H_0$ is really false, is called power. It equals 1 − β, where β is the chance of a miss ([[Type I and Type II Errors]]).
+A test notices an effect when the [[Test Statistic|test statistic]] is large, that is, when the signal is big compared with the noise ([[Signal and Noise]]). So power rises with anything that makes the signal bigger, makes the noise smaller, or lowers the bar. There are four ways to increase it:
+1. **Raise α**, for example from 0.05 to 0.10. This lowers the bar and raises power, but most researchers don't want the higher risk of a Type I error.
+2. **Increase $n$.** This shrinks the noise, because the standard error is $s/\sqrt{n}$ ([[Standard Error]]). It is the simplest fix, but not always practical because of cost or rare animals.
+3. **Increase the effect size.** This makes the signal bigger ([[Effect Size]]). For a first study, design treatment levels that are very different from each other instead of six subtle ones, and refine them later with more funding.
+4. **Reduce [[Variability|variability]]** (from the book). This shrinks the noise, through better measurement, [[Nuisance Variables and Confounding|blocking]] or paired designs ([[Why use a paired test for paired data]]).
 
-So what makes a telescope better? A test notices an effect when the [[Test Statistic|test statistic]] is big, meaning the signal is big compared to the noise ([[Signal and Noise]]). So anything that makes the signal bigger, the noise smaller, or the bar lower will raise power. That gives four knobs:
-1. **Lower the bar: raise α**, say from 0.05 to 0.10. You'll catch more, but you'll also get more false alarms, so most people won't.
-2. **Get more data: increase $n$.** This shrinks the noise, because the standard error is $s/\sqrt{n}$ ([[Standard Error]]). The simplest fix, when you can afford it.
-3. **Make the signal bigger: increase the effect size** ([[Effect Size]]). In a first study, compare treatments that are very different, rather than six subtle ones, and refine later.
-4. **Make the noise smaller: reduce [[Variability|variability]]**, with better measurement, [[Nuisance Variables and Confounding|blocking]], or a paired design that compares each unit with itself ([[Why use a paired test for paired data]]).
+Plan power before the study. After a non-significant result it is too late to tell a true null from a missed effect.
 
 ![[Type I and II errors and power.png|700]]
 Blue is the world where H₀ is true, orange the world with a real effect. Red (α) is a false alarm, gray (β) a missed effect, green is power. Moving the dashed [[Critical Value|cut-off]] right shrinks red but grows gray.
@@ -28,16 +28,16 @@ Blue is the world where H₀ is true, orange the world with a real effect. Red (
 ![[Power vs sample size.png|700]]
 For a medium effect at α = 0.05, power climbs with n and reaches the usual 80% target at about 64 per group.
 
-For example, in a blood-pressure trial in the book, with a [[Standard Deviation|standard deviation]] of 12 mmHg, 100 people per group and a true difference of 3 mmHg, power is about 0.42. That's worse than a coin toss: even though the effect is real, the study would usually miss it. About 251 per group gives 80% power, and 500 per group gives about 97.7%, more than needed.
+Planning power before collecting data avoids wasting money and animals on a study too small to find anything. It also avoids a study so large that it flags trivial differences ([[References|Vu and Harrington 2020, Ch. 5]], pp. 259–260).
 
-There's a formula for the [[Sample Size|sample size]] per group in a two-sample test with equal groups:
+For example, in a blood-pressure trial in the book, with a [[Standard Deviation|standard deviation]] of 12 mmHg, 100 people per group and a true difference of 3 mmHg, power is about 0.42. About 251 per group gives 80% power, and 500 per group gives about 97.7%, more than needed.
+
+The [[Sample Size|sample size]] per group for a two-sample test with equal group sizes is about
 $$n \approx \frac{(z_{1-\alpha/2} + z_{1-\beta})^2(\sigma_1^2 + \sigma_2^2)}{\Delta^2}$$
-You don't need to memorize it; just read it. The difference you want to detect, $\Delta$, is on the bottom and squared: halve the effect you're hunting, and you need four times the people. The noise, $\sigma$, is on top: noisier data need more people. For 80% power at α = 0.05, $(1.96 + 0.84)^2 = 7.84$. Targets are usually 80% or 90%.
+For 80% power at α = 0.05, $(1.96 + 0.84)^2 = 7.84$. Targets are usually 80% or 90%.
 
-So power is something you plan *before* the study, while you can still buy a better telescope. Planning avoids wasting money and animals on a study too small to find anything, and also a study so big it flags trivial differences ([[References|Vu and Harrington 2020, Ch. 5]], pp. 259–260).
+A non-significant result doesn't mean there is no effect. It may mean the study had low power.
 
-Try it yourself. A study finds "no significant difference". Does that show the treatment doesn't work? Not by itself. First ask: did this study have the power to see an effect if there was one? If it was a cheap telescope, "I saw nothing" tells you very little.
-
-See also: [[Ratios and Fractions|ratio]], [[Statistical vs Practical Significance]], [[power.t.test()]], [[Statistical Conclusion Validity]], [[Critical Value|cut-off]].
+See also: [[Ratios and Fractions|ratio]], [[Statistical vs Practical Significance]], [[power.t.test()]], [[Statistical Conclusion Validity]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (§5.4, pp. 257–262).

@@ -11,8 +11,6 @@ status: growing
 
 The "why" notes, in the order the ideas build on each other.
 
-Rules are easy to forget, and reasons are hard to forget. Every rule in statistics, divide by n − 1, never accept the null, run the ANOVA before the post hoc tests, exists because someone noticed a way of fooling themselves and found a defence against it. These notes go back to that moment. Each one takes a rule, asks why, and builds the answer from the basic ideas. Understand them and you won't need to memorize the rules. You'll be able to rebuild them.
-
 ## 1. Foundations
 - [[Why probability comes before statistics]]: a p-value is a conditional probability, so probability has to come first
 - [[Why a positive test can still mean you are probably healthy]]: when a condition is rare, false alarms can outnumber true positives

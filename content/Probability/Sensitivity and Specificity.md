@@ -13,7 +13,7 @@ status: seedling
 
 Sensitivity is how often a test is positive in people who have the condition. Specificity is how often it is negative in people who don't.
 
-No test is perfect, so the useful question is how it fails. A diagnostic test can be right in two ways and wrong in two ways:
+A diagnostic test can be right in two ways and wrong in two ways:
 
 | | Has condition | Doesn't |
 |---|---|---|
@@ -21,8 +21,6 @@ No test is perfect, so the useful question is how it fails. A diagnostic test ca
 | Test − | **false negative** | true negative |
 
 So judge the test separately in the two groups, because a test can be good at catching sick people and bad at clearing healthy ones, or the other way round. Among people who have the condition, the **sensitivity**, or true positive rate, is $P(+ \mid \text{disease})$: the share the test catches. Among people who don't, the **specificity**, or true negative rate, is $P(- \mid \text{healthy})$: the share it correctly clears. The error rates are what's left over: the false positive rate is $1 - \text{specificity}$ and the false negative rate is $1 - \text{sensitivity}$ ([[Complementary Events]]).
-
-Which error matters more depends on what it costs. Missing a serious disease that is treatable calls for high sensitivity, so few cases slip through. When a false alarm leads to a risky or expensive follow-up, high specificity matters more. There's no rule that settles this; it's a judgment about consequences.
 
 These numbers describe the test, not the patient. They let you compare tests, and they don't change with how common the condition is. A patient needs the question turned around, $P(\text{disease} \mid +)$, which does depend on how common the condition is ([[Predictive Values and Prevalence]], [[Bayes' Theorem]]).
 
@@ -48,9 +46,7 @@ For example, here is the SimpliRED D-dimer test for blood clots in the leg (DVT)
 - Sensitivity $= 51/59 \approx 0.864$, using only the DVT column.
 - Specificity $= 30/62 \approx 0.484$, which is poor.
 
-These numbers describe the test, not your result. That's the distinction most people miss. Sensitivity is not "the chance I'm sick if I test positive"; that is the [[Predictive Values and Prevalence|positive predictive value]]. And a sensitive test isn't automatically specific: the D-dimer test is very sensitive but poorly specific.
-
-Try it yourself. A smoke detector goes off every time there's a fire, but also whenever someone makes toast. Is its sensitivity or its specificity poor? Specificity: it catches all the real fires (high sensitivity) but raises false alarms on non-fires (low specificity).
+Sensitivity is not "the chance I'm sick if I test positive"; that is the [[Predictive Values and Prevalence|positive predictive value]]. And a sensitive test isn't automatically specific: the D-dimer test is very sensitive but poorly specific.
 
 See also: [[Conditional Probability]], [[Contingency Table]], [[Type I and Type II Errors]].
 

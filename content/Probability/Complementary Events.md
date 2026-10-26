@@ -11,16 +11,14 @@ status: seedling
 
 The complement of an event $A$ is "everything except $A$". Its probability is $P(\text{not } A) = 1 - P(A)$.
 
-Sometimes the fastest way to an answer is to work out the opposite and subtract. Every outcome either is in $A$ or isn't: either it rains tomorrow or it doesn't. "Not $A$" is itself an event, the complement, written $A^c$ (or $\bar{A}$ or $A'$). It holds every outcome in the sample space that isn't in $A$ ([[Sample Space and Events]]). $A$ and its complement can't both happen, and together they cover every possibility, so their probabilities add to 1 ([[Disjoint Events]]):
+Every outcome either is in $A$ or isn't: either it rains tomorrow or it doesn't. "Not $A$" is itself an event, the complement, written $A^c$ (or $\bar{A}$ or $A'$). It holds every outcome in the sample space that isn't in $A$ ([[Sample Space and Events]]). $A$ and its complement can't both happen, and together they cover every possibility, so their probabilities add to 1 ([[Disjoint Events]]):
 $$P(A) + P(A^c) = 1 \quad\Rightarrow\quad P(A^c) = 1 - P(A)$$
 
 The complement is useful whenever "not A" is easier to work out than A. "At least one" questions are the classic case. "At least one six in three rolls" can happen in many ways, but its complement, "no sixes", happens in only one way: $(5/6)^3$ ([[Multiplication Rule]]). Work that out and subtract it from 1.
 
 For example, the probability of at least one six in 3 rolls of a fair die. Counting directly means adding up one six, two sixes and three sixes, each in several arrangements, which is tedious. With the complement: $P(\text{no sixes}) = (5/6)^3 \approx 0.579$, so $P(\text{at least one}) \approx 1 - 0.579 = 0.421$.
 
-When a question says "at least one", reach for the complement first. Be careful with boundaries. The complement of "at least 2" is "at most 1" (fewer than 2), not "at most 2", because the value 2 belongs to the event itself.
-
-Try it yourself. What's the chance of at least one head in 3 flips of a fair coin? Counting all the ways to get one, two or three heads is fiddly. The opposite, no heads at all, is just TTT, with chance 1/8. So the answer is 1 − 1/8 = 7/8.
+Be careful with boundaries. The complement of "at least 2" is "at most 1" (fewer than 2), not "at most 2", because the value 2 belongs to the event itself.
 
 See also: [[Family-Wise Type I Error]].
 

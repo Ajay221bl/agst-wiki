@@ -11,7 +11,7 @@ status: seedling
 
 The variance is the average squared distance of the data from their mean. For a sample, you divide by $n - 1$ rather than $n$.
 
-You want to average the distances from the mean, but the obvious way gives you zero every time. The fix is the whole idea of variance. Spread means how far values sit from the centre. For each value, that is its deviation from the mean, $x_i - \bar{x}$ ([[Deviations from the Mean]]). You can't just average the deviations, because they always add up to zero: the mean is the balance point. So square them first. Squaring removes the signs and gives big distances more weight ([[Squares and Square Roots]]). Squares are used rather than [[Absolute Value|absolute values]] because the variances of independent quantities add up, which is what makes standard errors possible ([[Standard Error]]).
+Spread means how far values sit from the centre. For each value, that is its deviation from the mean, $x_i - \bar{x}$ ([[Deviations from the Mean]]). You can't just average the deviations, because they always add up to zero: the mean is the balance point. So square them first. Squaring removes the signs and gives big distances more weight ([[Squares and Square Roots]]). Squares are used rather than [[Absolute Value|absolute values]] because the variances of independent quantities add up, which is what makes standard errors possible ([[Standard Error]]).
 
 Adding the squared deviations gives the [[Sums of Squares and Mean Squares|sum of squares]], $\sum (x_i - \bar{x})^2$ ([[Summation Notation]]). Dividing by $n - 1$ gives an average squared distance:
 $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1}$$
@@ -26,9 +26,7 @@ The variance does the heavy lifting behind measures of spread. Because variances
 
 For example, take the data 1, 2, 3, 6, 3, with mean 3. The deviations are −2, −1, 0, 3 and 0 (sum 0). Squared, they are 4, 1, 0, 9 and 0 (sum 14). So $s^2 = 14/4 = 3.5$.
 
-The variance is the working tool; the standard deviation is the version you can picture. The variance and the standard deviation aren't two different measures of two different things: the standard deviation is just the square root of the variance. And dividing by $n$ is the formula for a whole population; for a sample, divide by $n - 1$.
-
-Try it yourself. The data 1, 2, 3, 6 and 3 have mean 3 and variance 3.5. If you doubled every value, what would happen to the variance? It would go up four times, because each deviation doubles and then gets squared. The standard deviation would only double.
+The variance and the standard deviation aren't two different measures of two different things: the standard deviation is just the square root of the variance. And dividing by $n$ is the formula for a whole population; for a sample, divide by $n - 1$.
 
 See also: [[Mean]], [[Pooled Variance]].
 

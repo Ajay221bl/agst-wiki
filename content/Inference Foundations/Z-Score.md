@@ -10,18 +10,22 @@ aliases:
 status: seedling
 ---
 
-A z-score tells you how many standard deviations a value is above (+) or below (−) the average. It's a way to compare things that were measured on completely different scales.
+A z-score says how many standard deviations a value sits above (+) or below (−) the mean.
 
-A student gets 85 in psychology and 62 in chemistry. Which did they do better in? Obviously psychology, 85 is bigger. But wait. What if the psychology exam was easy and everyone scored near the top, while the chemistry exam was brutal? Then the 62 might be the more impressive score. Raw numbers can't tell you. You need to know where each score sits *compared to its own class*.
-
-So let's build a fair ruler. Step one: how far is the score from its class average? That's the deviation, $x - \bar{x}$ ([[Deviations from the Mean]]). But "7 points below" means more in a class where everyone is bunched together than in one where scores are spread all over. So step two: measure that distance in units of the class's own spread, the standard deviation ([[Standard Deviation]]):
+Start with a deviation: how far a value is from the mean, $x - \bar{x}$ ([[Deviations from the Mean]]). Its size depends on the units: 5 cm means something different for ants and for trees. So divide it by the standard deviation to measure it in standard deviations:
 $$z = \frac{\text{observed} - \text{expected}}{\text{deviation measure}} = \frac{x - \bar{x}}{s} \;\;\text{or}\;\; \frac{x - \mu}{\sigma}$$
-The units cancel. What's left is pure "how unusual is this, in its own world?", called relative standing.
+The units cancel, so $z$ has no units. It measures **relative standing**, and values on different scales can be compared ([[Standard Deviation]]).
+
+Read the sign first. If $z > 0$ the value is above the mean, if $z < 0$ it is below, and if $z = 0$ it is exactly at the mean. Then read the size with the empirical rule. A value is **unusual if $z < -2$ or $z > 2$**, assuming the data are roughly [[Normality Checks|normal]], because only about 5% of values lie that far out ([[Empirical Rule]]).
+
+The same template builds every test statistic: (observed − expected) ÷ a measure of spread. Swap the single value for a sample mean and the standard deviation for the standard error, and you have the z and t tests. The t, F and chi-square statistics all follow it ([[Test Statistic]]). For a sample mean, the spread is the standard error:
+$$z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}}$$
+In a [[Hypothesis Testing|hypothesis test]], the value $\mu_0$ from $H_0$ goes in place of $\mu$.
 
 ![[Z-scores - exam comparison.png|700]]
 Each exam score becomes a distance from its own class mean in SDs, so three different exams sit on one axis. Chemistry (z = 0) is the relatively best score; psychology (z = −2) is right at the edge of unusual.
 
-For example:
+For example, which exam did a student do relatively best on?
 
 | Exam | Score | Class mean | Standard deviation | z |
 |---|---|---|---|---|
@@ -29,16 +33,10 @@ For example:
 | Economics | 67 | 79 | 8 | −1.5 |
 | Chemistry | 62 | 62 | 5 | 0 |
 
-Chemistry was right at the class average (z = 0), while psychology was 2 SDs below. So the lowest raw score is actually the best relative performance.
+Chemistry has the highest relative standing, even though it has the lowest raw score.
 
-How to read one: the sign says above or below the mean; the size says how far. Thanks to the [[Empirical Rule|empirical rule]], if the data are roughly bell-shaped, a value is **unusual if $z < -2$ or $z > 2$**, since only about 5% of values land that far out ([[Normality Checks|normal]]).
+Standardizing doesn't make data normal; the shape is unchanged. And z = −2 doesn't mean 2 units below the mean. It means two *standard deviations* below.
 
-Now here's why this little idea is so big. Look at the template again: (what you saw − what you expected) ÷ (how much it usually varies). Swap the single value for a sample mean, and the SD for the standard error, and you've built a test statistic:
-$$z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}}$$
-In a [[Hypothesis Testing|hypothesis test]], the $\mu_0$ from $H_0$ goes in place of $\mu$. The t, F and chi-square statistics are all the same idea wearing different clothes ([[Test Statistic]], [[Standard Error]]).
-
-Try it yourself. Does turning values into z-scores make the data normal? No. It just slides and stretches them; a lopsided pile stays lopsided. And does z = −2 mean "2 points below the mean"? No, 2 *standard deviations* below.
-
-See also: [[Ratios and Fractions|numerator]], [[Mean]], [[Outliers]].
+See also: [[Ratios and Fractions|numerator]], [[Mean]], [[Standard Error]], [[Outliers]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 3]] (§3.3).

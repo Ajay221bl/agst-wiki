@@ -13,7 +13,7 @@ status: seedling
 
 Categorical variables are best shown with bar graphs, side by side when there are two variables, or with mosaic plots. Pie charts and infographics are harder to read.
 
-When your data are labels, the only honest thing you can do is count them, and a good plot just shows the counts clearly. Categorical data can only be counted, so they are summarized by counts, proportions, percentages and the [[Mode|mode]] ([[Types of Data]]). A good plot shows those counts in a way the eye can compare accurately. Eyes are good at comparing lengths along a shared baseline, and bad at comparing angles and areas.
+Categorical data can only be counted, so they are summarized by counts, proportions, percentages and the [[Mode|mode]] ([[Types of Data]]). A good plot shows those counts in a way the eye can compare accurately. Eyes are good at comparing lengths along a shared baseline, and bad at comparing angles and areas.
 
 The main options, from most useful to least:
 - **Bar graph:** simple and clear. Bar heights side by side are easy to compare.
@@ -27,9 +27,7 @@ The same five percentages. In the bar graph the ranking is obvious; in the pie t
 
 For example, here are made-up counts of health ratings: Poor 120, Fair 410, Good 780, Very good 520, Excellent 170. A bar graph in that order shows the pattern. In alphabetical order (Excellent, Fair, Good, Poor, Very good) the natural order is lost, which is why ordered categories need their order set in R ([[factor()]]).
 
-Pick the plot that answers your question, then make it easy to read. For unordered categories, the order of the bars is arbitrary, so a bar chart of them has no "shape" to describe ([[Shape of a Distribution]]).
-
-Try it yourself. You want to show what share of farmers grow each of 6 crops. Bar chart or pie chart? A bar chart. Comparing bar heights is easy; comparing the angles of 6 pie slices is hard, especially when they're similar in size.
+For unordered categories, the order of the bars is arbitrary, so a bar chart of them has no "shape" to describe ([[Shape of a Distribution]]).
 
 See also: [[Proportions and Percentages]], [[Contingency Table]], [[Plots for Two Variables]].
 

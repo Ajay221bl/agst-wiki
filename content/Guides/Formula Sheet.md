@@ -9,8 +9,6 @@ status: growing
 
 Every formula up to one-way ANOVA in one place. Each row links to the note that explains where the formula comes from.
 
-Use this as a map, not as something to memorize. A formula you understand can be rebuilt in a minute. One you've memorized is gone the moment you're nervous. Almost every formula here is the same few ideas in different clothes: a difference divided by its spread, a total split into parts, or a probability rule applied twice.
-
 ## Probability
 | Rule | Formula | Explained in |
 |---|---|---|

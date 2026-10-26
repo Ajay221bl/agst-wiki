@@ -12,7 +12,7 @@ status: seedling
 
 A package is an add-on bundle of R functions. Install it once per computer with `install.packages()`, then load it in every session with `library()` or `require()`.
 
-No one person writes all the tools they need. Packages are how you borrow other people's work. Base R has many functions, but not all, for example [[Homogeneity of Variance|Levene's test]], [[Cohen's d]] or nicer plots. Functions written by other people come in **packages** ([[Functions and Arguments]]). Think of a library book: you install the package once, then check it out each time you need it.
+Base R has many functions, but not all, for example [[Homogeneity of Variance|Levene's test]], [[Cohen's d]] or nicer plots. Functions written by other people come in **packages** ([[Functions and Arguments]]). Think of a library book: you install the package once, then check it out each time you need it.
 - Install **once per computer**. This downloads the package.
 - Load it **in every session** with `library()`. This makes its functions available now.
 
@@ -30,8 +30,6 @@ Base R lacks many tools used in these notes. The packages used are `psych` (desc
 
 For example, the error "could not find function cohensD" means the `lsr` package isn't loaded. Run `library(lsr)`.
 
-Install once, load every time. You don't need to install a package every time: install once, and load it in every session.
-
-Try it yourself. You run `leveneTest(...)` and R says it can't find the function. What's the likely fix? The function lives in the car package, so run `library(car)` first, after installing it once with `install.packages("car")`.
+You don't need to install a package every time: install once, and load it in every session.
 
 See also: [[describe() and describeBy()]], [[ggpubr Plots]], [[leveneTest()]], [[cohensD()]].

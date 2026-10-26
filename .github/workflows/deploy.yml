@@ -38,6 +38,12 @@ jobs:
         run: npx quartz plugin install --from-config
       - name: Build Quartz
         run: npx quartz build
+      - name: Build the examples-first edition at /feynman/
+        run: |
+          sed -i 's#^  baseUrl: ajay221bl.github.io/agst-wiki$#  baseUrl: ajay221bl.github.io/agst-wiki/feynman#; s#^  pageTitle: Experimental Statistics Wiki$#  pageTitle: Experimental Statistics Wiki (examples first)#' quartz.config.yaml
+          grep -n "baseUrl\|pageTitle:" quartz.config.yaml
+          npx quartz build -d feynman-content -o public/feynman
+          git checkout quartz.config.yaml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -11,7 +11,7 @@ status: seedling
 
 An outlier is a value unusually far from the rest of the data. It is usually flagged by one of two rules: the box-plot fences, based on the interquartile range, or a z-score beyond ±2.
 
-An unusual value is either a mistake or a discovery, and you can't tell which by deleting it. "Far" needs a rule. The first rule uses the interquartile range (IQR): a value is an outlier if it lies below $Q_1 - 1.5 \times IQR$ or above $Q_3 + 1.5 \times IQR$ ([[Range and IQR]]). This rule is built from quartiles, which the outliers themselves can't move, and it doesn't assume the data are [[Normality Checks|normal]]. The second rule uses the [[Z-Score|z-score]], $z = (x - \bar{x})/s$: a value is unusual if $z$ is below −2 or above 2, outside the middle 95% ([[Empirical Rule]]). Some people use ±3 to flag only extreme outliers. This rule assumes the data are roughly bell-shaped, because "95% within 2 [[Standard Deviation|standard deviations]]" is a property of the bell shape.
+"Far" needs a rule. The first rule uses the interquartile range (IQR): a value is an outlier if it lies below $Q_1 - 1.5 \times IQR$ or above $Q_3 + 1.5 \times IQR$ ([[Range and IQR]]). This rule is built from quartiles, which the outliers themselves can't move, and it doesn't assume the data are [[Normality Checks|normal]]. The second rule uses the [[Z-Score|z-score]], $z = (x - \bar{x})/s$: a value is unusual if $z$ is below −2 or above 2, outside the middle 95% ([[Empirical Rule]]). Some people use ±3 to flag only extreme outliers. This rule assumes the data are roughly bell-shaped, because "95% within 2 [[Standard Deviation|standard deviations]]" is a property of the bell shape.
 
 Both rules are fine; just say which one you used. When they disagree, the data are often skewed, and the interquartile range rule is safer.
 
@@ -26,9 +26,7 @@ For example, the canopy trees have a minimum of 25.2 m, a mean of 37.41 and a st
 
 Both rules agree here.
 
-So treat an outlier as a question to answer, not a nuisance to remove. Many outliers are real and informative, so delete one only with a documented reason. And the z-score rule doesn't suit every data set: for skewed data, use the interquartile range rule.
-
-Try it yourself. A data set has Q₁ = 4 and Q₃ = 6. Is a value of 10 an outlier by the box-plot rule? The IQR is 2, and 1.5 × 2 = 3, so the upper fence is 6 + 3 = 9. 10 is beyond it, so yes, it's flagged. Then the real work starts: is it a mistake or a real value?
+Many outliers are real and informative, so delete one only with a documented reason. And the z-score rule doesn't suit every data set: for skewed data, use the interquartile range rule.
 
 See also: [[Box Plot and Five-Number Summary]], [[Why the median beats the mean for skewed data]].
 

@@ -8,7 +8,7 @@ aliases:
 status: growing
 ---
 
-This guide picks the right test from two questions about your data. Choosing a test isn't a lookup exercise. Each test is built for one kind of question and one kind of data, and if you understand what your data are, the choice makes itself. What type is your outcome, the [[Independent and Dependent Variables|dependent variable]] (DV)? And what type is the thing you compare by, the independent variable (IV)? This table covers the tests in this wiki.
+This guide picks the right test from two questions about your data. What type is your outcome, the [[Independent and Dependent Variables|dependent variable]] (DV)? And what type is the thing you compare by, the independent variable (IV)? This table covers the tests in this wiki.
 
 | Outcome (dependent variable) | Explanatory (independent variable) | Design | Test |
 |---|---|---|---|
@@ -70,7 +70,5 @@ Each of these notes has a worked example that goes through all six steps on real
 | [[Nonparametric Alternatives]] | the same data, using ranks |
 
 The raw data are in the `Data` folder as comma-separated (CSV) files, ready for `read.csv(file.choose())`.
-
-Try it yourself. Pick the test for each. (a) Blood pressure of the same 8 patients before and after a drug. (b) Yield under 4 different fertilizers, different plots for each. (c) Body temperature of a sample of people, compared with a textbook value. Answers: (a) paired t-test, since each patient is measured twice; (b) one-way ANOVA, one factor with 4 levels, then post hoc tests if it's significant; (c) one-sample t-test against the fixed value.
 
 See also: [[MOC - t-Tests]], [[MOC - ANOVA]], [[Independent vs Paired Samples]], [[Factors and Levels]], [[Formula Sheet]].

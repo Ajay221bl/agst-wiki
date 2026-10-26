@@ -12,7 +12,7 @@ status: seedling
 
 The more times you repeat a chance process, or the bigger your sample, the closer the observed [[Proportions and Percentages|proportion]] or average gets to the true probability or mean.
 
-Chance is wild in the short run and steady in the long run. This law explains why. A relative frequency is an [[Point Estimate|estimate]] of a probability ([[Classical vs Relative Frequency Probability]]). With few tries it can be far off: flip a fair coin 10 times and you might get 7 heads, which is 70%. With many tries it gets close: flip it 10,000 times and you will be very near 50%. Nothing "corrects" the coin. The early streaks simply get swamped by all the later flips, so they matter less and less to the overall share.
+A relative frequency is an [[Point Estimate|estimate]] of a probability ([[Classical vs Relative Frequency Probability]]). With few tries it can be far off: flip a fair coin 10 times and you might get 7 heads, which is 70%. With many tries it gets close: flip it 10,000 times and you will be very near 50%. Nothing "corrects" the coin. The early streaks simply get swamped by all the later flips, so they matter less and less to the overall share.
 
 The same holds for averages. As the [[Sample Size|sample size]] grows, the sample mean $\bar{x}$ settles towards the population mean $\mu$, and the sample standard deviation $s$ settles towards $\sigma$ ([[Mean]], [[Parameter vs Statistic]]). This is why bigger samples are trusted more. The [[Standard Error|standard error]] makes the idea precise by measuring how much $\bar{x}$ varies for a given sample size ([[Sampling Distribution]], [[Variability]]).
 
@@ -31,9 +31,7 @@ For example, the proportion of heads after:
 
 These are made-up but typical numbers. The proportion wanders early, then settles near 0.5.
 
-Patience, not luck, is what makes averages reliable. After five tails, heads is not "due". That belief is the gambler's fallacy: each flip is still 50/50 ([[Independent Events]]). The law works by dilution, not correction. And a huge sample only gets close to the truth if it is unbiased and representative.
-
-Try it yourself. You flip a fair coin 10 times and get 7 heads. Is the coin unfair? Not necessarily: with only 10 flips, that's well within luck. Flip it thousands of times and the share of heads will settle close to a half. The law of large numbers is about the long run, not about evening out the next few flips.
+After five tails, heads is not "due". That belief is the gambler's fallacy: each flip is still 50/50 ([[Independent Events]]). The law works by dilution, not correction. And a huge sample only gets close to the truth if it is unbiased and representative.
 
 See also: [[Why a bigger sample gives a narrower confidence interval]].
 

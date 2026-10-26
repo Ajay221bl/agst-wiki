@@ -8,8 +8,6 @@ status: growing
 
 Tests for one mean or two means, when the population standard deviation σ has to be estimated from the data.
 
-A t-test is the simplest complete version of the idea behind every test: take the difference you saw, divide it by how much it would wobble by chance, and ask whether the result is surprising. The only twist is that you don't know the true spread, so you estimate it, and the t-distribution charges you a little extra for that uncertainty. The big practical question isn't the formula. It's the design: are your two sets of numbers independent, or do they come in pairs?
-
 *Reading:* [[References|Vu and Harrington 2020, Ch. 5]].
 
 ## 1. Why t

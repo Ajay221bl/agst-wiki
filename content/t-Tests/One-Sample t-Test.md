@@ -9,21 +9,21 @@ aliases:
 status: seedling
 ---
 
-A one-sample t-test asks whether the average of one group differs from some fixed number, like a safety limit or a textbook value. It's the simplest complete test, and every other t-test is built from it.
+A one-sample t-test checks a claim about one [[Population and Sample|population]] mean. It uses the sample mean, the sample [[Standard Deviation|standard deviation]] (SD) and a t-distribution with $n - 1$ degrees of freedom (df).
 
-Let's start with a real worry. The government says fish with more than 0.50 parts per million (ppm) of mercury are a concern. You catch 15 croaker and measure them. Their average is 0.287. That's below 0.50, so the fish are fine, right?
+The question is whether a population mean differs from a known value $\mu_0$. For example, is the mean body temperature 98.6 °F? Write it as hypotheses about $\mu$ ([[Null and Alternative Hypotheses]]): $H_0: \mu = \mu_0$, against $H_A: \mu <, >$ or $\ne \mu_0$.
 
-Well, hold on. You measured 15 fish, not every croaker in the ocean. Another 15 would give a different average. So the real question is: is the true average of *all* croaker different from 0.50, or could a sample like yours easily come from a population sitting right at 0.50? We need to know how much an average of 15 fish wobbles.
-
-Here's how we think it through. The boring story is "the true mean is the reference value": $H_0: \mu = \mu_0$. The interesting one is that it's lower, higher, or just different: $H_A: \mu <, >$ or $\ne \mu_0$ ([[Null and Alternative Hypotheses]]). Then measure the gap between your sample mean and $\mu_0$, in units of how much a sample mean naturally wobbles, the standard error $s/\sqrt{n}$ ([[Standard Error]], [[Test Statistic]]):
+Fill in the test-statistic template with the sample mean and its standard error ([[Test Statistic]], [[Standard Error]]):
 $$t = \dfrac{\bar{x} - \mu_0}{s/\sqrt{n}}, \qquad df = n - 1$$
-Read it out loud: "how many wobbles is my average away from the reference?" We lose one degree of freedom because we estimated one mean ([[Degrees of Freedom]]). If $H_0$ is true, this t follows a t-distribution, so we can find how rare our value is: the p-value ([[t-Distribution]], [[P-Value]]).
+The df is $n - 1$ because one mean was estimated ([[Degrees of Freedom]]). If $H_0$ is true, t follows a t-distribution, so its p-value can be found ([[t-Distribution]], [[P-Value]]).
 
-And don't stop at the p-value. Give the range of believable means too, the confidence interval (CI): $\bar{x} \pm t^*_{n-1}\,s/\sqrt{n}$ ([[Confidence Interval]]). The p-value says "different or not"; the interval says "by how much".
+Also give the range of believable means, the confidence interval (CI) $\bar{x} \pm t^*_{n-1}\,s/\sqrt{n}$ ([[Confidence Interval]]). The CI shows how big the difference might be, which the p-value doesn't.
 
-When can you trust it? The fish must be a random sample of independent units, otherwise the standard error formula is wrong. And the population should be roughly normal, **or** the sample large (more than about 30), so that the average behaves like a bell ([[Central Limit Theorem]], [[Test Assumptions|requirements]]). Check with a [[Histogram|histogram]], a [[Q-Q Plot|Q-Q plot]] or a Shapiro–Wilk test ([[Normality Checks]]). If they fail badly, use a rank-based test ([[Nonparametric Alternatives]]).
+The [[Test Assumptions|requirements]] are a random sample of independent observations, so that the standard error formula is right, and a roughly normal population **or** a large $n$ (more than 30), so that $\bar{x}$ is approximately normal ([[Central Limit Theorem]]). Check with a [[Histogram|histogram]], a [[Q-Q Plot|Q-Q plot]] or a Shapiro–Wilk test ([[Normality Checks]]). If they fail, use nonparametric methods or bootstrapping ([[Nonparametric Alternatives]]).
 
-Here's how it played out in some examples:
+This test compares one group's mean with a fixed reference value: a safety limit, a textbook value or a target. It is also the engine of the paired t-test ([[Paired t-Test]]).
+
+For example:
 
 | Example | Result |
 |---|---|
@@ -66,8 +66,8 @@ xbar + c(-1, 1) * qt(0.975, df = n - 1) * se    # 95% CI 0.249 to 0.325
 
    [[Effect Size|Effect size]]: d = (0.287 − 0.50)/0.069 = −3.09, far past 0.8, so large ([[Cohen's d]]).
 
-Try it yourself. Someone runs `t.test(lizards$tail)` and proudly reports p < 0.001. What did they actually test? Whether the mean tail length is 0, because R tests μ = 0 unless you set `mu =`. No lizard has a zero-length tail, so the "significant" result is meaningless. With software, the arithmetic is free. The thinking, which value to test against and why, is the part that matters. This same test is also the engine inside the paired t-test ([[Paired t-Test]]).
+The default `t.test(x)` usually doesn't answer your question: it tests μ = 0 unless you set `mu =`.
 
-See also: [[Hypothesis Testing]], [[Two-Sample Independent t-Test]], [[pnorm(), qnorm(), pt() and qt()]], [[Population and Sample|population]], [[Standard Deviation|standard deviation]].
+See also: [[Hypothesis Testing]], [[Two-Sample Independent t-Test]], [[pnorm(), qnorm(), pt() and qt()]].
 
 Further reading: [[References|Vu and Harrington 2020, Ch. 5]] (§5.1).

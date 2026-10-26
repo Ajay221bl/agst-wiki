@@ -12,7 +12,7 @@ status: seedling
 
 `car::leveneTest(y ~ group, data = d)` tests whether the groups have equal variances. A large p-value means equal variances look fine.
 
-Before comparing means, check that the groups have similar noise. ANOVA assumes the groups share one [[Variance|variance]] ([[Homogeneity of Variance]]). Levene's test checks this. It runs an ANOVA on each value's distance from its group [[Median|median]] ([[Absolute Value]]), and it lives in the `car` package ([[R Packages]]):
+ANOVA assumes the groups share one [[Variance|variance]] ([[Homogeneity of Variance]]). Levene's test checks this. It runs an ANOVA on each value's distance from its group [[Median|median]] ([[Absolute Value]]), and it lives in the `car` package ([[R Packages]]):
 
 ```r
 library(car)
@@ -31,8 +31,6 @@ It is the formal check of ANOVA's third [[Test Assumptions|assumption]]. Compare
 
 For example, Pr(>F) = 0.08 means you [[Why we never accept the null hypothesis|fail to reject]] at 0.05, so equal variances are believable, though the result is close.
 
-Same letter, different question. The F here isn't the ANOVA F. It is Levene's own [[Parameter vs Statistic|statistic]], about spreads, not means.
-
-Try it yourself. `leveneTest()` gives a large p-value. Can you go ahead with a pooled ANOVA? Yes, as far as variances go. A large p means no evidence that the spreads differ. A small one would be the warning.
+The F here isn't the ANOVA F. It is Levene's own [[Parameter vs Statistic|statistic]], about spreads, not means.
 
 See also: [[aov()]].

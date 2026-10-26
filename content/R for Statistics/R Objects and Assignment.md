@@ -10,7 +10,7 @@ status: seedling
 
 `name <- value` stores a value, such as a number, a data set or a test result, under a name so it can be used again later.
 
-R is just a place to keep things under names so you can use them again. A result you can't refer to has to be worked out again, so R remembers things by name. The arrow `<-` means "store the thing on the right under the name on the left":
+A result you can't refer to has to be worked out again, so R remembers things by name. The arrow `<-` means "store the thing on the right under the name on the left":
 
 ```r
 x <- 5
@@ -32,8 +32,6 @@ names(COVIDtime) <- c("March", "April")   # rename them
 ```
 The second line changes the column names of the stored object.
 
-The computer is perfectly literal, so be precise. R cares about capital letters: `Frust` and `frust` are different objects. And spaces in names break code, so use `_` or `.` instead.
-
-Try it yourself. You type `m <- mean(c(2, 4, 6))`. Nothing prints. Did it work? Yes. The answer, 4, was stored in `m` instead of printed. Type `m` to see it.
+R cares about capital letters: `Frust` and `frust` are different objects. And spaces in names break code, so use `_` or `.` instead.
 
 See also: [[Functions and Arguments]].

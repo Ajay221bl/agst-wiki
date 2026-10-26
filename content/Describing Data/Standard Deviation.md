@@ -12,7 +12,7 @@ status: seedling
 
 The standard deviation (SD) is roughly the typical distance of a value from the mean, in the data's own units.
 
-You want one number that says "how far is a typical value from the average?", in the units you actually measured. The [[Variance|variance]] measures spread, but in squared units. Taking its square root brings back the original units:
+The [[Variance|variance]] measures spread, but in squared units. Taking its square root brings back the original units:
 $$s = \sqrt{s^2} = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n-1}}$$
 If heights are in centimetres, the SD is in centimetres too, so it can be compared directly with the mean and with individual values ([[Squares and Square Roots]]).
 
@@ -34,9 +34,7 @@ Two groups, both with a mean of 50:
 
 The same mean, but completely different data.
 
-The standard deviation describes the data; almost everything else in inference is about something else. Don't confuse the SD with the [[Standard Error|standard error]] (SE). The SD describes how individual values vary. The SE, $s/\sqrt{n}$, describes how a [[Parameter vs Statistic|statistic]] such as the mean would vary from one sample to the next. Also, a bigger sample doesn't make the SD shrink; it settles towards the population value $\sigma$. It is the SE that shrinks.
-
-Try it yourself. Two classes both average 7 out of 10 on a quiz. One has SD 1, the other SD 3. In which class is a score of 7 a better description of a typical student? The first: most students there scored close to 7. In the second, scores are all over the place.
+Don't confuse the SD with the [[Standard Error|standard error]] (SE). The SD describes how individual values vary. The SE, $s/\sqrt{n}$, describes how a [[Parameter vs Statistic|statistic]] such as the mean would vary from one sample to the next. Also, a bigger sample doesn't make the SD shrink; it settles towards the population value $\sigma$. It is the SE that shrinks.
 
 See also: [[Coefficient of Variation]].
 

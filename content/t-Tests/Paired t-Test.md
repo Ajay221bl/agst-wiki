@@ -9,28 +9,24 @@ aliases:
 status: seedling
 ---
 
-A paired t-test is for data that come in natural pairs, like the same swimmer with and without a wetsuit. You subtract within each pair, then ask whether the average difference is far from zero. That's all: it's a one-sample t-test on the differences.
+A paired t-test is a one-sample t-test on the differences within each pair.
 
-Twelve swimmers each swim once in a wetsuit and once in a normal swimsuit. Some of them are fast and some are slow; the fastest is much faster than the slowest. Now, does the wetsuit help?
+Paired data come in linked pairs, such as the same swimmer with and without a wetsuit ([[Independent vs Paired Samples]]). Within a pair almost everything is shared, such as the swimmer's fitness and technique. So the difference within each pair is free of that shared [[Variability|variation]].
 
-Here's the naive approach. Put all the wetsuit times in one pile and all the swimsuit times in another, and compare the piles. But look at what happens. The differences between *swimmers* are huge, and the wetsuit effect is small. In two piles, the small effect gets buried under the big swimmer-to-swimmer differences.
+So work out the difference $d_i$ for every pair; the two original columns are no longer needed. Use **after − before**, so that **positive means an increase** and **negative means a decrease**. Before − after also works, but every sign flips, which is confusing.
 
-So here's the clever move. Don't compare piles. Compare each swimmer with themselves. Swimmer 1 in a wetsuit minus swimmer 1 in a swimsuit. Their fitness, their technique, their stroke all cancel out, because they're the same in both swims. What's left is just the wetsuit. You've turned two noisy columns into one clean column of differences ([[Independent vs Paired Samples]], [[Variability]]).
+Now there is one sample of differences, so run a one-sample t-test on it against 0 ([[One-Sample t-Test]]):
+- $H_0: \mu_d = 0$, against $H_A: \mu_d <, >$ or $\ne 0$. **State the order of subtraction**, for example "d = April − March", because the sign of every result depends on it.
+- $t = \dfrac{\bar{d} - 0}{s_d/\sqrt{n}}$, with $n_{pairs} - 1$ degrees of freedom; the [[Confidence Interval|confidence interval]] (CI) is $\bar{d} \pm t^*\,s_d/\sqrt{n}$.
+
+The [[Test Assumptions|requirements]] are that the pairs are a random sample and independent of each other, and that **the differences** are roughly normal (or there are many pairs). **Test the normality of the differences, not each column** ([[Normality Checks]]), because the differences are the only data the test uses.
+
+The payoff is that $s_d$ is usually far smaller than either column's [[Standard Deviation|standard deviation]], so the same effect gives a much larger t. In the swim data, the paired t is 12.3, against 1.37 unpaired. Each unit acts as its own control, removing unit-to-unit variability from the comparison ([[Why use a paired test for paired data]]).
 
 ![[Paired vs independent view.png|700]]
 Left: units differ so much from each other that pre and post look similar. Right: taking post − pre within each unit removes that variation, and every unit clearly went up.
 
-Now it's a problem you already know how to solve: one sample of numbers, compared with 0 ([[One-Sample t-Test]]).
-- $H_0: \mu_d = 0$ (the wetsuit makes no difference on average), against $H_A: \mu_d <, >$ or $\ne 0$.
-- $t = \dfrac{\bar{d} - 0}{s_d/\sqrt{n}}$, with $n_{pairs} - 1$ degrees of freedom; the [[Confidence Interval|confidence interval]] (CI) is $\bar{d} \pm t^*\,s_d/\sqrt{n}$.
-
-Decide the order of subtraction and say it out loud, for example "d = after − before". Then **positive means an increase**. Flip the order and every sign flips with it, which confuses everyone.
-
-When can you trust it? The pairs must be a random sample, independent of each other, and **the differences** must be roughly normal (or there must be lots of pairs) ([[Test Assumptions|requirements]]). Check the differences, not each column, because the differences are the only data the test ever looks at ([[Normality Checks]]).
-
-Why is it so much more powerful? Because $s_d$, the spread of the *differences*, is usually much smaller than the spread of either column; the swimmer-to-swimmer variation is gone. Same effect, much less noise, much bigger t. In the swim data the paired t is 12.3; treat it as two unpaired groups and it's 1.37 ([[Why use a paired test for paired data]], [[Standard Deviation|standard deviation]]).
-
-For example, four chickens weighed before and after a diet have differences of +2.5, +4, +2 and +0.5. The mean difference is 2.25, and the test asks whether that's far enough from 0, given how much the differences vary.
+For example, four chickens weighed before and after a diet have differences of +2.5, +4, +2 and +0.5. The mean difference is 2.25, and the test asks whether that mean is far enough from 0, given how much the differences vary.
 
 ![[Worked example - paired t-test.png|700]]
 Left, the swimmers differ a lot from each other, but every line rises. Right, the 12 differences sit well away from 0, and so does their CI.
@@ -76,7 +72,7 @@ cohensD(swim$wetsuit, swim$swimsuit, method = "paired")   # 3.56
 
 **What goes wrong if you ignore the pairing:** `t.test(swim$wetsuit, swim$swimsuit)` treats the data as 24 different swimmers and gives t = 1.37, df 22.0, p = 0.185, with a CI from −0.040 to 0.195 that includes 0. The mean difference is the same, but the spread between swimmers swamps it: the standard error is about ten times larger.
 
-Try it yourself. You ran `t.test(after, before, paired = TRUE)` and R reports df = 22 for 12 pairs. What happened? Something's wrong: a paired test on 12 pairs should have 11 degrees of freedom. A df of 22 means R ran an unpaired test. The lesson reaches beyond this test: the best way to remove noise is to design the comparison so the noise cancels.
+Don't check the normality of each column; check the differences. And a two-tailed paired test can still say which is bigger: the decision is two-sided, but the sign of the CI shows the direction.
 
 See also: [[Deviations from the Mean]], [[Cohen's d]], [[t.test()]].
 

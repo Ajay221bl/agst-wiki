@@ -10,7 +10,7 @@ status: seedling
 
 A quasi-experiment compares groups like an experiment does, but the researcher can't set the [[Independent and Dependent Variables|independent variable]] (IV) or can't randomly assign units to groups, usually for practical or ethical reasons.
 
-Reality often won't let you run the ideal study, and the question becomes how close you can get. A true experiment needs both manipulation and random assignment ([[Experiment]]). Some variables simply can't be assigned:
+A true experiment needs both manipulation and random assignment ([[Experiment]]). Some variables simply can't be assigned:
 - the age of cattle, or how many calves a cow has already had;
 - birth order (first-born or later-born) and achievement;
 - student performance at two different schools;
@@ -32,9 +32,7 @@ Many important questions can't be studied with true experiments. Quasi-experimen
 
 For example, in a study of blood lead level (low, medium or high) and IQ analysed with ANOVA, the lead groups weren't assigned. Even a significant result only shows an association, which could be due to something like household income.
 
-The mature view is not "experiments good, everything else bad" but "know what each design can and can't claim". Quasi-experiments aren't bad science; they are often the only ethical option, as long as you state the limitation. They are close cousins of observational studies, but usually involve a planned comparison of defined groups, often with some researcher control.
-
-Try it yourself. You want to know if smoking during pregnancy affects birth weight. Can you run a true experiment? No: you can't ethically assign mothers to smoke. So you compare mothers who smoked with those who didn't, a quasi-experiment, and you have to worry about everything else that differs between the two groups.
+Quasi-experiments aren't bad science; they are often the only ethical option, as long as you state the limitation. They are close cousins of observational studies, but usually involve a planned comparison of defined groups, often with some researcher control.
 
 See also: [[Observational Study Designs]], [[Internal Validity]].
 

@@ -13,9 +13,7 @@ status: seedling
 
 PICO stands for Patient (or Problem), Intervention, Comparison and Outcome. It is a way to turn a vague scientific question into a statistical one with a specific, measurable outcome.
 
-Imagine asking a friend "is this a good restaurant?" Good for what? A cheap lunch? A birthday dinner? Vegetarians? Until you pin it down, there's no answer. Scientific questions are the same: "does this drug work?" can't be tested until you say for whom, compared with what, and measured how.
-
-Most bad analyses fail before any data are collected, because the question was vague. "Is this drug effective?" means nothing to statistics until "effective" is pinned down as a number: a mean change, or the [[Proportions and Percentages|proportion]] of people who improve? Statistics models how things vary from unit to unit, and it needs a number to model ([[Variability]], [[Parameter vs Statistic]]). PICO forces you to decide, one letter at a time:
+"Is this drug effective?" means nothing to statistics until "effective" is pinned down as a number: a mean change, or the [[Proportions and Percentages|proportion]] of people who improve? Statistics models how things vary from unit to unit, and it needs a number to model ([[Variability]], [[Parameter vs Statistic]]). PICO forces you to decide, one letter at a time:
 - **Patient or Problem:** who or what is studied. This is the [[Population and Sample|population]] the results apply to.
 - **Intervention:** the treatment or exposure, which is the independent variable.
 - **Comparison:** what it is compared with. "Better" needs a baseline.
@@ -32,9 +30,7 @@ How you define "effective" decides the analysis.
 
 For example: "Cholesterol-lowering drugs given to people over 50 with high cholesterol will tend to result in heart attacks **at a rate** lower than in the comparison group." The rate is the number to estimate, so now there is a population value to make [[Descriptive vs Inferential Statistics|inferences]] about.
 
-A sharp question does half the work. The comparison doesn't have to be a placebo; any meaningful reference works. And a statistically significant result answers the statistical question, not the scientific one: you still have to bring it back to the real context ([[Statistical vs Practical Significance]]).
-
-Try it yourself. How would you turn "does yoga help back pain?" into a PICO question? For example: in adults with long-term back pain (P), does a weekly yoga class (I), compared with usual care (C), lower pain scores after a few months (O)? Now it's something you can measure and test.
+The comparison doesn't have to be a placebo; any meaningful reference works. And a statistically significant result answers the statistical question, not the scientific one: you still have to bring it back to the real context ([[Statistical vs Practical Significance]]).
 
 See also: [[Experiment]], [[Independent and Dependent Variables]].
 

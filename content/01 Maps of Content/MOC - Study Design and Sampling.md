@@ -11,8 +11,6 @@ status: growing
 
 What a study can conclude is decided before any data exist.
 
-This is the part of statistics most people treat as paperwork, and it's the part that matters most. No analysis, however clever, can rescue a study that asked the wrong question or let the groups differ in ways nobody controlled. Good design is cheaper than good analysis, and it's the only thing that can earn the word "caused". The key idea is that randomness does two different jobs: random assignment protects causation, and random sampling protects generalization.
-
 *Reading:* [[References|Kirk 2013, Ch. 1]], [[References|Vu and Harrington 2020, Ch. 1]] §1.3.
 
 ## 1. Asking the question
