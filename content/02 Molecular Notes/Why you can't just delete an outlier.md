@@ -28,4 +28,6 @@ So there are better moves than deleting. Check the original record. Report the r
 
 Silently dropping outliers makes results look cleaner than the data are. And if the same data can say different things depending on which points disappear, then the conclusion belongs to the analyst, not the data.
 
+Try it yourself. One plant in your study is three times taller than the rest. Before deleting it, what should you ask? Is it a recording error, like a misplaced decimal point? Or is it a real plant that grew that tall? An error can be fixed or removed, with a note saying so. A real value is data, and deleting it makes your results look neater than nature is.
+
 See also: [[Box Plot and Five-Number Summary]], [[Why the median beats the mean for skewed data]], [[Why visualize data before testing]], [[Why rank tests trade power for robustness, and why run both]].

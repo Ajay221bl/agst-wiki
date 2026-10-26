@@ -28,4 +28,6 @@ Different designs have their own effect sizes: d for t-tests, η² for ANOVA and
 
 So report both. Without effect sizes, readers mistake significance in a large sample for importance, and non-significance in a small sample for no effect. "Is it real?" and "does it matter?" are separate questions, and a good report answers both.
 
+Try it yourself. Two studies report the same small p-value. One found a difference of a few seconds in reaction time; the other, a difference of several hours in recovery time. Are they equally important? The p-values can't tell you. Only the effect size shows which result is worth acting on.
+
 See also: [[P-Value]], [[Effect Size]], [[Standard Error|standard error]], [[Ratios and Fractions|denominator]], [[Statistical vs Practical Significance]], [[Signal and Noise]], [[Why a p-value is not always meaningful]], [[Why go with the confidence interval when the hypothesis is weak]].

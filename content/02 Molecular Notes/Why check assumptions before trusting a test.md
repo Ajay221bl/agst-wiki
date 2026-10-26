@@ -34,4 +34,6 @@ If the assumptions fail, say so, and get a second opinion from a nonparametric t
 
 This is what statistical conclusion validity means. Broken assumptions give p-values and [[Post Hoc Tests|post hoc tests]] that look precise but aren't ([[Statistical Conclusion Validity]]). Precision you haven't earned is worse than none, because it gets believed.
 
+Try it yourself. Your t-test gives a small p-value, but a Q-Q plot of the data curves sharply away from the line and the groups are tiny. How much do you trust that p-value? Not much. The p-value was computed as if the data were roughly normal, and with tiny groups that promise matters. Try a rank-based test as well.
+
 See also: [[ANOVA Assumptions]], [[Central Limit Theorem]], [[Null Distribution]], [[Test Assumptions|assumptions]], [[Robustness]], [[Residuals]], [[Q-Q Plot]], [[Why visualize data before testing]], [[Why a significant ANOVA can have no significant post hocs]].

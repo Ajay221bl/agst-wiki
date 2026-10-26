@@ -31,4 +31,6 @@ That doesn't make the mean bad. For roughly symmetric data it's the default, bec
 
 So match the summary to the shape. Report a mean income or a mean hospital stay and you describe almost nobody, and one data-entry error can change the headline. The right question isn't "which is better?" It's "which one does this data distort?"
 
+Try it yourself. Nine people in a room earn about the same modest income. Then a billionaire walks in. What happens to the mean income, and to the median? The mean shoots up enormously; the median barely moves. Which better describes a typical person in the room? The median.
+
 See also: [[Median]], [[Shape of a Distribution]], [[Outliers]], [[Robustness]], [[Ranks]], [[Why report both center and spread]], [[Nonparametric Alternatives]].

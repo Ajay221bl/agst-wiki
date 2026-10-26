@@ -28,4 +28,6 @@ Two consequences follow. First, with two groups a significant F already tells yo
 
 This is what understanding feels like: fewer things to remember, because you've seen they were one thing all along. ANOVA is the t-test, extended to as many groups as you like.
 
+Try it yourself. A pooled two-sample t-test gives t = −3. If you ran a one-way ANOVA on the same two groups, what F would you get, and would the p-value change? F = 9, because squaring removes the sign, and the p-value would be exactly the same.
+
 See also: [[Two-Sample Independent t-Test]], [[One-Way ANOVA]], [[F-Distribution]], [[Ratios and Fractions|numerator]], [[Why ANOVA instead of many t-tests]], [[Why analysis of variance can compare means]], [[Why R uses Welch's t-test by default]].

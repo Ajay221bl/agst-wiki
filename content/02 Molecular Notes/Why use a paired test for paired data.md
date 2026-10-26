@@ -27,4 +27,6 @@ There's a second reason, too. The independent two-sample test assumes the two gr
 
 So the rule follows from the design, not from the numbers. If each value has a natural partner, use the pairing. Otherwise a real change can be missed because the noise between units swamps it. Comparing something with itself is the cleanest comparison there is.
 
+Try it yourself. You weigh 8 dogs before and after a diet. Big dogs stay big and small dogs stay small, so the before and after weights vary hugely. Should you use an independent two-sample test or a paired test? Paired. Taking each dog's own difference cancels out the dog-to-dog size differences, leaving only the diet's effect and a little noise.
+
 See also: [[Standard Error]], [[Independent Events]], [[Test Assumptions|assumption]], [[Signal and Noise]], [[Why check assumptions before trusting a test]], [[ANOVA Assumptions]].

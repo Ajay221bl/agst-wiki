@@ -35,4 +35,6 @@ Two problems, two tools, so four combinations, each earning a different strength
 
 Once you see the two jobs, a lot of bad reasoning becomes easy to spot. Claiming causation from a randomly sampled survey ignores confounding. Applying a [[Randomized Controlled Trial|randomized trial]] run on volunteers to everyone ignores who volunteers. Before you trust a conclusion, ask which coin was flipped, and where.
 
+Try it yourself. A researcher recruits volunteers from one city, then randomly assigns them to treatment or control. Which kind of validity does this protect, and which is at risk? Random assignment protects internal validity, so a difference can be credited to the treatment. But the volunteers weren't randomly sampled, so whether the result carries over to other people is the open question.
+
 See also: [[Internal Validity]], [[Association vs Causation|causation]], [[External Validity]], [[Why RCTs trade external validity for internal validity]], [[Experiment]], [[Quasi-Experiment]].

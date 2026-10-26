@@ -30,4 +30,6 @@ So report the whole path: how many started, how many were removed and why, how m
 
 The principle is transparency. Every analysis makes choices, and the reader can only judge your conclusion if they can see them. Unreported removals make the stated n wrong, hide possible bias, and leave nobody able to repeat what you did.
 
+Try it yourself. Your data have 10 rows, and two of them are blank in one column you don't even use. You run na.omit() on the whole table. How many rows go into the test? Only 8. You lost two observations for no reason, and your degrees of freedom changed. That's why the write-up must say what was done.
+
 See also: [[Why use degrees of freedom as a sanity check]], [[Why R must be told what kind of variable it has]], [[Why a bigger sample can't fix a biased one]].

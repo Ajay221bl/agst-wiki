@@ -28,4 +28,6 @@ Follow that to the end. To be 100% sure, the interval would have to stretch over
 
 There's a general lesson in that. Certainty and usefulness trade off. A claim that can't possibly be wrong usually isn't saying much. The goal isn't to never be wrong. It's to be clear about how wrong you might be.
 
+Try it yourself. Someone asks for a 100% confidence interval for the average weight of adult dogs. What would it have to look like? It would have to include every weight that's even remotely possible, so it would be uselessly wide. That's why we settle for 95%: a range narrow enough to be useful, with an honest, known chance of missing.
+
 See also: [[Standard Error]], [[Why 95% confidence is not a 95% probability]], [[Why go with the confidence interval when the hypothesis is weak]], [[Why a bigger sample gives a narrower confidence interval]].

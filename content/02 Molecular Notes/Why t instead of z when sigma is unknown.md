@@ -27,4 +27,6 @@ And the penalty fades as you learn more. As the degrees of freedom grow, $s$ bec
 
 Using z with an estimated standard deviation gives intervals that are too narrow and tests that reject too often, especially with small samples. The t-distribution is just the normal curve, made honest about what you don't know.
 
+Try it yourself. With only 3 observations, would you rather use a z critical value or a t critical value for a confidence interval? The t value. With so few values, the sample standard deviation could easily be far off, and t's fatter tails widen the interval to pay for that. As n grows, the two become nearly the same.
+
 See also: [[Normal Distribution]], [[Critical Value]], [[One-Sample t-Test]], [[Why the sampling distribution makes inference possible]].

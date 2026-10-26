@@ -29,4 +29,6 @@ A couple of things fall out of this. F is a ratio of two variances, and variance
 
 So "analysis of variance" is the right name. A difference only means something compared to the noise around it. Compare means without looking at the spread, and you'll call noisy differences real and miss consistent ones.
 
+Try it yourself. Two studies find exactly the same group means. In study A the values within each group are tightly bunched; in study B they're spread all over. Which gives the bigger F? Study A. Same gaps between means, but less noise to compare them with, so the signal stands out.
+
 See also: [[Variance]], [[Ratios and Fractions|ratio]], [[ANOVA Table]], [[Sums of Squares and Mean Squares]], [[Statistical Model]], [[Mean|mean]], [[Signal and Noise]], [[Why ANOVA instead of many t-tests]], [[Why report both center and spread]].

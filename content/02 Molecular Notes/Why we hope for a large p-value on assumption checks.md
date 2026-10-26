@@ -28,4 +28,6 @@ Two cautions keep this honest. A large p doesn't prove the assumption holds, bec
 
 The lesson is bigger than these two tests. Never read a p-value without first asking: what was the null hypothesis? Read every small p as good news and you'll end up celebrating a broken assumption and trusting a test that shouldn't be trusted.
 
+Try it yourself. Levene's test gives a large p-value, well above α. Good or bad for your ANOVA? Good. H₀ in Levene's test is "the variances are equal", and a large p means no evidence against it. A small p here would be the warning sign.
+
 See also: [[Writing a Conclusion]], [[Why check assumptions before trusting a test]], [[Why we never accept the null hypothesis]], [[Why big samples make almost everything significant]].

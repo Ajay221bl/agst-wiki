@@ -32,4 +32,6 @@ For a difference between two means, the null value is 0. An interval entirely ab
 
 The practical lesson: once you see that these are one idea, your write-ups can't contradict themselves. And the interval tells you more, because it shows every value the data would reject at once, not just the one you happened to test.
 
+Try it yourself. A 95% interval for a mean difference runs from a small negative number to a positive one. Without computing anything, what does a two-sided test of "difference = 0" at 5% say? It fails to reject, because 0 is inside the interval, so 0 is a believable value. And if the interval sat entirely above 0? Then the test would reject.
+
 See also: [[Significance Level]], [[Hypothesis Testing]], [[Why go with the confidence interval when the hypothesis is weak]], [[Why choose alpha and tails before seeing the data]], [[Why an interval beats a single number, and why no interval is 100%]].

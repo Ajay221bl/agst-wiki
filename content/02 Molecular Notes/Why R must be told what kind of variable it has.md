@@ -26,4 +26,6 @@ So the routine is short. Read the data, run `str()`, fix the types and the shape
 
 The danger here is silence. The test runs, the output looks normal, and it answers a different question: a trend across the codes instead of differences between groups. A computer will do exactly what you said, not what you meant. The only defence is to say it precisely.
 
+Try it yourself. You run `aov(yield ~ treatment)` on 4 treatments coded 1 to 4, and the output shows 1 degree of freedom for treatment. What went wrong? With 4 groups you should see 4 − 1 = 3. A 1 means R read the codes as a number and fitted a line. Wrap the column in `factor()` and run it again.
+
 See also: [[t.test()|t.test]], [[Why use degrees of freedom as a sanity check]], [[Why visualize data before testing]].

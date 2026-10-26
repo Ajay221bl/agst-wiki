@@ -29,4 +29,6 @@ So skipping probability doesn't save time. It just means memorizing. Without it,
 
 Learn the foundations and the rest of the subject becomes derivable. Skip them and it becomes a list of rules.
 
+Try it yourself. Flip a coin you believe is fair 10 times and get 10 heads. Why do you start to doubt the coin? Because if it were fair, that result would be extremely rare. That's the whole logic of a hypothesis test: assume nothing is going on, compute how rare your data would be, and doubt the assumption if they're very rare.
+
 See also: [[Test Statistic|test statistics]], [[Complementary Events]], [[Multiplication Rule]], [[Hypothesis Testing]], [[Sensitivity and Specificity]], [[Why a positive test can still mean you are probably healthy]].

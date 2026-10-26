@@ -28,4 +28,6 @@ So a p of 0.03 says "data like these would be rare if H₀ were true". It does n
 
 The reason this matters: reading p as the chance that H₀ is true makes weak evidence sound strong, and turns one study into something close to proof. A p-value tells you how surprised to be. It doesn't tell you what to believe.
 
+Try it yourself. A study reports p = 0.03. Which of these is right? (a) There's a 3% chance the null is true. (b) If the null were true, data at least this extreme would turn up about 3% of the time. Only (b). The p-value is computed by assuming the null, so it can't also tell you how likely the null is.
+
 See also: [[Sensitivity and Specificity|diagnostic testing]], [[Why probability comes before statistics]], [[Why a positive test can still mean you are probably healthy]], [[Why a p-value is not always meaningful]].

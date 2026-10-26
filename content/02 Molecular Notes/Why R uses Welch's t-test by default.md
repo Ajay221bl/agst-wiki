@@ -28,4 +28,6 @@ So compare the two bets. Choose Welch and the variances are equal: you lose a sl
 
 That's why defaulting to the pooled test would mislead in exactly the unbalanced, unevenly spread data that field studies tend to produce.
 
+Try it yourself. Your output shows degrees of freedom with a decimal point, not a whole number. Did something break? No. That's Welch's adjustment at work. It keeps each group's own variance, and the degrees of freedom it ends up with needn't be a whole number. A pooled test would have given a whole number.
+
 See also: [[Two-Sample Independent t-Test]], [[Why check assumptions before trusting a test]], [[Why a two-group ANOVA gives F equal to t squared]].

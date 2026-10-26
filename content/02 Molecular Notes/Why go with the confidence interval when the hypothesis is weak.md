@@ -25,4 +25,6 @@ And you lose nothing by choosing the interval. It still answers the two-tailed t
 
 So the interval contains the test, and more. When the question is weak, or you're not sure what it should be, report the range and let the reader see what the data actually support. Otherwise reports fill up with p-values against meaningless null values, and no sense of how large anything is.
 
+Try it yourself. A paper tests whether a fertilizer changes yield by exactly 0 and rejects. What's missing? How big the change is. A confidence interval would show, say, whether it's a tiny boost or a huge one, which is what a farmer actually needs to know.
+
 See also: [[Hypothesis Testing]], [[Why report an effect size with the p-value]], [[Why a bigger sample gives a narrower confidence interval]].

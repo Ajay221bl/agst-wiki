@@ -28,4 +28,6 @@ ANOVA fixes this by asking **one overall test** at α: is there any difference a
 
 So the principle is: ask one good question before many small ones. Without it, studies with many groups would almost always "find" a difference, whether or not one exists.
 
+Try it yourself. You have 4 groups and run every pairwise t-test at 5%, with no adjustment. How many tests, and what's the rough chance of at least one false alarm if nothing is going on? 6 tests, and about 26%, roughly a one-in-four chance of announcing a difference that isn't there. With one ANOVA, the risk stays at 5%.
+
 See also: [[One-Way ANOVA]], [[Why post hoc tests only after a significant ANOVA]], [[Bonferroni Correction]].

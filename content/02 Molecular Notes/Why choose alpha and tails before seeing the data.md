@@ -28,4 +28,6 @@ The one-tailed test deserves a note of its own. It really is more powerful in it
 
 Underneath all this is a simple point about honesty. The easiest person to fool is yourself, and the data will always offer you a flattering choice afterwards. Results chased this way are the ones that can't be repeated ([[References|Wasserstein and Lazar 2016]]). Commit first, then look.
 
+Try it yourself. You planned a two-tailed test, got a p-value just above α, then noticed that a one-tailed test in the direction you saw would halve it and land below α. Can you switch? No. Choosing the direction after seeing the data is exactly how false positives sneak in. You report the planned two-tailed test.
+
 See also: [[Family-Wise Type I Error]], [[Null Distribution]], [[Why a p-value is not always meaningful]], [[Why ANOVA instead of many t-tests]].

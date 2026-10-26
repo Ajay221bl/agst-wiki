@@ -30,4 +30,6 @@ That last dial has a square root on it, and the square root is the hard truth of
 
 So the lesson cuts two ways. More confidence is never free: you pay in width. And a narrow interval is only as good as the sample behind it. Precision from a biased sample is still the wrong answer.
 
+Try it yourself. Your interval is too wide and you want it half as wide, keeping the same confidence level. How much more data do you need? Four times as much, because the width shrinks with the square root of n. And if you raised the confidence level instead, would the interval get wider or narrower? Wider.
+
 See also: [[Point Estimate|estimate]], [[Standard Error]], [[Critical Value]], [[Why the sampling distribution makes inference possible]], [[Statistical Power]].

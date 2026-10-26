@@ -30,4 +30,6 @@ Put them together: the same effect with less noise gives a bigger test statistic
 
 The mistake to avoid is leaving known noise in. Ignore a pairing or a known nuisance variable, and its variation stays in the [[Residuals|error term]], hiding real effects. Clear thinking about where the noise comes from beats brute force. A cleverly designed small study can see what a careless big one misses.
 
+Try it yourself. You can't make a drug work any better, but you want a more powerful study without recruiting more people. Name one thing you could change. Measure each person before and after (pairing), group similar people and compare within groups (blocking), or use a more precise measuring device. Each one shrinks the noise in the denominator, so the same signal stands out more.
+
 See also: [[Variability|variation]], [[Why use a paired test for paired data]], [[Why every test statistic is signal over noise]], [[Why a bigger sample gives a narrower confidence interval]].

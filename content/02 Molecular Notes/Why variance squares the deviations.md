@@ -30,4 +30,6 @@ One cost remains: squaring changes the units, so centimetres become cm². So we 
 
 The general lesson: in mathematics, the choice that wins is often the one that makes everything else simple. Average signed deviations and every data set has zero spread. Use anything but squares and there's no between-within split for ANOVA.
 
+Try it yourself. The values 1, 3 and 5 have mean 3. Add up the plain deviations from the mean: −2, 0 and 2. What do you get? 0, as always. Now square them: 4, 0 and 4, which add to 8. The squares can't cancel, so they measure spread.
+
 See also: [[Variance]], [[Why we divide by n minus 1]], [[Why report both center and spread]], [[Why analysis of variance can compare means]].

@@ -28,4 +28,6 @@ So the honest statement is "not enough evidence". It describes what you know, an
 
 This isn't pedantry. If weak studies could "prove" that treatments don't work, good ideas would be abandoned on the strength of experiments too small to test them. Absence of evidence is not evidence of absence.
 
+Try it yourself. A tiny pilot study of 5 plants finds no significant effect of a fertilizer. Can you conclude the fertilizer does nothing? No. With 5 plants, even a real effect could easily go unseen. All you can say is that this study didn't find evidence of an effect.
+
 See also: [[Null and Alternative Hypotheses]], [[Type I and Type II Errors]], [[Why a p-value is not always meaningful]], [[Statistical vs Practical Significance]].

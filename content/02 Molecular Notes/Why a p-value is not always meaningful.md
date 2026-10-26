@@ -29,4 +29,6 @@ The American Statistical Association put it bluntly: a p-value doesn't measure t
 
 Why does this matter so much? Because when a single number becomes the goal, people start gaming it. They run analyses until one comes out significant, [[Family-Wise Type I Error|pick the best of many tests]], and report trivial "discoveries". A p-value is useful evidence. It's a terrible goal.
 
+Try it yourself. A huge study finds that people who drink one brand of water score higher on a test, with a p-value far below any usual cutoff, but the difference is a fraction of one point. Is it significant? Yes. Does it matter? Almost certainly not. A small p-value says the difference is probably real, not that it's big.
+
 See also: [[P-Value]], [[Sample Size|sample size]], [[Why report an effect size with the p-value]], [[Why we never accept the null hypothesis]].

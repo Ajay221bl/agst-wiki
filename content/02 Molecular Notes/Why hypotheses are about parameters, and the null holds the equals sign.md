@@ -28,4 +28,6 @@ Notice what that makes H₀. It's not necessarily what you believe. It's a start
 
 Get either rule wrong and the test collapses. Hypotheses about statistics test nothing. A null without a specific value leaves the test with no distribution to compare the data against.
 
+Try it yourself. A student writes H₀: x̄ = 5. What's wrong? x̄ is the sample mean, which you already know the moment you calculate it, so there's nothing to test. The hypothesis should be about the population mean, μ. And which one gets the equals sign, H₀ or Hₐ? H₀, because the test needs one exact value to build its curve around.
+
 See also: [[Null and Alternative Hypotheses]], [[Confidence Interval]], [[Point Estimate|estimate]], [[Why we never accept the null hypothesis]], [[Why the sampling distribution makes inference possible]], [[Why a p-value is not the probability the null is true]].

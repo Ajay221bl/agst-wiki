@@ -35,4 +35,6 @@ And it **communicates**. A good plot convinces faster than any table.
 
 So look first, then calculate. Skip the looking, and tests get run on skewed, outlier-ridden or wrongly coded data without anyone noticing, and the conclusions inherit every one of those problems. The numbers are a summary of the data. Always see the original before trusting the summary.
 
+Try it yourself. Two groups have the same mean and standard deviation. One is a neat bell shape; the other is two separate clumps with nothing in the middle. Would the summary numbers warn you? No. Only a plot would. And a single mean for that second group would describe almost nobody in it.
+
 See also: [[Histogram]], [[Box Plot and Five-Number Summary]], [[Shape of a Distribution]], [[Q-Q Plot]], [[Why check assumptions before trusting a test]], [[Descriptive vs Inferential Statistics]].

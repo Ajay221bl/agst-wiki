@@ -29,4 +29,6 @@ One small footnote. Taking the [[Squares and Square Roots|square root]] breaks t
 
 Why care? Because dividing by $n$ would always understate [[Variability|variability]]. That would make [[Standard Error|standard errors]] too small and [[Confidence Interval|confidence intervals]] too narrow, and tests would reject too often, especially in small samples. When you use your data twice, once to find the centre and again to measure spread around it, you have to pay for the reuse.
 
+Try it yourself. You have just 2 values, 4 and 6. Their mean is 5, and each sits 1 away from it. Divide the sum of squared deviations by n and you get 1; divide by n − 1 and you get 2. Which is closer to the true variance, on average? The n − 1 version, because the sample mean always sits right between your values and makes the distances look smaller than they really are.
+
 See also: [[Variance]], [[Deviations from the Mean]], [[Standard Deviation]], [[t-Distribution]].

@@ -36,4 +36,6 @@ And it works in reverse. **The ANOVA df tell you the design.** df of 2 and 12 me
 
 The deeper habit is this: before you look at an answer, know roughly what it should look like. Then surprises become signals. Without that, an analysis can run on the wrong data or the wrong model with no error message, and the p-value will look perfectly normal.
 
+Try it yourself. You run a one-way ANOVA on 4 groups with 3 observations each. Before looking at the output, what df should it show? Between groups: 4 − 1 = 3. Within groups: 4 × 3 − 4 = 8. If the output shows anything else, check your data before reading the p-value.
+
 See also: [[str()]], [[Why check assumptions before trusting a test]].

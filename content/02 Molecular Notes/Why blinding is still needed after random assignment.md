@@ -32,4 +32,6 @@ Sometimes it's impossible. You can't hide whether someone had surgery or physica
 
 The lesson is broader than trials. Expectations are a force. If you don't design them out, they'll show up in your data looking exactly like a result.
 
+Try it yourself. A trial randomly assigns patients to a new pain pill or a sugar pill, but tells each patient which one they got. Is the comparison still fair at the end? Not really. The groups started alike, but people who know they got the real pill may report less pain because they expect to. Randomization can't undo that; only blinding can.
+
 See also: [[Randomized Controlled Trial]], [[Why random assignment and random sampling protect different things]], [[Why RCTs trade external validity for internal validity]].

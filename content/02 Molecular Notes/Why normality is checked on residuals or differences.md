@@ -28,4 +28,6 @@ Books often say "check each group" for two-sample tests and ANOVA. Checking the 
 
 The general habit is worth more than the rule. Before checking an assumption, ask what exactly it's an assumption about. Check the raw response and you'd flag non-normality whenever the groups really differ. Check the wrong columns in a paired design and you can both miss real problems and invent fake ones.
 
+Try it yourself. Three groups have means far apart, so the whole response column, plotted together, has three humps. Does that break ANOVA's normality assumption? Not necessarily. Subtract each group's mean and look at the residuals. If they look roughly normal, you're fine. The humps were just the groups being different, which is the effect you're testing for.
+
 See also: [[Q-Q Plot|Q-Q plots]], [[Histogram|histograms]], [[Why check assumptions before trusting a test]], [[Why use a paired test for paired data]], [[Why we hope for a large p-value on assumption checks]].

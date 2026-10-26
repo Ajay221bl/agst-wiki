@@ -33,10 +33,12 @@ Imagine 100,000 women. A prevalence of 0.35% means 350 have cancer and 99,650 do
 
 Now run the test. A sensitivity of 0.89 means it catches 311.5 of the 350. Good. A specificity of 0.93 means a 7% false-positive rate among the healthy: 0.07 × 99,650 ≈ 6,975.5 false positives. A small rate, but applied to an enormous group.
 
-Add them up. That's about 7,287 positives in total, and only 311.5 of them are real. So $P(	ext{cancer} \mid +) = 311.5/7{,}287 \approx 0.043$ ([[References|Vu and Harrington 2020, Ch. 2]], pp. 112–116).
+Add them up. That's about 7,287 positives in total, and only 311.5 of them are real. So $P(\text{cancer} \mid +) = 311.5/7{,}287 \approx 0.043$ ([[References|Vu and Harrington 2020, Ch. 2]], pp. 112–116).
 
 Notice where the answer came from. Not mainly from how good the test is, but from how rare the condition was to begin with. Change the prevalence and the first step changes, so the predictive value changes with it. Sensitivity and specificity don't change at all. They describe the test. The predictive value describes the test meeting a particular population.
 
 The deeper mistake is confusing $P(+ \mid D)$ with $P(D \mid +)$: "how likely is a positive if you're sick" with "how likely are you sick if you're positive". Make it, and patients and doctors treat a positive screening result as a near-certain diagnosis. The same mistake shows up in hypothesis testing, when $P(\text{data} \mid H_0)$, the p-value, is confused with $P(H_0 \mid \text{data})$ ([[P-Value]]). Whenever you see a conditional probability, ask which way round it runs. And ask how common the thing was before you looked.
+
+Try it yourself. Same test, but now used only on women who already have a lump, where cancer is far more common. Does the chance of cancer after a positive result go up or down? Up. Sensitivity and specificity haven't changed, but there are now far more true positives compared with false alarms, so a positive means much more.
 
 See also: [[Sensitivity and Specificity]], [[Predictive Values and Prevalence]], [[Bayes' Theorem]], [[Contingency Table]], [[Conditional Probability]], [[Ratios and Fractions|denominator]], [[Why probability comes before statistics]], [[Type I and Type II Errors]].

@@ -26,4 +26,6 @@ After the data are in, the chance is gone. Your particular interval either cover
 
 This isn't hair-splitting. Putting a probability on one interval claims more than one study knows, and it quietly treats μ as if it were random. Be confident in the process, and humble about the single result.
 
+Try it yourself. A friend computes a 95% interval for the mean height of a plant species and says "there's a 95% chance the true mean is in here". What would you say? Something like: "Either it's in there or it isn't. The 95% is how often this way of making intervals works, and we can't tell whether this one is a hit or a miss." Then ask yourself: if 100 classmates each built an interval from their own sample, about how many would miss? Around 5.
+
 See also: [[Why an interval beats a single number, and why no interval is 100%]], [[Why the sampling distribution makes inference possible]].

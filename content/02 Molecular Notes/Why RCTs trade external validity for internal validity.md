@@ -32,4 +32,6 @@ And sometimes a trial isn't even an option. It's impractical for rare outcomes, 
 
 So "gold standard" means "best for proving cause", not "best for everything". Treat trial results as universal and you ignore who was studied. Dismiss observational studies and you leave rare diseases and harmful exposures unstudied; it was long cohort studies that first linked smoking to heart disease. Every design answers some questions well and others badly. The skill is knowing which question you're asking.
 
+Try it yourself. A trial shows a drug works in young, healthy volunteers. Your patient is very old and has three other conditions. Is the result wrong? No, it's very likely right for the kind of people studied. The open question is whether it carries over to your patient: that's external validity, and the trial's careful control doesn't answer it.
+
 See also: [[Internal Validity]], [[Blinding and Placebo]], [[Why random assignment and random sampling protect different things]], [[Experiment]].

@@ -27,4 +27,6 @@ So pair them sensibly. For roughly [[Shape of a Distribution|symmetric]] data, r
 
 Leave the spread out and readers can't tell whether a difference is huge or trivial. You also hide unequal spreads between groups, which break an ANOVA [[Test Assumptions|assumption]] ([[Homogeneity of Variance]]). A centre is half a description. The spread is the other half.
 
+Try it yourself. Two dart players both average dead centre. One lands every dart close; the other scatters them all over the board. Does "average: dead centre" describe both players fairly? No. You need the spread to tell them apart, and a test needs it too, to judge whether a difference in averages is big.
+
 See also: [[Mean]], [[Median]], [[Range and IQR]], [[Summation Notation]], [[Between- and Within-Group Variability]], [[Deviations from the Mean]], [[Why the median beats the mean for skewed data]], [[Coefficient of Variation]].

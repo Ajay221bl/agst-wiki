@@ -28,4 +28,6 @@ So with a large n, change the question you ask. Not "is it significant?" but "ho
 
 Otherwise big-data studies would report trivial effects as discoveries, and throw out sound analyses because a normality test said no. A powerful enough lens finds a difference in anything. Your job is to decide which ones are worth seeing.
 
+Try it yourself. Study 1 has 50 people per group and p = 0.8. Study 2 has 20,000 per group, the same tiny difference, and p is minuscule. Did the effect get bigger? No, it's identical. Only the standard error shrank. So with big data, always look at the size of the effect, not just the p-value.
+
 See also: [[Why report an effect size with the p-value]], [[Why a p-value is not always meaningful]], [[Why a bigger sample can't fix a biased one]].

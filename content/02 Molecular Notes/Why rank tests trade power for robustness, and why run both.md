@@ -28,4 +28,6 @@ So in the grey zone, where a normality test rejects but the plots look close to 
 
 That's a good general habit. When you're unsure whether an assumption holds, check whether your conclusion survives without it. Ignoring a clear violation can give p-values that are too small or too large. Using only rank tests on normal data wastes some power. Running both tells you which world you're in.
 
+Try it yourself. Replace the values 2, 3, 4 and 1000 by their ranks. What do you get, and what happened to the huge value? The ranks are 1, 2, 3 and 4. The 1000 counts only as "the largest", one step above the next, so it can't drag the result around the way it would drag a mean.
+
 See also: [[Test Assumptions|assumptions]], [[Why check assumptions before trusting a test]], [[Why big samples make almost everything significant]].

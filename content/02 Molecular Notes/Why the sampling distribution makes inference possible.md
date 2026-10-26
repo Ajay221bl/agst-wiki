@@ -31,4 +31,6 @@ And all of this rests on a random sample. Without one, as the book puts it, "the
 
 Without the sampling distribution, a sample mean would just be a number, with no way to say how far it might be from the truth. With it, one sample becomes evidence. That's the leap from describing what you saw to knowing something about what you didn't.
 
+Try it yourself. You take one sample of size n and get a mean. You can't see the other samples you might have drawn. So how can you say how far off your mean might be? Because theory tells you how all those sample means would spread out: about σ/√n around the truth. One sample, plus that known pattern, is enough.
+
 See also: [[Why report both center and spread|center and spread]], [[Standard Error]], [[Random Sampling]], [[Null Distribution]], [[Why a bigger sample gives a narrower confidence interval]], [[Why t instead of z when sigma is unknown]].

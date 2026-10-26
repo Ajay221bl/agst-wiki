@@ -24,4 +24,6 @@ The first time you see this, it feels like the software is broken. It isn't. The
 
 So the forest can be clearly there even when no single tree stands out. If you don't understand this, you might throw away a perfectly good significant ANOVA, or go hunting for a bug that isn't there. The honest report is both results, side by side, with the reason they differ.
 
+Try it yourself. Your ANOVA gives p just under α, and Tukey's test finds no pair significant. Should you report "no differences"? No. Report that the overall test found evidence the means aren't all equal, but the data weren't strong enough to say which pairs differ. More data per group is the usual fix.
+
 See also: [[Tukey HSD]], [[Why post hoc tests only after a significant ANOVA]], [[Why check assumptions before trusting a test]].

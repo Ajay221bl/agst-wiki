@@ -28,4 +28,6 @@ So you ask the questions yourself. Was any unit measured more than once? Are uni
 
 Get this wrong and you overstate the evidence, producing [[Type I and Type II Errors|false positives]] that no assumption test will ever warn you about. Some knowledge only lives in the context. No amount of computation substitutes for knowing where your data came from.
 
+Try it yourself. Ten piglets from the same litter, kept in one pen, get diet A; ten from another litter in another pen get diet B. The data look perfectly normal and the spreads are equal. Is the independence assumption met? No. Piglets sharing a litter and a pen aren't independent, and diet is tangled up with litter and pen. No test on the numbers can show that; you see it only in how the study was run.
+
 See also: [[Why use a paired test for paired data]], [[Why check assumptions before trusting a test]], [[Why random assignment and random sampling protect different things]].

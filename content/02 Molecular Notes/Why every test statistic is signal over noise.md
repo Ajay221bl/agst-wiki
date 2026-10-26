@@ -32,4 +32,6 @@ And now you can see every way to make a test more sensitive. The signal can grow
 
 Without the denominator, the same difference would be called significant or not depending only on the units, and a large noisy study couldn't be compared with a small precise one. Signal only means something against noise. That's true well beyond statistics.
 
+Try it yourself. Two experiments find the same difference between group means, 5 units. In the first, the standard error is 1; in the second, it's 5. Which has the bigger test statistic, and which gives stronger evidence? The first: 5 over 1 is 5, while 5 over 5 is 1. Same signal, much less noise.
+
 See also: [[Test Statistic]], [[Why analysis of variance can compare means]], [[Why t instead of z when sigma is unknown]], [[Why pairing, blocking and good measurement raise power]].

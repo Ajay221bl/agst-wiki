@@ -33,4 +33,6 @@ If you do reject, you know at least one mean differs. You don't know which, beca
 
 The order is the whole point. Ask "is there anything?" before "where is it?", and you protect yourself from finding things that aren't there. Skip it, and a failed overall test plus one lucky pair becomes a false positive dressed up as a finding.
 
+Try it yourself. A classmate skips the ANOVA, runs Tukey's test straight away, and reports the one pair that came out significant. What's the problem? Without the overall test, they've gone hunting through pairs, which is the multiple-testing trap. First check that the ANOVA says there's something to find.
+
 See also: [[Bonferroni Correction]], [[Why a significant ANOVA can have no significant post hocs]], [[Why ANOVA instead of many t-tests]].
