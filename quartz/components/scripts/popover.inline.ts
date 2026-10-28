@@ -130,6 +130,8 @@ async function mouseEnterHandler(
 
   const { x, y } = await computePosition(link, popoverElement, {
     strategy: "fixed",
+    // graph previews open beside the graph instead of covering it
+    placement: link.classList.contains("agst-graph-anchor") ? "left-start" : "bottom",
     middleware: [inline({ x: clientX, y: clientY }), shift(), flip()],
   })
   Object.assign(popoverElement.style, {
@@ -163,6 +165,33 @@ function setupPopovers() {
     })
   }
 }
+
+// The page graph asks for a preview when the pointer rests on a node. A hidden 1px link at the
+// pointer stands in for the node so the normal hover logic (fetch, position, nesting) applies.
+let graphAnchor: HTMLAnchorElement | null = null
+document.addEventListener("agst:graph-hover", (e) => {
+  const { href, x, y } = (e as CustomEvent<{ href: string; x: number; y: number }>).detail
+  if (!graphAnchor || !graphAnchor.isConnected) {
+    graphAnchor = document.createElement("a")
+    graphAnchor.className = "internal agst-graph-anchor"
+    graphAnchor.setAttribute("aria-hidden", "true")
+    graphAnchor.tabIndex = -1
+    Object.assign(graphAnchor.style, {
+      position: "fixed",
+      width: "1px",
+      height: "1px",
+      pointerEvents: "none",
+      opacity: "0",
+    })
+    document.body.appendChild(graphAnchor)
+  }
+  graphAnchor.href = href
+  Object.assign(graphAnchor.style, { left: `${x}px`, top: `${y}px` })
+  mouseEnterHandler.call(graphAnchor, { clientX: x, clientY: y })
+})
+document.addEventListener("agst:graph-leave", () => {
+  if (graphAnchor) mouseLeaveHandler.call(graphAnchor)
+})
 
 document.addEventListener("nav", () => {
   cancelClose()

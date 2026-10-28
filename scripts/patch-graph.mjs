@@ -1,11 +1,12 @@
 // Patches the installed @quartz-community/graph plugin so the page graph
 // colours nodes by topic folder (Why notes in their own colour), hides hub
 // pages (home, maps, start-here, guides, tags, folder indexes) and draws a
-// small legend. Runs after `npx quartz plugin install`; safe to run twice.
+// small legend; hovering a node in the page graph highlights it and opens the note preview
+// (via the agst:graph-hover event handled in popover.inline.ts). Runs after `npx quartz plugin install`; safe to run twice.
 // Restore the plugin with `npx quartz plugin install --from-config`.
 import fs from "node:fs"
 
-const MARK = "/*agst-graph*/"
+const MARK = "/*agst-graph-4*/"
 const files = [
   "node_modules/@quartz-community/graph/dist/index.js",
   "node_modules/@quartz-community/graph/dist/components/index.js",
@@ -27,6 +28,12 @@ const reps = [
   [
     'function $e(i){var l=i.id===g;return l?Ie:K.has(i.id)||i.id.startsWith("tags/")?Qu:ue}',
     'function $e(i){if(i.id===g)return ze;var tp=agTopic(i.id);return tp?h(tp[2],"#888888"):ue}',
+  ],
+  // hover: pixi's own pointerover does not fire under the d3 drag/zoom handlers, so hit-test on
+  // the canvas; highlight the node and its links, fade the rest, and show the node's name
+  [
+    "var le=!1;function se(){",
+    '(function(){var cv=Q.canvas,cur=null;function pick(ev){var r=cv.getBoundingClientRect(),x=(ev.clientX-r.left-j.x)/j.k,y=(ev.clientY-r.top-j.y)/j.k;for(var q=0;q<ru.length;q++){var n=ru[q],dx=x-n.x-O/2,dy=y-n.y-G/2;if(Math.sqrt(dx*dx+dy*dy)<oe(n)+4)return n.id}return null}function show(id,ev){if(id===cur)return;var loc=!_.classList.contains("global-graph-container");if(loc&&cur!==null)document.dispatchEvent(new CustomEvent("agst:graph-leave"));if(loc&&id!==null&&id!==g&&ev)document.dispatchEvent(new CustomEvent("agst:graph-hover",{detail:{href:new URL(Nu(id),window.location.href).toString(),x:ev.clientX,y:ev.clientY}}));cur=id;Wu(id);Au();var base=Math.max((j.k*Me-1)/3.75,0);for(var q=0;q<P.length;q++)P[q].label.alpha=id!==null&&P[q].simulationData.id===id?1:base;cv.style.cursor=id===null?"":"pointer"}cv.addEventListener("pointermove",function(ev){Eu||show(pick(ev),ev)});cv.addEventListener("pointerleave",function(){Eu||show(null)})})();var le=!1;function se(){',
   ],
   // legend after the canvas is attached
   ["_.appendChild(Q.canvas);", "_.appendChild(Q.canvas);agLegend(_,ru,ru.some(function(n){return n.id===g}));"],

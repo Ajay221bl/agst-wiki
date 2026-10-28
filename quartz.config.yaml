@@ -170,7 +170,7 @@ plugins:
         repelForce: 1.2
         centerForce: 0.4
         linkDistance: 60
-        fontSize: 0.55
+        fontSize: 0.7
         showTags: false
         focusOnHover: true
         enableRadial: false
