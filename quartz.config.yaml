@@ -166,9 +166,9 @@ plugins:
     options:
       localGraph:
         depth: 1
-        scale: 1.0
+        scale: 0.8
         repelForce: 1.2
-        centerForce: 0.25
+        centerForce: 0.4
         linkDistance: 60
         fontSize: 0.55
         showTags: false
