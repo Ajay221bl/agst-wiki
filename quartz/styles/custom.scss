@@ -1,3 +1,13 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+// Bigger page graph: a wider right column on desktop and a taller graph box everywhere.
+@media all and ($desktop) {
+  .page > #quartz-body {
+    grid-template-columns: #{$sidePanelWidth} auto 400px;
+  }
+}
+.sidebar .graph > .graph-outer {
+  height: 380px;
+}

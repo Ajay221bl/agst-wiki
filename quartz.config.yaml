@@ -166,7 +166,7 @@ plugins:
     options:
       localGraph:
         depth: 1
-        scale: 0.85
+        scale: 1.0
         repelForce: 1.2
         centerForce: 0.25
         linkDistance: 60
