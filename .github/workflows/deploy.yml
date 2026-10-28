@@ -36,6 +36,8 @@ jobs:
         run: npm ci
       - name: Install Quartz plugins
         run: npx quartz plugin install --from-config
+      - name: Colour the page graph by topic and hide hub pages
+        run: node scripts/patch-graph.mjs
       - name: Build Quartz
         run: npx quartz build
       - name: Build the examples-first edition at /feynman/
